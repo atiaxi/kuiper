@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+$: << 'lib'
+require 'setup'
+
+# Because this is wrapped by Gems, the usual standby of:
+# if $0 == __file ... end
+# doesn't work.  However, because both the script Gems wraps this with and
+# this script have the same name, we can check for that.
+
+if File.basename($0) == File.basename(__FILE__)
+	start_kuiper
+end
