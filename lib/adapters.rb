@@ -1,3 +1,4 @@
+require 'engine'
 
 class Adapter
 
@@ -103,10 +104,11 @@ class RepositoryAdapter < Adapter
   
   # You don't need to provide the repository to wrap, this will get it from the
   # resourcelocator.  Filter is the kind of objects to show.
-  def initialize(filter = KuiObject)
-    @rl = ResourceLocator.instance
+  def initialize(filter = KuiObject, base_only=true)
+    @rl = Opal::ResourceLocator.instance
     super(@rl.repository)
     @constraint = filter
+    @base_only = base_only
   end
   
   def constraint
@@ -114,7 +116,7 @@ class RepositoryAdapter < Adapter
   end
   
   def items
-    return @adaptee.everything_of_type(@constraint)
+    return @adaptee.everything_of_type(@constraint, @base_only)
   end
   
 end

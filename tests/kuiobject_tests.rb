@@ -169,6 +169,39 @@ class TC_WeaponsAndShips < Test::Unit::TestCase
     
   end
   
+  # While editing, if I add a weapon to a ship, then add that same weapon, the
+  # original one I'm adding from also displays x2.  test_primary there seems
+  # to indicate that they're two different objects, but it doesn't test the
+  # adapters
+  def test_adapters
+    # This was to test building, specifically, so edit mode is on
+    $edit_mode = true
+    left = ShipWeaponAdapter.new(@playerShip)
+    right = RepositoryAdapter.new(KuiWeaponBlueprint)
+    
+    assert_equal(3, right.items.size)
+    
+    primary = right.items[0]
+    assert_equal(primary, @primary)
+    
+    # Repository adapter is supposedly read-only
+    right.remove_item(primary)
+    assert_equal(3, right.items.size)
+    
+    # Test moving primary over
+    left.add_item(primary)
+    right.remove_item(primary)
+    
+    # Weapon should have been duped
+    assert_not_equal(left.items[0], primary)
+    assert_equal(left.items[0].base_tag, primary.base_tag)
+    assert_not_equal(left.items[0].tag, primary.tag)
+    
+    assert_not_nil(@rl.repository.everything[left.items[0].tag])
+    assert_equal(3, right.items.size)
+    $edit_mode = false
+  end
+  
   def test_primary
     @playerShip.add_weapon(@primary)
 
@@ -189,6 +222,7 @@ class TC_WeaponsAndShips < Test::Unit::TestCase
     
     found = @playerShip.find_weapon(@primary)
     assert(found.amount == 2)
+    assert_equal(0, @primary.amount)
     
     # Remove one
     @playerShip.remove_weapon(@primary)

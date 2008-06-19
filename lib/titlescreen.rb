@@ -8,6 +8,8 @@
 # Author:: Roger Ostrander
 # License:: GPL
 
+require 'optparse'
+
 require 'base'
 require 'editor'
 require 'dialogs'
@@ -82,6 +84,7 @@ class TitleScreen < State
     @loaduni.rect.midtop = [ @newuni.rect.centerx, @newuni.rect.bottom + 3]
     self << @loaduni
  
+    parse_args
   end
   
   def draw(screen)
@@ -136,6 +139,23 @@ class TitleScreen < State
   def new_universe
     #start_edit_with(@rl.path_for("bootstrap.xml"))
     start_edit
+  end
+  
+  def parse_args(args = ARGV)
+    
+    opts = OptionParser.new do | opt |
+      opt.banner = "Usage: kuiper [options]"
+      
+      opt.on("-s", "--scenario [NAME]",
+          "Start a new game of the given scenario") do |name|
+            
+        fullpath = @rl.path_for(name)
+        if fullpath
+          
+        end
+      end
+    end
+    
   end
   
   def resume_game

@@ -216,6 +216,13 @@ class BuilderDialog < Opal::State
     @done.rect.bottomright = [ @mainRect.right - @spacing,
       @mainRect.bottom - @spacing ]
     self << @done
+      
+    if $edit_mode
+      @edit = Button.new("Edit") { self.edit_item }
+      @edit.rect.right = @done.rect.left - @spacing
+      @edit.rect.y = @done.rect.y
+      self << @edit
+    end
     
   end
   

@@ -340,7 +340,7 @@ class MapState < Opal::State
       if sector
         name = sector.name
         description = sector.description
-        unless sector.visited
+        unless sector.visited or $edit_mode
           name = 'Unknown'
           description = 'No data available'
         end

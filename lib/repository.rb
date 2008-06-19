@@ -49,12 +49,15 @@ class Repository
   end
   
   # Type is the class of object we're looking for
-  # This matches exact class only, no subclasses
-  # TODO: Probably want to change that.
-  def everything_of_type(type)
+  # Anything that satisfied kind_of? will work
+  # If base_only is set, only items that are base-tags will work
+  # (e.g. they're not Laser:3344)
+  def everything_of_type(type, base_only = false)
     rl = Opal::ResourceLocator.instance
     matches = rl.repository.everything.select do | tag, item |
-      item.kind_of?(type) && tag
+      kind = item.kind_of?(type)
+      result = base_only ? kind && (item.tag == item.base_tag) : kind
+      result
     end
     return matches.collect { |tag,item| item }
   end

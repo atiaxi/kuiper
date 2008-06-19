@@ -389,9 +389,6 @@ class KuiObject
   def tag=(string)
     repo = Opal::ResourceLocator.instance.storage[:repository]
     if repo
-      if @tag
-        repo.everything.delete(@tag)
-      end
       repo.everything[string] = self
     end
 
@@ -625,7 +622,7 @@ class KuiFleet < KuiObject
     return false unless super
     return false unless @ships.size > 0
     return false unless @spawn_chance > 0
-    return false unless @max_stay > 0 && @max_stay > @min_stay
+    return false unless @max_stay > 0 && @max_stay >= @min_stay
     return self.class.enumerations[:behavior].index(@behavior) != nil
   end
   
