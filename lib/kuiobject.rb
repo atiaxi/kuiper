@@ -55,7 +55,8 @@ end
 class KuiObject
   # Editable, or "Field" attributes
   def self.attrs
-    @attrs ||= Set.new
+    return @attrs if @attrs
+    @attrs = Set.new
 
     if(self.superclass.respond_to?(:attrs))
       inherited = self.superclass.attrs
@@ -65,6 +66,7 @@ class KuiObject
   end
   
   def self.booleans
+    return @booleans if @booleans
     @booleans ||= Set.new
 
     if(self.superclass.respond_to?(:booleans))
@@ -90,6 +92,7 @@ class KuiObject
   end
   
   def self.children
+    return @children if @children
     @children ||= Set.new
     
     if self.superclass.respond_to?(:children)
@@ -273,9 +276,11 @@ class KuiObject
     super
   end
   
-  # Deep comparison of this object to the other
+  # Two objects are == if their tags are identical
   def ==(other)
-    return self.do_equal(other)    
+    #return self.deep_equals(other)
+    return false unless other
+    return self.tag == other.tag
   end
   
   # Two objects are === if their base tags are identical.
@@ -288,7 +293,13 @@ class KuiObject
     return @tag.split(separator)[0] if @tag
     return nil
   end
+
+  # Old ==, compares fields, children, everything.
+  def deep_equals(other)
+    return self.do_equal(other)
+  end
   
+  # Fully recursive equals - very slow!  Use only if you actually need it.
   def do_equal(other, already_compared = Set.new,base=false)
     return true if already_compared.include?(other)
     
@@ -989,6 +1000,12 @@ class KuiRelation < KuiObject
     @feeling = feelings
     @target_org = target
     @tag = nil # We explicitly have no tag
+  end
+  
+  # Need a different comparator, since we don't use tags
+  def ==(other)
+    return false unless other
+    return @target_org == other.target_org && @feeling == other.feeling    
   end
   
   def playable?

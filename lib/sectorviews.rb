@@ -121,7 +121,7 @@ class ShipSprite < TranslatableSprite
   end
   
   def image
-    frame = (@model.angle / 10).to_i
+    frame = @model.angle.to_i / 10
     return @images[frame]
   end
   

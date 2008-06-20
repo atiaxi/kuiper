@@ -113,12 +113,13 @@ class TC_Org < Test::Unit::TestCase
     
     # Give them a parting shot
     before_mars = @martians.feelings_for(@earthicans)
+    assert_equal(1000000, before_mars)
     @martians.org_shot_me(@earthicans)
     after_mars = @martians.feelings_for(@earthicans)
     
     diff_mars = before_mars - after_mars
     # Are we still pals?
-    assert(diff_mars == -(@martians.shooting_mod *
+    assert_equal(diff_mars,-(@martians.shooting_mod *
       @martians.friendly_multiplier))
   end
   
