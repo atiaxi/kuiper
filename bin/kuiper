@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
 $: << 'lib'
+
+#: << '../lib' # in case people are running in this dir
+
 require 'setup'
 
 # Because this is wrapped by Gems, the usual standby of:

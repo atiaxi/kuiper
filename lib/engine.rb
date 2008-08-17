@@ -9,7 +9,7 @@ require 'utility'
 # Attempt to load rubygame as a gem
 begin
   require 'rubygems'
-  gem 'rubygame', '>=3.0.0'
+  gem 'rubygame', '>=2.3.0'
 rescue LoadError
   # Nope, either no gems or no rubygame
 end
@@ -18,8 +18,8 @@ begin
   require 'rubygame'
   require 'rubygame/ftor'
   # In case we didn't get this from a gem, verify version
-  unless version_check(:rubygame, [3,0,0])
-    puts "This requires Rubygame >= 3.0.0"
+  unless version_check(:rubygame, [2,3,0])
+    puts "This requires Rubygame >= 2.3.0"
     exit
   end
 rescue LoadError
@@ -392,8 +392,14 @@ class ResourceLocator
     begin
       # First, do we even have gems?
       require 'rubygems'
-      # Okay, we do.  Next, see if we can load ourselves up
-      Gem.activate(name,false) # Will also throw LoadError if there's a problem.
+      # Ported over from porttown
+      # Apparently Gem.activate changed from 2 args to 1 at some point, and I
+      # can't find rdocs anywhere that tell me why, so this is a workaround
+      begin
+        Gem.activate(name)
+      rescue ArgumentError
+        Gem.activate(name, false)
+      end
       #If we made it here, then we're a gem.
       @is_gem = true
     rescue LoadError
