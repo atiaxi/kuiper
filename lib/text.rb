@@ -284,29 +284,29 @@ class MultiLineInput < MultiLineLabel
   def keyTyped(event)
     str = event.string 
     if @focus
-      if event.key == :backspace
+      if event.key == Rubygame::K_BACKSPACE
         if @text_string && !@text_string.empty?
           remove_text
         end
-      elsif event.key == :return
+      elsif event.key == Rubygame::K_RETURN
         add_newline
-      elsif event.key == :end
+      elsif event.key == Rubygame::K_END
         caret_to_end_of_line
-      elsif event.key == :home
+      elsif event.key == Rubygame::K_HOME
         caret_to_start_of_line
-      elsif event.key == :left
+      elsif event.key == Rubygame::K_LEFT
         #puts "At: #{@caret} going #{@caret-1}, max: #{@text_string.size}"
         @caret -= 1 unless @caret == 0
         focus_caret
-      elsif event.key == :right
+      elsif event.key == Rubygame::K_RIGHT
         #puts "At: #{@caret} going #{@caret+1}, max: #{@text_string.size}"
         if @text_string
           @caret += 1 unless @caret == @text_string.size
           focus_caret
         end
-      elsif event.key == :up
+      elsif event.key == Rubygame::K_UP
         caret_move_up
-      elsif event.key == :down
+      elsif event.key == Rubygame::K_DOWN
         caret_move_down
       elsif !str.is_null?
         add_text(str)

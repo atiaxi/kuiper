@@ -168,10 +168,10 @@ class Engine
       rl.screen.fill([0,0,0])
       current.draw(rl.screen) if current
       rl.screen.flip
-      elapsed = clock.tick.seconds
+      elapsed = clock.tick / 1000.0
       current.update(elapsed) if current
-    
-      Rubygame::Clock.wait(0.05)
+
+      Rubygame::Clock.wait(50)
     
     end
     Rubygame::quit
@@ -274,13 +274,13 @@ class State
 
     ups = collide_point(x,y)
     for sprite in ups
-      if event.button == :mouse_left ||
-         event.button == :mouse_right ||
-         event.button == :mouse_middle
+      if event.button == Rubygame::MOUSE_LEFT ||
+         event.button == Rubygame::MOUSE_RIGHT ||
+         event.button == Rubygame::MOUSE_MIDDLE
         sprite.click(x,y) if sprite.respond_to?(:click)
       else
         if sprite.respond_to?(:wheel)
-          sprite.wheel(event.button == :mouse_wheel_up)
+          sprite.wheel(event.button == Rubygame::MOUSE_WHEELUP)
         end
       end
     end
@@ -476,11 +476,11 @@ class ResourceLocator
     return @screen if @screen
     Rubygame.init
     Rubygame::TTF.setup()
-    modes = [ :doublebuf ]
+    modes = Rubygame::DOUBLEBUF | Rubygame::HWSURFACE
     if fullscreen
-      mods << :fullscreen
+      modes |= Rubygame::FULLSCREEN
     end
-    @screen =  Rubygame::Screen.set_mode([width,height],32, modes)
+    @screen =  Rubygame::Screen.set_mode([width,height],0, modes)
     return @screen
   end
   
