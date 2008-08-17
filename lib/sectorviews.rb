@@ -44,7 +44,8 @@ class TranslatableSprite < OpalSprite
   # Returns a rectangle suitable for display on, say, a radar.
   # The x and y parts of the rectangle are offsets from center
   def scaled_rect(scale)
-    scaled = rect.dup
+    rect unless @rect # Make sure we've initialized our rectangle
+    scaled = @rect.dup
     scaled.w = (scaled.w * scale).to_i
     scaled.h = (scaled.h * scale).to_i
     scaled.w = 1 if scaled.w < 1

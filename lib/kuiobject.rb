@@ -280,7 +280,7 @@ class KuiObject
   def ==(other)
     #return self.deep_equals(other)
     return false unless other
-    return self.tag == other.tag
+    return self.tag.eql?(other.tag)
   end
   
   # Two objects are === if their base tags are identical.

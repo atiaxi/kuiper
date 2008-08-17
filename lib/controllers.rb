@@ -155,6 +155,7 @@ class FleetController
   attr_reader :ai_controllers
   
   attr_reader :sector, :fleet
+  attr_reader :most_hated
   
   attr_accessor :waypoint
   
@@ -162,7 +163,7 @@ class FleetController
     @fleet = fleet
     @sector = sector_state.sector
     @ai_controllers = []
-    @aggro = Array.new
+    @aggro = {}
     @aggro_check_countdown = 0
     @waypoint = nil
     @fighting = false
@@ -176,6 +177,7 @@ class FleetController
     end
     @people_who_shot_me = {}
     @people_who_shot_me.default = 0
+    @most_hated = nil
   end
   
   def alive
@@ -190,16 +192,24 @@ class FleetController
       unless get_aggro_for(ship)
         if owner
           initial = owner.feelings_for(ship.owner)
-          @aggro << Aggro.new(ship, initial)
+          @aggro[ship] = initial if initial
         end
       end
     end
-    @aggro.sort!
+    gen_most_hated
+  end
+  
+  # Generates the @most_hated variable and caches it because figuring out who's
+  # the most hated for some reason takes forever.
+  # Also, it's like genX, but more hated.
+  def gen_most_hated
+    # This will find the greatest value stored in the dictionary
+    hate,val = @aggro.min { | hate1, hate2 | hate1[1] <=> hate2[1] }
+    @most_hated = hate
   end
   
   def get_aggro_for(ship)
-    found = @aggro.detect { | aggro | aggro.toward == ship }
-    return found
+    return @aggro[ship]
   end
   
   # Used to coordinate retaliation; doesn't blab to other organizations (that's
@@ -218,24 +228,19 @@ class FleetController
     
       aggro = get_aggro_for(other.shooter)
       if aggro
-        if aggro.amount > owner.kill_on_sight
-          aggro.amount = owner.kill_on_sight
+        if aggro < owner.kill_on_sight
+          aggro = owner.kill_on_sight
         else
-          aggro.amount -= other.damage
+          aggro -= other.damage
         end
+        gen_most_hated
       else
         build_aggro_list
         aggro = get_aggro_for(other.shooter)
-        aggro.amount = owner.kill_on_sight
+        @aggro[other.shooter] = owner.kill_on_sight
       end
     end
     
-  end
-  
-  # Returns the Aggro that's the most hated.
-  def most_hated
-    build_aggro_list unless @aggro.size > 0
-    return @aggro[0]
   end
   
   def owner
@@ -281,8 +286,9 @@ class FleetController
         @aggro_check_countdown <= 0) 
       build_aggro_list
       next_target = most_hated
-      if next_target && next_target.amount <= owner.kill_on_sight
-        start_fighting_with(next_target.toward)
+      #ResourceLocator.instance.logger.debug("#{@fleet.tag}: Next target is: #{next_target.tag}")
+      if next_target && @aggro[next_target] <= owner.kill_on_sight
+        start_fighting_with(next_target)
       elsif @fighting
         # No targets we hate enough to fight, resume our duties
         stop_fighting
