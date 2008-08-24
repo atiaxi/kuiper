@@ -462,8 +462,8 @@ class MarketDialog < BuilderDialog
     if chosen
       amount = @amount.text.to_i
       selling = @rightAdapter.items.detect { |item|
-      puts "Item: #{item}, chosen; #{chosen} ===? #{item === chosen}"
-      puts "Item tag: #{item.tag}, chosen tag: #{chosen.tag}"
+      #puts "Item: #{item}, chosen; #{chosen} ===? #{item === chosen}"
+      #puts "Item tag: #{item.tag}, chosen tag: #{chosen.tag}"
       item === chosen }
       if selling
         player = @rl.repository.universe.player

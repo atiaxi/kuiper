@@ -16,8 +16,7 @@ def start_kuiper
     title = TitleScreen.new(engine)
     engine << title
     
-    Rubygame.enable_key_repeat(Rubygame::DEFAULT_KEY_REPEAT_DELAY,
-      Rubygame::DEFAULT_KEY_REPEAT_INTERVAL);
+    Rubygame.enable_key_repeat
     
     engine.hook(:backslash) { |driver| driver.running = false }
     engine.hook(:f5) do | driver |

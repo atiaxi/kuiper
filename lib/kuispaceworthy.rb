@@ -1,3 +1,5 @@
+require 'observer'
+
 require 'kuiobject'
 
 # Any objects designed to fly around in space should inherit from this
@@ -190,6 +192,9 @@ class KuiSpaceworthyBlueprint < KuiObject
 
 end
 class KuiShip < KuiSpaceworthy
+  
+  include Observable
+  
   child :cargo
   child :addons
   child :anti_addons
@@ -383,6 +388,13 @@ class KuiShip < KuiSpaceworthy
     end
   end
   
+  # Ship is being removed (can also be a despawn),
+  # inform observers
+  def die
+    changed
+    notify_observers(self, :gone)
+  end
+  
   # Returns the first anti-addon we have that shares a tag
   def find_anti_addon(addon)
     return @anti_addons.detect { |a| a.tag == addon.tag }
@@ -443,6 +455,7 @@ class KuiShip < KuiSpaceworthy
     if self.shields < 0
       damage = self.shields.abs
       self.shields = 0
+      die
     else
       damage = 0
     end

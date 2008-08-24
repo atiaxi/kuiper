@@ -9,7 +9,7 @@ require 'utility'
 # Attempt to load rubygame as a gem
 begin
   require 'rubygems'
-  gem 'rubygame', '>=2.3.0'
+  gem 'rubygame', '>=2.4.0'
 rescue LoadError
   # Nope, either no gems or no rubygame
 end
@@ -18,8 +18,8 @@ begin
   require 'rubygame'
   require 'rubygame/ftor'
   # In case we didn't get this from a gem, verify version
-  unless version_check(:rubygame, [2,3,0])
-    puts "This requires Rubygame >= 2.3.0"
+  unless version_check(:rubygame, [2,4,0])
+    puts "This requires Rubygame >= 2.4.0"
     exit
   end
 rescue LoadError

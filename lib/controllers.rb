@@ -178,6 +178,7 @@ class FleetController
     @people_who_shot_me = {}
     @people_who_shot_me.default = 0
     @most_hated = nil
+    @target = nil # Specific ship we're fighting against
   end
   
   def alive
@@ -266,32 +267,59 @@ class FleetController
 
   def start_fighting_with(who)
     # What's our action here?
-    if @fleet.under_attack == :flee
-      @ai_controllers.each { |aic| aic.flee }
-    elsif @fleet.under_attack == :fight
-      @fighting = true
-      @ai_controllers.each { |aic| aic.fight(who, self) }
+    if @ai_controllers[0] && @ai_controllers[0].leaving
+      stop_fighting
+    else
+      if @fleet.under_attack == :flee
+        @ai_controllers.each { |aic| aic.flee }
+      elsif @fleet.under_attack == :fight
+        @fighting = true
+        @target = who
+        @ai_controllers.each { |aic| aic.fight(who, self) }
+        @target.add_observer(self)
+      end
     end
   end
   
+  # Re-sets the ai controller behavior to its default.
+  # Removes us as an observer of the target, if any.
   def stop_fighting
     @fighting = false
     @ai_controllers.each do | aic |
-      aic.behavior = setup_behavior(ship,@fleet.behavior)
+      aic.behavior = setup_behavior(aic.model,@fleet.behavior)
     end
+    @target.delete_observer(self) if @target
   end
   
-  def update(delay)
-    if (@aggro.size == 0 ||
-        @aggro_check_countdown <= 0) 
-      build_aggro_list
-      next_target = most_hated
-      #ResourceLocator.instance.logger.debug("#{@fleet.tag}: Next target is: #{next_target.tag}")
-      if next_target && @aggro[next_target] <= owner.kill_on_sight
-        start_fighting_with(next_target)
-      elsif @fighting
-        # No targets we hate enough to fight, resume our duties
-        stop_fighting
+  def update(*args)
+    if args.size == 1
+      update_fleet(args[0])
+    else
+      # It's an update from a ship
+      who, action = args
+      if action == :gone
+        @target = nil
+        @aggro.delete(who)
+        @people_who_shot_me.delete(who)
+        stop_fighting # Removes us as observer
+      end
+    end
+  end
+    
+  def update_fleet(delay)
+    # Don't bother with aggro if we're on the way out.
+    unless @ai_controllers[0] && @ai_controllers[0].leaving
+      if (@aggro.size == 0 ||
+          @aggro_check_countdown <= 0) 
+        build_aggro_list
+        next_target = most_hated
+        #ResourceLocator.instance.logger.debug("#{@fleet.tag}: Next target is: #{next_target.tag}")
+        if next_target && @aggro[next_target] <= owner.kill_on_sight
+          start_fighting_with(next_target)
+        elsif @fighting
+          # No targets we hate enough to fight, resume our duties
+          stop_fighting
+        end
       end
     end
     
@@ -378,6 +406,7 @@ class AIController < ShipController
   attr_accessor :stay
   attr_accessor :behavior
   attr_accessor :fleet
+  attr_reader :leaving
   
   def initialize(model, sector_state)
     super
@@ -385,6 +414,7 @@ class AIController < ShipController
     @stay = nil
     @fleet = nil
     @behavior = CrazyBehavior.new(@model)
+    @fb = nil
   end
   
   # Force this ship to take up fighting behavior against the given target,
@@ -396,7 +426,8 @@ class AIController < ShipController
   # Force this ship to take up the fleeing behavior
   def flee
     @leaving = true
-    @behavior = FleeBehavior.new(@model)
+    @fb = FleeBehavior.new(@model)
+    @behavior = @fb
   end
   
   def kill
@@ -408,7 +439,7 @@ class AIController < ShipController
     super
     if @alive
       # If our time's up, transition to jumping out
-      if @fleet.current_stay > @stay && !@leaving
+      if @fleet.current_stay > @stay && @fb != @behavior
         flee
       end
       @behavior.update(delay)

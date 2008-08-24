@@ -427,10 +427,12 @@ class SectorState < Opal::State
       @props.enabled = false
       self << @props
     else
-      @radar = RadarBox.new(self,
-        SliderBox::ANCHOR_BOTTOM, @rl.screen.height, -1, 10)
-      @radar.depth = DEPTH_PLAYER
-      @radar.show
+      unless @radar
+        @radar = RadarBox.new(self,
+          SliderBox::ANCHOR_BOTTOM, @rl.screen.height, -1, 10)
+        @radar.depth = DEPTH_PLAYER
+        @radar.show
+      end
     
       @log = LogBox.new(SliderBox::ANCHOR_BOTTOM, @rl.screen.height, -1,
         @radar.rect.right + 10)
