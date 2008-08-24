@@ -7,13 +7,13 @@ require 'engine'
 class TC_Options < Test::Unit::TestCase
   
   def test_keydown
-    good_event = Rubygame::KeyDownEvent.new(:a,[])
+    good_event = Rubygame::KeyDownEvent.new(Rubygame::K_A,[])
     bad_event = Rubygame::KeyDownEvent.new(:x, [])
-    canceler = Rubygame::KeyUpEvent.new(:a, [])
+    canceler = Rubygame::KeyUpEvent.new(Rubygame::K_A, [])
     bad_canceler = Rubygame::KeyUpEvent.new(:x, [])
     right_out = Rubygame::MouseMotionEvent.new([0,0],[0,0],0)
     
-    kdc = KeyDownControl.new('Fire lasers',:a)
+    kdc = KeyDownControl.new('Fire lasers',Rubygame::K_A)
     assert(kdc === (good_event))
     assert !(kdc === bad_event)
     assert !(kdc === canceler)
@@ -28,7 +28,7 @@ class TC_Options < Test::Unit::TestCase
     bad_event = Rubygame::JoyAxisEvent.new(1, 1, 30)
     good_cancel = Rubygame::JoyAxisEvent.new(0, 1, -30)
     good_cancel2 = Rubygame::JoyAxisEvent.new(0, 1, 0)
-    right_out = Rubygame::KeyUpEvent.new(:a, [])
+    right_out = Rubygame::KeyUpEvent.new(Rubygame::K_A, [])
     
     jac = JoyAxisControl.new('Turn left', 0, 1, true)
     assert(jac === (good_event))
@@ -48,7 +48,7 @@ class TC_Options < Test::Unit::TestCase
     down_event = Rubygame::JoyBallEvent.new(1, 1, [ 0, 10])
     weak_upleft = Rubygame::JoyBallEvent.new(1,1, [ -1, -1])
     wrong_joystick = Rubygame::JoyBallEvent.new(2, 1 ,[0, -10])
-    right_out = Rubygame::KeyUpEvent.new(:a, [])
+    right_out = Rubygame::KeyUpEvent.new(Rubygame::K_A, [])
     
     up_jbc = JoyBallControl.new('up',1,1,0,-5)
     upleft_jbc = JoyBallControl.new('upleft',1,1,-5,-5)
@@ -73,7 +73,7 @@ class TC_Options < Test::Unit::TestCase
     wrong_stick = Rubygame::JoyDownEvent.new(2,1)
     wrong_stick_cancel = Rubygame::JoyUpEvent.new(2,1)
     wrong_button = Rubygame::JoyDownEvent.new(1,2)
-    right_out = Rubygame::KeyUpEvent.new(:a, [])
+    right_out = Rubygame::KeyUpEvent.new(Rubygame::K_A, [])
     
     jdc = JoyDownControl.new('Kill Skuls', 1, 1)
     assert jdc === right_event
@@ -90,7 +90,7 @@ class TC_Options < Test::Unit::TestCase
     wrong_stick = Rubygame::JoyHatEvent.new(4,1,Rubygame::HAT_LEFT)
     wrong_hat = Rubygame::JoyHatEvent.new(1,12,Rubygame::HAT_LEFT)
     wrong_direction = Rubygame::JoyHatEvent.new(1,1,Rubygame::HAT_LEFTUP)
-    right_out = Rubygame::KeyUpEvent.new(:a, [])
+    right_out = Rubygame::KeyUpEvent.new(Rubygame::K_A, [])
     
     jhc = JoyHatControl.new('Leftier', 1, 1, Rubygame::HAT_LEFT)
     assert jhc === right_event
@@ -103,12 +103,12 @@ class TC_Options < Test::Unit::TestCase
   end
   
   def test_mousedown
-    right_event = Rubygame::MouseDownEvent.new( [0,0],:mouse_left)
-    canceler = Rubygame::MouseUpEvent.new( [0,0], :mouse_left)
-    wrong_button = Rubygame::MouseDownEvent.new( [0,0], :mouse_right)  
-    right_out = Rubygame::KeyUpEvent.new(:a, [])
+    right_event = Rubygame::MouseDownEvent.new( [0,0],Rubygame::MOUSE_LEFT)
+    canceler = Rubygame::MouseUpEvent.new( [0,0], Rubygame::MOUSE_LEFT)
+    wrong_button = Rubygame::MouseDownEvent.new( [0,0], Rubygame::MOUSE_RIGHT)  
+    right_out = Rubygame::KeyUpEvent.new(Rubygame::K_A, [])
     
-    mdc = MouseDownControl.new('Fire Lasers', :mouse_left)
+    mdc = MouseDownControl.new('Fire Lasers', Rubygame::MOUSE_LEFT)
     
     assert mdc === right_event
     assert mdc.canceled_by?(canceler)
