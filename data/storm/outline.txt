@@ -1,0 +1,360 @@
+
+= The Coming Storm =
+
+  Humanity is alone among the stars and, as always when humanity has
+  only itself to deal with, war is constant.  An inner circle of
+  systems are allied against separatist rebels who seek their
+  independence.  It would be a tale told a thousand times, if there
+  were not much worse in store....
+
+
+== Plot ==
+
+There are three phases to the module's progression
+
+=== Act I: The Calm Before ===
+
+  The player is a newly licensed ship pilot, and has the most
+  rinky-dink ship possible.  They will start in Alliance territory
+  (likely Earth) and be able to move freely from there.  Early
+  missions will be deliveries and, in outlying sectors, an easy bounty
+  hunt or two
+
+  Every so often, the player will see propaganda about the war.
+  Eventually, if they stick around Alliance areas enough and gain
+  renown against pirates, they may be approached by Alliance military
+  for a more active role in the war.
+
+  Rebel space is easy to gain entrance to; at the beginning of the
+  game neither side will have an opinion about the player, and thus
+  the player is safe from firefights.  Pirates tend to only operate at
+  the more outward fringes.  Rebel space features no propaganda but
+  plenty of shady-seeming deals.   Gaining renown against pirates is
+  also a good way to gain renown among the Rebels.
+
+
+==== The War ====
+
+  Whichever side the player chooses will have them first run supply
+  missions (which will gain them more renown for their chosen side).
+  Bounty hunts for enemy scouts, as well as scouting missions, will be
+  made available.  Plot missions will eventually allow the player to
+  give supplies to the front and/or perform sabotage on
+  stations/planets.  Neutral sectors will become controlled by the
+  player's side.
+
+
+==== The Gate ====
+
+  As a side series of missions, a neutral group of scientists will
+  hire the player pretty much almost out of the gate.  They will have
+  random scouting and delivery missions, but not much else.  At a
+  certain point in the war, however, the player will be given a plot
+  mission to use a scanning in some sector (very similar to random
+  missions).  There they will discover the Gate.
+
+
+  There are two more plot missions for the gate.  One is similar to
+  the first (scientists explain they need more details on the gate,
+  player escorts their ships there).  The second comes some time later
+  when the scientists (at their base) invent a machine they think can
+  trigger the gate remotely and have you deliver it.  When the player
+  does so, the gate opens and the Medreggi flow through, ending Act I.
+
+
+  (Act II begins when the player jumps out of the sector.  If they
+  take the time to look around before leaving, they may see the
+  Medreggi Command Ship)
+
+
+=== Act II: Eye ===
+
+==== Reconciliation ====
+
+  At first, nobody but the scientists is aware of the Medreggi
+  influence.  They will send you on diplomatic missions to whichever
+  side of the war you support.
+
+
+  Medreggi ships will begin appearing in the formerly neutral zones
+  after that initial mission.  Your side of the war will call for
+  peace talks and have you sent as an emissary to a station of the
+  other side.  Renown will probably be reset at this point so the
+  player doesn't get blown up; either that or make Medreggi ships so
+  common that defense forces are busy.
+
+
+  In light of the actual alien invasion, the other side agrees to
+  concede whatever points your side had.  If you're rebel, this means
+  that while you'll be part of the government in name, you (and all
+  planets) have much freer run of internal politics, and better
+  support.  If you're alliance, this is essentially the rebels
+  renouncing their uprising and being absorbed into the greater
+  alliance.
+
+
+  After this, the old Alliance and Rebel organizations are removed and
+  replaced with Humanity.  Pirates continue but are less active
+  (especially in Rebel space)
+
+
+==== Lingering Hatred ====
+
+  Even though all of humanity is supposedly united against the
+  invaders, some are holding on to their old ways.  The player may be
+  approached for sabotage missions against the player's old foe.  They
+  can take them or turn them in (upon turning in, all future sabotage
+  missions have different objectives) without a renown hit.  Even
+  these missions end in Act III
+
+
+==== The New Face of War ====
+
+  The player will receive random missions from any mission board for
+  resupply and recon to help with the war effort.  
+
+
+  The scientists will be providing their own recon missions that have
+  the player going deep into now-Medreggi owned territory for scans.
+  These incursions will be especially resisted in the target sector.
+  A plot mission available at this point is to go to the initial gate
+  location without weapons as a show of good faith.  This will be as
+  aggresively resisted as the incursions to other sectors were.  (The
+  Command Ship will not appear at this location in Act II)
+
+
+  At some point, the player will have a mission to capture a Medreggi ship.
+
+  There are no other plot missions for the war effort except for the
+  seemingly-random "Defend location X" missions.  While these require
+  little other than showing up in the sector and maybe blowing up a
+  fleet or two, they will reveal patterns.  After a few of these, the
+  scientists will realize that the Medreggi resist any space-based
+  defense but completely ignore the planets.
+
+
+==== Reaching Out ====
+
+  After the initial gate outreach and the scientists' realization that
+  the Medreggi spare planets, they theorize that something about the
+  Ships is aggravating them.  Thus, any ship flying 'silently' would
+  go unremarked.  The scientists want to both test this theory and
+  find out more about the gate, so your scan is to only include the
+  gate while flying silenty.
+
+
+  The player will be equipped with a free 'Gate Scanner' secondary
+  weapon at this point.  Medreggi ships will still attack en route,
+  but at the destination it will initially appear as though the ships
+  are non-hostile.  Only upon the player's use of the gate scanner
+  (with anything as a target) will they turn hostile.
+
+
+  This delights the scientists - not only do they get a good scan of
+  the gate to consider, they also realize that it is the scanners
+  themselves which are setting off the Medreggi's aggression.  They
+  confirm this suspicion with the captured ship; its sensors never
+  seemed to work, but once towed out to deep space (escort mission?)
+  and other ships go silent, they work excellently.
+
+
+  The Medreggi language is impossible to decipher, but the ship's
+  storage is not.  Using the sensors, the ship can locate the Command
+  Ship.  The player will have a choice between flying the Medreggi
+  Warship or disguising their own (in case they don't want to give it
+  up)
+
+
+  The scientists have prepared data on humanity, including languages
+  and how to adjust Medreggi sensors to filter out the noise that the
+  humans' sensors are causing.  This information is already aboard the
+  Warship (or the player's ship) in a format it is hoped the Medreggi
+  will understand.  It will be uploaded upon docking with the Command
+  Ship.  This is probably a suicide mission, but the player thus far
+  established that they are one of the few who can survive impossible
+  odds, etc.
+
+
+  Renown with the Medreggi is reset again so that they are non-hostile
+  to the player.
+
+
+  Upon locating the Command Ship (it'll be in a previously empty
+  sector and landable) and the player docking, Act III commences.
+
+
+=== Act III: Any Port ===
+
+  The Medreggi understand and offer profuse apologies; they had indeed
+  assumed the scanners were part of an attack, and as all their people
+  are on the ships, they had to defend themselves.  They are coming
+  from a dying universe ("Last World") to a dying universe ("Current
+  World", i.e. the player's) and searching for another gate (to "Next
+  World"), as they believe what devoured their universe is en route.
+  They regard the player as particularly honored, as the player was
+  the one who activated the gate and allowed them to escape to Current
+  World.
+
+
+  Medreggi colony ships will now appear.  Renown will once again reset
+  for everyone so that Medreggi are non-hostile to all.  The former
+  war effort will give the player "Deliver Diplomats" and "Deliver
+  Aid" missions.  Scientists will give "Deliver/Retrieve Scientists"
+  missions in the hopes that they can learn something.  Medreggi
+  themselves will give you recon missions to attempt to find the other
+  gate. (at this point, to no avail)
+
+
+==== Strangelets ====
+
+  Having been given free passage to the gate sector, the scientists
+  will give more recon missions to scan it.  The Medreggi will have
+  left it by this point, but after some time unidentified black spots
+  identified as "Strangelets" appear.  They're invincible but do no
+  damage (unless I can figure out a cool way for them to do so).  The
+  scientists are confused and have no idea what's going on, so they
+  send you to bring the data to the Command Ship.
+
+
+  The Medreggi are horrified at this data - they warn the player not
+  to go to that sector, as it will soon be devoured the way their old
+  universe was.  The Strangelets are a sign that this will occur.
+  After the player gets this message, the gate sector will vanish.
+
+
+  From this point on, the Medreggi will have several missions
+  requesting pickup of large amounts of materials to be dropped off at
+  the Command Ship and various Foundries.
+
+
+  Scientists will send you to investigate gate sector but it will no
+  longer be on the map.  Upon arrival in the buffer sector, the player
+  can confirm that it is strangelet-free.  Upon return, the former war
+  leadership will think the threat over, but both the Medreggi and
+  Scientists will send you on occasional 'monitor the situation in
+  buffer' missions.  One of these missions will discover Strangelets.
+
+ 
+  Old war leadership will send you to Command Ship to ask for Medreggi
+  advice.  Medreggi have been building more colony ships for humanity,
+  having known in advance that the universe was doomed (The storm goes
+  from universe to universe; the Medreggi attempt to save what they
+  can from each one and escape to the next).  They offer to help
+  evacuate any human planet that needs it, in return for your help in
+  locating the gate.
+
+
+  From this point forward, the random sectors that Medreggi missions
+  send you include the actual second gate sector as a possibility.
+
+
+==== Evacuation ====
+
+  Any inhabited sector that shows Strangelets will post an "Evacuate
+  <planet>" mission.  The player has X days until that sector is
+  destroyed entirely.  All the player has to do is go to the planet,
+  they will call the Medreggi upon it to perform the actual
+  evacuation; evacuations are tracked.
+
+
+  After a sector is destroyed, any adjacent sector will be filled with
+  Strangelets Y days afterward.
+
+
+  The former war council will notice that, if things proceed on this
+  course, a large portion of formerly-rebel space will be cut off.  In
+  a show of reconciliation for humanity, they will ask the player to
+  evacuate the entire area (it will be posted as above).  When the
+  area is cut off, all sectors in it are treated as destroyed.
+
+
+  The instant the player finds the second gate, they will be asked to
+  return to the Command Ship.  The Medreggi will waste no time
+  evacuating their warships, leaving only colony ships for humanity
+  and an offer of alliance and information about what is on the other
+  side of the gate  (The Command Ship will be available in the second
+  gate sector until the end of the game).
+
+
+  The former war council will post a mission to have the player get
+  info from the Command Ship at its new location and return: The
+  outlook is good, nobody appears to be on the other side of the gate,
+  and there are habitable worlds.  The council tells the player that
+  evacuations are top priority.
+
+
+  When all sectors are destroyed, empty, evacuated, or any combination
+  of the three, the final mission is given: Evacuate through the gate.
+
+
+==== Epilogue ====
+
+  Humanity lives because of the Medreggi, and discover that the
+  Medreggi are actually a number of different races that have been
+  saved over untold numbers of years.  Thanks to the player, X
+  million/billion/trillion people are alive (depending on evac stats).
+  The Medreggi do not know when the Strangelets will come again,
+  sometimes it has been mere minutes, other times hundreds of years.
+  They advise against settling anywhere, as they will only have to be
+  evacuated again.
+
+
+  Humanity disagrees.  "We will settle.  We will rebuild.  And one
+  day, we will return"
+
+
+  <The End>
+
+== Factions ==
+
+=== Alliance ===
+
+  The alliance are the inner systems, the ones most linked to and
+  easiest to keep communications to.  These systems are, for the most
+  part, willing participants in the alliance.  Originally formed to
+  defend themselves against Pirates and the early imagined threat of
+  alien invasion, they have taken an increasingly heavy-handed role in
+  government.
+
+
+=== Rebel ===
+
+  Outer colonies were and are, in general, poorer than the inner
+  colonies, as they are more recently developed.  Furthermore, though
+  traders love dealing with newly formed colonies, there is an
+  increasing feeling that the alliance would rather keep business to
+  itself.  After being, from their perspective, neglected, the Rebels
+  formed their own much more loosely held government.  It was this
+  action which got the Alliance's attention.
+
+
+=== Pirates ===
+
+  As much as the Rebel would like to pretend they have the high
+  ground, are fighting for freedom, etc, in reality they have very
+  loose control of their systems and thus the outer parts of rebel
+  territory are rife with banditry.  Pirates also operate in other
+  remote areas, though often not in as strong a concentration.  Rebels
+  will occasionally bribe pirates to operate as mercenaries for them
+  in their conflicts.
+
+
+=== Scientists ===
+
+  The driving force of the main plot, the scientist faction is more
+  powerful in combat than you'd expect nerds to be.  Their goals are
+  exploration and, as such, they tend to run into Pirates.  For this
+  reason they arm themselves surprisingly well; all non-military ships
+  were designed by this faction.  Always offers delivery and scout
+  missions, occasionally missions against Pirates.
+
+
+=== Medreggi ===
+
+  Aliens from "Previous World", they at first think humans are
+  attacking them by blinding their sensors; this is due to their
+  superior sensor technology being over-sensitive for our universe and
+  thus blinded by routine scans.  They retaliate quickly.  Only after
+  some time do humans come to realize the mistake, and an
+  understanding is reached.
+
