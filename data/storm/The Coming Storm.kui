@@ -1,1 +1,234 @@
-/home/roger/.kuiper/The Coming Storm/The Coming Storm.kui
+<?xml version='1.0' encoding='UTF-8'?>
+<universe name='The Coming Storm' tag='universe' description=' Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....'>
+  <child name='map'>
+    <map tag='new_object'>
+      <child name='sectors'>
+        <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' The cradle of humankind, the Sol sector is where it all began. '>
+          <child name='planets'/>
+          <child name='projectiles'/>
+          <child name='halos'/>
+          <child name='killed_fleets'/>
+          <child name='potential_fleets'/>
+          <child name='links_to'>
+            <sector name='Centauri' x='54.0' visited='false' y='-60.0' tag='sector_centauri' description=' Binary systems are inherently more difficult to find hyperspace links through, but given Centauri&apos;s relative closeness to the Sol sector it made for an easy first target.'>
+              <child name='planets'/>
+              <child name='projectiles'/>
+              <child name='halos'/>
+              <child name='killed_fleets'/>
+              <child name='potential_fleets'/>
+              <child name='links_to'>
+                <ref tag='sector_sol'/>
+                <sector name='Farpost' x='-71.0' visited='false' y='-75.0' tag='sector_farpost' description=' Hyperspace research stagnated when the burgeoning human alliance reached this sector.  For a very long time, it was in fact the furthest post from human lands.'>
+                  <child name='planets'/>
+                  <child name='projectiles'/>
+                  <child name='halos'/>
+                  <child name='killed_fleets'/>
+                  <child name='potential_fleets'/>
+                  <child name='links_to'>
+                    <ref tag='sector_centauri'/>
+                  </child>
+                  <child name='active_fleets'/>
+                  <child name='plot'/>
+                </sector>
+                <sector name='Freehold' x='201.0' visited='false' y='4.0' tag='sector_freehold' description=' Freehold was the first experiment in independence from the central Earth government.  Though comparatively short-lived due to lack of resources, its example has been remembered by every rebel group since.'>
+                  <child name='planets'/>
+                  <child name='projectiles'/>
+                  <child name='halos'/>
+                  <child name='killed_fleets'/>
+                  <child name='potential_fleets'/>
+                  <child name='links_to'>
+                    <ref tag='sector_centauri'/>
+                    <sector name='Preview' x='129.0' visited='false' y='112.0' tag='sector_preview' description=' Preview&apos;s only habitable planet was known for quite some time before settlement, which resulted in a number of squatters who appeared before they were officially allowed to.'>
+                      <child name='planets'/>
+                      <child name='projectiles'/>
+                      <child name='halos'/>
+                      <child name='killed_fleets'/>
+                      <child name='potential_fleets'/>
+                      <child name='links_to'>
+                        <sector name='Sirius' x='31.0' visited='false' y='77.0' tag='sector_sirius' description=' One of the first working hyperspace lanes led to this sector.  Its importance has only increased over time.'>
+                          <child name='planets'/>
+                          <child name='projectiles'/>
+                          <child name='halos'/>
+                          <child name='killed_fleets'/>
+                          <child name='potential_fleets'/>
+                          <child name='links_to'>
+                            <ref tag='sector_sol'/>
+                            <sector name='Void' x='-73.0' visited='false' y='55.0' tag='sector_void' description=' Void was the first sector discovered without even a star.  This discovery led to changes in hyperspace theory that allowed humankind to spread even farther.'>
+                              <child name='planets'/>
+                              <child name='projectiles'/>
+                              <child name='halos'/>
+                              <child name='killed_fleets'/>
+                              <child name='potential_fleets'/>
+                              <child name='links_to'>
+                                <ref tag='sector_sirius'/>
+                                <sector name='Galaxy Survey 1' x='-41.0' visited='false' y='140.0' tag='sector_gs1' description=' When it became known that empty sectors could play host to hyperspace lanes, the Galaxy Survey was comissioned.  It was responsible for discovering many of the outlying sectors, but had a poor track record for selecting inhabitable ones.'>
+                                  <child name='planets'/>
+                                  <child name='projectiles'/>
+                                  <child name='halos'/>
+                                  <child name='killed_fleets'/>
+                                  <child name='potential_fleets'/>
+                                  <child name='links_to'>
+                                    <ref tag='sector_sirius'/>
+                                    <ref tag='sector_void'/>
+                                    <sector name='Galaxy Survey 14' x='-3.0' visited='false' y='220.0' tag='sector_gs14' description=' Galaxy Survey 14 contains very little more than the lanes which connect it to the rest of the galaxy.'>
+                                      <child name='planets'/>
+                                      <child name='projectiles'/>
+                                      <child name='halos'/>
+                                      <child name='killed_fleets'/>
+                                      <child name='potential_fleets'/>
+                                      <child name='links_to'>
+                                        <sector name='Keyhole' x='79.0' visited='false' y='185.0' tag='sector_keyhole' description=' Home of the so-called &apos;keyhole nebula&apos;, this sector holds value mostly to scientists who want to study potential star formation firsthand.'>
+                                          <child name='planets'/>
+                                          <child name='projectiles'/>
+                                          <child name='halos'/>
+                                          <child name='killed_fleets'/>
+                                          <child name='potential_fleets'/>
+                                          <child name='links_to'>
+                                            <ref tag='sector_sirius'/>
+                                            <ref tag='sector_gs14'/>
+                                          </child>
+                                          <child name='active_fleets'/>
+                                          <child name='plot'/>
+                                        </sector>
+                                        <ref tag='sector_gs1'/>
+                                        <sector name='Paradise' x='154.0' visited='false' y='255.0' tag='sector_paradise' description=' The Paradise sector was named on its initial survey.  It was later discovered that the previously-thought-perfect planet was anything but paradise.'>
+                                          <child name='planets'/>
+                                          <child name='projectiles'/>
+                                          <child name='halos'/>
+                                          <child name='killed_fleets'/>
+                                          <child name='potential_fleets'/>
+                                          <child name='links_to'>
+                                            <ref tag='sector_gs14'/>
+                                            <sector name='Raw' x='173.0' visited='false' y='163.0' tag='sector_raw' description=' Uninhabitable by most standards, this sector is peopled mainly by those extracting the many raw materials available.'>
+                                              <child name='planets'/>
+                                              <child name='projectiles'/>
+                                              <child name='halos'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_preview'/>
+                                                <ref tag='sector_paradise'/>
+                                              </child>
+                                              <child name='active_fleets'/>
+                                              <child name='plot'/>
+                                            </sector>
+                                          </child>
+                                          <child name='active_fleets'/>
+                                          <child name='plot'/>
+                                        </sector>
+                                      </child>
+                                      <child name='active_fleets'/>
+                                      <child name='plot'/>
+                                    </sector>
+                                  </child>
+                                  <child name='active_fleets'/>
+                                  <child name='plot'/>
+                                </sector>
+                              </child>
+                              <child name='active_fleets'/>
+                              <child name='plot'/>
+                            </sector>
+                            <ref tag='sector_preview'/>
+                            <sector name='Incorporated' x='116.0' visited='false' y='43.0' tag='sector_incorporated' description=' The hyperspace lane to Incorporated was discovered by a private company.  At the time, humankind was spread thinly, and there was little interest in further colonization, allowing the company that discovered the lane a monopoly over its use.'>
+                              <child name='planets'/>
+                              <child name='projectiles'/>
+                              <child name='halos'/>
+                              <child name='killed_fleets'/>
+                              <child name='potential_fleets'/>
+                              <child name='links_to'>
+                                <ref tag='sector_sirius'/>
+                              </child>
+                              <child name='active_fleets'/>
+                              <child name='plot'/>
+                            </sector>
+                            <ref tag='sector_keyhole'/>
+                            <ref tag='sector_gs1'/>
+                          </child>
+                          <child name='active_fleets'/>
+                          <child name='plot'/>
+                        </sector>
+                        <ref tag='sector_freehold'/>
+                        <ref tag='sector_raw'/>
+                      </child>
+                      <child name='active_fleets'/>
+                      <child name='plot'/>
+                    </sector>
+                  </child>
+                  <child name='active_fleets'/>
+                  <child name='plot'/>
+                </sector>
+              </child>
+              <child name='active_fleets'/>
+              <child name='plot'/>
+            </sector>
+            <ref tag='sector_sirius'/>
+          </child>
+          <child name='active_fleets'/>
+          <child name='plot'/>
+        </sector>
+        <ref tag='sector_centauri'/>
+        <ref tag='sector_sirius'/>
+        <ref tag='sector_farpost'/>
+        <ref tag='sector_void'/>
+        <ref tag='sector_preview'/>
+        <ref tag='sector_incorporated'/>
+        <ref tag='sector_freehold'/>
+        <ref tag='sector_keyhole'/>
+        <ref tag='sector_gs1'/>
+        <ref tag='sector_gs14'/>
+        <ref tag='sector_raw'/>
+        <ref tag='sector_paradise'/>
+        <sector name='Delete Me' x='177.0' visited='false' y='162.0' tag='new_object' description=' '>
+          <child name='planets'/>
+          <child name='projectiles'/>
+          <child name='halos'/>
+          <child name='killed_fleets'/>
+          <child name='potential_fleets'/>
+          <child name='links_to'/>
+          <child name='active_fleets'/>
+          <child name='plot'/>
+        </sector>
+      </child>
+    </map>
+  </child>
+  <child name='player'>
+    <player tag='player' credits='1000.0'>
+      <child name='org'>
+        <org killing_mod='-50.0' name='The Player' friendly='500.0' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_player' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' friendly_multiplier='0.5'>
+          <child name='feelings'>
+            <relation feeling='1000000'>
+              <child name='target_org'>
+                <ref tag='org_player'/>
+              </child>
+            </relation>
+          </child>
+        </org>
+      </child>
+      <child name='completed_missions'/>
+      <child name='start_ship'>
+        <ship velocity_x='0.0' name='Scout' velocity_y='0.0001' facing_x='0.0' price='0.0' x='0.0' facing_y='-1.0' armor='100.0' y='0.0' shields='100.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_bare' jumping_progress='0.0'>
+          <child name='ammo'/>
+          <child name='weapons'/>
+          <child name='cargo'/>
+          <child name='addons'/>
+          <child name='itinerary'/>
+          <child name='owner'>
+            <ref tag='org_player'/>
+          </child>
+          <child name='target'/>
+          <child name='blueprint'>
+            <shipblueprint armor_regen='0.005' name='Scout' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.01' hardpoints='1.0' max_armor='100.0' max_shields='100.0' max_fuel='100.0'/>
+          </child>
+          <child name='secondaries'/>
+          <child name='anti_addons'/>
+        </ship>
+      </child>
+      <child name='start_sector'>
+        <ref tag='sector_sol'/>
+      </child>
+      <child name='on_planet'/>
+      <child name='missions'/>
+      <child name='flags'/>
+    </player>
+  </child>
+</universe>
