@@ -3,4 +3,5 @@
 .settings
 cloc.sh
 html
-kuiper
+kuiper_linux
+pkg

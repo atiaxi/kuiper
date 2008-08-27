@@ -11,6 +11,11 @@ def main
   root << ["Development",devs]
   #devs = (root["Development"] = [])
   devs << ['Created By', 'Roger Ostrander']
+  devs << ['Snippets From', 'Why the Lucky Stiff']
+  devs << ['','AI for game programmers (TODO: Get full cite)']
+  # TODO: Put text of LGPL somewhere for this
+  devs << ['rubyscript2exe.rb courtesy', 'Erik Veenstra']
+  devs << ['','http://www.erikveen.dds.nl/rubyscript2exe/index.html']
   
   notmine = []
   root << ["Other Art", notmine]

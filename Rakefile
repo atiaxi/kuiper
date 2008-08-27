@@ -45,6 +45,7 @@ Rake::GemPackageTask.new(gem_spec) do |pkg|
   pkg.need_tar = true
   pkg.need_tar_gz = true
   pkg.need_tar_bz2 = true
+  pkg.package_files.include([ "Rakefile", "credits.yml"])
 end
 
 Rake::TestTask.new do |t|
@@ -59,3 +60,22 @@ Rake::RDocTask.new do |rd|
   rd.rdoc_files.include("lib/**/*.rb")
   rd.rdoc_files.include("tests/**/*.rb")
 end
+
+# Adopted from whytheluckystiff:
+# http://redhanded.hobix.com/inspect/churningRubyIntoExe.html
+
+ RUBYSCRIPT2EXE   = ENV['RUBYSCRIPT2EXE'] || 'bin/rubyscript2exe.rb'
+ RUBY_MAIN_SCRIPT = ENV['RUBYMAINSCRIPT'] || 'bin/kuiper'
+ EXEC_TARGET      = File.join(RUBY_MAIN_SCRIPT.sub(/rb$/, 'exe') )
+
+ file :executable do | t |
+   puts RUBYSCRIPT2EXE
+   unless File.exist?(RUBYSCRIPT2EXE)
+     raise RuntimeError.new("rubyscript2exe.rb not found " +
+       "pass with RUBYSCRIPT2EXE=/path/to/rubyscript2.rb")
+   end
+   sh %{ruby "#{RUBYSCRIPT2EXE}" #{RUBY_MAIN_SCRIPT}}
+   #File.move(EXEC_TARGET, 'build')
+   #puts "Created executable file build/#{EXEC_TARGET}.exe" 
+   puts "Done"
+ end
