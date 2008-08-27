@@ -45,7 +45,7 @@ Rake::GemPackageTask.new(gem_spec) do |pkg|
   pkg.need_tar = true
   pkg.need_tar_gz = true
   pkg.need_tar_bz2 = true
-  pkg.package_files.include([ "Rakefile", "credits.yml"])
+  pkg.package_files.include([ "Rakefile", "credits.yml", "kuiper_linux"])
 end
 
 Rake::TestTask.new do |t|
