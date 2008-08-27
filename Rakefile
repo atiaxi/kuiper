@@ -79,3 +79,6 @@ end
    #puts "Created executable file build/#{EXEC_TARGET}.exe" 
    puts "Done"
  end
+
+task :default => [:deploy]
+task :deploy => [:executable, :package]
