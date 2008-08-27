@@ -396,15 +396,15 @@ class MapState < Opal::State
   def update(delay)
     super(delay)
     old_x, old_y = @center.topleft
-    if @keyStatus[:up]
+    if @keyStatus[Rubygame::K_UP]
       @center.y -= SCROLL_SPEED
-    elsif @keyStatus[:down]
+    elsif @keyStatus[Rubygame::K_DOWN]
       @center.y += SCROLL_SPEED
     end
     
-    if @keyStatus[:left]
+    if @keyStatus[Rubygame::K_LEFT]
       @center.x -= SCROLL_SPEED
-    elsif @keyStatus[:right]
+    elsif @keyStatus[Rubygame::K_RIGHT]
       @center.x += SCROLL_SPEED
     end
     if @center.x != old_x || @center.y != old_y

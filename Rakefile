@@ -1,18 +1,19 @@
 #!/usr/bin/env ruby
 
 require 'rake'
-require 'rake/runtest'
+require 'rake/testtask'
 require 'rake/rdoctask'
 require 'rake/gempackagetask'
 require 'rubygems'
 
 require 'lib/utility'
 
+$STRING_KUI_VERSION = $KUIPER_VERSION.join(".")# Our version number 
+                                               # is [major,minor,bug]
 gem_spec = Gem::Specification.new do |s|
   s.name     = "kuiper" # The name of our gem
   s.bindir   = "bin"    # The directory of the script to start the game
-  s.version  = $KUIPER_VERSION.join(".") # Our version number 
-                                         # is [major,minor,bug]
+  s.version  = $STRING_KUI_VERSION
   s.author   = "Roger Ostrander" # Me
   s.email    = "denor@users.sourceforge.net" # Me again
   s.homepage = "http://llynmir.net/projects/kuiper/" # My trac, for now
@@ -41,13 +42,15 @@ gem_spec = Gem::Specification.new do |s|
 end
 
 Rake::GemPackageTask.new(gem_spec) do |pkg| 
-  pkg.need_tar_bz2 = true
-  pkg.need_zip = true
   pkg.need_tar = true
+  pkg.need_tar_gz = true
+  pkg.need_tar_bz2 = true
 end
 
-task :test do 
-  Rake.run_tests 'tests/tests.rb'
+Rake::TestTask.new do |t|
+  t.libs << "tests"
+  t.test_files = FileList['tests/tests.rb']
+  t.verbose=true
 end
 
 Rake::RDocTask.new do |rd|
