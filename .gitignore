@@ -2,7 +2,5 @@
 .project
 .settings
 cloc.sh
-data/Tutorial.kui
 html
-images/salvage.png
 kuiper

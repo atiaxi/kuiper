@@ -457,6 +457,7 @@ class ResourceLocator
       result = path_from_dir_for(dir,filename)
       return result if result
     end
+    @logger.fatal("Failed to locate '#{filename}'")
     return nil
   end
   
