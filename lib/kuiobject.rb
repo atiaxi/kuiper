@@ -675,6 +675,12 @@ class KuiMap < KuiObject
     @sectors = []
   end
   
+  # This just removes the sector from the map, it does no other dependency 
+  # checking
+  def delete(sector)
+    @sectors.delete(sector) 
+  end
+  
   def playable?
     return false unless super
     @sectors.each { |sector| return false unless sector.playable? }

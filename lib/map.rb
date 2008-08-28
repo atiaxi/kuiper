@@ -100,6 +100,15 @@ class MapState < Opal::State
     reload_sectors
   end
   
+  def del_sector
+    unlink_sector
+    # TODO: A more thorough search of the models to make sure
+    # this sector's not referenced anywhere
+    @selected
+    @map.delete(@selected)
+    reload_sectors
+  end
+  
   def done
     button = @sectors_to_buttons[@selected]
     button.remove_halo(@selection_halo) if button
@@ -203,6 +212,12 @@ class MapState < Opal::State
     @new_sector.rect.bottomright = [ right, bottom ]
     self << @new_sector
     bottom = @new_sector.rect.top - @spacing
+    
+    @del_button = Button.new("Delete this sector") { self.del_sector }
+    @del_button.rect.bottomright = [ right, bottom ]
+    @del_button.enabled = false
+    self << @del_button
+    bottom = @del_button.rect.top - @spacing
     
     @link_mode = false
     @link_button = Button.new("Link this sector") {self.link_sector}
@@ -354,6 +369,7 @@ class MapState < Opal::State
         end
         if $edit_mode
           @link_button.enabled = true
+          @del_button.enabled = true
           @props.enabled = true
           @unlink_button.enabled = true if sector.links_to.size > 0
         else
