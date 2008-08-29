@@ -120,8 +120,16 @@ class MapState < Opal::State
       sector.links_to.each do | link |
         target = @sectors_to_buttons[link]
         if target
-          screen.draw_line(button.rect.center,
-                          target.rect.center,
+          # The underlying SDL_gfx call appears to sometimes draw off the 
+          # screen and into random memory.
+          cropButton = @rl.keep_in_screen(button.rect)
+          cropTarget = @rl.keep_in_screen(target.rect)
+          cropRect = @rl.screen_rect
+          #cropButton = cropRect.clamp(button.rect)
+          #cropTarget = cropRect.clamp(target.rect)
+          #@rl.logger.debug("Button rect: #{cropButton.center}, target rect: #{cropTarget.center}")
+          screen.draw_line(cropButton.center,
+                           cropTarget.center,
                           [255,255,255])
         end
       end

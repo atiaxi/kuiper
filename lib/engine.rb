@@ -408,6 +408,36 @@ class ResourceLocator
     return @is_gem
   end
   
+  # Return a rectangle that's been cropped to the screen
+  def keep_in_screen(src_rect)
+    rect = src_rect.dup
+    screct = screen_rect
+    shrinkW = 0
+    shrinkH = 0
+    if rect.x < 0
+      shrinkW = rect.x.abs
+      rect.w -= shrinkW
+      rect.x = 0
+    end
+    if rect.right > screct.right
+      shrinkW = rect.right - screct.right
+      rect.w = rect.w - shrinkW
+      rect.right = screct.right
+    end
+    
+    if rect.y < 0
+      shrinkH = rect.y.abs
+      rect.h -= shrinkH
+      rect.y = 0
+    end
+    if rect.bottom > screct.bottom
+      shrinkH = rect.bottom - screct.bottom
+      rect.h -= shrinkH
+      rect.bottom = screct.bottom
+    end
+    return rect
+  end
+  
   def logger
     return @logger
   end

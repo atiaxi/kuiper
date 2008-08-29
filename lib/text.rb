@@ -146,7 +146,7 @@ class MultiLineInput < MultiLineLabel
     #self.text = self.text + str
     @text_string ||= ""
     @caret = @text_string.size if @caret > @text_string.size
-    @caret = 0 if @caret < 0
+    @caret = -1 if @caret < -1
     self.text = @text_string.insert(@caret,str)
     @caret += 1
     focus_caret
@@ -319,6 +319,7 @@ class MultiLineInput < MultiLineLabel
   # Programatic backspace
   def remove_text
     unless @caret == 0
+      @caret = @text_string.size if @caret > @text_string.size
       @text_string[@caret-1]=""
       self.text = @text_string
       @caret -= 1
