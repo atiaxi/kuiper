@@ -72,6 +72,8 @@ class Engine
   attr_reader :hooks
   attr_accessor :running
   
+  include Rubygame::Events # New-style events
+  
   def initialize()
     @stack = []
     @hooks = {}
@@ -129,6 +131,7 @@ class Engine
     @running = true
     clock = Rubygame::Clock.new()
     queue = Rubygame::EventQueue.new()
+    queue.enable_new_style_events
     rl = ResourceLocator.instance
     
     clock.tick
@@ -139,20 +142,20 @@ class Engine
       queue.each do |event|
         pre_transition.raw(event) if pre_transition.respond_to?(:raw)
         case(event)
-        when Rubygame::QuitEvent
+        when QuitRequested
           @running = false
-        when Rubygame::KeyDownEvent
+        when KeyPressed
           result = @hooks[event.key]
           result.call(self) if result
           #puts event.key
           pre_transition.keyEvent(event,true)
-        when Rubygame::KeyUpEvent
+        when KeyReleased
           pre_transition.keyEvent(event, false)
-        when Rubygame::MouseMotionEvent
+        when MouseMoved
           pre_transition.mouseMove(event)
-        when Rubygame::MouseDownEvent
+        when MousePressed
           pre_transition.mouseDown(event)
-        when Rubygame::MouseUpEvent
+        when MouseReleased
           mouseUps << event
         end
       end
@@ -271,16 +274,15 @@ class State
   # Passes down :click to affected sprites. Returns a list of them, too.
   def mouseUp(event)
     x,y = event.pos
-
     ups = collide_point(x,y)
     for sprite in ups
-      if event.button == Rubygame::MOUSE_LEFT ||
-         event.button == Rubygame::MOUSE_RIGHT ||
-         event.button == Rubygame::MOUSE_MIDDLE
+      if event.button == :mouse_left ||
+         event.button == :mouse_right ||
+         event.button == :mouse_middle
         sprite.click(x,y) if sprite.respond_to?(:click)
       else
         if sprite.respond_to?(:wheel)
-          sprite.wheel(event.button == Rubygame::MOUSE_WHEELUP)
+          sprite.wheel(event.button == :mouse_wheel_up)
         end
       end
     end

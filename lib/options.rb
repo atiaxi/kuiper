@@ -27,23 +27,23 @@ class Options
   # or once landed on a planet.
   def default_controls
     result = []
-    result << KeyDownControl.new('Accelerate', Rubygame::K_UP)
-    result << KeyDownControl.new('Slow', Rubygame::K_DOWN)
-    result << KeyDownControl.new('Rotate Left', Rubygame::K_LEFT)
-    result << KeyDownControl.new('Rotate Right', Rubygame::K_RIGHT)
-    result << KeyDownControl.new('Main Menu', Rubygame::K_ESCAPE)
-    result << KeyDownControl.new('Land', Rubygame::K_L)
-    result << KeyDownControl.new('Map', Rubygame::K_M)
-    result << KeyDownControl.new('Jump', Rubygame::K_J)
-    result << KeyDownControl.new('View Info', Rubygame::K_I)
-    result << KeyDownControl.new('Radar Zoom Out', Rubygame::K_MINUS)
-    result << KeyDownControl.new("Radar Zoom In", Rubygame::K_PLUS )
-    result << KeyDownControl.new("Fire Primary Weapons", Rubygame::K_SPACE)
-    result << KeyDownControl.new("Next Target", Rubygame::K_TAB)
-    result << KeyDownControl.new("Next Secondary Weapon", Rubygame::K_Q)
-    result << KeyDownControl.new("Fire Secondary Weapon", Rubygame::K_F)
-    result << KeyDownControl.new("Quicksave", Rubygame::K_F5)
-    result << KeyDownControl.new("Nearest Hostile Target", Rubygame::K_R)
+    result << KeyDownControl.new('Accelerate', :up)
+    result << KeyDownControl.new('Slow', :down)
+    result << KeyDownControl.new('Rotate Left', :left)
+    result << KeyDownControl.new('Rotate Right', :right)
+    result << KeyDownControl.new('Main Menu', :escape)
+    result << KeyDownControl.new('Land', :l)
+    result << KeyDownControl.new('Map', :m)
+    result << KeyDownControl.new('Jump', :j)
+    result << KeyDownControl.new('View Info', :i)
+    result << KeyDownControl.new('Radar Zoom Out', :minus)
+    result << KeyDownControl.new("Radar Zoom In", :equals )
+    result << KeyDownControl.new("Fire Primary Weapons", :space)
+    result << KeyDownControl.new("Next Target", :tab)
+    result << KeyDownControl.new("Next Secondary Weapon", :q)
+    result << KeyDownControl.new("Fire Secondary Weapon", :f)
+    result << KeyDownControl.new("Quicksave", :f5)
+    result << KeyDownControl.new("Nearest Hostile Target", :r)
     return result
   end
   def save
@@ -58,23 +58,26 @@ end
 
 class Control
   
+  include Rubygame::Events
+  
   attr_accessor :name
  
   def self.from_event(event)
     case(event)
-    when Rubygame::KeyDownEvent
+    when KeyDownEvent
       return KeyDownControl.new('',event.key)
-    when Rubygame::JoyAxisEvent
-      return JoyAxisControl.new('',event.joynum, event.axis, event.value > 0)
-    when Rubygame::JoyBallEvent
-      return JoyBallControl.new('',event.joynum, event.ball, *event.rel)  
-    when Rubygame::JoyDownEvent
-      return JoyDownControl.new('',event.joynum, event.button )
-    when Rubygame::JoyHatEvent
-      return JoyHatControl.new('',event.joynum, event.hat, event.value)
-    when Rubygame::MouseDownEvent
+    when JoystickAxisMoved
+      return JoyAxisControl.new('',event.joystick_id, event.axis,
+        event.value > 0)
+    when JoystickBallMoved
+      return JoyBallControl.new('',event.joystick_id, event.ball, *event.rel)  
+    when JoystickButtonPressed
+      return JoyDownControl.new('',event.joystick_id, event.button )
+    when JoystickHatMoved
+      return JoyHatControl.new('',event.joystick_id, event.hat, event.direction)
+    when MousePressed
       return MouseDownControl.new('', event.button )
-    when Rubygame::MouseMotionEvent
+    when MouseMoved
       return MouseMotionControl.new('', *event.rel)
     else
       return nil
@@ -118,14 +121,14 @@ class KeyDownControl < Control
   end
   
   def ===(event)
-    if event.class == Rubygame::KeyDownEvent
+    if event.class == KeyPressed
       return event.key == @sym
     end
     return false
   end
   
   def canceled_by?(event)
-    return false unless event.class == Rubygame::KeyUpEvent
+    return false unless event.class == KeyReleased
     return event.key == @sym
   end
   
@@ -155,8 +158,8 @@ class JoyAxisControl < Control
   end
   
   def ===(event)
-    if event.class == Rubygame::JoyAxisEvent
-      return false unless @stick == event.joynum
+    if event.class == JoystickAxisMoved
+      return false unless @stick == event.joystick_id
       return false unless @axis == event.axis
       if @positive
         return event.value > 0
@@ -168,8 +171,8 @@ class JoyAxisControl < Control
   end
   
   def canceled_by?(event)
-    return false unless event.class == Rubygame::JoyAxisEvent
-    return false unless @stick == event.joynum
+    return false unless event.class == JoystickAxisMoved
+    return false unless @stick == event.joystick_id
     return false unless @axis == event.axis
     return true if event.value == 0
     if @positive
@@ -257,8 +260,8 @@ class JoyBallControl < Control
   end
   
   def ===(event)
-    if event.class == Rubygame::JoyBallEvent
-      return false unless @stick == event.joynum
+    if event.class == JoystickBallMoved
+      return false unless @stick == event.joystick_id
       return false unless @ball == event.ball
       return matches_motion(event.rel)
     end
@@ -266,8 +269,8 @@ class JoyBallControl < Control
   end
 
   def canceled_by?(event)
-    return false unless event.class == Rubygame::JoyBallEvent
-    return false unless @stick == event.joynum
+    return false unless event.class == JoystickBallMoved
+    return false unless @stick == event.joystick_id
     return false unless @ball == event.ball
     return canceled_by_motion(event.rel)  
   end
@@ -290,8 +293,8 @@ class JoyDownControl < Control
   end
   
   def canceled_by?(event)
-    return false unless event.class == Rubygame::JoyUpEvent
-    return false unless event.joynum == @stick
+    return false unless event.class == JoystickButtonReleased
+    return false unless event.joystick_id == @stick
     return event.button == @button
   end
   
@@ -300,8 +303,8 @@ class JoyDownControl < Control
   end
   
   def ===(event)
-    if event.class == Rubygame::JoyDownEvent
-      return false unless event.joynum == @stick
+    if event.class == JoystickButtonPressed
+      return false unless event.joystick_id == @stick
       return event.button == @button
     end
     return false
@@ -324,37 +327,24 @@ class JoyHatControl < Control
   
   # Returning to center is a cancelling event for all directions
   def canceled_by?(event)
-    return false unless event.class == Rubygame::JoyHatEvent
-    return false unless @stick == event.joynum
+    return false unless event.class == JoystickHatMoved
+    return false unless @stick == event.joystick_id
     return false unless @hat == event.hat
-    return event.value == Rubygame::HAT_CENTERED
+    return event.center?
   end
   
   def ===(event)
-    if event.class == Rubygame::JoyHatEvent
-      return false unless @stick == event.joynum
+    if event.class == JoystickHatMoved
+      return false unless @stick == event.joystick_id
       return false unless @hat == event.hat
-      return @direction == event.value
+      return @direction == event.direction
     end
     return false
   end
   
+  # Used to be a lot more work than this.
   def hat_direction_to_s
-    xdir = ''
-    ydir = ''
-    if @direction & Rubygame::HAT_UP
-      ydir = 'up'
-    elsif @direction & Rubygame::HAT_DOWN
-      ydir = 'down'
-    end
-    
-    if @direction & Rubygame::HAT_LEFT
-      xdir = 'left'
-    elsif @direction & Rubygame::HAT_RIGHT
-      xdir = 'right'
-    end
-    
-    return "#{ydir}#{xdir}"
+    return @direction.to_S
   end
   
   def to_s
@@ -376,14 +366,14 @@ class MouseDownControl < Control
   end
   
   def ===(event)
-    if event.class == Rubygame::MouseDownEvent
+    if event.class == MousePressed
       return event.button == @button
     end
     return false
   end
   
   def canceled_by?(event)
-    return false unless event.class == Rubygame::MouseUpEvent
+    return false unless event.class == MouseReleased
     return event.button == @button
   end
   
@@ -404,12 +394,12 @@ class MouseMotionControl < Control
   end
   
   def canceled_by?(event)
-    return false unless event.class == Rubygame::MouseMotionEvent
+    return false unless event.class == MouseMoved
     return canceled_by_motion(event.rel)
   end
   
   def ===(event)
-    if event.class == Rubygame::MouseMotionEvent
+    if event.class == MouseMoved
       return matches_motion(event.rel)
     end
     return false
