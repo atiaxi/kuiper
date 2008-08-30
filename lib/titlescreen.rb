@@ -212,6 +212,7 @@ class TitleScreen < State
       @resumegame.visible = false
       @savegame.visible = false
     end
+    return repository
   end
   
   def set_options

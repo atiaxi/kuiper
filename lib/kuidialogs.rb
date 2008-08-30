@@ -287,52 +287,6 @@ class ImageSelectorDialog < ResourceDialog
   
 end
 
-class InfoDialog < DataActionDialog
-  
-  attr_reader :result
-  
-  def initialize(driver, message, choices = [ ['Ok', true] ])
-    @insetX ||= 150
-    @insetY ||= 150
-    @message = message
-    @choices = choices
-    @result = nil
-    super(driver)
-  end
-  
-  def choices=(anArray)
-    @choices = anArray
-    setup_gui
-  end
-  
-  def layout_actions
-    initial_y = @actionY
-    @choices.each do | label,result |
-      layout_action_item(label) do 
-        @result = result
-        self.done
-      end
-    end
-    @action_height = @actionY - initial_y
-  end
-  
-  def layout_data
-    initial_y = @dataY
-    message = MultiLineLabel.new
-    message.rect.w = @mainRect.w - (@spacing * 2)
-    message.text = @message
-    layout_data_item(message)
-    @data_height = @dataY - initial_y
-  end
-  
-  def setup_gui
-    super
-    @done.visible = false
-    @mainRect.h = [@data_height, @action_height].max + @spacing*2
-  end
-  
-end
-
 # Allows the editor to pick a specific KuiObject stored in the repository.
 class KuiObjectSelector < ResourceDialog
   
@@ -909,3 +863,5 @@ class FeelingsDialog < Opal::State
   end
   
 end
+
+require 'kuiquery'

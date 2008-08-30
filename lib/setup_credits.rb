@@ -29,6 +29,9 @@ def main
   thanks = []
   root << ["Thanks To",thanks]
   thanks << "The Rubygame Library"
+  thanks << "ruby-talk"
+  thanks << "Trac"
+  thanks << "Git"
     
   puts root.to_yaml
 end

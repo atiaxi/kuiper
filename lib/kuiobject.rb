@@ -974,7 +974,7 @@ class KuiPlayer < KuiObject
   def remove_mission(mission,exit_code=0)
     done = @missions.delete(mission)
     if done && exit_code
-      if  exit_code > 0  || mission.globally_unique
+      if  exit_code != 0  || mission.globally_unique
         # TODO: Replace the exit code of this mission if, for example, we failed
         #       it before.
         done.exit_code = exit_code
@@ -986,6 +986,12 @@ class KuiPlayer < KuiObject
   
   def unset_flag(flag_tag)
     @flags.delete_if { |flag| flag.tag == flag_tag }
+  end
+  
+  # By default, the player has no name.  This is one of the ways that the
+  # engine detects that we're starting up a new game rather than loading one.
+  def unnamed?
+    return @name == nil || @name.size == 0
   end
   
   def visit(sector)

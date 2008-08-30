@@ -285,7 +285,6 @@ class MultiLineInput < MultiLineLabel
   
   def keyTyped(event)
     str = event.string
-    puts event.key
     if @focus
       if event.key == :backspace
         if @text_string && !@text_string.empty?

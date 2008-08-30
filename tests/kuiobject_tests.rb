@@ -5,6 +5,24 @@ require 'kuispaceworthy'
 require 'repository'
 require 'test/unit'
 
+class TC_Player < Test::Unit::TestCase
+  
+  def setup
+    @rl = Opal::ResourceLocator.instance
+    @rl.storage[:repository] = Repository.new
+    @rl.repository.universe = KuiUniverse.new
+    @player = @rl.repository.universe.player
+  end
+  
+  def test_unnamed
+    assert(@player.unnamed?)
+    # Empty names should count as un-named
+    @player.name = ''
+    assert(@player.unnamed?)
+  end
+  
+end
+
 class TC_Org < Test::Unit::TestCase
   
   def setup

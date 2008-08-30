@@ -53,18 +53,22 @@ class SectorState < Opal::State
     super
     player = @rl.repository.universe.player
     
-    player.visit(@sector)
-    
     unless $edit_mode
+      player.visit(@sector)
       @player_controller.controls.reset
       
-      eval = MissionEvaluatorState.new(@driver, player.missions, self)
-      result = eval.check
+      # Detect beginning of game, do things.
+      game_begin if player.unnamed?
+      
+      unless @continue 
+        eval = MissionEvaluatorState.new(@driver, player.missions, self)
+        result = eval.check
           
-      if result
-        eval = MissionEvaluatorState.new(@driver, @sector.plot, self)
-        result = eval.award
-      end
+        if result
+          eval = MissionEvaluatorState.new(@driver, @sector.plot, self)
+          result = eval.award
+        end
+      end    
     end
   end
   
@@ -179,6 +183,22 @@ class SectorState < Opal::State
   def fire(projectile)
     @sector.projectiles << projectile
     add_projectile(projectile)
+  end
+  
+  # Called once when the player presses 'new game'
+  def game_begin
+    suggestion = ENV['USERNAME']
+    suggestion = "McKay" unless suggestion
+    suggestion = suggestion.capitalize
+    olid = OneLineInputDialog.new(@driver, "Welcome, pilot!  What " +
+      "is your name?", suggestion)
+    callcc do |cont|
+      @continue = cont
+      @driver << olid
+    end
+    if olid.resolved
+      @rl.repository.universe.player.name = olid.result
+    end
   end
 
   # While it's the PlayerController's job to react to most of the player's
