@@ -120,13 +120,17 @@ class MapState < Opal::State
       sector.links_to.each do | link |
         target = @sectors_to_buttons[link]
         if target
-          # The underlying SDL_gfx call appears to sometimes draw off the 
-          # screen and into random memory.
-          cropButton = @rl.keep_in_screen(button.rect)
-          cropTarget = @rl.keep_in_screen(target.rect)
+          # I'd wanted to avoid popping in and out of the screen, but it
+          # appears that I can't without causing random crashes due to SDL_gfx
+          # not liking off-screen co-ords (but only sometimes)
           cropRect = @rl.screen_rect
-          #cropButton = cropRect.clamp(button.rect)
-          #cropTarget = cropRect.clamp(target.rect)
+          cropButton = Rubygame::Rect.new(button.rect.centerx,
+            button.rect.centery, 1, 1)
+          cropTarget = Rubygame::Rect.new(target.rect.centerx,
+            target.rect.centery, 1, 1)
+          next unless cropRect.contain?(cropButton)
+          next unless cropRect.contain?(cropTarget)
+          
           #@rl.logger.debug("Button rect: #{cropButton.center}, target rect: #{cropTarget.center}")
           screen.draw_line(cropButton.center,
                            cropTarget.center,
@@ -246,6 +250,17 @@ class MapState < Opal::State
     self << @props
     bottom = @props.rect.top - @spacing
     
+    operators = [ @new_sector, @del_button, @link_button,
+        @unlink_button, @props ]
+    rects = operators.collect {|o| o.rect }
+    leftmost = rects.min { |r,s| r.x <=> s.x }
+    h = @rl.screen_rect.bottom - @spacing - bottom
+    box = Box.new
+    box.rect.x = leftmost.x - @spacing
+    box.rect.y = bottom
+    box.rect.w = @rl.screen_rect.right - box.rect.x
+    box.rect.h = h
+    self << box
   end
   
   def reload_playing_mode

@@ -275,6 +275,7 @@ class State
   def mouseUp(event)
     x,y = event.pos
     ups = collide_point(x,y)
+    ups = ups.sort
     for sprite in ups
       if event.button == :mouse_left ||
          event.button == :mouse_right ||
@@ -285,6 +286,7 @@ class State
           sprite.wheel(event.button == :mouse_wheel_up)
         end
       end
+      break if sprite.click_stops_here
     end
     return ups
   end

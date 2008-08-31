@@ -70,6 +70,7 @@ class OpalSprite
   attr_accessor :visible
   attr_accessor :depth
   attr_accessor :alive
+  attr_accessor :click_stops_here
   
   def initialize()
     super
@@ -79,6 +80,11 @@ class OpalSprite
     @alive = true
     @depth = 0
     @image = nil
+    @click_stops_here = false
+  end
+  
+  def <=>(other)
+    return @depth <=> other.depth
   end
   
   def draw(surface)
@@ -122,14 +128,19 @@ end
 # Fakes a container, but behaves like every other widget;
 # if you want this to look right, add this before the items
 # that it should appear under.
+# By default, blocks clicks to everything under it.
 class Box < StaticSprite
 
   include Colorable
+  
+  BOX_DEPTH = 10
   
   def initialize()
     super
     @bgcolor = [0,0,255]
     @border = [255,255,255]
+    @depth = BOX_DEPTH
+    @click_stops_here = true
   end
   
   def draw(screen)
