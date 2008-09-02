@@ -311,6 +311,7 @@ class MultiLineInput < MultiLineLabel
       elsif event.key == :down
         caret_move_down
       elsif !str.is_null? && str.size > 0
+        return if event.modifiers.detect { |mod| mod.to_s.include?('ctrl') }
         add_text(str)
       end
     end

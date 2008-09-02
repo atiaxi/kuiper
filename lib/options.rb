@@ -44,6 +44,7 @@ class Options
     result << KeyDownControl.new("Fire Secondary Weapon", :f)
     result << KeyDownControl.new("Quicksave", :f5)
     result << KeyDownControl.new("Nearest Hostile Target", :r)
+    result << KeyDownControl.new("Pause", :p)
     return result
   end
   def save

@@ -8,6 +8,8 @@ require 'gameover'
 require 'sectorviews'
 require 'sliderbox'
 
+require 'pause'
+
 # The sector state is both the state that the
 # player will fly around in and the state
 # for editing some parts of the sector
@@ -222,6 +224,9 @@ class SectorState < Opal::State
       @radar.zoom(delay)
     elsif handler.active?(:radar_zoom_in)
       @radar.zoom(-delay)
+    elsif handler.active?(:pause)
+      ps = PausedState.new(@driver, self)
+      @driver << ps
     end
   end
   
