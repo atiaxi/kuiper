@@ -121,6 +121,14 @@ class Scroller < CompositeSprite
     scroll(-scroll_units)
   end
   
+  def wheel(going_up)
+    if going_up
+      up
+    else
+      down
+    end
+  end
+  
 end
 
 class MultiLineInput < MultiLineLabel
