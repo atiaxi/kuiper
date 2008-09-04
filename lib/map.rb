@@ -55,7 +55,7 @@ class MapState < Opal::State
   attr_accessor :select_mode
   attr :selected
   
-  SCROLL_SPEED = 5
+  SCROLL_SPEED = 10
   SECTOR_DEPTH = 100
     
   def self.select_mode(driver)
