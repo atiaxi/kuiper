@@ -4,7 +4,39 @@
     <map tag='new_object'>
       <child name='sectors'>
         <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' The cradle of humankind, the Sol sector is where it all began. '>
-          <child name='planets'/>
+          <child name='planets'>
+            <planet landing_distance='150.0' name='Earth' x='-7.0' y='-43.0' image_filename='planetoid.png' fuel_cost='1.0' tag='planet_earth' description='This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. '>
+              <child name='cargo_for_sale'>
+                <cargo average_price='0.0' tag='food_med' mission_related='false' amount='0.0' markup='-15.0'>
+                  <child name='blueprint'>
+                    <cargoblueprint name='Food' tag='cargo_food' base_price='100.0' description='A mix of natural and artificial materials, you never know the exact composition of what you&apos;ll be transporting.  The important thing is that you can eat it if your ship ends up stranded somewhere. '/>
+                  </child>
+                </cargo>
+                <cargo average_price='0.0' tag='metals_high' mission_related='false' amount='0.0' markup='10.0'>
+                  <child name='blueprint'>
+                    <cargoblueprint name='Raw Metals' tag='cargo_raw_metals' base_price='150.0' description='This is mostly unprocessed ore - since the metal tends to weigh the same whether it&apos;s been through a machine or not and you never know which exact metals the buyer will need. '/>
+                  </child>
+                </cargo>
+              </child>
+              <child name='missions'/>
+              <child name='addons_for_sale'/>
+              <child name='weapons_for_sale'/>
+              <child name='ships_for_sale'/>
+              <child name='random_missions'/>
+              <child name='plot'/>
+              <child name='owner'>
+                <org killing_mod='-50.0' name='Alliance' friendly='500.0' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_alliance' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' friendly_multiplier='0.5'>
+                  <child name='feelings'>
+                    <relation feeling='1000000'>
+                      <child name='target_org'>
+                        <ref tag='org_alliance'/>
+                      </child>
+                    </relation>
+                  </child>
+                </org>
+              </child>
+            </planet>
+          </child>
           <child name='projectiles'/>
           <child name='killed_fleets'/>
           <child name='halos'/>
@@ -338,6 +370,85 @@
                                           <child name='links_to'>
                                             <ref tag='sector_sandwall'/>
                                             <ref tag='sector_ss12'/>
+                                            <sector name='North Star' x='-88.0' visited='false' y='-268.0' tag='sector_north_star' description='More officially known as &apos;Polaris&apos;, humanity has been navigating by the light of this star since before they could even leave the planet. '>
+                                              <child name='planets'/>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_ss14gs81'/>
+                                                <ref tag='sector_centauri'/>
+                                                <sector name='New Bottleneck' x='-239.0' visited='false' y='-317.0' tag='sector_new_bottleneck' description='The Galaxy Survey operated for a very long time; even after the area beyond Bottleneck had been discovered and colonised, the Survey continued to try to find new sectors.  They spent the vast majority of their time in this sector, using the most sophisticated eqiupment possible to try to find another link to anywhere else, and failed.'>
+                                                  <child name='planets'/>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_north_star'/>
+                                                  </child>
+                                                  <child name='active_fleets'/>
+                                                  <child name='plot'/>
+                                                </sector>
+                                                <sector name='Galaxy Survey 60' x='-50.0' visited='false' y='-348.0' tag='sector_gs60' description='Galaxy Survey 60 is a sector.  No more, no less. '>
+                                                  <child name='planets'/>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_north_star'/>
+                                                    <sector name='Galaxy Survey 77' x='-187.0' visited='false' y='-378.0' tag='sector_gs77' description='The Galaxy Survey had lasted for an unprecedented amount of time, but public interest was at this point at an all-time low.  Awareness that the project even existed was less than one-thousandth of one percent among the peoples of the galaxy.  The Survey ended soon after. '>
+                                                      <child name='planets'/>
+                                                      <child name='projectiles'/>
+                                                      <child name='killed_fleets'/>
+                                                      <child name='halos'/>
+                                                      <child name='potential_fleets'/>
+                                                      <child name='links_to'>
+                                                        <ref tag='sector_gs60'/>
+                                                        <sector name='Galaxy Survey Final' x='-217.0' visited='false' y='-421.0' tag='sector_gsFinal' description='The Survey of this sector was brief and almost entirely non-noteworthy.  It was also the last Survey performed until the Second Survey was commissioned to repeat their ancestor&apos;s mistakes. '>
+                                                          <child name='planets'/>
+                                                          <child name='projectiles'/>
+                                                          <child name='killed_fleets'/>
+                                                          <child name='halos'/>
+                                                          <child name='potential_fleets'/>
+                                                          <child name='links_to'>
+                                                            <ref tag='sector_gs77'/>
+                                                            <sector name='Forbidden' x='-60.0' visited='false' y='-448.0' tag='sector_forbidden' description='&quot;We came into this sector as scientists, as explorers, always looking deeper along the hyperspace lanes to find what&apos;s there.  We left... content with our place in the world, I guess.  What we saw out there was nothing, and it was the most horrible empty nothing possible.  No future, no end, a death alone and forgotten.  That&apos;s what lied along this path.  No, we&apos;re not going past this sector.&quot; - Captain Millings, Galaxy Survey. '>
+                                                              <child name='planets'/>
+                                                              <child name='projectiles'/>
+                                                              <child name='killed_fleets'/>
+                                                              <child name='halos'/>
+                                                              <child name='potential_fleets'/>
+                                                              <child name='links_to'>
+                                                                <ref tag='sector_gsFinal'/>
+                                                                <ref tag='sector_gs77'/>
+                                                                <ref tag='sector_gs60'/>
+                                                              </child>
+                                                              <child name='active_fleets'/>
+                                                              <child name='plot'/>
+                                                            </sector>
+                                                          </child>
+                                                          <child name='active_fleets'/>
+                                                          <child name='plot'/>
+                                                        </sector>
+                                                        <ref tag='sector_north_star'/>
+                                                        <ref tag='sector_forbidden'/>
+                                                      </child>
+                                                      <child name='active_fleets'/>
+                                                      <child name='plot'/>
+                                                    </sector>
+                                                    <ref tag='sector_forbidden'/>
+                                                  </child>
+                                                  <child name='active_fleets'/>
+                                                  <child name='plot'/>
+                                                </sector>
+                                                <ref tag='sector_gs77'/>
+                                              </child>
+                                              <child name='active_fleets'/>
+                                              <child name='plot'/>
+                                            </sector>
                                           </child>
                                           <child name='active_fleets'/>
                                           <child name='plot'/>
@@ -377,7 +488,18 @@
                                       <child name='potential_fleets'/>
                                       <child name='links_to'>
                                         <sector name='Sirius' x='31.0' visited='false' y='77.0' tag='sector_sirius' description=' One of the first working hyperspace lanes led to this sector.  Its importance has only increased over time.'>
-                                          <child name='planets'/>
+                                          <child name='planets'>
+                                            <planet landing_distance='100.0' name='Loyalty' x='-89.0' y='150.0' image_filename='desert.png' fuel_cost='1.0' tag='sector_loyalty' description='This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. '>
+                                              <child name='cargo_for_sale'/>
+                                              <child name='missions'/>
+                                              <child name='addons_for_sale'/>
+                                              <child name='weapons_for_sale'/>
+                                              <child name='ships_for_sale'/>
+                                              <child name='random_missions'/>
+                                              <child name='plot'/>
+                                              <child name='owner'/>
+                                            </planet>
+                                          </child>
                                           <child name='projectiles'/>
                                           <child name='killed_fleets'/>
                                           <child name='halos'/>
@@ -725,6 +847,31 @@
                   <child name='plot'/>
                 </sector>
                 <ref tag='sector_freehold'/>
+                <ref tag='sector_north_star'/>
+                <sector name='Edge' x='93.0' visited='false' y='-174.0' tag='sector_edge' description='Short for &quot;The Edge of the Galaxy&quot;, this was for the longest time the last remotely habitable planet for a very large distance indeed.  Some still consider it so. '>
+                  <child name='planets'/>
+                  <child name='projectiles'/>
+                  <child name='killed_fleets'/>
+                  <child name='halos'/>
+                  <child name='potential_fleets'/>
+                  <child name='links_to'>
+                    <ref tag='sector_centauri'/>
+                    <sector name='Galaxy Survey 42' x='67.0' visited='false' y='-234.0' tag='sector_gs42' description='Galaxy Survey 42 turned out to be the answer to a question nobody asked. '>
+                      <child name='planets'/>
+                      <child name='projectiles'/>
+                      <child name='killed_fleets'/>
+                      <child name='halos'/>
+                      <child name='potential_fleets'/>
+                      <child name='links_to'>
+                        <ref tag='sector_edge'/>
+                      </child>
+                      <child name='active_fleets'/>
+                      <child name='plot'/>
+                    </sector>
+                  </child>
+                  <child name='active_fleets'/>
+                  <child name='plot'/>
+                </sector>
               </child>
               <child name='active_fleets'/>
               <child name='plot'/>
@@ -791,6 +938,14 @@
         <ref tag='sector_the'/>
         <ref tag='sector_unrecoverable'/>
         <ref tag='sector_ss8192'/>
+        <ref tag='sector_north_star'/>
+        <ref tag='sector_new_bottleneck'/>
+        <ref tag='sector_gs60'/>
+        <ref tag='sector_edge'/>
+        <ref tag='sector_gs42'/>
+        <ref tag='sector_gsFinal'/>
+        <ref tag='sector_gs77'/>
+        <ref tag='sector_forbidden'/>
       </child>
     </map>
   </child>
