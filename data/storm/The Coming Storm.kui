@@ -1,33 +1,864 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<universe name='The Coming Storm' tag='universe' description=' Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....'>
+<universe name='The Coming Storm' tag='universe' description=' Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....' labels='asdf,neboat,foo'>
   <child name='map'>
-    <map tag='new_object'>
+    <map tag='new_object' labels=''>
       <child name='sectors'>
-        <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' The cradle of humankind, the Sol sector is where it all began. '>
-          <child name='planets'>
-            <planet landing_distance='150.0' name='Earth' x='-7.0' y='-43.0' image_filename='planetoid.png' fuel_cost='1.0' tag='planet_earth' description='This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. '>
-              <child name='cargo_for_sale'>
-                <cargo average_price='0.0' tag='food_med' mission_related='false' amount='0.0' markup='-15.0'>
-                  <child name='blueprint'>
-                    <cargoblueprint name='Food' tag='cargo_food' base_price='100.0' description='A mix of natural and artificial materials, you never know the exact composition of what you&apos;ll be transporting.  The important thing is that you can eat it if your ship ends up stranded somewhere. '/>
+        <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' The cradle of humankind, the Sol sector is where it all began. ' labels=''>
+          <child name='projectiles'/>
+          <child name='killed_fleets'/>
+          <child name='halos'/>
+          <child name='active_fleets'/>
+          <child name='potential_fleets'/>
+          <child name='links_to'>
+            <sector name='Centauri' x='54.0' visited='false' y='-60.0' tag='sector_centauri' description=' Binary systems are inherently more difficult to find hyperspace links through, but given Centauri&apos;s relative closeness to the Sol sector it made for an easy first target.' labels=''>
+              <child name='projectiles'/>
+              <child name='killed_fleets'/>
+              <child name='halos'/>
+              <child name='active_fleets'/>
+              <child name='potential_fleets'/>
+              <child name='links_to'>
+                <ref tag='sector_sol'/>
+                <sector name='Farpost' x='-71.0' visited='false' y='-75.0' tag='sector_farpost' description=' Hyperspace research stagnated when the burgeoning human alliance reached this sector.  For a very long time, it was in fact the furthest post from human lands.' labels=''>
+                  <child name='projectiles'/>
+                  <child name='killed_fleets'/>
+                  <child name='halos'/>
+                  <child name='active_fleets'/>
+                  <child name='potential_fleets'/>
+                  <child name='links_to'>
+                    <ref tag='sector_centauri'/>
+                    <sector name='New Sol' x='-166.0' visited='false' y='-39.0' tag='sector_new_sol' description=' There are any number of stars similar to that of Earth&apos;s, but this was the first that a hyperspace lane was discovered going to.' labels=''>
+                      <child name='projectiles'/>
+                      <child name='killed_fleets'/>
+                      <child name='halos'/>
+                      <child name='active_fleets'/>
+                      <child name='potential_fleets'/>
+                      <child name='links_to'>
+                        <ref tag='sector_farpost'/>
+                        <sector name='Sandwall' x='-280.0' visited='false' y='-92.0' tag='sector_sandwall' description='&quot;The Sandwall&quot; got its name because it is literally filled with tiny microscopic particles.  At the speed a ship would enter the sector, it would be torn apart in moments.  Fortunately, the upside was that humanity developed shielding technology, more than making up for the inconvenience. ' labels=''>
+                          <child name='projectiles'/>
+                          <child name='killed_fleets'/>
+                          <child name='halos'/>
+                          <child name='active_fleets'/>
+                          <child name='potential_fleets'/>
+                          <child name='links_to'>
+                            <ref tag='sector_new_sol'/>
+                            <sector name='Galaxy Survey 83' x='-411.0' visited='false' y='-136.0' tag='sector_gs83' description='It has been not so subtly suggested that, at this point, the Galaxy Survey had lost count. ' labels=''>
+                              <child name='projectiles'/>
+                              <child name='killed_fleets'/>
+                              <child name='halos'/>
+                              <child name='active_fleets'/>
+                              <child name='potential_fleets'/>
+                              <child name='links_to'>
+                                <ref tag='sector_sandwall'/>
+                                <sector name='Bottleneck' x='-544.0' visited='false' y='-182.0' tag='sector_bottleneck' description='For reasons scientists even now do not understand, hyperspace lanes are more difficult to locate in this area of space.  This is the only sector linking another group of tightly-clustered sectors to alliance space, and if not for it, the two would be forever separated. ' labels=''>
+                                  <child name='projectiles'/>
+                                  <child name='killed_fleets'/>
+                                  <child name='halos'/>
+                                  <child name='active_fleets'/>
+                                  <child name='potential_fleets'/>
+                                  <child name='links_to'>
+                                    <ref tag='sector_gs83'/>
+                                    <sector name='The Vat' x='-621.0' visited='false' y='-265.0' tag='sector_vat' description='The Vat was an expieriment to create habitable planets.  While it worked, it turned out to be massively consuming of time and energy. It was deemed easier to simply explore for other habitable worlds and terraform where appropriate. ' labels=''>
+                                      <child name='projectiles'/>
+                                      <child name='killed_fleets'/>
+                                      <child name='halos'/>
+                                      <child name='active_fleets'/>
+                                      <child name='potential_fleets'/>
+                                      <child name='links_to'>
+                                        <ref tag='sector_bottleneck'/>
+                                        <sector name='The Hammer' x='-713.0' visited='false' y='-209.0' tag='sector_hammer' description='This sector plays host to the largest weapons manufacturing system in the known universe. ' labels=''>
+                                          <child name='projectiles'/>
+                                          <child name='killed_fleets'/>
+                                          <child name='halos'/>
+                                          <child name='active_fleets'/>
+                                          <child name='potential_fleets'/>
+                                          <child name='links_to'>
+                                            <ref tag='sector_vat'/>
+                                            <sector name='The Forgotten' x='-724.0' visited='false' y='-306.0' tag='sector_forgotten' description='Everyone remembers The Forgotten - its name stems from an unexpected hyperspace lane failure which left it isolated for hundreds of years. ' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_hammer'/>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                            <sector name='The End' x='-860.0' visited='false' y='-211.0' tag='sector_end' description='Initially the name was just a joke, but like many such names, it stuck. This sector has numerous properties making hyperspace lane formation not only improbable, but impossible.  The pre-existing route to this sector is due to collapse within a few thousand years. ' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_hammer'/>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                          </child>
+                                          <child name='plot'/>
+                                          <child name='planets'/>
+                                        </sector>
+                                        <sector name='The Anvil' x='-503.0' visited='false' y='-308.0' tag='sector_anvil' description='Originally interesting due to fluctuations in previously-thought-constant constants, this sector has only become more interesting over time; at the moment it is the center of most defensive research. ' labels=''>
+                                          <child name='projectiles'/>
+                                          <child name='killed_fleets'/>
+                                          <child name='halos'/>
+                                          <child name='active_fleets'/>
+                                          <child name='potential_fleets'/>
+                                          <child name='links_to'>
+                                            <ref tag='sector_vat'/>
+                                            <sector name='The Ruse' x='-645.0' visited='false' y='-363.0' tag='sector_ruse' description='This entire area of space is known for its scientifically interesting oddities, but none more so than The Ruse.  Whenever a ship enters the sector, it gets a brief sensor echo of the next sector along.  The reason for this remains unexplained, even today. ' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_vat'/>
+                                                <ref tag='sector_anvil'/>
+                                                <sector name='The Rebel' x='-776.0' visited='false' y='-394.0' tag='sector_rebel' description='It was in this sector, not long ago, that the rebellion against the central alliance of humans was begun.  The central systems had a weak hold this far from their center to begin with, and their influence had plummeted since. ' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_ruse'/>
+                                                    <sector name='Second Survey 6' x='-834.0' visited='false' y='-493.0' tag='sector_ss6' description='Second Survey Six faced the same naming problems as Second Survey Two, but even less interest. ' labels=''>
+                                                      <child name='projectiles'/>
+                                                      <child name='killed_fleets'/>
+                                                      <child name='halos'/>
+                                                      <child name='active_fleets'/>
+                                                      <child name='potential_fleets'/>
+                                                      <child name='links_to'>
+                                                        <sector name='Second Survey 5' x='-513.0' visited='false' y='-473.0' tag='sector_ss5' description='&quot;Oh, come on, even the Galaxy Survey eventually found a sector!&quot; - Second Survey Official. ' labels=''>
+                                                          <child name='projectiles'/>
+                                                          <child name='killed_fleets'/>
+                                                          <child name='halos'/>
+                                                          <child name='active_fleets'/>
+                                                          <child name='potential_fleets'/>
+                                                          <child name='links_to'>
+                                                            <sector name='The Price' x='-519.0' visited='false' y='-404.0' tag='sector_price' description='This sector is owned by the Price family, widely considered by many, rebel and alliance alike, as being an organized crime front. ' labels=''>
+                                                              <child name='projectiles'/>
+                                                              <child name='killed_fleets'/>
+                                                              <child name='halos'/>
+                                                              <child name='active_fleets'/>
+                                                              <child name='potential_fleets'/>
+                                                              <child name='links_to'>
+                                                                <ref tag='sector_ruse'/>
+                                                                <ref tag='sector_ss5'/>
+                                                                <sector name='The Pale' x='-389.0' visited='false' y='-428.0' tag='sector_pale' description='This area of the galaxy is no stranger to anomalies, but this particular area is, to quote scientists who tried to explore further, &quot;Beyond the Pale&quot; ' labels=''>
+                                                                  <child name='projectiles'/>
+                                                                  <child name='killed_fleets'/>
+                                                                  <child name='halos'/>
+                                                                  <child name='active_fleets'/>
+                                                                  <child name='potential_fleets'/>
+                                                                  <child name='links_to'>
+                                                                    <ref tag='sector_price'/>
+                                                                    <sector name='Second Survey 4' x='-401.0' visited='false' y='-335.0' tag='sector_ss4' description='It became painfully and rapidly apparent that the Second Survey was to be no more successful than the first. ' labels=''>
+                                                                      <child name='projectiles'/>
+                                                                      <child name='killed_fleets'/>
+                                                                      <child name='halos'/>
+                                                                      <child name='active_fleets'/>
+                                                                      <child name='potential_fleets'/>
+                                                                      <child name='links_to'>
+                                                                        <ref tag='sector_anvil'/>
+                                                                        <ref tag='sector_pale'/>
+                                                                      </child>
+                                                                      <child name='plot'/>
+                                                                      <child name='planets'/>
+                                                                    </sector>
+                                                                    <sector name='The' x='-283.0' visited='false' y='-392.0' tag='sector_the' description='The the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the.e.e.e.e.e.e.....' labels=''>
+                                                                      <child name='projectiles'/>
+                                                                      <child name='killed_fleets'/>
+                                                                      <child name='halos'/>
+                                                                      <child name='active_fleets'/>
+                                                                      <child name='potential_fleets'/>
+                                                                      <child name='links_to'>
+                                                                        <ref tag='sector_pale'/>
+                                                                        <sector name='Second Survey 8192' x='-281.0' visited='false' y='-464.0' tag='sector_ss8192' description='This sector didn&apos;t even exist until the Pale was discovered.  The Second Survey had no record of the exploration which discovered it, no idea how it simply appeared on their maps, and absolutely no idea why every other map of the galaxy, electronic or otherwise, also now included it. ' labels=''>
+                                                                          <child name='projectiles'/>
+                                                                          <child name='killed_fleets'/>
+                                                                          <child name='halos'/>
+                                                                          <child name='active_fleets'/>
+                                                                          <child name='potential_fleets'/>
+                                                                          <child name='links_to'>
+                                                                            <ref tag='sector_pale'/>
+                                                                            <ref tag='sector_the'/>
+                                                                          </child>
+                                                                          <child name='plot'/>
+                                                                          <child name='planets'/>
+                                                                        </sector>
+                                                                      </child>
+                                                                      <child name='plot'/>
+                                                                      <child name='planets'/>
+                                                                    </sector>
+                                                                    <sector name='Th% UnreYovrrabNl' x='-372.0' visited='false' y='-511.0' tag='sector_unrecoverable' description='Th8s scc!r is nt onnly entr##ly impppsibll to wxplre, but an7 data brght from it i7 inevtttttbly cor*!pted. ' labels=''>
+                                                                      <child name='projectiles'/>
+                                                                      <child name='killed_fleets'/>
+                                                                      <child name='halos'/>
+                                                                      <child name='active_fleets'/>
+                                                                      <child name='potential_fleets'/>
+                                                                      <child name='links_to'>
+                                                                        <ref tag='sector_pale'/>
+                                                                      </child>
+                                                                      <child name='plot'/>
+                                                                      <child name='planets'/>
+                                                                    </sector>
+                                                                    <ref tag='sector_ss8192'/>
+                                                                  </child>
+                                                                  <child name='plot'/>
+                                                                  <child name='planets'/>
+                                                                </sector>
+                                                              </child>
+                                                              <child name='plot'/>
+                                                              <child name='planets'/>
+                                                            </sector>
+                                                            <ref tag='sector_ruse'/>
+                                                            <ref tag='sector_ss6'/>
+                                                          </child>
+                                                          <child name='plot'/>
+                                                          <child name='planets'/>
+                                                        </sector>
+                                                        <ref tag='sector_rebel'/>
+                                                      </child>
+                                                      <child name='plot'/>
+                                                      <child name='planets'/>
+                                                    </sector>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                                <ref tag='sector_price'/>
+                                                <sector name='The Right' x='-858.0' visited='false' y='-328.0' tag='sector_right' description='In actuality, this sector belongs to a family known as the&quot;Wrights&quot;, but hardly anyone gets this right, despite the fearsome family reputation. ' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_ruse'/>
+                                                    <sector name='Second Survey 7' x='-952.0' visited='false' y='-275.0' tag='sector_ss7' description='The number 7 has traditionally been associated with luck.  Unfortunately for the second survey, this was not the case.' labels=''>
+                                                      <child name='projectiles'/>
+                                                      <child name='killed_fleets'/>
+                                                      <child name='halos'/>
+                                                      <child name='active_fleets'/>
+                                                      <child name='potential_fleets'/>
+                                                      <child name='links_to'>
+                                                        <ref tag='sector_right'/>
+                                                      </child>
+                                                      <child name='plot'/>
+                                                      <child name='planets'/>
+                                                    </sector>
+                                                    <sector name='Second Survey 3' x='-972.0' visited='false' y='-377.0' tag='sector_ss3' description='The same spirit of heady adventure and optimisim permeated the Second Survey as did the first.  Sadly, the same failure followed. ' labels=''>
+                                                      <child name='projectiles'/>
+                                                      <child name='killed_fleets'/>
+                                                      <child name='halos'/>
+                                                      <child name='active_fleets'/>
+                                                      <child name='potential_fleets'/>
+                                                      <child name='links_to'>
+                                                        <ref tag='sector_right'/>
+                                                      </child>
+                                                      <child name='plot'/>
+                                                      <child name='planets'/>
+                                                    </sector>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                                <sector name='The Night Sky' x='-669.0' visited='false' y='-455.0' tag='sector_night_sky' description='The lone habitable world of this sector would have little to recommend it, if not for the spectacular view of the nearby nebula. ' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_ruse'/>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                                <ref tag='sector_ss5'/>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                            <sector name='Second Survey 1' x='-501.0' visited='false' y='-247.0' tag='sector_ss1' description='Comissioned by the Rebellion, the Second Survey was designed to pick up where theGalaxy Survey left off - and if they were to discover sectors which would give the rebels an advantage, this was &quot;just a bonus&quot; ' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_anvil'/>
+                                                <sector name='Second Survey 2' x='-461.0' visited='false' y='-223.0' tag='sector_ss2' description='The alliteration of the sector name, and the fact that it was the second attempt at a survey seemed to dictate a better name.  In the years since its discovery, none have been suggested, owing mainly to lack of interest. ' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_ss1'/>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                            <ref tag='sector_ss4'/>
+                                          </child>
+                                          <child name='plot'/>
+                                          <child name='planets'/>
+                                        </sector>
+                                        <ref tag='sector_ruse'/>
+                                      </child>
+                                      <child name='plot'/>
+                                      <child name='planets'/>
+                                    </sector>
+                                    <sector name='Second Survey 12' x='-356.0' visited='false' y='-197.0' tag='sector_ss12' description='Initially the Second Survey thought that following up in the exact same places that the initial Survey had, but with superior technology, would reveal better results.  This was a mistake. ' labels=''>
+                                      <child name='projectiles'/>
+                                      <child name='killed_fleets'/>
+                                      <child name='halos'/>
+                                      <child name='active_fleets'/>
+                                      <child name='potential_fleets'/>
+                                      <child name='links_to'>
+                                        <ref tag='sector_gs83'/>
+                                        <ref tag='sector_bottleneck'/>
+                                        <sector name='SS-14 / GS-81' x='-203.0' visited='false' y='-225.0' tag='sector_ss14gs81' description='The Second Survey was less than excited to discover yet another empty sector.  They were practically infuriated to be informed that the Galaxy Survey had already been there. ' labels=''>
+                                          <child name='projectiles'/>
+                                          <child name='killed_fleets'/>
+                                          <child name='halos'/>
+                                          <child name='active_fleets'/>
+                                          <child name='potential_fleets'/>
+                                          <child name='links_to'>
+                                            <ref tag='sector_sandwall'/>
+                                            <ref tag='sector_ss12'/>
+                                            <sector name='North Star' x='-88.0' visited='false' y='-268.0' tag='sector_north_star' description='More officially known as &apos;Polaris&apos;, humanity has been navigating by the light of this star since before they could even leave the planet. ' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_ss14gs81'/>
+                                                <ref tag='sector_centauri'/>
+                                                <sector name='New Bottleneck' x='-239.0' visited='false' y='-317.0' tag='sector_new_bottleneck' description='The Galaxy Survey operated for a very long time; even after the area beyond Bottleneck had been discovered and colonised, the Survey continued to try to find new sectors.  They spent the vast majority of their time in this sector, using the most sophisticated eqiupment possible to try to find another link to anywhere else, and failed.' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_north_star'/>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                                <sector name='Galaxy Survey 60' x='-50.0' visited='false' y='-348.0' tag='sector_gs60' description='Galaxy Survey 60 is a sector.  No more, no less. ' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_north_star'/>
+                                                    <sector name='Galaxy Survey 77' x='-187.0' visited='false' y='-378.0' tag='sector_gs77' description='The Galaxy Survey had lasted for an unprecedented amount of time, but public interest was at this point at an all-time low.  Awareness that the project even existed was less than one-thousandth of one percent among the peoples of the galaxy.  The Survey ended soon after. ' labels=''>
+                                                      <child name='projectiles'/>
+                                                      <child name='killed_fleets'/>
+                                                      <child name='halos'/>
+                                                      <child name='active_fleets'/>
+                                                      <child name='potential_fleets'/>
+                                                      <child name='links_to'>
+                                                        <ref tag='sector_gs60'/>
+                                                        <sector name='Galaxy Survey Final' x='-217.0' visited='false' y='-421.0' tag='sector_gsFinal' description='The Survey of this sector was brief and almost entirely non-noteworthy.  It was also the last Survey performed until the Second Survey was commissioned to repeat their ancestor&apos;s mistakes. ' labels=''>
+                                                          <child name='projectiles'/>
+                                                          <child name='killed_fleets'/>
+                                                          <child name='halos'/>
+                                                          <child name='active_fleets'/>
+                                                          <child name='potential_fleets'/>
+                                                          <child name='links_to'>
+                                                            <ref tag='sector_gs77'/>
+                                                            <sector name='Forbidden' x='-60.0' visited='false' y='-448.0' tag='sector_forbidden' description='&quot;We came into this sector as scientists, as explorers, always looking deeper along the hyperspace lanes to find what&apos;s there.  We left... content with our place in the world, I guess.  What we saw out there was nothing, and it was the most horrible empty nothing possible.  No future, no end, a death alone and forgotten.  That&apos;s what lied along this path.  No, we&apos;re not going past this sector.&quot; - Captain Millings, Galaxy Survey. ' labels=''>
+                                                              <child name='projectiles'/>
+                                                              <child name='killed_fleets'/>
+                                                              <child name='halos'/>
+                                                              <child name='active_fleets'/>
+                                                              <child name='potential_fleets'/>
+                                                              <child name='links_to'>
+                                                                <ref tag='sector_gsFinal'/>
+                                                                <ref tag='sector_gs77'/>
+                                                                <ref tag='sector_gs60'/>
+                                                              </child>
+                                                              <child name='plot'/>
+                                                              <child name='planets'/>
+                                                            </sector>
+                                                          </child>
+                                                          <child name='plot'/>
+                                                          <child name='planets'/>
+                                                        </sector>
+                                                        <ref tag='sector_north_star'/>
+                                                        <ref tag='sector_forbidden'/>
+                                                      </child>
+                                                      <child name='plot'/>
+                                                      <child name='planets'/>
+                                                    </sector>
+                                                    <ref tag='sector_forbidden'/>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                                <ref tag='sector_gs77'/>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                          </child>
+                                          <child name='plot'/>
+                                          <child name='planets'/>
+                                        </sector>
+                                      </child>
+                                      <child name='plot'/>
+                                      <child name='planets'/>
+                                    </sector>
+                                  </child>
+                                  <child name='plot'/>
+                                  <child name='planets'/>
+                                </sector>
+                                <ref tag='sector_ss12'/>
+                              </child>
+                              <child name='plot'/>
+                              <child name='planets'/>
+                            </sector>
+                            <sector name='Fear' x='-252.0' visited='false' y='126.0' tag='sector_fear' description='During the initial invasion scare, the inhabitants of this sector rapidly grew xenophobic, not only of the imaginary invaders, but also of their fellow humans. ' labels=''>
+                              <child name='projectiles'/>
+                              <child name='killed_fleets'/>
+                              <child name='halos'/>
+                              <child name='active_fleets'/>
+                              <child name='potential_fleets'/>
+                              <child name='links_to'>
+                                <sector name='Galaxy Survey 7' x='-132.0' visited='false' y='189.0' tag='sector_gs7' description=' From a scientific standpoint, there is always something to learn from a newly discovered sector.  Even to scientists, however, this sector is dull.' labels=''>
+                                  <child name='projectiles'/>
+                                  <child name='killed_fleets'/>
+                                  <child name='halos'/>
+                                  <child name='active_fleets'/>
+                                  <child name='potential_fleets'/>
+                                  <child name='links_to'>
+                                    <sector name='Galaxy Survey 1' x='-41.0' visited='false' y='140.0' tag='sector_gs1' description=' When it became known that empty sectors could play host to hyperspace lanes, the Galaxy Survey was comissioned.  It was responsible for discovering many of the outlying sectors, but had a poor track record for selecting inhabitable ones.' labels=''>
+                                      <child name='projectiles'/>
+                                      <child name='killed_fleets'/>
+                                      <child name='halos'/>
+                                      <child name='active_fleets'/>
+                                      <child name='potential_fleets'/>
+                                      <child name='links_to'>
+                                        <sector name='Sirius' x='31.0' visited='false' y='77.0' tag='sector_sirius' description=' One of the first working hyperspace lanes led to this sector.  Its importance has only increased over time.' labels=''>
+                                          <child name='projectiles'/>
+                                          <child name='killed_fleets'/>
+                                          <child name='halos'/>
+                                          <child name='active_fleets'/>
+                                          <child name='potential_fleets'/>
+                                          <child name='links_to'>
+                                            <ref tag='sector_sol'/>
+                                            <sector name='Void' x='-73.0' visited='false' y='55.0' tag='sector_void' description=' Void was the first sector discovered without even a star.  This discovery led to changes in hyperspace theory that allowed humankind to spread even farther.' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_sirius'/>
+                                                <ref tag='sector_gs1'/>
+                                                <sector name='Backup' x='-198.0' visited='false' y='55.0' tag='sector_backup' description=' When the invasion fears reached their peak, plans were enacted to evacuate Earth and relocate them to this sector.' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_void'/>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                                <sector name='Fray' x='-80.0' visited='false' y='-5.0' tag='sector_fray' description=' Due to its extremely weak connection to the other Galaxy Survey sectors, this sector was long ago re-named to more accurately reflect the fact that it is, in the words of one Survey executive &quot;like the frayed end of a string&quot;' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_void'/>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                            <sector name='Preview' x='129.0' visited='false' y='112.0' tag='sector_preview' description=' Preview&apos;s only habitable planet was known for quite some time before settlement, which resulted in a number of squatters who appeared before they were officially allowed to.' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_sirius'/>
+                                                <sector name='Freehold' x='201.0' visited='false' y='4.0' tag='sector_freehold' description=' Freehold was the first experiment in independence from the central Earth government.  Though comparatively short-lived due to lack of resources, its example has been remembered by every rebel group since.' labels=''>
+                                                  <child name='projectiles'/>
+                                                  <child name='killed_fleets'/>
+                                                  <child name='halos'/>
+                                                  <child name='active_fleets'/>
+                                                  <child name='potential_fleets'/>
+                                                  <child name='links_to'>
+                                                    <ref tag='sector_centauri'/>
+                                                    <ref tag='sector_preview'/>
+                                                    <sector name='Galaxy Survey 5' x='288.0' visited='false' y='160.0' tag='sector_gs5' description=' The early days of the Galaxy Survey were full of optimism.  This fifth failure marked the beginning of the decline.' labels=''>
+                                                      <child name='projectiles'/>
+                                                      <child name='killed_fleets'/>
+                                                      <child name='halos'/>
+                                                      <child name='active_fleets'/>
+                                                      <child name='potential_fleets'/>
+                                                      <child name='links_to'>
+                                                        <ref tag='sector_freehold'/>
+                                                        <sector name='Raw' x='173.0' visited='false' y='163.0' tag='sector_raw' description=' Uninhabitable by most standards, this sector is peopled mainly by those extracting the many raw materials available.' labels=''>
+                                                          <child name='projectiles'/>
+                                                          <child name='killed_fleets'/>
+                                                          <child name='halos'/>
+                                                          <child name='active_fleets'/>
+                                                          <child name='potential_fleets'/>
+                                                          <child name='links_to'>
+                                                            <ref tag='sector_preview'/>
+                                                            <sector name='Paradise' x='154.0' visited='false' y='255.0' tag='sector_paradise' description=' The Paradise sector was named on its initial survey.  It was later discovered that the previously-thought-perfect planet was anything but paradise.' labels=''>
+                                                              <child name='projectiles'/>
+                                                              <child name='killed_fleets'/>
+                                                              <child name='halos'/>
+                                                              <child name='active_fleets'/>
+                                                              <child name='potential_fleets'/>
+                                                              <child name='links_to'>
+                                                                <sector name='Galaxy Survey 14' x='-3.0' visited='false' y='220.0' tag='sector_gs14' description=' Galaxy Survey 14 contains very little more than the lanes which connect it to the rest of the galaxy.' labels=''>
+                                                                  <child name='projectiles'/>
+                                                                  <child name='killed_fleets'/>
+                                                                  <child name='halos'/>
+                                                                  <child name='active_fleets'/>
+                                                                  <child name='potential_fleets'/>
+                                                                  <child name='links_to'>
+                                                                    <sector name='Keyhole' x='79.0' visited='false' y='185.0' tag='sector_keyhole' description=' Home of the so-called &apos;keyhole nebula&apos;, this sector holds value mostly to scientists who want to study potential star formation firsthand.' labels=''>
+                                                                      <child name='projectiles'/>
+                                                                      <child name='killed_fleets'/>
+                                                                      <child name='halos'/>
+                                                                      <child name='active_fleets'/>
+                                                                      <child name='potential_fleets'/>
+                                                                      <child name='links_to'>
+                                                                        <ref tag='sector_sirius'/>
+                                                                        <ref tag='sector_gs14'/>
+                                                                      </child>
+                                                                      <child name='plot'/>
+                                                                      <child name='planets'/>
+                                                                    </sector>
+                                                                    <ref tag='sector_gs1'/>
+                                                                    <ref tag='sector_paradise'/>
+                                                                    <sector name='Galaxy Survey 21' x='64.0' visited='false' y='312.0' tag='sector_gs21' description=' Galaxy Survey 21 is one of the few surveyed sectors with a star and nothing else.' labels=''>
+                                                                      <child name='projectiles'/>
+                                                                      <child name='killed_fleets'/>
+                                                                      <child name='halos'/>
+                                                                      <child name='active_fleets'/>
+                                                                      <child name='potential_fleets'/>
+                                                                      <child name='links_to'>
+                                                                        <ref tag='sector_gs14'/>
+                                                                        <sector name='Grand Survey' x='-45.0' visited='false' y='353.0' tag='sector_survey' description=' Formerly a nondescript Galaxy Survey sector, this has enjoyed a recent surge in popularity as a jumping-off point for further exploration.' labels=''>
+                                                                          <child name='projectiles'/>
+                                                                          <child name='killed_fleets'/>
+                                                                          <child name='halos'/>
+                                                                          <child name='active_fleets'/>
+                                                                          <child name='potential_fleets'/>
+                                                                          <child name='links_to'>
+                                                                            <ref tag='sector_gs14'/>
+                                                                            <ref tag='sector_gs21'/>
+                                                                            <sector name='Invasion' x='-134.0' visited='false' y='279.0' tag='sector_invasion' description=' Humanity has always been alone in the galaxy, but that was not always thought to be the case.  Though there are no planets, or even a star in this sector, many artifacts of another civilization were first discovered here.  This sparked fears of an invasion that have only recently abated.' labels=''>
+                                                                              <child name='projectiles'/>
+                                                                              <child name='killed_fleets'/>
+                                                                              <child name='halos'/>
+                                                                              <child name='active_fleets'/>
+                                                                              <child name='potential_fleets'/>
+                                                                              <child name='links_to'>
+                                                                                <ref tag='sector_survey'/>
+                                                                                <ref tag='sector_gs7'/>
+                                                                                <sector name='Decoy' x='-264.0' visited='false' y='246.0' tag='sector_decoy' description='At the peak of the invasion fears, this previously empty sector was populated with a wide array of high-tech gadgetry to make it appear as though it were actually humanity&apos;s homeworld.  ' labels=''>
+                                                                                  <child name='projectiles'/>
+                                                                                  <child name='killed_fleets'/>
+                                                                                  <child name='halos'/>
+                                                                                  <child name='active_fleets'/>
+                                                                                  <child name='potential_fleets'/>
+                                                                                  <child name='links_to'>
+                                                                                    <ref tag='sector_invasion'/>
+                                                                                  </child>
+                                                                                  <child name='plot'/>
+                                                                                  <child name='planets'/>
+                                                                                </sector>
+                                                                              </child>
+                                                                              <child name='plot'/>
+                                                                              <child name='planets'/>
+                                                                            </sector>
+                                                                          </child>
+                                                                          <child name='plot'/>
+                                                                          <child name='planets'/>
+                                                                        </sector>
+                                                                        <sector name='Galaxy Survey 13' x='225.0' visited='false' y='296.0' tag='sector_gs13' description=' This sector came very close to being named &apos;Triskaidekaphobia&apos;.' labels=''>
+                                                                          <child name='projectiles'/>
+                                                                          <child name='killed_fleets'/>
+                                                                          <child name='halos'/>
+                                                                          <child name='active_fleets'/>
+                                                                          <child name='potential_fleets'/>
+                                                                          <child name='links_to'>
+                                                                            <ref tag='sector_gs21'/>
+                                                                            <ref tag='sector_paradise'/>
+                                                                            <sector name='Arc' x='260.0' visited='false' y='227.0' tag='sector_arc' description=' Originally Galaxy Survey 6, this sector was re-named as it originally was theorized to be a connector to Paradise but instead completes an arc around it.' labels=''>
+                                                                              <child name='projectiles'/>
+                                                                              <child name='killed_fleets'/>
+                                                                              <child name='halos'/>
+                                                                              <child name='active_fleets'/>
+                                                                              <child name='potential_fleets'/>
+                                                                              <child name='links_to'>
+                                                                                <ref tag='sector_gs5'/>
+                                                                                <ref tag='sector_gs13'/>
+                                                                                <sector name='Galaxy Survey 10' x='384.0' visited='false' y='243.0' tag='sector_gs10' description=' There was little organization to the Galaxy Survey&apos;s techniques; as soon as a lane was discovered, an expedition was mounted.  By the time the survey reached GS10, however, there was worry that they were reaching too far afield.' labels=''>
+                                                                                  <child name='projectiles'/>
+                                                                                  <child name='killed_fleets'/>
+                                                                                  <child name='halos'/>
+                                                                                  <child name='active_fleets'/>
+                                                                                  <child name='potential_fleets'/>
+                                                                                  <child name='links_to'>
+                                                                                    <ref tag='sector_arc'/>
+                                                                                    <sector name='Cove' x='348.0' visited='false' y='343.0' tag='sector_cove' description=' Nobody even remembers the original name of this sector - it has been home to pirates that long.' labels=''>
+                                                                                      <child name='projectiles'/>
+                                                                                      <child name='killed_fleets'/>
+                                                                                      <child name='halos'/>
+                                                                                      <child name='active_fleets'/>
+                                                                                      <child name='potential_fleets'/>
+                                                                                      <child name='links_to'>
+                                                                                        <ref tag='sector_gs10'/>
+                                                                                      </child>
+                                                                                      <child name='plot'/>
+                                                                                      <child name='planets'/>
+                                                                                    </sector>
+                                                                                    <sector name='Lagoon' x='474.0' visited='false' y='311.0' tag='sector_lagoon' description='In very few other places has the level of criminality risen higher than it has in this area. ' labels=''>
+                                                                                      <child name='projectiles'/>
+                                                                                      <child name='killed_fleets'/>
+                                                                                      <child name='halos'/>
+                                                                                      <child name='active_fleets'/>
+                                                                                      <child name='potential_fleets'/>
+                                                                                      <child name='links_to'>
+                                                                                        <ref tag='sector_gs10'/>
+                                                                                      </child>
+                                                                                      <child name='plot'/>
+                                                                                      <child name='planets'/>
+                                                                                    </sector>
+                                                                                  </child>
+                                                                                  <child name='plot'/>
+                                                                                  <child name='planets'/>
+                                                                                </sector>
+                                                                              </child>
+                                                                              <child name='plot'/>
+                                                                              <child name='planets'/>
+                                                                            </sector>
+                                                                            <sector name='Solitude' x='202.0' visited='false' y='443.0' tag='sector_solitude' description=' Solitude originally had yet another unimaginitive name courtesy the Galactic Survey.  Its current name was earned by those who, in ones and twos, came to it to get away from everything else.' labels=''>
+                                                                              <child name='projectiles'/>
+                                                                              <child name='killed_fleets'/>
+                                                                              <child name='halos'/>
+                                                                              <child name='active_fleets'/>
+                                                                              <child name='potential_fleets'/>
+                                                                              <child name='links_to'>
+                                                                                <sector name='Galaxy Survey 22' x='143.0' visited='false' y='380.0' tag='sector_gs22' description=' &quot;A gigantic expanse of nothing&quot; - Galaxy Survey report' labels=''>
+                                                                                  <child name='projectiles'/>
+                                                                                  <child name='killed_fleets'/>
+                                                                                  <child name='halos'/>
+                                                                                  <child name='active_fleets'/>
+                                                                                  <child name='potential_fleets'/>
+                                                                                  <child name='links_to'>
+                                                                                    <ref tag='sector_gs21'/>
+                                                                                    <ref tag='sector_solitude'/>
+                                                                                  </child>
+                                                                                  <child name='plot'/>
+                                                                                  <child name='planets'/>
+                                                                                </sector>
+                                                                                <ref tag='sector_gs13'/>
+                                                                                <sector name='Knot' x='285.0' visited='false' y='501.0' tag='sector_knot' description='The Galaxy Survey never gave this sector an official GS number.  The long strand of empty sectors had long by now been compared to a string (especially with the inclusion of &apos;Frey&apos;), and with this sector being the end of the strand and its comparatively stronger links, the name was a foregone conclusion. ' labels=''>
+                                                                                  <child name='projectiles'/>
+                                                                                  <child name='killed_fleets'/>
+                                                                                  <child name='halos'/>
+                                                                                  <child name='active_fleets'/>
+                                                                                  <child name='potential_fleets'/>
+                                                                                  <child name='links_to'>
+                                                                                    <ref tag='sector_solitude'/>
+                                                                                  </child>
+                                                                                  <child name='plot'/>
+                                                                                  <child name='planets'/>
+                                                                                </sector>
+                                                                              </child>
+                                                                              <child name='plot'/>
+                                                                              <child name='planets'/>
+                                                                            </sector>
+                                                                          </child>
+                                                                          <child name='plot'/>
+                                                                          <child name='planets'/>
+                                                                        </sector>
+                                                                        <ref tag='sector_gs22'/>
+                                                                      </child>
+                                                                      <child name='plot'/>
+                                                                      <child name='planets'/>
+                                                                    </sector>
+                                                                    <ref tag='sector_survey'/>
+                                                                  </child>
+                                                                  <child name='plot'/>
+                                                                  <child name='planets'/>
+                                                                </sector>
+                                                                <ref tag='sector_raw'/>
+                                                                <ref tag='sector_gs13'/>
+                                                              </child>
+                                                              <child name='plot'/>
+                                                              <child name='planets'/>
+                                                            </sector>
+                                                            <ref tag='sector_gs5'/>
+                                                          </child>
+                                                          <child name='plot'/>
+                                                          <child name='planets'/>
+                                                        </sector>
+                                                        <ref tag='sector_arc'/>
+                                                      </child>
+                                                      <child name='plot'/>
+                                                      <child name='planets'/>
+                                                    </sector>
+                                                  </child>
+                                                  <child name='plot'/>
+                                                  <child name='planets'/>
+                                                </sector>
+                                                <ref tag='sector_raw'/>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                            <sector name='Incorporated' x='116.0' visited='false' y='43.0' tag='sector_incorporated' description=' The hyperspace lane to Incorporated was discovered by a private company.  At the time, humankind was spread thinly, and there was little interest in further colonization, allowing the company that discovered the lane a monopoly over its use.' labels=''>
+                                              <child name='projectiles'/>
+                                              <child name='killed_fleets'/>
+                                              <child name='halos'/>
+                                              <child name='active_fleets'/>
+                                              <child name='potential_fleets'/>
+                                              <child name='links_to'>
+                                                <ref tag='sector_sirius'/>
+                                              </child>
+                                              <child name='plot'/>
+                                              <child name='planets'/>
+                                            </sector>
+                                            <ref tag='sector_keyhole'/>
+                                            <ref tag='sector_gs1'/>
+                                          </child>
+                                          <child name='plot'/>
+                                          <child name='planets'>
+                                            <planet landing_distance='100.0' name='Loyalty' x='-89.0' y='150.0' image_filename='desert.png' fuel_cost='1.0' tag='sector_loyalty' description='This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. ' labels=''>
+                                              <child name='addons_for_sale'/>
+                                              <child name='missions'/>
+                                              <child name='weapons_for_sale'/>
+                                              <child name='ships_for_sale'/>
+                                              <child name='random_missions'/>
+                                              <child name='plot'/>
+                                              <child name='owner'/>
+                                              <child name='cargo_for_sale'/>
+                                            </planet>
+                                          </child>
+                                        </sector>
+                                        <ref tag='sector_void'/>
+                                        <ref tag='sector_gs14'/>
+                                        <ref tag='sector_gs7'/>
+                                      </child>
+                                      <child name='plot'/>
+                                      <child name='planets'/>
+                                    </sector>
+                                    <ref tag='sector_invasion'/>
+                                    <ref tag='sector_fear'/>
+                                  </child>
+                                  <child name='plot'/>
+                                  <child name='planets'/>
+                                </sector>
+                                <ref tag='sector_sandwall'/>
+                              </child>
+                              <child name='plot'/>
+                              <child name='planets'/>
+                            </sector>
+                            <sector name='Truth' x='-395.0' visited='false' y='41.0' tag='sector_truth' description='This sector is home to a number of less-than-ideal but still inhabitable planets.  A number of pilgrims, rejecting the religious ideals of their time, made their way here in search of Truth.  While many claimed to have been successful, each definition seems to disagree with the others. ' labels=''>
+                              <child name='projectiles'/>
+                              <child name='killed_fleets'/>
+                              <child name='halos'/>
+                              <child name='active_fleets'/>
+                              <child name='potential_fleets'/>
+                              <child name='links_to'>
+                                <ref tag='sector_sandwall'/>
+                              </child>
+                              <child name='plot'/>
+                              <child name='planets'/>
+                            </sector>
+                            <ref tag='sector_ss14gs81'/>
+                          </child>
+                          <child name='plot'/>
+                          <child name='planets'/>
+                        </sector>
+                      </child>
+                      <child name='plot'/>
+                      <child name='planets'/>
+                    </sector>
                   </child>
-                </cargo>
-                <cargo average_price='0.0' tag='metals_high' mission_related='false' amount='0.0' markup='10.0'>
-                  <child name='blueprint'>
-                    <cargoblueprint name='Raw Metals' tag='cargo_raw_metals' base_price='150.0' description='This is mostly unprocessed ore - since the metal tends to weigh the same whether it&apos;s been through a machine or not and you never know which exact metals the buyer will need. '/>
+                  <child name='plot'/>
+                  <child name='planets'/>
+                </sector>
+                <ref tag='sector_freehold'/>
+                <ref tag='sector_north_star'/>
+                <sector name='Edge' x='93.0' visited='false' y='-174.0' tag='sector_edge' description='Short for &quot;The Edge of the Galaxy&quot;, this was for the longest time the last remotely habitable planet for a very large distance indeed.  Some still consider it so. ' labels=''>
+                  <child name='projectiles'/>
+                  <child name='killed_fleets'/>
+                  <child name='halos'/>
+                  <child name='active_fleets'/>
+                  <child name='potential_fleets'/>
+                  <child name='links_to'>
+                    <ref tag='sector_centauri'/>
+                    <sector name='Galaxy Survey 42' x='67.0' visited='false' y='-234.0' tag='sector_gs42' description='Galaxy Survey 42 turned out to be the answer to a question nobody asked. ' labels=''>
+                      <child name='projectiles'/>
+                      <child name='killed_fleets'/>
+                      <child name='halos'/>
+                      <child name='active_fleets'/>
+                      <child name='potential_fleets'/>
+                      <child name='links_to'>
+                        <ref tag='sector_edge'/>
+                      </child>
+                      <child name='plot'/>
+                      <child name='planets'/>
+                    </sector>
                   </child>
-                </cargo>
+                  <child name='plot'/>
+                  <child name='planets'/>
+                </sector>
               </child>
-              <child name='missions'/>
+              <child name='plot'/>
+              <child name='planets'/>
+            </sector>
+            <ref tag='sector_sirius'/>
+          </child>
+          <child name='plot'/>
+          <child name='planets'>
+            <planet landing_distance='150.0' name='Earth' x='-7.0' y='-43.0' image_filename='planetoid.png' fuel_cost='1.0' tag='planet_earth' description='This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. ' labels=''>
               <child name='addons_for_sale'/>
+              <child name='missions'/>
               <child name='weapons_for_sale'/>
               <child name='ships_for_sale'/>
               <child name='random_missions'/>
               <child name='plot'/>
               <child name='owner'>
-                <org killing_mod='-50.0' name='Alliance' friendly='500.0' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_alliance' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' friendly_multiplier='0.5'>
+                <org friendly='500.0' killing_mod='-50.0' name='Alliance' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_alliance' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
                   <child name='feelings'>
-                    <relation feeling='1000000'>
+                    <relation labels='' feeling='1000000'>
                       <child name='target_org'>
                         <ref tag='org_alliance'/>
                       </child>
@@ -35,851 +866,20 @@
                   </child>
                 </org>
               </child>
+              <child name='cargo_for_sale'>
+                <cargo average_price='0.0' tag='food_med' mission_related='false' amount='0.0' markup='-15.0' labels=''>
+                  <child name='blueprint'>
+                    <cargoblueprint name='Food' tag='cargo_food' base_price='100.0' description='A mix of natural and artificial materials, you never know the exact composition of what you&apos;ll be transporting.  The important thing is that you can eat it if your ship ends up stranded somewhere. ' labels=''/>
+                  </child>
+                </cargo>
+                <cargo average_price='0.0' tag='metals_high' mission_related='false' amount='0.0' markup='10.0' labels=''>
+                  <child name='blueprint'>
+                    <cargoblueprint name='Raw Metals' tag='cargo_raw_metals' base_price='150.0' description='This is mostly unprocessed ore - since the metal tends to weigh the same whether it&apos;s been through a machine or not and you never know which exact metals the buyer will need. ' labels=''/>
+                  </child>
+                </cargo>
+              </child>
             </planet>
           </child>
-          <child name='projectiles'/>
-          <child name='killed_fleets'/>
-          <child name='halos'/>
-          <child name='potential_fleets'/>
-          <child name='links_to'>
-            <sector name='Centauri' x='54.0' visited='false' y='-60.0' tag='sector_centauri' description=' Binary systems are inherently more difficult to find hyperspace links through, but given Centauri&apos;s relative closeness to the Sol sector it made for an easy first target.'>
-              <child name='planets'/>
-              <child name='projectiles'/>
-              <child name='killed_fleets'/>
-              <child name='halos'/>
-              <child name='potential_fleets'/>
-              <child name='links_to'>
-                <ref tag='sector_sol'/>
-                <sector name='Farpost' x='-71.0' visited='false' y='-75.0' tag='sector_farpost' description=' Hyperspace research stagnated when the burgeoning human alliance reached this sector.  For a very long time, it was in fact the furthest post from human lands.'>
-                  <child name='planets'/>
-                  <child name='projectiles'/>
-                  <child name='killed_fleets'/>
-                  <child name='halos'/>
-                  <child name='potential_fleets'/>
-                  <child name='links_to'>
-                    <ref tag='sector_centauri'/>
-                    <sector name='New Sol' x='-166.0' visited='false' y='-39.0' tag='sector_new_sol' description=' There are any number of stars similar to that of Earth&apos;s, but this was the first that a hyperspace lane was discovered going to.'>
-                      <child name='planets'/>
-                      <child name='projectiles'/>
-                      <child name='killed_fleets'/>
-                      <child name='halos'/>
-                      <child name='potential_fleets'/>
-                      <child name='links_to'>
-                        <ref tag='sector_farpost'/>
-                        <sector name='Sandwall' x='-280.0' visited='false' y='-92.0' tag='sector_sandwall' description='&quot;The Sandwall&quot; got its name because it is literally filled with tiny microscopic particles.  At the speed a ship would enter the sector, it would be torn apart in moments.  Fortunately, the upside was that humanity developed shielding technology, more than making up for the inconvenience. '>
-                          <child name='planets'/>
-                          <child name='projectiles'/>
-                          <child name='killed_fleets'/>
-                          <child name='halos'/>
-                          <child name='potential_fleets'/>
-                          <child name='links_to'>
-                            <ref tag='sector_new_sol'/>
-                            <sector name='Galaxy Survey 83' x='-411.0' visited='false' y='-136.0' tag='sector_gs83' description='It has been not so subtly suggested that, at this point, the Galaxy Survey had lost count. '>
-                              <child name='planets'/>
-                              <child name='projectiles'/>
-                              <child name='killed_fleets'/>
-                              <child name='halos'/>
-                              <child name='potential_fleets'/>
-                              <child name='links_to'>
-                                <ref tag='sector_sandwall'/>
-                                <sector name='Bottleneck' x='-544.0' visited='false' y='-182.0' tag='sector_bottleneck' description='For reasons scientists even now do not understand, hyperspace lanes are more difficult to locate in this area of space.  This is the only sector linking another group of tightly-clustered sectors to alliance space, and if not for it, the two would be forever separated. '>
-                                  <child name='planets'/>
-                                  <child name='projectiles'/>
-                                  <child name='killed_fleets'/>
-                                  <child name='halos'/>
-                                  <child name='potential_fleets'/>
-                                  <child name='links_to'>
-                                    <ref tag='sector_gs83'/>
-                                    <sector name='The Vat' x='-621.0' visited='false' y='-265.0' tag='sector_vat' description='The Vat was an expieriment to create habitable planets.  While it worked, it turned out to be massively consuming of time and energy. It was deemed easier to simply explore for other habitable worlds and terraform where appropriate. '>
-                                      <child name='planets'/>
-                                      <child name='projectiles'/>
-                                      <child name='killed_fleets'/>
-                                      <child name='halos'/>
-                                      <child name='potential_fleets'/>
-                                      <child name='links_to'>
-                                        <ref tag='sector_bottleneck'/>
-                                        <sector name='The Hammer' x='-713.0' visited='false' y='-209.0' tag='sector_hammer' description='This sector plays host to the largest weapons manufacturing system in the known universe. '>
-                                          <child name='planets'/>
-                                          <child name='projectiles'/>
-                                          <child name='killed_fleets'/>
-                                          <child name='halos'/>
-                                          <child name='potential_fleets'/>
-                                          <child name='links_to'>
-                                            <ref tag='sector_vat'/>
-                                            <sector name='The Forgotten' x='-724.0' visited='false' y='-306.0' tag='sector_forgotten' description='Everyone remembers The Forgotten - its name stems from an unexpected hyperspace lane failure which left it isolated for hundreds of years. '>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_hammer'/>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                            <sector name='The End' x='-860.0' visited='false' y='-211.0' tag='sector_end' description='Initially the name was just a joke, but like many such names, it stuck. This sector has numerous properties making hyperspace lane formation not only improbable, but impossible.  The pre-existing route to this sector is due to collapse within a few thousand years. '>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_hammer'/>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                          </child>
-                                          <child name='active_fleets'/>
-                                          <child name='plot'/>
-                                        </sector>
-                                        <sector name='The Anvil' x='-503.0' visited='false' y='-308.0' tag='sector_anvil' description='Originally interesting due to fluctuations in previously-thought-constant constants, this sector has only become more interesting over time; at the moment it is the center of most defensive research. '>
-                                          <child name='planets'/>
-                                          <child name='projectiles'/>
-                                          <child name='killed_fleets'/>
-                                          <child name='halos'/>
-                                          <child name='potential_fleets'/>
-                                          <child name='links_to'>
-                                            <ref tag='sector_vat'/>
-                                            <sector name='The Ruse' x='-645.0' visited='false' y='-363.0' tag='sector_ruse' description='This entire area of space is known for its scientifically interesting oddities, but none more so than The Ruse.  Whenever a ship enters the sector, it gets a brief sensor echo of the next sector along.  The reason for this remains unexplained, even today. '>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_vat'/>
-                                                <ref tag='sector_anvil'/>
-                                                <sector name='The Rebel' x='-776.0' visited='false' y='-394.0' tag='sector_rebel' description='It was in this sector, not long ago, that the rebellion against the central alliance of humans was begun.  The central systems had a weak hold this far from their center to begin with, and their influence had plummeted since. '>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_ruse'/>
-                                                    <sector name='Second Survey 6' x='-834.0' visited='false' y='-493.0' tag='sector_ss6' description='Second Survey Six faced the same naming problems as Second Survey Two, but even less interest. '>
-                                                      <child name='planets'/>
-                                                      <child name='projectiles'/>
-                                                      <child name='killed_fleets'/>
-                                                      <child name='halos'/>
-                                                      <child name='potential_fleets'/>
-                                                      <child name='links_to'>
-                                                        <sector name='Second Survey 5' x='-513.0' visited='false' y='-473.0' tag='sector_ss5' description='&quot;Oh, come on, even the Galaxy Survey eventually found a sector!&quot; - Second Survey Official. '>
-                                                          <child name='planets'/>
-                                                          <child name='projectiles'/>
-                                                          <child name='killed_fleets'/>
-                                                          <child name='halos'/>
-                                                          <child name='potential_fleets'/>
-                                                          <child name='links_to'>
-                                                            <sector name='The Price' x='-519.0' visited='false' y='-404.0' tag='sector_price' description='This sector is owned by the Price family, widely considered by many, rebel and alliance alike, as being an organized crime front. '>
-                                                              <child name='planets'/>
-                                                              <child name='projectiles'/>
-                                                              <child name='killed_fleets'/>
-                                                              <child name='halos'/>
-                                                              <child name='potential_fleets'/>
-                                                              <child name='links_to'>
-                                                                <ref tag='sector_ruse'/>
-                                                                <ref tag='sector_ss5'/>
-                                                                <sector name='The Pale' x='-389.0' visited='false' y='-428.0' tag='sector_pale' description='This area of the galaxy is no stranger to anomalies, but this particular area is, to quote scientists who tried to explore further, &quot;Beyond the Pale&quot; '>
-                                                                  <child name='planets'/>
-                                                                  <child name='projectiles'/>
-                                                                  <child name='killed_fleets'/>
-                                                                  <child name='halos'/>
-                                                                  <child name='potential_fleets'/>
-                                                                  <child name='links_to'>
-                                                                    <ref tag='sector_price'/>
-                                                                    <sector name='Second Survey 4' x='-401.0' visited='false' y='-335.0' tag='sector_ss4' description='It became painfully and rapidly apparent that the Second Survey was to be no more successful than the first. '>
-                                                                      <child name='planets'/>
-                                                                      <child name='projectiles'/>
-                                                                      <child name='killed_fleets'/>
-                                                                      <child name='halos'/>
-                                                                      <child name='potential_fleets'/>
-                                                                      <child name='links_to'>
-                                                                        <ref tag='sector_anvil'/>
-                                                                        <ref tag='sector_pale'/>
-                                                                      </child>
-                                                                      <child name='active_fleets'/>
-                                                                      <child name='plot'/>
-                                                                    </sector>
-                                                                    <sector name='The' x='-283.0' visited='false' y='-392.0' tag='sector_the' description='The the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the.e.e.e.e.e.e.....'>
-                                                                      <child name='planets'/>
-                                                                      <child name='projectiles'/>
-                                                                      <child name='killed_fleets'/>
-                                                                      <child name='halos'/>
-                                                                      <child name='potential_fleets'/>
-                                                                      <child name='links_to'>
-                                                                        <ref tag='sector_pale'/>
-                                                                        <sector name='Second Survey 8192' x='-281.0' visited='false' y='-464.0' tag='sector_ss8192' description='This sector didn&apos;t even exist until the Pale was discovered.  The Second Survey had no record of the exploration which discovered it, no idea how it simply appeared on their maps, and absolutely no idea why every other map of the galaxy, electronic or otherwise, also now included it. '>
-                                                                          <child name='planets'/>
-                                                                          <child name='projectiles'/>
-                                                                          <child name='killed_fleets'/>
-                                                                          <child name='halos'/>
-                                                                          <child name='potential_fleets'/>
-                                                                          <child name='links_to'>
-                                                                            <ref tag='sector_pale'/>
-                                                                            <ref tag='sector_the'/>
-                                                                          </child>
-                                                                          <child name='active_fleets'/>
-                                                                          <child name='plot'/>
-                                                                        </sector>
-                                                                      </child>
-                                                                      <child name='active_fleets'/>
-                                                                      <child name='plot'/>
-                                                                    </sector>
-                                                                    <sector name='Th% UnreYovrrabNl' x='-372.0' visited='false' y='-511.0' tag='sector_unrecoverable' description='Th8s scc!r is nt onnly entr##ly impppsibll to wxplre, but an7 data brght from it i7 inevtttttbly cor*!pted. '>
-                                                                      <child name='planets'/>
-                                                                      <child name='projectiles'/>
-                                                                      <child name='killed_fleets'/>
-                                                                      <child name='halos'/>
-                                                                      <child name='potential_fleets'/>
-                                                                      <child name='links_to'>
-                                                                        <ref tag='sector_pale'/>
-                                                                      </child>
-                                                                      <child name='active_fleets'/>
-                                                                      <child name='plot'/>
-                                                                    </sector>
-                                                                    <ref tag='sector_ss8192'/>
-                                                                  </child>
-                                                                  <child name='active_fleets'/>
-                                                                  <child name='plot'/>
-                                                                </sector>
-                                                              </child>
-                                                              <child name='active_fleets'/>
-                                                              <child name='plot'/>
-                                                            </sector>
-                                                            <ref tag='sector_ruse'/>
-                                                            <ref tag='sector_ss6'/>
-                                                          </child>
-                                                          <child name='active_fleets'/>
-                                                          <child name='plot'/>
-                                                        </sector>
-                                                        <ref tag='sector_rebel'/>
-                                                      </child>
-                                                      <child name='active_fleets'/>
-                                                      <child name='plot'/>
-                                                    </sector>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                                <ref tag='sector_price'/>
-                                                <sector name='The Right' x='-858.0' visited='false' y='-328.0' tag='sector_right' description='In actuality, this sector belongs to a family known as the&quot;Wrights&quot;, but hardly anyone gets this right, despite the fearsome family reputation. '>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_ruse'/>
-                                                    <sector name='Second Survey 7' x='-952.0' visited='false' y='-275.0' tag='sector_ss7' description='The number 7 has traditionally been associated with luck.  Unfortunately for the second survey, this was not the case.'>
-                                                      <child name='planets'/>
-                                                      <child name='projectiles'/>
-                                                      <child name='killed_fleets'/>
-                                                      <child name='halos'/>
-                                                      <child name='potential_fleets'/>
-                                                      <child name='links_to'>
-                                                        <ref tag='sector_right'/>
-                                                      </child>
-                                                      <child name='active_fleets'/>
-                                                      <child name='plot'/>
-                                                    </sector>
-                                                    <sector name='Second Survey 3' x='-972.0' visited='false' y='-377.0' tag='sector_ss3' description='The same spirit of heady adventure and optimisim permeated the Second Survey as did the first.  Sadly, the same failure followed. '>
-                                                      <child name='planets'/>
-                                                      <child name='projectiles'/>
-                                                      <child name='killed_fleets'/>
-                                                      <child name='halos'/>
-                                                      <child name='potential_fleets'/>
-                                                      <child name='links_to'>
-                                                        <ref tag='sector_right'/>
-                                                      </child>
-                                                      <child name='active_fleets'/>
-                                                      <child name='plot'/>
-                                                    </sector>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                                <sector name='The Night Sky' x='-669.0' visited='false' y='-455.0' tag='sector_night_sky' description='The lone habitable world of this sector would have little to recommend it, if not for the spectacular view of the nearby nebula. '>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_ruse'/>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                                <ref tag='sector_ss5'/>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                            <sector name='Second Survey 1' x='-501.0' visited='false' y='-247.0' tag='sector_ss1' description='Comissioned by the Rebellion, the Second Survey was designed to pick up where theGalaxy Survey left off - and if they were to discover sectors which would give the rebels an advantage, this was &quot;just a bonus&quot; '>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_anvil'/>
-                                                <sector name='Second Survey 2' x='-461.0' visited='false' y='-223.0' tag='sector_ss2' description='The alliteration of the sector name, and the fact that it was the second attempt at a survey seemed to dictate a better name.  In the years since its discovery, none have been suggested, owing mainly to lack of interest. '>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_ss1'/>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                            <ref tag='sector_ss4'/>
-                                          </child>
-                                          <child name='active_fleets'/>
-                                          <child name='plot'/>
-                                        </sector>
-                                        <ref tag='sector_ruse'/>
-                                      </child>
-                                      <child name='active_fleets'/>
-                                      <child name='plot'/>
-                                    </sector>
-                                    <sector name='Second Survey 12' x='-356.0' visited='false' y='-197.0' tag='sector_ss12' description='Initially the Second Survey thought that following up in the exact same places that the initial Survey had, but with superior technology, would reveal better results.  This was a mistake. '>
-                                      <child name='planets'/>
-                                      <child name='projectiles'/>
-                                      <child name='killed_fleets'/>
-                                      <child name='halos'/>
-                                      <child name='potential_fleets'/>
-                                      <child name='links_to'>
-                                        <ref tag='sector_gs83'/>
-                                        <ref tag='sector_bottleneck'/>
-                                        <sector name='SS-14 / GS-81' x='-203.0' visited='false' y='-225.0' tag='sector_ss14gs81' description='The Second Survey was less than excited to discover yet another empty sector.  They were practically infuriated to be informed that the Galaxy Survey had already been there. '>
-                                          <child name='planets'/>
-                                          <child name='projectiles'/>
-                                          <child name='killed_fleets'/>
-                                          <child name='halos'/>
-                                          <child name='potential_fleets'/>
-                                          <child name='links_to'>
-                                            <ref tag='sector_sandwall'/>
-                                            <ref tag='sector_ss12'/>
-                                            <sector name='North Star' x='-88.0' visited='false' y='-268.0' tag='sector_north_star' description='More officially known as &apos;Polaris&apos;, humanity has been navigating by the light of this star since before they could even leave the planet. '>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_ss14gs81'/>
-                                                <ref tag='sector_centauri'/>
-                                                <sector name='New Bottleneck' x='-239.0' visited='false' y='-317.0' tag='sector_new_bottleneck' description='The Galaxy Survey operated for a very long time; even after the area beyond Bottleneck had been discovered and colonised, the Survey continued to try to find new sectors.  They spent the vast majority of their time in this sector, using the most sophisticated eqiupment possible to try to find another link to anywhere else, and failed.'>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_north_star'/>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                                <sector name='Galaxy Survey 60' x='-50.0' visited='false' y='-348.0' tag='sector_gs60' description='Galaxy Survey 60 is a sector.  No more, no less. '>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_north_star'/>
-                                                    <sector name='Galaxy Survey 77' x='-187.0' visited='false' y='-378.0' tag='sector_gs77' description='The Galaxy Survey had lasted for an unprecedented amount of time, but public interest was at this point at an all-time low.  Awareness that the project even existed was less than one-thousandth of one percent among the peoples of the galaxy.  The Survey ended soon after. '>
-                                                      <child name='planets'/>
-                                                      <child name='projectiles'/>
-                                                      <child name='killed_fleets'/>
-                                                      <child name='halos'/>
-                                                      <child name='potential_fleets'/>
-                                                      <child name='links_to'>
-                                                        <ref tag='sector_gs60'/>
-                                                        <sector name='Galaxy Survey Final' x='-217.0' visited='false' y='-421.0' tag='sector_gsFinal' description='The Survey of this sector was brief and almost entirely non-noteworthy.  It was also the last Survey performed until the Second Survey was commissioned to repeat their ancestor&apos;s mistakes. '>
-                                                          <child name='planets'/>
-                                                          <child name='projectiles'/>
-                                                          <child name='killed_fleets'/>
-                                                          <child name='halos'/>
-                                                          <child name='potential_fleets'/>
-                                                          <child name='links_to'>
-                                                            <ref tag='sector_gs77'/>
-                                                            <sector name='Forbidden' x='-60.0' visited='false' y='-448.0' tag='sector_forbidden' description='&quot;We came into this sector as scientists, as explorers, always looking deeper along the hyperspace lanes to find what&apos;s there.  We left... content with our place in the world, I guess.  What we saw out there was nothing, and it was the most horrible empty nothing possible.  No future, no end, a death alone and forgotten.  That&apos;s what lied along this path.  No, we&apos;re not going past this sector.&quot; - Captain Millings, Galaxy Survey. '>
-                                                              <child name='planets'/>
-                                                              <child name='projectiles'/>
-                                                              <child name='killed_fleets'/>
-                                                              <child name='halos'/>
-                                                              <child name='potential_fleets'/>
-                                                              <child name='links_to'>
-                                                                <ref tag='sector_gsFinal'/>
-                                                                <ref tag='sector_gs77'/>
-                                                                <ref tag='sector_gs60'/>
-                                                              </child>
-                                                              <child name='active_fleets'/>
-                                                              <child name='plot'/>
-                                                            </sector>
-                                                          </child>
-                                                          <child name='active_fleets'/>
-                                                          <child name='plot'/>
-                                                        </sector>
-                                                        <ref tag='sector_north_star'/>
-                                                        <ref tag='sector_forbidden'/>
-                                                      </child>
-                                                      <child name='active_fleets'/>
-                                                      <child name='plot'/>
-                                                    </sector>
-                                                    <ref tag='sector_forbidden'/>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                                <ref tag='sector_gs77'/>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                          </child>
-                                          <child name='active_fleets'/>
-                                          <child name='plot'/>
-                                        </sector>
-                                      </child>
-                                      <child name='active_fleets'/>
-                                      <child name='plot'/>
-                                    </sector>
-                                  </child>
-                                  <child name='active_fleets'/>
-                                  <child name='plot'/>
-                                </sector>
-                                <ref tag='sector_ss12'/>
-                              </child>
-                              <child name='active_fleets'/>
-                              <child name='plot'/>
-                            </sector>
-                            <sector name='Fear' x='-252.0' visited='false' y='126.0' tag='sector_fear' description='During the initial invasion scare, the inhabitants of this sector rapidly grew xenophobic, not only of the imaginary invaders, but also of their fellow humans. '>
-                              <child name='planets'/>
-                              <child name='projectiles'/>
-                              <child name='killed_fleets'/>
-                              <child name='halos'/>
-                              <child name='potential_fleets'/>
-                              <child name='links_to'>
-                                <sector name='Galaxy Survey 7' x='-132.0' visited='false' y='189.0' tag='sector_gs7' description=' From a scientific standpoint, there is always something to learn from a newly discovered sector.  Even to scientists, however, this sector is dull.'>
-                                  <child name='planets'/>
-                                  <child name='projectiles'/>
-                                  <child name='killed_fleets'/>
-                                  <child name='halos'/>
-                                  <child name='potential_fleets'/>
-                                  <child name='links_to'>
-                                    <sector name='Galaxy Survey 1' x='-41.0' visited='false' y='140.0' tag='sector_gs1' description=' When it became known that empty sectors could play host to hyperspace lanes, the Galaxy Survey was comissioned.  It was responsible for discovering many of the outlying sectors, but had a poor track record for selecting inhabitable ones.'>
-                                      <child name='planets'/>
-                                      <child name='projectiles'/>
-                                      <child name='killed_fleets'/>
-                                      <child name='halos'/>
-                                      <child name='potential_fleets'/>
-                                      <child name='links_to'>
-                                        <sector name='Sirius' x='31.0' visited='false' y='77.0' tag='sector_sirius' description=' One of the first working hyperspace lanes led to this sector.  Its importance has only increased over time.'>
-                                          <child name='planets'>
-                                            <planet landing_distance='100.0' name='Loyalty' x='-89.0' y='150.0' image_filename='desert.png' fuel_cost='1.0' tag='sector_loyalty' description='This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. '>
-                                              <child name='cargo_for_sale'/>
-                                              <child name='missions'/>
-                                              <child name='addons_for_sale'/>
-                                              <child name='weapons_for_sale'/>
-                                              <child name='ships_for_sale'/>
-                                              <child name='random_missions'/>
-                                              <child name='plot'/>
-                                              <child name='owner'/>
-                                            </planet>
-                                          </child>
-                                          <child name='projectiles'/>
-                                          <child name='killed_fleets'/>
-                                          <child name='halos'/>
-                                          <child name='potential_fleets'/>
-                                          <child name='links_to'>
-                                            <ref tag='sector_sol'/>
-                                            <sector name='Void' x='-73.0' visited='false' y='55.0' tag='sector_void' description=' Void was the first sector discovered without even a star.  This discovery led to changes in hyperspace theory that allowed humankind to spread even farther.'>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_sirius'/>
-                                                <ref tag='sector_gs1'/>
-                                                <sector name='Backup' x='-198.0' visited='false' y='55.0' tag='sector_backup' description=' When the invasion fears reached their peak, plans were enacted to evacuate Earth and relocate them to this sector.'>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_void'/>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                                <sector name='Fray' x='-80.0' visited='false' y='-5.0' tag='sector_fray' description=' Due to its extremely weak connection to the other Galaxy Survey sectors, this sector was long ago re-named to more accurately reflect the fact that it is, in the words of one Survey executive &quot;like the frayed end of a string&quot;'>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_void'/>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                            <sector name='Preview' x='129.0' visited='false' y='112.0' tag='sector_preview' description=' Preview&apos;s only habitable planet was known for quite some time before settlement, which resulted in a number of squatters who appeared before they were officially allowed to.'>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_sirius'/>
-                                                <sector name='Freehold' x='201.0' visited='false' y='4.0' tag='sector_freehold' description=' Freehold was the first experiment in independence from the central Earth government.  Though comparatively short-lived due to lack of resources, its example has been remembered by every rebel group since.'>
-                                                  <child name='planets'/>
-                                                  <child name='projectiles'/>
-                                                  <child name='killed_fleets'/>
-                                                  <child name='halos'/>
-                                                  <child name='potential_fleets'/>
-                                                  <child name='links_to'>
-                                                    <ref tag='sector_centauri'/>
-                                                    <ref tag='sector_preview'/>
-                                                    <sector name='Galaxy Survey 5' x='288.0' visited='false' y='160.0' tag='sector_gs5' description=' The early days of the Galaxy Survey were full of optimism.  This fifth failure marked the beginning of the decline.'>
-                                                      <child name='planets'/>
-                                                      <child name='projectiles'/>
-                                                      <child name='killed_fleets'/>
-                                                      <child name='halos'/>
-                                                      <child name='potential_fleets'/>
-                                                      <child name='links_to'>
-                                                        <ref tag='sector_freehold'/>
-                                                        <sector name='Raw' x='173.0' visited='false' y='163.0' tag='sector_raw' description=' Uninhabitable by most standards, this sector is peopled mainly by those extracting the many raw materials available.'>
-                                                          <child name='planets'/>
-                                                          <child name='projectiles'/>
-                                                          <child name='killed_fleets'/>
-                                                          <child name='halos'/>
-                                                          <child name='potential_fleets'/>
-                                                          <child name='links_to'>
-                                                            <ref tag='sector_preview'/>
-                                                            <sector name='Paradise' x='154.0' visited='false' y='255.0' tag='sector_paradise' description=' The Paradise sector was named on its initial survey.  It was later discovered that the previously-thought-perfect planet was anything but paradise.'>
-                                                              <child name='planets'/>
-                                                              <child name='projectiles'/>
-                                                              <child name='killed_fleets'/>
-                                                              <child name='halos'/>
-                                                              <child name='potential_fleets'/>
-                                                              <child name='links_to'>
-                                                                <sector name='Galaxy Survey 14' x='-3.0' visited='false' y='220.0' tag='sector_gs14' description=' Galaxy Survey 14 contains very little more than the lanes which connect it to the rest of the galaxy.'>
-                                                                  <child name='planets'/>
-                                                                  <child name='projectiles'/>
-                                                                  <child name='killed_fleets'/>
-                                                                  <child name='halos'/>
-                                                                  <child name='potential_fleets'/>
-                                                                  <child name='links_to'>
-                                                                    <sector name='Keyhole' x='79.0' visited='false' y='185.0' tag='sector_keyhole' description=' Home of the so-called &apos;keyhole nebula&apos;, this sector holds value mostly to scientists who want to study potential star formation firsthand.'>
-                                                                      <child name='planets'/>
-                                                                      <child name='projectiles'/>
-                                                                      <child name='killed_fleets'/>
-                                                                      <child name='halos'/>
-                                                                      <child name='potential_fleets'/>
-                                                                      <child name='links_to'>
-                                                                        <ref tag='sector_sirius'/>
-                                                                        <ref tag='sector_gs14'/>
-                                                                      </child>
-                                                                      <child name='active_fleets'/>
-                                                                      <child name='plot'/>
-                                                                    </sector>
-                                                                    <ref tag='sector_gs1'/>
-                                                                    <ref tag='sector_paradise'/>
-                                                                    <sector name='Galaxy Survey 21' x='64.0' visited='false' y='312.0' tag='sector_gs21' description=' Galaxy Survey 21 is one of the few surveyed sectors with a star and nothing else.'>
-                                                                      <child name='planets'/>
-                                                                      <child name='projectiles'/>
-                                                                      <child name='killed_fleets'/>
-                                                                      <child name='halos'/>
-                                                                      <child name='potential_fleets'/>
-                                                                      <child name='links_to'>
-                                                                        <ref tag='sector_gs14'/>
-                                                                        <sector name='Grand Survey' x='-45.0' visited='false' y='353.0' tag='sector_survey' description=' Formerly a nondescript Galaxy Survey sector, this has enjoyed a recent surge in popularity as a jumping-off point for further exploration.'>
-                                                                          <child name='planets'/>
-                                                                          <child name='projectiles'/>
-                                                                          <child name='killed_fleets'/>
-                                                                          <child name='halos'/>
-                                                                          <child name='potential_fleets'/>
-                                                                          <child name='links_to'>
-                                                                            <ref tag='sector_gs14'/>
-                                                                            <ref tag='sector_gs21'/>
-                                                                            <sector name='Invasion' x='-134.0' visited='false' y='279.0' tag='sector_invasion' description=' Humanity has always been alone in the galaxy, but that was not always thought to be the case.  Though there are no planets, or even a star in this sector, many artifacts of another civilization were first discovered here.  This sparked fears of an invasion that have only recently abated.'>
-                                                                              <child name='planets'/>
-                                                                              <child name='projectiles'/>
-                                                                              <child name='killed_fleets'/>
-                                                                              <child name='halos'/>
-                                                                              <child name='potential_fleets'/>
-                                                                              <child name='links_to'>
-                                                                                <ref tag='sector_survey'/>
-                                                                                <ref tag='sector_gs7'/>
-                                                                                <sector name='Decoy' x='-264.0' visited='false' y='246.0' tag='sector_decoy' description='At the peak of the invasion fears, this previously empty sector was populated with a wide array of high-tech gadgetry to make it appear as though it were actually humanity&apos;s homeworld.  '>
-                                                                                  <child name='planets'/>
-                                                                                  <child name='projectiles'/>
-                                                                                  <child name='killed_fleets'/>
-                                                                                  <child name='halos'/>
-                                                                                  <child name='potential_fleets'/>
-                                                                                  <child name='links_to'>
-                                                                                    <ref tag='sector_invasion'/>
-                                                                                  </child>
-                                                                                  <child name='active_fleets'/>
-                                                                                  <child name='plot'/>
-                                                                                </sector>
-                                                                              </child>
-                                                                              <child name='active_fleets'/>
-                                                                              <child name='plot'/>
-                                                                            </sector>
-                                                                          </child>
-                                                                          <child name='active_fleets'/>
-                                                                          <child name='plot'/>
-                                                                        </sector>
-                                                                        <sector name='Galaxy Survey 13' x='225.0' visited='false' y='296.0' tag='sector_gs13' description=' This sector came very close to being named &apos;Triskaidekaphobia&apos;.'>
-                                                                          <child name='planets'/>
-                                                                          <child name='projectiles'/>
-                                                                          <child name='killed_fleets'/>
-                                                                          <child name='halos'/>
-                                                                          <child name='potential_fleets'/>
-                                                                          <child name='links_to'>
-                                                                            <ref tag='sector_gs21'/>
-                                                                            <ref tag='sector_paradise'/>
-                                                                            <sector name='Arc' x='260.0' visited='false' y='227.0' tag='sector_arc' description=' Originally Galaxy Survey 6, this sector was re-named as it originally was theorized to be a connector to Paradise but instead completes an arc around it.'>
-                                                                              <child name='planets'/>
-                                                                              <child name='projectiles'/>
-                                                                              <child name='killed_fleets'/>
-                                                                              <child name='halos'/>
-                                                                              <child name='potential_fleets'/>
-                                                                              <child name='links_to'>
-                                                                                <ref tag='sector_gs5'/>
-                                                                                <ref tag='sector_gs13'/>
-                                                                                <sector name='Galaxy Survey 10' x='384.0' visited='false' y='243.0' tag='sector_gs10' description=' There was little organization to the Galaxy Survey&apos;s techniques; as soon as a lane was discovered, an expedition was mounted.  By the time the survey reached GS10, however, there was worry that they were reaching too far afield.'>
-                                                                                  <child name='planets'/>
-                                                                                  <child name='projectiles'/>
-                                                                                  <child name='killed_fleets'/>
-                                                                                  <child name='halos'/>
-                                                                                  <child name='potential_fleets'/>
-                                                                                  <child name='links_to'>
-                                                                                    <ref tag='sector_arc'/>
-                                                                                    <sector name='Cove' x='348.0' visited='false' y='343.0' tag='sector_cove' description=' Nobody even remembers the original name of this sector - it has been home to pirates that long.'>
-                                                                                      <child name='planets'/>
-                                                                                      <child name='projectiles'/>
-                                                                                      <child name='killed_fleets'/>
-                                                                                      <child name='halos'/>
-                                                                                      <child name='potential_fleets'/>
-                                                                                      <child name='links_to'>
-                                                                                        <ref tag='sector_gs10'/>
-                                                                                      </child>
-                                                                                      <child name='active_fleets'/>
-                                                                                      <child name='plot'/>
-                                                                                    </sector>
-                                                                                    <sector name='Lagoon' x='474.0' visited='false' y='311.0' tag='sector_lagoon' description='In very few other places has the level of criminality risen higher than it has in this area. '>
-                                                                                      <child name='planets'/>
-                                                                                      <child name='projectiles'/>
-                                                                                      <child name='killed_fleets'/>
-                                                                                      <child name='halos'/>
-                                                                                      <child name='potential_fleets'/>
-                                                                                      <child name='links_to'>
-                                                                                        <ref tag='sector_gs10'/>
-                                                                                      </child>
-                                                                                      <child name='active_fleets'/>
-                                                                                      <child name='plot'/>
-                                                                                    </sector>
-                                                                                  </child>
-                                                                                  <child name='active_fleets'/>
-                                                                                  <child name='plot'/>
-                                                                                </sector>
-                                                                              </child>
-                                                                              <child name='active_fleets'/>
-                                                                              <child name='plot'/>
-                                                                            </sector>
-                                                                            <sector name='Solitude' x='202.0' visited='false' y='443.0' tag='sector_solitude' description=' Solitude originally had yet another unimaginitive name courtesy the Galactic Survey.  Its current name was earned by those who, in ones and twos, came to it to get away from everything else.'>
-                                                                              <child name='planets'/>
-                                                                              <child name='projectiles'/>
-                                                                              <child name='killed_fleets'/>
-                                                                              <child name='halos'/>
-                                                                              <child name='potential_fleets'/>
-                                                                              <child name='links_to'>
-                                                                                <sector name='Galaxy Survey 22' x='143.0' visited='false' y='380.0' tag='sector_gs22' description=' &quot;A gigantic expanse of nothing&quot; - Galaxy Survey report'>
-                                                                                  <child name='planets'/>
-                                                                                  <child name='projectiles'/>
-                                                                                  <child name='killed_fleets'/>
-                                                                                  <child name='halos'/>
-                                                                                  <child name='potential_fleets'/>
-                                                                                  <child name='links_to'>
-                                                                                    <ref tag='sector_gs21'/>
-                                                                                    <ref tag='sector_solitude'/>
-                                                                                  </child>
-                                                                                  <child name='active_fleets'/>
-                                                                                  <child name='plot'/>
-                                                                                </sector>
-                                                                                <ref tag='sector_gs13'/>
-                                                                                <sector name='Knot' x='285.0' visited='false' y='501.0' tag='sector_knot' description='The Galaxy Survey never gave this sector an official GS number.  The long strand of empty sectors had long by now been compared to a string (especially with the inclusion of &apos;Frey&apos;), and with this sector being the end of the strand and its comparatively stronger links, the name was a foregone conclusion. '>
-                                                                                  <child name='planets'/>
-                                                                                  <child name='projectiles'/>
-                                                                                  <child name='killed_fleets'/>
-                                                                                  <child name='halos'/>
-                                                                                  <child name='potential_fleets'/>
-                                                                                  <child name='links_to'>
-                                                                                    <ref tag='sector_solitude'/>
-                                                                                  </child>
-                                                                                  <child name='active_fleets'/>
-                                                                                  <child name='plot'/>
-                                                                                </sector>
-                                                                              </child>
-                                                                              <child name='active_fleets'/>
-                                                                              <child name='plot'/>
-                                                                            </sector>
-                                                                          </child>
-                                                                          <child name='active_fleets'/>
-                                                                          <child name='plot'/>
-                                                                        </sector>
-                                                                        <ref tag='sector_gs22'/>
-                                                                      </child>
-                                                                      <child name='active_fleets'/>
-                                                                      <child name='plot'/>
-                                                                    </sector>
-                                                                    <ref tag='sector_survey'/>
-                                                                  </child>
-                                                                  <child name='active_fleets'/>
-                                                                  <child name='plot'/>
-                                                                </sector>
-                                                                <ref tag='sector_raw'/>
-                                                                <ref tag='sector_gs13'/>
-                                                              </child>
-                                                              <child name='active_fleets'/>
-                                                              <child name='plot'/>
-                                                            </sector>
-                                                            <ref tag='sector_gs5'/>
-                                                          </child>
-                                                          <child name='active_fleets'/>
-                                                          <child name='plot'/>
-                                                        </sector>
-                                                        <ref tag='sector_arc'/>
-                                                      </child>
-                                                      <child name='active_fleets'/>
-                                                      <child name='plot'/>
-                                                    </sector>
-                                                  </child>
-                                                  <child name='active_fleets'/>
-                                                  <child name='plot'/>
-                                                </sector>
-                                                <ref tag='sector_raw'/>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                            <sector name='Incorporated' x='116.0' visited='false' y='43.0' tag='sector_incorporated' description=' The hyperspace lane to Incorporated was discovered by a private company.  At the time, humankind was spread thinly, and there was little interest in further colonization, allowing the company that discovered the lane a monopoly over its use.'>
-                                              <child name='planets'/>
-                                              <child name='projectiles'/>
-                                              <child name='killed_fleets'/>
-                                              <child name='halos'/>
-                                              <child name='potential_fleets'/>
-                                              <child name='links_to'>
-                                                <ref tag='sector_sirius'/>
-                                              </child>
-                                              <child name='active_fleets'/>
-                                              <child name='plot'/>
-                                            </sector>
-                                            <ref tag='sector_keyhole'/>
-                                            <ref tag='sector_gs1'/>
-                                          </child>
-                                          <child name='active_fleets'/>
-                                          <child name='plot'/>
-                                        </sector>
-                                        <ref tag='sector_void'/>
-                                        <ref tag='sector_gs14'/>
-                                        <ref tag='sector_gs7'/>
-                                      </child>
-                                      <child name='active_fleets'/>
-                                      <child name='plot'/>
-                                    </sector>
-                                    <ref tag='sector_invasion'/>
-                                    <ref tag='sector_fear'/>
-                                  </child>
-                                  <child name='active_fleets'/>
-                                  <child name='plot'/>
-                                </sector>
-                                <ref tag='sector_sandwall'/>
-                              </child>
-                              <child name='active_fleets'/>
-                              <child name='plot'/>
-                            </sector>
-                            <sector name='Truth' x='-395.0' visited='false' y='41.0' tag='sector_truth' description='This sector is home to a number of less-than-ideal but still inhabitable planets.  A number of pilgrims, rejecting the religious ideals of their time, made their way here in search of Truth.  While many claimed to have been successful, each definition seems to disagree with the others. '>
-                              <child name='planets'/>
-                              <child name='projectiles'/>
-                              <child name='killed_fleets'/>
-                              <child name='halos'/>
-                              <child name='potential_fleets'/>
-                              <child name='links_to'>
-                                <ref tag='sector_sandwall'/>
-                              </child>
-                              <child name='active_fleets'/>
-                              <child name='plot'/>
-                            </sector>
-                            <ref tag='sector_ss14gs81'/>
-                          </child>
-                          <child name='active_fleets'/>
-                          <child name='plot'/>
-                        </sector>
-                      </child>
-                      <child name='active_fleets'/>
-                      <child name='plot'/>
-                    </sector>
-                  </child>
-                  <child name='active_fleets'/>
-                  <child name='plot'/>
-                </sector>
-                <ref tag='sector_freehold'/>
-                <ref tag='sector_north_star'/>
-                <sector name='Edge' x='93.0' visited='false' y='-174.0' tag='sector_edge' description='Short for &quot;The Edge of the Galaxy&quot;, this was for the longest time the last remotely habitable planet for a very large distance indeed.  Some still consider it so. '>
-                  <child name='planets'/>
-                  <child name='projectiles'/>
-                  <child name='killed_fleets'/>
-                  <child name='halos'/>
-                  <child name='potential_fleets'/>
-                  <child name='links_to'>
-                    <ref tag='sector_centauri'/>
-                    <sector name='Galaxy Survey 42' x='67.0' visited='false' y='-234.0' tag='sector_gs42' description='Galaxy Survey 42 turned out to be the answer to a question nobody asked. '>
-                      <child name='planets'/>
-                      <child name='projectiles'/>
-                      <child name='killed_fleets'/>
-                      <child name='halos'/>
-                      <child name='potential_fleets'/>
-                      <child name='links_to'>
-                        <ref tag='sector_edge'/>
-                      </child>
-                      <child name='active_fleets'/>
-                      <child name='plot'/>
-                    </sector>
-                  </child>
-                  <child name='active_fleets'/>
-                  <child name='plot'/>
-                </sector>
-              </child>
-              <child name='active_fleets'/>
-              <child name='plot'/>
-            </sector>
-            <ref tag='sector_sirius'/>
-          </child>
-          <child name='active_fleets'/>
-          <child name='plot'/>
         </sector>
         <ref tag='sector_centauri'/>
         <ref tag='sector_sirius'/>
@@ -950,23 +950,22 @@
     </map>
   </child>
   <child name='player'>
-    <player tag='player' credits='1000.0'>
+    <player tag='player' credits='1000.0' labels=''>
+      <child name='on_planet'/>
       <child name='start_ship'>
-        <ship velocity_x='0.0' name='Scout' velocity_y='0.0001' facing_x='0.0' x='0.0' price='0.0' facing_y='-1.0' armor='100.0' y='0.0' shields='100.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_bare' jumping_progress='0.0'>
-          <child name='ammo'/>
-          <child name='weapons'/>
+        <ship velocity_x='0.0' name='Scout' velocity_y='0.0001' facing_x='0.0' x='0.0' price='0.0' facing_y='-1.0' armor='100.0' y='0.0' shields='100.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_bare' jumping_progress='0.0' labels=''>
           <child name='addons'/>
-          <child name='blueprint'>
-            <shipblueprint armor_regen='0.005' name='Scout' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.01' hardpoints='1.0' max_armor='100.0' max_shields='100.0' max_fuel='100.0'/>
-          </child>
           <child name='itinerary'/>
-          <child name='target'/>
+          <child name='blueprint'>
+            <shipblueprint name='Scout' armor_regen='0.005' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.01' hardpoints='1.0' max_armor='100.0' max_shields='100.0' labels='' max_fuel='100.0'/>
+          </child>
           <child name='secondaries'/>
           <child name='anti_addons'/>
+          <child name='target'/>
           <child name='owner'>
-            <org killing_mod='-50.0' name='The Player' friendly='500.0' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_player' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' friendly_multiplier='0.5'>
+            <org friendly='500.0' killing_mod='-50.0' name='The Player' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_player' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
               <child name='feelings'>
-                <relation feeling='1000000'>
+                <relation labels='' feeling='1000000'>
                   <child name='target_org'>
                     <ref tag='org_player'/>
                   </child>
@@ -975,18 +974,19 @@
             </org>
           </child>
           <child name='cargo'/>
+          <child name='ammo'/>
+          <child name='weapons'/>
         </ship>
       </child>
       <child name='start_sector'>
         <ref tag='sector_sol'/>
       </child>
-      <child name='on_planet'/>
       <child name='missions'/>
       <child name='org'>
         <ref tag='org_player'/>
       </child>
-      <child name='flags'/>
       <child name='completed_missions'/>
+      <child name='flags'/>
     </player>
   </child>
 </universe>

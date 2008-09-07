@@ -1,5 +1,22 @@
 require 'search'
 
+class TC_Repository_Search < Test::Unit::TestCase
+
+  
+  def setup
+    @rl = Opal::ResourceLocator.instance
+    @rl.storage[:repository] = Repository.new
+    @rl.repository.universe = KuiUniverse.new
+    @player = @rl.repository.universe.player
+    
+    @foo = KuiObject.new
+    @foo.tag = "barf"
+    @foo.labels = "foo, planet, werg"
+  end
+  
+  
+end
+
 class TC_Search < Test::Unit::TestCase
   
   def setup

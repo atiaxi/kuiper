@@ -82,7 +82,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   end
   
   def test_default_obj
-    default_xml = "<object tag='default'/>"
+    default_xml = "<object tag='default' labels=''/>"
     assert(@default.to_xml.to_s == default_xml)
   end
   

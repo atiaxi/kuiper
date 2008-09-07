@@ -21,6 +21,28 @@ class TC_Player < Test::Unit::TestCase
     assert(@player.unnamed?)
   end
   
+  def test_labels
+    assert_equal(0, @player.label_array.size)
+    assert_equal("", @player.labels)
+    
+    @player.labels = "foo,bar,,bAz, quux"
+    assert_equal(4, @player.label_array.size)
+    assert_equal("bar", @player.label_array[1])
+    
+    # test space reduction
+    assert_equal("quux", @player.label_array[3])
+    # test case insensitivity
+    assert_equal("baz", @player.label_array[2])
+  end
+  
+  def test_label_persist
+    @player.labels = "abcd,hijk"
+    xml = @player.to_xml.to_s
+    doc = REXML::Document.new(xml)
+    player = KuiObject.from_xml(doc.root)
+    assert_equal(@player.labels,player.labels)
+  end
+  
 end
 
 class TC_Org < Test::Unit::TestCase

@@ -49,7 +49,7 @@ class Placeholder
 end
 
 # Root class of all objects intended to be 
-# serializable via YAML.
+# serializable via XML.
 # Attributes are made into accessors and such,
 # so don't name them something like 'id'!
 class KuiObject
@@ -269,9 +269,13 @@ class KuiObject
     end
     return @sizes[attr]
   end
+  
+  raw_attr :labels
+  attr_reader :label_array
 
   def initialize()
     @tag = "new_object"
+    self.labels = ""
     @rl = Opal::ResourceLocator.instance
     super
   end
@@ -374,6 +378,19 @@ class KuiObject
     return binding()
   end
   
+  def labels
+    return @labels
+  end
+  
+  # CSV is, as you might expect, a comma separated list of values that represent
+  # the labels for this object.
+  def labels=(csv)
+    @labels = csv
+    label_array = csv.split(",")
+    label_array = label_array.collect { |l| l.downcase.strip }
+    @label_array = label_array.reject { |l| l.size <= 0 }
+  end
+  
   # Returns true if this has all the fields it requires to be in the game, as
   # well as whether its required children are playable.  This isn't a
   # substitute for actually functioning; a ship with tiny acceleration is
@@ -397,6 +414,8 @@ class KuiObject
   # looked up in the repository
   string_attr :tag
 
+  # Setting a KuiObject's tag will cause the object to store itself
+  # in the repository under that name.
   def tag=(string)
     repo = Opal::ResourceLocator.instance.storage[:repository]
     if repo
