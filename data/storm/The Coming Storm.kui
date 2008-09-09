@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<universe name='The Coming Storm' tag='universe' description=' Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....' labels='asdf,neboat,foo'>
+<universe name='The Coming Storm' tag='universe' description=' Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....' labels=''>
   <child name='map'>
     <map tag='new_object' labels=''>
       <child name='sectors'>
-        <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' The cradle of humankind, the Sol sector is where it all began. ' labels=''>
+        <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' The cradle of humankind, the Sol sector is where it all began. ' labels='alliance,human,inhabited'>
           <child name='projectiles'/>
           <child name='killed_fleets'/>
           <child name='halos'/>
           <child name='active_fleets'/>
           <child name='potential_fleets'/>
           <child name='links_to'>
-            <sector name='Centauri' x='54.0' visited='false' y='-60.0' tag='sector_centauri' description=' Binary systems are inherently more difficult to find hyperspace links through, but given Centauri&apos;s relative closeness to the Sol sector it made for an easy first target.' labels=''>
+            <sector name='Centauri' x='54.0' visited='false' y='-60.0' tag='sector_centauri' description=' Binary systems are inherently more difficult to find hyperspace links through, but given Centauri&apos;s relative closeness to the Sol sector it made for an easy first target.' labels='alliance,inhabited,human'>
               <child name='projectiles'/>
               <child name='killed_fleets'/>
               <child name='halos'/>
@@ -441,21 +441,21 @@
                               <child name='active_fleets'/>
                               <child name='potential_fleets'/>
                               <child name='links_to'>
-                                <sector name='Galaxy Survey 7' x='-132.0' visited='false' y='189.0' tag='sector_gs7' description=' From a scientific standpoint, there is always something to learn from a newly discovered sector.  Even to scientists, however, this sector is dull.' labels=''>
+                                <sector name='Galaxy Survey 7' x='-132.0' visited='false' y='189.0' tag='sector_gs7' description=' From a scientific standpoint, there is always something to learn from a newly discovered sector.  Even to scientists, however, this sector is dull.' labels='human,uninhabited,galaxysurvey'>
                                   <child name='projectiles'/>
                                   <child name='killed_fleets'/>
                                   <child name='halos'/>
                                   <child name='active_fleets'/>
                                   <child name='potential_fleets'/>
                                   <child name='links_to'>
-                                    <sector name='Galaxy Survey 1' x='-41.0' visited='false' y='140.0' tag='sector_gs1' description=' When it became known that empty sectors could play host to hyperspace lanes, the Galaxy Survey was comissioned.  It was responsible for discovering many of the outlying sectors, but had a poor track record for selecting inhabitable ones.' labels=''>
+                                    <sector name='Galaxy Survey 1' x='-41.0' visited='false' y='140.0' tag='sector_gs1' description=' When it became known that empty sectors could play host to hyperspace lanes, the Galaxy Survey was comissioned.  It was responsible for discovering many of the outlying sectors, but had a poor track record for selecting inhabitable ones.' labels='human,galaxysurvey,uninhabited'>
                                       <child name='projectiles'/>
                                       <child name='killed_fleets'/>
                                       <child name='halos'/>
                                       <child name='active_fleets'/>
                                       <child name='potential_fleets'/>
                                       <child name='links_to'>
-                                        <sector name='Sirius' x='31.0' visited='false' y='77.0' tag='sector_sirius' description=' One of the first working hyperspace lanes led to this sector.  Its importance has only increased over time.' labels=''>
+                                        <sector name='Sirius' x='31.0' visited='false' y='77.0' tag='sector_sirius' description=' One of the first working hyperspace lanes led to this sector.  Its importance has only increased over time.' labels='alliance,human,inhabited'>
                                           <child name='projectiles'/>
                                           <child name='killed_fleets'/>
                                           <child name='halos'/>
@@ -463,7 +463,7 @@
                                           <child name='potential_fleets'/>
                                           <child name='links_to'>
                                             <ref tag='sector_sol'/>
-                                            <sector name='Void' x='-73.0' visited='false' y='55.0' tag='sector_void' description=' Void was the first sector discovered without even a star.  This discovery led to changes in hyperspace theory that allowed humankind to spread even farther.' labels=''>
+                                            <sector name='Void' x='-73.0' visited='false' y='55.0' tag='sector_void' description=' Void was the first sector discovered without even a star.  This discovery led to changes in hyperspace theory that allowed humankind to spread even farther.' labels='alliance,human,uninhabited'>
                                               <child name='projectiles'/>
                                               <child name='killed_fleets'/>
                                               <child name='halos'/>
@@ -484,7 +484,7 @@
                                                   <child name='plot'/>
                                                   <child name='planets'/>
                                                 </sector>
-                                                <sector name='Fray' x='-80.0' visited='false' y='-5.0' tag='sector_fray' description=' Due to its extremely weak connection to the other Galaxy Survey sectors, this sector was long ago re-named to more accurately reflect the fact that it is, in the words of one Survey executive &quot;like the frayed end of a string&quot;' labels=''>
+                                                <sector name='Fray' x='-80.0' visited='false' y='-5.0' tag='sector_fray' description=' Due to its extremely weak connection to the other Galaxy Survey sectors, this sector was long ago re-named to more accurately reflect the fact that it is, in the words of one Survey executive &quot;like the frayed end of a string&quot;' labels='alliance,human,uninhabited'>
                                                   <child name='projectiles'/>
                                                   <child name='killed_fleets'/>
                                                   <child name='halos'/>
@@ -540,7 +540,7 @@
                                                               <child name='active_fleets'/>
                                                               <child name='potential_fleets'/>
                                                               <child name='links_to'>
-                                                                <sector name='Galaxy Survey 14' x='-3.0' visited='false' y='220.0' tag='sector_gs14' description=' Galaxy Survey 14 contains very little more than the lanes which connect it to the rest of the galaxy.' labels=''>
+                                                                <sector name='Galaxy Survey 14' x='-3.0' visited='false' y='220.0' tag='sector_gs14' description=' Galaxy Survey 14 contains very little more than the lanes which connect it to the rest of the galaxy.' labels='human,alliance,galaxysurvey'>
                                                                   <child name='projectiles'/>
                                                                   <child name='killed_fleets'/>
                                                                   <child name='halos'/>
@@ -562,7 +562,7 @@
                                                                     </sector>
                                                                     <ref tag='sector_gs1'/>
                                                                     <ref tag='sector_paradise'/>
-                                                                    <sector name='Galaxy Survey 21' x='64.0' visited='false' y='312.0' tag='sector_gs21' description=' Galaxy Survey 21 is one of the few surveyed sectors with a star and nothing else.' labels=''>
+                                                                    <sector name='Galaxy Survey 21' x='64.0' visited='false' y='312.0' tag='sector_gs21' description=' Galaxy Survey 21 is one of the few surveyed sectors with a star and nothing else.' labels='uninhabited,human,galaxysurvey'>
                                                                       <child name='projectiles'/>
                                                                       <child name='killed_fleets'/>
                                                                       <child name='halos'/>
@@ -570,7 +570,7 @@
                                                                       <child name='potential_fleets'/>
                                                                       <child name='links_to'>
                                                                         <ref tag='sector_gs14'/>
-                                                                        <sector name='Grand Survey' x='-45.0' visited='false' y='353.0' tag='sector_survey' description=' Formerly a nondescript Galaxy Survey sector, this has enjoyed a recent surge in popularity as a jumping-off point for further exploration.' labels=''>
+                                                                        <sector name='Grand Survey' x='-45.0' visited='false' y='353.0' tag='sector_survey' description=' Formerly a nondescript Galaxy Survey sector, this has enjoyed a recent surge in popularity as a jumping-off point for further exploration.' labels='scientist,human,inhabited'>
                                                                           <child name='projectiles'/>
                                                                           <child name='killed_fleets'/>
                                                                           <child name='halos'/>
@@ -579,7 +579,7 @@
                                                                           <child name='links_to'>
                                                                             <ref tag='sector_gs14'/>
                                                                             <ref tag='sector_gs21'/>
-                                                                            <sector name='Invasion' x='-134.0' visited='false' y='279.0' tag='sector_invasion' description=' Humanity has always been alone in the galaxy, but that was not always thought to be the case.  Though there are no planets, or even a star in this sector, many artifacts of another civilization were first discovered here.  This sparked fears of an invasion that have only recently abated.' labels=''>
+                                                                            <sector name='Invasion' x='-134.0' visited='false' y='279.0' tag='sector_invasion' description=' Humanity has always been alone in the galaxy, but that was not always thought to be the case.  Though there are no planets, or even a star in this sector, many artifacts of another civilization were first discovered here.  This sparked fears of an invasion that have only recently abated.' labels='scientist,human,inhabited,exit'>
                                                                               <child name='projectiles'/>
                                                                               <child name='killed_fleets'/>
                                                                               <child name='halos'/>
@@ -602,11 +602,33 @@
                                                                                 </sector>
                                                                               </child>
                                                                               <child name='plot'/>
-                                                                              <child name='planets'/>
+                                                                              <child name='planets'>
+                                                                                <planet landing_distance='100' name='New Planet' x='7.0' y='177.0' image_filename='station.png' fuel_cost='1' tag='new_object' labels=''>
+                                                                                  <child name='addons_for_sale'/>
+                                                                                  <child name='missions'/>
+                                                                                  <child name='weapons_for_sale'/>
+                                                                                  <child name='ships_for_sale'/>
+                                                                                  <child name='random_missions'/>
+                                                                                  <child name='plot'/>
+                                                                                  <child name='owner'/>
+                                                                                  <child name='cargo_for_sale'/>
+                                                                                </planet>
+                                                                              </child>
                                                                             </sector>
                                                                           </child>
                                                                           <child name='plot'/>
-                                                                          <child name='planets'/>
+                                                                          <child name='planets'>
+                                                                            <planet landing_distance='100.0' name='Science!' x='-24.0' y='6.0' image_filename='station.png' fuel_cost='1.0' tag='station_science' description='Staying mostly out of the fray between rebel and alliance, the scientists here would be regarded as a renegade breakaway faction if they ever actually did anything other than survey. ' labels='scientist,inhabited,station,human'>
+                                                                              <child name='addons_for_sale'/>
+                                                                              <child name='missions'/>
+                                                                              <child name='weapons_for_sale'/>
+                                                                              <child name='ships_for_sale'/>
+                                                                              <child name='random_missions'/>
+                                                                              <child name='plot'/>
+                                                                              <child name='owner'/>
+                                                                              <child name='cargo_for_sale'/>
+                                                                            </planet>
+                                                                          </child>
                                                                         </sector>
                                                                         <sector name='Galaxy Survey 13' x='225.0' visited='false' y='296.0' tag='sector_gs13' description=' This sector came very close to being named &apos;Triskaidekaphobia&apos;.' labels=''>
                                                                           <child name='projectiles'/>
@@ -673,7 +695,7 @@
                                                                               <child name='active_fleets'/>
                                                                               <child name='potential_fleets'/>
                                                                               <child name='links_to'>
-                                                                                <sector name='Galaxy Survey 22' x='143.0' visited='false' y='380.0' tag='sector_gs22' description=' &quot;A gigantic expanse of nothing&quot; - Galaxy Survey report' labels=''>
+                                                                                <sector name='Galaxy Survey 22' x='143.0' visited='false' y='380.0' tag='sector_gs22' description=' &quot;A gigantic expanse of nothing&quot; - Galaxy Survey report' labels='human,galaxysurvey,uninhabited'>
                                                                                   <child name='projectiles'/>
                                                                                   <child name='killed_fleets'/>
                                                                                   <child name='halos'/>
@@ -740,9 +762,20 @@
                                                 <ref tag='sector_raw'/>
                                               </child>
                                               <child name='plot'/>
-                                              <child name='planets'/>
+                                              <child name='planets'>
+                                                <planet landing_distance='100.0' name='Finders Keepers' x='-290.0' y='-78.0' image_filename='water.png' fuel_cost='1.0' tag='planet_finders_keepers' description='The planet&apos;s name is also its motto - its founding was fraught with legal wrangling over who owned what in the wake of some several million squatters having arrived before any government.  Fortunately, that sort of trouble settled down long ago.  ' labels='alliance,human,inhabited,standard'>
+                                                  <child name='addons_for_sale'/>
+                                                  <child name='missions'/>
+                                                  <child name='weapons_for_sale'/>
+                                                  <child name='ships_for_sale'/>
+                                                  <child name='random_missions'/>
+                                                  <child name='plot'/>
+                                                  <child name='owner'/>
+                                                  <child name='cargo_for_sale'/>
+                                                </planet>
+                                              </child>
                                             </sector>
-                                            <sector name='Incorporated' x='116.0' visited='false' y='43.0' tag='sector_incorporated' description=' The hyperspace lane to Incorporated was discovered by a private company.  At the time, humankind was spread thinly, and there was little interest in further colonization, allowing the company that discovered the lane a monopoly over its use.' labels=''>
+                                            <sector name='Incorporated' x='116.0' visited='false' y='43.0' tag='sector_incorporated' description=' The hyperspace lane to Incorporated was discovered by a private company.  At the time, humankind was spread thinly, and there was little interest in further colonization, allowing the company that discovered the lane a monopoly over its use.' labels='alliance,standard,inhabited'>
                                               <child name='projectiles'/>
                                               <child name='killed_fleets'/>
                                               <child name='halos'/>
@@ -752,14 +785,35 @@
                                                 <ref tag='sector_sirius'/>
                                               </child>
                                               <child name='plot'/>
-                                              <child name='planets'/>
+                                              <child name='planets'>
+                                                <planet landing_distance='100.0' name='Limited Liability' x='178.0' y='177.0' image_filename='green.png' fuel_cost='1.0' tag='planet_llc' description='Overture, inc., welcomes you to our planet, and asks you to spend freely. ' labels='alliance,human,standard,inhabited'>
+                                                  <child name='addons_for_sale'/>
+                                                  <child name='missions'/>
+                                                  <child name='weapons_for_sale'/>
+                                                  <child name='ships_for_sale'/>
+                                                  <child name='random_missions'/>
+                                                  <child name='plot'/>
+                                                  <child name='owner'/>
+                                                  <child name='cargo_for_sale'/>
+                                                </planet>
+                                                <planet landing_distance='100.0' name='Sole Proprietorship' x='22.0' y='58.0' image_filename='moon.png' fuel_cost='1.0' tag='sector_sole_p' description='This moon is owned by one person, currently Alexander Michail.  Nobody but those who end up in charge of the place know how ownership  transfers from one person to another, only that Sole Proprietorship has remained true to its name for hundreds of years. ' labels='alliance,human,standard,inhabited'>
+                                                  <child name='addons_for_sale'/>
+                                                  <child name='missions'/>
+                                                  <child name='weapons_for_sale'/>
+                                                  <child name='ships_for_sale'/>
+                                                  <child name='random_missions'/>
+                                                  <child name='plot'/>
+                                                  <child name='owner'/>
+                                                  <child name='cargo_for_sale'/>
+                                                </planet>
+                                              </child>
                                             </sector>
                                             <ref tag='sector_keyhole'/>
                                             <ref tag='sector_gs1'/>
                                           </child>
                                           <child name='plot'/>
                                           <child name='planets'>
-                                            <planet landing_distance='100.0' name='Loyalty' x='-89.0' y='150.0' image_filename='desert.png' fuel_cost='1.0' tag='sector_loyalty' description='This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. ' labels=''>
+                                            <planet landing_distance='100.0' name='Loyalty' x='-89.0' y='150.0' image_filename='desert.png' fuel_cost='1.0' tag='sector_loyalty' description='This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. ' labels='alliance,human,standard,inhabited'>
                                               <child name='addons_for_sale'/>
                                               <child name='missions'/>
                                               <child name='weapons_for_sale'/>
@@ -842,13 +896,24 @@
                 </sector>
               </child>
               <child name='plot'/>
-              <child name='planets'/>
+              <child name='planets'>
+                <planet landing_distance='150.0' name='Chiron Station' x='-1.0' y='-31.0' image_filename='station.png' fuel_cost='1.0' tag='station_chiron' description='The oldest human-created habitation still existing, this station has a constant air of disrepair despite having been fully rebuilt over a dozen times.' labels='alliance,human,standard,station'>
+                  <child name='addons_for_sale'/>
+                  <child name='missions'/>
+                  <child name='weapons_for_sale'/>
+                  <child name='ships_for_sale'/>
+                  <child name='random_missions'/>
+                  <child name='plot'/>
+                  <child name='owner'/>
+                  <child name='cargo_for_sale'/>
+                </planet>
+              </child>
             </sector>
             <ref tag='sector_sirius'/>
           </child>
           <child name='plot'/>
           <child name='planets'>
-            <planet landing_distance='150.0' name='Earth' x='-7.0' y='-43.0' image_filename='planetoid.png' fuel_cost='1.0' tag='planet_earth' description='This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. ' labels=''>
+            <planet landing_distance='150.0' name='Earth' x='-7.0' y='-43.0' image_filename='planetoid.png' fuel_cost='1.0' tag='planet_earth' description='This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. ' labels='alliance,human,standard,inhabited'>
               <child name='addons_for_sale'/>
               <child name='missions'/>
               <child name='weapons_for_sale'/>
