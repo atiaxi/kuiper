@@ -53,6 +53,21 @@ module Layout
     self << input if input
   end
   
+  def layout_field_button(label,input,buttonText,&callback)
+    label.translate_to(@fieldX, @fieldY)
+    input.translate_to(label.rect.right + @spacing, @fieldY)
+    button = Button.new(buttonText) { callback.call }
+    button.translate_to(input.rect.right + @spacing, @fieldY)
+    w = button.rect.right
+    if w > @fieldW
+      @fieldW = w
+      @fieldRight = @fieldX + w
+    end
+    self << label
+    self << input
+    self << button
+  end
+  
   # "Fields" are things like integers, strings, booleans - things which end up
   # as attributes in the XML, rather than full-fledged children
   def layout_fields
@@ -222,7 +237,17 @@ class PropertiesDialog < Opal::State
   # alphabetical order. Subclasses override this
   # if they need to do anything fancy.
   def layout_fields
+    # Everything has a tag - or it BETTER!
+    value = @stored_values[:tag] || @object.tag
+    label = Label.new("Tag")
+    input = InputField.new(value,30)
+    @attr_to_field[:tag] = input
+    layout_field_button(label,input,"Auto") do
+      puts "Auto clicked!"
+    end
+    @fieldY = input.rect.bottom + @spacing    
     @object.class.attrs.sort.each do | attr |
+      next if attr == :tag # We did tags ourselves
       display = true
       value = @stored_values[attr] || @object.send(attr)
       label = Label.new(attr.to_s)

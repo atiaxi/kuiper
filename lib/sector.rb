@@ -144,6 +144,13 @@ class SectorState < Opal::State
     end
   end
   
+  def del_planet
+    selected = @player_controller.model.target
+    # TODO: Like for sectors, make sure this planet's not reference anywhere
+    @sector.delete_planet(selected) if selected
+    setup_gui
+  end
+  
   def done
     @driver.pop
   end
@@ -275,7 +282,10 @@ class SectorState < Opal::State
     clicked_on.each do | sprite |
       if sprite.respond_to?(:targetable?) && sprite.targetable?
         @player_controller.model.target = sprite.model
-        @props.enabled = true if $edit_mode
+        if $edit_mode
+          @props.enabled = true
+          @del_planet.enabled = true
+        end
       end
     end
   end
@@ -446,6 +456,12 @@ class SectorState < Opal::State
       @new_planet.rect.bottomright = [ @done.rect.right, bottom ]
       self << @new_planet
       bottom = @new_planet.rect.top - @spacing
+      
+      @del_planet = Button.new("Delete this planet") { self.del_planet }
+      @del_planet.rect.bottomright = [ @done.rect.right, bottom ]
+      @del_planet.enabled = false
+      self << @del_planet
+      bottom = @del_planet.rect.top - @spacing
       
       @props = Button.new("Properties") { self.props }
       @props.rect.bottomright = [@done.rect.right ,bottom]

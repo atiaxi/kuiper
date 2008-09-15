@@ -6,12 +6,27 @@ class TC_Repository_Search < Test::Unit::TestCase
   def setup
     @rl = Opal::ResourceLocator.instance
     @rl.storage[:repository] = Repository.new
-    @rl.repository.universe = KuiUniverse.new
-    @player = @rl.repository.universe.player
+    @repo = @rl.repository
+    @repo.universe = KuiUniverse.new
+    @player = @repo.universe.player
     
     @foo = KuiObject.new
     @foo.tag = "barf"
     @foo.labels = "foo, planet, werg"
+  end
+  
+  def test_unique_tag
+    @blarg = KuiObject.new
+    blargtag = "tag_blarg"
+    @blarg.tag = @repo.ensure_unique_tag(blargtag)
+    # Should not have changed, as tag_blarg didn't exist before
+    assert_equal(blargtag,@blarg.tag)
+    
+    @shabarg = KuiObject.new
+    @shabarg.tag = @repo.ensure_unique_tag(blargtag)
+    assert_not_equal(blargtag,@shabarg.tag)
+    assert_equal(blargtag,@shabarg.base_tag)
+    
   end
   
   

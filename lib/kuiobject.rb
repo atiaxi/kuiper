@@ -1103,6 +1103,10 @@ class KuiSector < KuiObject
     return ships
   end
   
+  def delete_planet(planet)
+    @planets.delete(planet)
+  end
+  
   def links_to?(sector)
     return @links_to.include?(sector)
   end

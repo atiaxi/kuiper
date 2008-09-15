@@ -40,6 +40,7 @@ class Repository
   def ensure_unique_tag(base, separator=':')
     tagname = base
     tagname = "new_tag" unless tagname
+    # Yes, I am aware that this is not the best way.
     while(self[tagname])
       tagname = tagname.split(TAG_SEPARATOR)[0]
       number = rand(10000)

@@ -508,7 +508,7 @@
                                               <child name='potential_fleets'/>
                                               <child name='links_to'>
                                                 <ref tag='sector_sirius'/>
-                                                <sector name='Freehold' x='201.0' visited='false' y='4.0' tag='sector_freehold' description=' Freehold was the first experiment in independence from the central Earth government.  Though comparatively short-lived due to lack of resources, its example has been remembered by every rebel group since.' labels=''>
+                                                <sector name='Freehold' x='201.0' visited='false' y='4.0' tag='sector_freehold' description=' Freehold was the first experiment in independence from the central Earth government.  Though comparatively short-lived due to lack of resources, its example has been remembered by every rebel group since.' labels='alliance,human,inhabited'>
                                                   <child name='projectiles'/>
                                                   <child name='killed_fleets'/>
                                                   <child name='halos'/>
@@ -517,7 +517,7 @@
                                                   <child name='links_to'>
                                                     <ref tag='sector_centauri'/>
                                                     <ref tag='sector_preview'/>
-                                                    <sector name='Galaxy Survey 5' x='288.0' visited='false' y='160.0' tag='sector_gs5' description=' The early days of the Galaxy Survey were full of optimism.  This fifth failure marked the beginning of the decline.' labels=''>
+                                                    <sector name='Galaxy Survey 5' x='288.0' visited='false' y='160.0' tag='sector_gs5' description=' The early days of the Galaxy Survey were full of optimism.  This fifth failure marked the beginning of the decline.' labels='galaxysurvey,uninhabited'>
                                                       <child name='projectiles'/>
                                                       <child name='killed_fleets'/>
                                                       <child name='halos'/>
@@ -533,7 +533,7 @@
                                                           <child name='potential_fleets'/>
                                                           <child name='links_to'>
                                                             <ref tag='sector_preview'/>
-                                                            <sector name='Paradise' x='154.0' visited='false' y='255.0' tag='sector_paradise' description=' The Paradise sector was named on its initial survey.  It was later discovered that the previously-thought-perfect planet was anything but paradise.' labels=''>
+                                                            <sector name='Paradise' x='154.0' visited='false' y='255.0' tag='sector_paradise' description=' The Paradise sector was named on its initial survey.  It was later discovered that the previously-thought-perfect planet was anything but paradise.' labels='inhabited,alliance,human'>
                                                               <child name='projectiles'/>
                                                               <child name='killed_fleets'/>
                                                               <child name='halos'/>
@@ -547,7 +547,7 @@
                                                                   <child name='active_fleets'/>
                                                                   <child name='potential_fleets'/>
                                                                   <child name='links_to'>
-                                                                    <sector name='Keyhole' x='79.0' visited='false' y='185.0' tag='sector_keyhole' description=' Home of the so-called &apos;keyhole nebula&apos;, this sector holds value mostly to scientists who want to study potential star formation firsthand.' labels=''>
+                                                                    <sector name='Keyhole' x='79.0' visited='false' y='185.0' tag='sector_keyhole' description=' Home of the so-called &apos;keyhole nebula&apos;, this sector holds value mostly to scientists who want to study potential star formation firsthand.' labels='scientist,inhabited,human'>
                                                                       <child name='projectiles'/>
                                                                       <child name='killed_fleets'/>
                                                                       <child name='halos'/>
@@ -558,7 +558,18 @@
                                                                         <ref tag='sector_gs14'/>
                                                                       </child>
                                                                       <child name='plot'/>
-                                                                      <child name='planets'/>
+                                                                      <child name='planets'>
+                                                                        <planet landing_distance='100.0' name='Gatekeeper' x='-161.0' y='-6.0' image_filename='moon.png' fuel_cost='1.0' tag='planet_gatekeeper' description='Gatekeeper is a barren waste at best.  This does not stop it from being host to literally tens of thousands of scientists, all encamped in enclosed domes, devoted to their research. ' labels='scientist,inhabited,human,standard'>
+                                                                          <child name='addons_for_sale'/>
+                                                                          <child name='missions'/>
+                                                                          <child name='weapons_for_sale'/>
+                                                                          <child name='ships_for_sale'/>
+                                                                          <child name='random_missions'/>
+                                                                          <child name='plot'/>
+                                                                          <child name='owner'/>
+                                                                          <child name='cargo_for_sale'/>
+                                                                        </planet>
+                                                                      </child>
                                                                     </sector>
                                                                     <ref tag='sector_gs1'/>
                                                                     <ref tag='sector_paradise'/>
@@ -603,7 +614,7 @@
                                                                               </child>
                                                                               <child name='plot'/>
                                                                               <child name='planets'>
-                                                                                <planet landing_distance='100' name='New Planet' x='7.0' y='177.0' image_filename='station.png' fuel_cost='1' tag='new_object' labels=''>
+                                                                                <planet landing_distance='100.0' name='New Planet' x='7.0' y='177.0' image_filename='station.png' fuel_cost='1.0' tag='new_object' labels=''>
                                                                                   <child name='addons_for_sale'/>
                                                                                   <child name='missions'/>
                                                                                   <child name='weapons_for_sale'/>
@@ -625,12 +636,22 @@
                                                                               <child name='ships_for_sale'/>
                                                                               <child name='random_missions'/>
                                                                               <child name='plot'/>
-                                                                              <child name='owner'/>
+                                                                              <child name='owner'>
+                                                                                <org friendly='500.0' killing_mod='-50.0' name='Scientists' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_scientists' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
+                                                                                  <child name='feelings'>
+                                                                                    <relation labels='' feeling='1000000'>
+                                                                                      <child name='target_org'>
+                                                                                        <ref tag='org_scientists'/>
+                                                                                      </child>
+                                                                                    </relation>
+                                                                                  </child>
+                                                                                </org>
+                                                                              </child>
                                                                               <child name='cargo_for_sale'/>
                                                                             </planet>
                                                                           </child>
                                                                         </sector>
-                                                                        <sector name='Galaxy Survey 13' x='225.0' visited='false' y='296.0' tag='sector_gs13' description=' This sector came very close to being named &apos;Triskaidekaphobia&apos;.' labels=''>
+                                                                        <sector name='Galaxy Survey 13' x='225.0' visited='false' y='296.0' tag='sector_gs13' description=' This sector came very close to being named &apos;Triskaidekaphobia&apos;.' labels='galaxysurvey,human,uninhabited'>
                                                                           <child name='projectiles'/>
                                                                           <child name='killed_fleets'/>
                                                                           <child name='halos'/>
@@ -639,7 +660,7 @@
                                                                           <child name='links_to'>
                                                                             <ref tag='sector_gs21'/>
                                                                             <ref tag='sector_paradise'/>
-                                                                            <sector name='Arc' x='260.0' visited='false' y='227.0' tag='sector_arc' description=' Originally Galaxy Survey 6, this sector was re-named as it originally was theorized to be a connector to Paradise but instead completes an arc around it.' labels=''>
+                                                                            <sector name='Arc' x='260.0' visited='false' y='227.0' tag='sector_arc' description=' Originally Galaxy Survey 6, this sector was re-named as it originally was theorized to be a connector to Paradise but instead completes an arc around it.' labels='galaxysurvey,uninhabited'>
                                                                               <child name='projectiles'/>
                                                                               <child name='killed_fleets'/>
                                                                               <child name='halos'/>
@@ -648,7 +669,7 @@
                                                                               <child name='links_to'>
                                                                                 <ref tag='sector_gs5'/>
                                                                                 <ref tag='sector_gs13'/>
-                                                                                <sector name='Galaxy Survey 10' x='384.0' visited='false' y='243.0' tag='sector_gs10' description=' There was little organization to the Galaxy Survey&apos;s techniques; as soon as a lane was discovered, an expedition was mounted.  By the time the survey reached GS10, however, there was worry that they were reaching too far afield.' labels=''>
+                                                                                <sector name='Galaxy Survey 10' x='384.0' visited='false' y='243.0' tag='sector_gs10' description=' There was little organization to the Galaxy Survey&apos;s techniques; as soon as a lane was discovered, an expedition was mounted.  By the time the survey reached GS10, however, there was worry that they were reaching too far afield.' labels='galaxysurvey,uninhabited,eastpirates'>
                                                                                   <child name='projectiles'/>
                                                                                   <child name='killed_fleets'/>
                                                                                   <child name='halos'/>
@@ -656,7 +677,7 @@
                                                                                   <child name='potential_fleets'/>
                                                                                   <child name='links_to'>
                                                                                     <ref tag='sector_arc'/>
-                                                                                    <sector name='Cove' x='348.0' visited='false' y='343.0' tag='sector_cove' description=' Nobody even remembers the original name of this sector - it has been home to pirates that long.' labels=''>
+                                                                                    <sector name='Cove' x='348.0' visited='false' y='343.0' tag='sector_cove' description=' Nobody even remembers the original name of this sector - it has been home to pirates that long.' labels='eastpirates,inhabited,human'>
                                                                                       <child name='projectiles'/>
                                                                                       <child name='killed_fleets'/>
                                                                                       <child name='halos'/>
@@ -666,9 +687,20 @@
                                                                                         <ref tag='sector_gs10'/>
                                                                                       </child>
                                                                                       <child name='plot'/>
-                                                                                      <child name='planets'/>
+                                                                                      <child name='planets'>
+                                                                                        <planet landing_distance='100.0' name='Davey Jones&apos; Locker' x='234.0' y='-21.0' image_filename='station.png' fuel_cost='1.0' tag='station_locker' description='&quot;Oh no, nosir!  Illegal activity is strictly frowned upon in this station. I mean, yes, there&apos;s a lot of pirate activity, but we&apos;re just named this way to capitalize on it!  Station management doesn&apos;t go in for that sort of thing.   Market&apos;s that way, off-market is that way.&quot; - Locker tourist guide.' labels='eastpirates,inhabited,human,standard,station'>
+                                                                                          <child name='addons_for_sale'/>
+                                                                                          <child name='missions'/>
+                                                                                          <child name='weapons_for_sale'/>
+                                                                                          <child name='ships_for_sale'/>
+                                                                                          <child name='random_missions'/>
+                                                                                          <child name='plot'/>
+                                                                                          <child name='owner'/>
+                                                                                          <child name='cargo_for_sale'/>
+                                                                                        </planet>
+                                                                                      </child>
                                                                                     </sector>
-                                                                                    <sector name='Lagoon' x='474.0' visited='false' y='311.0' tag='sector_lagoon' description='In very few other places has the level of criminality risen higher than it has in this area. ' labels=''>
+                                                                                    <sector name='Lagoon' x='474.0' visited='false' y='311.0' tag='sector_lagoon' description='In very few other places has the level of criminality risen higher than it has in this area. ' labels='eastpirates,human,inhabited'>
                                                                                       <child name='projectiles'/>
                                                                                       <child name='killed_fleets'/>
                                                                                       <child name='halos'/>
@@ -678,7 +710,18 @@
                                                                                         <ref tag='sector_gs10'/>
                                                                                       </child>
                                                                                       <child name='plot'/>
-                                                                                      <child name='planets'/>
+                                                                                      <child name='planets'>
+                                                                                        <planet landing_distance='100.0' name='Bloodbath' x='-35.0' y='91.0' image_filename='redplanet.png' fuel_cost='1.0' tag='planet_bloodbath' description='This planet&apos;s name comes from before it was home to a thousand different pirate clans - its red tint earned it the title &quot;Bloodbath&quot;.  The constantly fueding clans just outside the landing port seem intent on earning the name. ' labels='inhabited,human,standard,eastpirates'>
+                                                                                          <child name='addons_for_sale'/>
+                                                                                          <child name='missions'/>
+                                                                                          <child name='weapons_for_sale'/>
+                                                                                          <child name='ships_for_sale'/>
+                                                                                          <child name='random_missions'/>
+                                                                                          <child name='plot'/>
+                                                                                          <child name='owner'/>
+                                                                                          <child name='cargo_for_sale'/>
+                                                                                        </planet>
+                                                                                      </child>
                                                                                     </sector>
                                                                                   </child>
                                                                                   <child name='plot'/>
@@ -688,7 +731,7 @@
                                                                               <child name='plot'/>
                                                                               <child name='planets'/>
                                                                             </sector>
-                                                                            <sector name='Solitude' x='202.0' visited='false' y='443.0' tag='sector_solitude' description=' Solitude originally had yet another unimaginitive name courtesy the Galactic Survey.  Its current name was earned by those who, in ones and twos, came to it to get away from everything else.' labels=''>
+                                                                            <sector name='Solitude' x='202.0' visited='false' y='443.0' tag='sector_solitude' description=' Solitude originally had yet another unimaginitive name courtesy the Galactic Survey.  Its current name was earned by those who, in ones and twos, came to it to get away from everything else.' labels='human,inhabited,galaxysurvey'>
                                                                               <child name='projectiles'/>
                                                                               <child name='killed_fleets'/>
                                                                               <child name='halos'/>
@@ -709,7 +752,7 @@
                                                                                   <child name='planets'/>
                                                                                 </sector>
                                                                                 <ref tag='sector_gs13'/>
-                                                                                <sector name='Knot' x='285.0' visited='false' y='501.0' tag='sector_knot' description='The Galaxy Survey never gave this sector an official GS number.  The long strand of empty sectors had long by now been compared to a string (especially with the inclusion of &apos;Frey&apos;), and with this sector being the end of the strand and its comparatively stronger links, the name was a foregone conclusion. ' labels=''>
+                                                                                <sector name='Knot' x='285.0' visited='false' y='501.0' tag='sector_knot' description='The Galaxy Survey never gave this sector an official GS number.  The long strand of empty sectors had long by now been compared to a string (especially with the inclusion of &apos;Frey&apos;), and with this sector being the end of the strand and its comparatively stronger links, the name was a foregone conclusion. ' labels='human,galaxysurvey,uninhabited'>
                                                                                   <child name='projectiles'/>
                                                                                   <child name='killed_fleets'/>
                                                                                   <child name='halos'/>
@@ -723,7 +766,18 @@
                                                                                 </sector>
                                                                               </child>
                                                                               <child name='plot'/>
-                                                                              <child name='planets'/>
+                                                                              <child name='planets'>
+                                                                                <planet landing_distance='100.0' name='Solitude Station' x='-160.0' y='68.0' image_filename='station.png' fuel_cost='1.0' tag='station_solitude' description='Solitude Station welcomes anyone who no longer wishes to feel the crush of their fellow human.   It has more windows than any other station ever built, the better to provide views of the universe outside. ' labels='human,inhabited,standard,station'>
+                                                                                  <child name='addons_for_sale'/>
+                                                                                  <child name='missions'/>
+                                                                                  <child name='weapons_for_sale'/>
+                                                                                  <child name='ships_for_sale'/>
+                                                                                  <child name='random_missions'/>
+                                                                                  <child name='plot'/>
+                                                                                  <child name='owner'/>
+                                                                                  <child name='cargo_for_sale'/>
+                                                                                </planet>
+                                                                              </child>
                                                                             </sector>
                                                                           </child>
                                                                           <child name='plot'/>
@@ -743,7 +797,28 @@
                                                                 <ref tag='sector_gs13'/>
                                                               </child>
                                                               <child name='plot'/>
-                                                              <child name='planets'/>
+                                                              <child name='planets'>
+                                                                <planet landing_distance='100.0' name='Eden' x='-21.0' y='-70.0' image_filename='redplanet.png' fuel_cost='1.0' tag='planet_eden' description='Eden was a deceptive planet from the very beginning.  The long-range scanners the Survey used said it was entirely Earthlike, and it was - at first.  Over the past hundred years, the ecosystem has been collapsing.  Despite modern terraforming processes, the collapse has yet to be halted.' labels='inhabited,alliance,human,standard'>
+                                                                  <child name='addons_for_sale'/>
+                                                                  <child name='missions'/>
+                                                                  <child name='weapons_for_sale'/>
+                                                                  <child name='ships_for_sale'/>
+                                                                  <child name='random_missions'/>
+                                                                  <child name='plot'/>
+                                                                  <child name='owner'>
+                                                                    <org friendly='500.0' killing_mod='-50.0' name='Alliance' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_alliance' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
+                                                                      <child name='feelings'>
+                                                                        <relation labels='' feeling='1000000'>
+                                                                          <child name='target_org'>
+                                                                            <ref tag='org_alliance'/>
+                                                                          </child>
+                                                                        </relation>
+                                                                      </child>
+                                                                    </org>
+                                                                  </child>
+                                                                  <child name='cargo_for_sale'/>
+                                                                </planet>
+                                                              </child>
                                                             </sector>
                                                             <ref tag='sector_gs5'/>
                                                           </child>
@@ -757,7 +832,20 @@
                                                     </sector>
                                                   </child>
                                                   <child name='plot'/>
-                                                  <child name='planets'/>
+                                                  <child name='planets'>
+                                                    <planet landing_distance='100.0' name='New Phoenix' x='-31.0' y='-52.0' image_filename='water.png' fuel_cost='1.0' tag='planet_new_phoenix' description='New Phoenix is a prosperous, happy planet.  Money changes hands, tourists gawk at attractions, natives go about their business.  It is extremely ordinary for a place that was once the head of a rebellion. ' labels='alliance,human,standard,inhabited'>
+                                                      <child name='addons_for_sale'/>
+                                                      <child name='missions'/>
+                                                      <child name='weapons_for_sale'/>
+                                                      <child name='ships_for_sale'/>
+                                                      <child name='random_missions'/>
+                                                      <child name='plot'/>
+                                                      <child name='owner'>
+                                                        <ref tag='org_alliance'/>
+                                                      </child>
+                                                      <child name='cargo_for_sale'/>
+                                                    </planet>
+                                                  </child>
                                                 </sector>
                                                 <ref tag='sector_raw'/>
                                               </child>
@@ -921,15 +1009,7 @@
               <child name='random_missions'/>
               <child name='plot'/>
               <child name='owner'>
-                <org friendly='500.0' killing_mod='-50.0' name='Alliance' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_alliance' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
-                  <child name='feelings'>
-                    <relation labels='' feeling='1000000'>
-                      <child name='target_org'>
-                        <ref tag='org_alliance'/>
-                      </child>
-                    </relation>
-                  </child>
-                </org>
+                <ref tag='org_alliance'/>
               </child>
               <child name='cargo_for_sale'>
                 <cargo average_price='0.0' tag='food_med' mission_related='false' amount='0.0' markup='-15.0' labels=''>
@@ -1018,15 +1098,16 @@
     <player tag='player' credits='1000.0' labels=''>
       <child name='on_planet'/>
       <child name='start_ship'>
-        <ship velocity_x='0.0' name='Scout' velocity_y='0.0001' facing_x='0.0' x='0.0' price='0.0' facing_y='-1.0' armor='100.0' y='0.0' shields='100.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_bare' jumping_progress='0.0' labels=''>
+        <ship velocity_x='0.0' name='Scout' velocity_y='0.0001' facing_x='0.0' x='0.0' price='0.0' facing_y='-1.0' armor='100.0' shields='100.0' y='0.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_bare' jumping_progress='0.0' labels=''>
           <child name='addons'/>
-          <child name='itinerary'/>
+          <child name='ammo'/>
+          <child name='weapons'/>
           <child name='blueprint'>
-            <shipblueprint name='Scout' armor_regen='0.005' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.01' hardpoints='1.0' max_armor='100.0' max_shields='100.0' labels='' max_fuel='100.0'/>
+            <shipblueprint armor_regen='0.005' name='Scout' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' expansion_space='10.0' shield_regen='0.01' hardpoints='1.0' fuel_per_jump='25.0' max_armor='100.0' max_shields='100.0' labels='' max_fuel='100.0'/>
           </child>
-          <child name='secondaries'/>
-          <child name='anti_addons'/>
+          <child name='itinerary'/>
           <child name='target'/>
+          <child name='secondaries'/>
           <child name='owner'>
             <org friendly='500.0' killing_mod='-50.0' name='The Player' devoted='1000.0' unfriendly='-500.0' gullibility='0.8' tag='org_player' friendly_shots_threshold='3.0' shooting_mod='-10.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
               <child name='feelings'>
@@ -1038,9 +1119,8 @@
               </child>
             </org>
           </child>
+          <child name='anti_addons'/>
           <child name='cargo'/>
-          <child name='ammo'/>
-          <child name='weapons'/>
         </ship>
       </child>
       <child name='start_sector'>
