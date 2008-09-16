@@ -63,6 +63,36 @@ class Repository
     return matches.collect { |tag,item| item }
   end
   
+  # Generates a unique tag for the given object
+  def generate_tag_for(object)
+    total = []
+    prefix = object.class.to_s
+    prefix = prefix[3...prefix.size()] # Skip 'kui'
+    total << prefix.downcase
+    
+    exclusions = [ 'the','a','an','in','of','from','is', 'and' ]
+    
+    if object.respond_to?(:name)
+      name = object.name
+      name = name.strip.downcase
+        
+      exclusions.each do |x|
+        excludeBeginning = Regexp.new("^#{x}\s")
+        excludeMiddle = Regexp.new("\s#{x}\s")
+        name.gsub!(excludeBeginning,'')
+        name.gsub!(excludeMiddle,' ')
+      end
+     
+      total += name.split
+    end
+    
+    initial = total.join("_")
+    if initial != object.tag
+      initial = ensure_unique_tag(initial,'-')
+    end
+    return initial
+  end
+  
   # If we've already output this object, we need
   # only create a reference to it
   def ref_for(kuiobject)

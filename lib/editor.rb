@@ -238,14 +238,15 @@ class PropertiesDialog < Opal::State
   # if they need to do anything fancy.
   def layout_fields
     # Everything has a tag - or it BETTER!
+    # Probably should refactor this or something.
     value = @stored_values[:tag] || @object.tag
     label = Label.new("Tag")
-    input = InputField.new(value,30)
-    @attr_to_field[:tag] = input
-    layout_field_button(label,input,"Auto") do
-      puts "Auto clicked!"
+    tagInput = InputField.new(value,30)
+    @attr_to_field[:tag] = tagInput
+    layout_field_button(label,tagInput,"Auto") do
+      tagInput.text = @rl.repository.generate_tag_for(@object)
     end
-    @fieldY = input.rect.bottom + @spacing    
+    @fieldY = tagInput.rect.bottom + @spacing    
     @object.class.attrs.sort.each do | attr |
       next if attr == :tag # We did tags ourselves
       display = true
