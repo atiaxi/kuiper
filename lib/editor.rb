@@ -74,16 +74,23 @@ module Layout
     
   end
   
-  def layout_image_child(text, filename, &callback)
+  def layout_image_child(text,filename,sizes=nil,kind=ImageButton,&callback)
     if filename
       @label = Label.new(text)
       layout_child(@label)
       
-      @imageButton = ShipImageButton.new(filename,&callback)
+      @imageButton = kind.new(filename,&callback)
+      if sizes
+        @imageButton.max_size = sizes
+      end
     else
       @imageButton = Button.new("Set Image",&callback)
     end  
     layout_child(@imageButton)
+  end
+  
+  def layout_ship_image_child(text, filename, sizes=nil,&callback)
+    layout_image_child(text,filename,ShipImageButton,&callback)
   end
   
    def layout_minibuilder_child(mb)
@@ -432,11 +439,11 @@ class PlayerEditor < PropertiesDialog
     x = @mainRect.right - @spacing
     
     if @player.start_ship
-      layout_image_child("Start Ship",
+      layout_ship_image_child("Start Ship",
         @player.start_ship.blueprint.image_filename) { self.set_start_ship }
         
     else
-      layout_image_child("Set Starting Ship", nil) { self.set_start_ship }
+      layout_ship_image_child("Set Starting Ship", nil) { self.set_start_ship }
     end
     
     mc = MiniChooser.new(@driver, @player, :start_sector, KuiSector,

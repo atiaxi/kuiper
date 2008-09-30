@@ -57,14 +57,10 @@ class PlanetEditor < PropertiesDialog
     
   def layout_children
     
-    if @planet.image_filename
-      @imageButton = ImageButton.new(@planet.image_filename) { self.set_image }
-      @imageButton.max_size = [50,50]
-    else
-      @imageButton = Button.new("Set Image") { self.set_image }
+    layout_image_child("Image",@planet.image_filename, [100,100]) do
+      self.set_image 
     end
-    layout_child(@imageButton)
-    
+        
     owned_text = @planet.owner ? @planet.owner.name : 'Nobody'
     @ownerButton = Button.new("Owned by #{owned_text}") { self.set_owner }
     layout_child(@ownerButton)
@@ -109,7 +105,7 @@ class PlanetEditor < PropertiesDialog
     
     rl = ResourceLocator.instance
     if isd.chosen && rl.image_for(isd.chosen)
-      @image_filename = isd.chosen
+      @planet.image_filename = isd.chosen
       setup_gui
     end
   end
@@ -139,7 +135,7 @@ class ShipBlueprintEditor < PropertiesDialog
   end
   
   def layout_children
-    layout_image_child("Image", @blueprint.image_filename) { self.set_image }
+    layout_ship_image_child("Image", @blueprint.image_filename) { self.set_image }
   end
 
   def set_image
@@ -220,7 +216,7 @@ class WeaponBlueprintEditor < PropertiesDialog
   end
   
   def layout_children
-    layout_image_child("Image", @weapon.image_filename) { self.set_image }  
+    layout_ship_image_child("Image", @weapon.image_filename) { self.set_image }  
     
     @ammoBuilder = MiniBuilder.new(@driver,
       ListAdapter.new(@weapon.ammo, KuiWeaponBlueprint), "Ammo")
