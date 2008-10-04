@@ -18,7 +18,6 @@ def start_kuiper
     
     Rubygame.enable_key_repeat
     
-    # Was :backslash and :f5
     engine.hook(:backslash) { |driver| driver.running = false }
     engine.hook(:f5) do | driver |
       rl = ResourceLocator.instance

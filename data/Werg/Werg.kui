@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<universe name='Werg' save_as_dev='true' tag='universe_werg' description='Describe your new universe here' labels=''>
+  <child name='map'>
+    <map tag='new_object' labels=''>
+      <child name='sectors'>
+        <sector name='Start Sector' x='0' visited='false' y='0' tag='start_sector' description='' labels=''>
+          <child name='killed_fleets'/>
+          <child name='halos'/>
+          <child name='active_fleets'/>
+          <child name='potential_fleets'/>
+          <child name='links_to'/>
+          <child name='plot'/>
+          <child name='planets'/>
+          <child name='projectiles'/>
+        </sector>
+      </child>
+    </map>
+  </child>
+  <child name='player'>
+    <player tag='player' credits='1000.0' labels=''>
+      <child name='flags'/>
+      <child name='missions'/>
+      <child name='org'>
+        <org friendly='500' name='The Player' killing_mod='-50' devoted='1000' gullibility='0.8' unfriendly='-500' tag='org_player' friendly_shots_threshold='3' shooting_mod='-10' neutral='0' kill_on_sight='-1000' labels='' friendly_multiplier='0.5'>
+          <child name='feelings'>
+            <relation labels='' feeling='1000000'>
+              <child name='target_org'>
+                <ref tag='org_player'/>
+              </child>
+            </relation>
+          </child>
+        </org>
+      </child>
+      <child name='completed_missions'/>
+      <child name='on_planet'/>
+      <child name='start_ship'>
+        <ship velocity_x='0' name='Scout' velocity_y='0.0001' facing_x='0' x='0' price='0' facing_y='-1' armor='100.0' shields='100.0' y='0' chosen_secondary_index='0' fuel='100.0' tag='scout_bare' jumping_progress='0' labels=''>
+          <child name='blueprint'>
+            <shipblueprint armor_regen='0.005' name='Scout' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' expansion_space='10.0' shield_regen='0.01' hardpoints='1' fuel_per_jump='25' max_armor='100.0' max_shields='100.0' labels='' max_fuel='100'/>
+          </child>
+          <child name='ammo'/>
+          <child name='weapons'/>
+          <child name='itinerary'/>
+          <child name='target'/>
+          <child name='cargo'/>
+          <child name='secondaries'/>
+          <child name='anti_addons'/>
+          <child name='owner'>
+            <ref tag='org_player'/>
+          </child>
+          <child name='addons'/>
+        </ship>
+      </child>
+      <child name='start_sector'>
+        <ref tag='start_sector'/>
+      </child>
+    </player>
+  </child>
+</universe>

@@ -1127,6 +1127,7 @@ class KuiUniverse < KuiObject
   
   string_attr :name
   string_attr :description
+  boolean_attr :save_as_dev
   
   set_size_for :description , [5,40] 
   
@@ -1134,6 +1135,7 @@ class KuiUniverse < KuiObject
     super
     @map = KuiMap.new
     @player = KuiPlayer.new
+    @save_as_dev = false
   end
   
   def playable?

@@ -39,7 +39,11 @@ def save_universe(universe)
   module_name = universe.name + ".kui"
   module_dir = universe.name
   rl = ResourceLocator.instance
-  fullpath = rl.dotpath_for(module_dir)
+  if universe.save_as_dev
+    fullpath = "./data/#{module_dir}/"
+  else
+    fullpath = rl.dotpath_for(module_dir)
+  end
   Dir.mkdir(fullpath) unless File.exists?(fullpath)
   fullpath = File.join(fullpath, module_name)
   File.open(fullpath, "w") do | file |
