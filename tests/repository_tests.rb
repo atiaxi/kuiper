@@ -1,4 +1,6 @@
 
+require 'test/unit'
+
 class TC_Repository_Tests < Test::Unit::TestCase
   
   def setup

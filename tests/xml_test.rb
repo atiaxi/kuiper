@@ -242,6 +242,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   end
   
   # Seemingly some problems with the loading routines giving null universes
+  # if the universe tag is changed
   def test_filesystem_full_circle
     uni = Bootstrapper.new.universe
     repo = Repository.new
