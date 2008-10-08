@@ -527,7 +527,6 @@ class ScenarioDialog < ResourceDialog
     if @file_list.chosen
       filename = "#{@file_list.chosen}#{@extension}"
       @chosen = rl.path_for(filename)
-      rl.logger.debug("path_for #{filename} is: #{@chosen}")
       File.open(@chosen) do | file |
         xml = REXML::Document.new(file)
         universe_xml = xml.root
