@@ -5,6 +5,7 @@ require 'kuispaceworthy'
 require 'repository'
 require 'test/unit'
 require 'stringio'
+require 'tempfile'
 
 require 'setup_bootstrap'
 
@@ -238,6 +239,25 @@ class TC_Xml_Export < Test::Unit::TestCase
     ship = KuiObject.from_xml(doc.root)
     ship.setup_firing_order
     assert(ship.weapons.size > 0)
+  end
+  
+  # Seemingly some problems with the loading routines giving null universes
+  # if the universe tag is changed
+  def test_filesystem_full_circle
+    uni = Bootstrapper.new.universe
+    repo = Repository.new
+    @rl.storage[:repository] = repo
+    repo.root = uni
+    
+    temp_file = Tempfile.new('kuiper_xml_test')
+    @rl.repository.to_xml(temp_file)
+    temp_file.close
+    
+    loaded_repo = Repository.new
+    loaded_repo.add_from_file(temp_file.path)
+    temp_file.unlink
+    
+    assert_equal(repo.universe,loaded_repo.universe)
   end
   
   def test_full_circle

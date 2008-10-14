@@ -388,7 +388,7 @@ class MapState < Opal::State
         button.add_halo(@selection_halo)
         if previous && previous != @selected
           prevButton = @sectors_to_buttons[previous]
-          prevButton.remove_halo(@selection_halo) if previous
+          prevButton.remove_halo(@selection_halo) if previous && prevButton
         end
         if $edit_mode
           @link_button.enabled = true

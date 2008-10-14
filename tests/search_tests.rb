@@ -14,6 +14,11 @@ class TC_Repository_Search < Test::Unit::TestCase
     @foo.labels = "foo, planet, werg"
   end
   
+  # Did you know that tests will fail if you define an empty class?
+  def test_placeholder
+    assert(true)
+  end
+  
 end
 
 class TC_Search < Test::Unit::TestCase

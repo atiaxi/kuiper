@@ -551,7 +551,7 @@ class CompositeSprite < OpalSprite
   end
   
   def draw(screen)
-    assert { @rect.w > 0 && @rect.h > 0 }
+#    assert { @rect.w > 0 && @rect.h > 0 }
     @children.each do | child |
       child.draw(screen)
     end

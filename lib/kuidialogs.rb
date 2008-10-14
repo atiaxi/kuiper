@@ -1,5 +1,6 @@
 
 require 'dialogs'
+require 'rexml/document'
 
 include Opal
 
@@ -461,7 +462,6 @@ class MarketDialog < BuilderDialog
       
       @cred.text = "(#{freequirements} available)"
       @cred.rect.top = @require.rect.bottom
-
     end
   end
   
@@ -527,12 +527,13 @@ class ScenarioDialog < ResourceDialog
     if @file_list.chosen
       filename = "#{@file_list.chosen}#{@extension}"
       @chosen = rl.path_for(filename)
+      File.open(@chosen) do | file |
+        xml = REXML::Document.new(file)
+        universe_xml = xml.root
+        @name.text = universe_xml.attribute('name').value
+        @desc.text = universe_xml.attribute('description').value
+      end
       
-      tmpniverse = Repository.new
-      tmpniverse.add_from_file(@chosen)
-      
-      @name.text = tmpniverse.universe.name
-      @desc.text = tmpniverse.universe.description
     end
   end
   
