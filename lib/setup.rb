@@ -78,5 +78,5 @@ def setup_screen
 end
 
 if File.basename($0) == File.basename(__FILE__)
-	start_kuiper(true)
+	start_kuiper
 end
