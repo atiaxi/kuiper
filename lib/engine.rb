@@ -376,7 +376,12 @@ class ResourceLocator
     unless @images.has_key?(filename)
       begin
         fullpath = path_for(filename)
-        img = Rubygame::Surface.load_image(fullpath)
+        if fullpath
+          img = Rubygame::Surface.load_image(fullpath)
+        else
+          @logger.fatal("Fullpath for #{filename} not found!")
+          exit
+        end
       rescue Rubygame::SDLError
         @logger.fatal("Error loading '#{filename}': #{$!}")
       end

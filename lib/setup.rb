@@ -8,8 +8,19 @@ require 'titlescreen'
 include Opal
 
 
-def start_kuiper  
+def start_kuiper(from_setup_rb=false)  
   $edit_mode = false
+  rl = ResourceLocator.instance
+  if from_setup_rb
+    olddirs = rl.dirs.dup
+    rl.dirs.clear
+    olddirs.each do |dir|
+      rl.dirs << ("../" + dir)
+    end
+    
+    rl.dirs.flatten!
+    rl.logger.debug("Search dirs are: #{rl.dirs}")
+  end
   screen = setup_screen
   unless screen == nil
     engine = Engine.new()
@@ -20,7 +31,6 @@ def start_kuiper
     
     engine.hook(:backslash) { |driver| driver.running = false }
     engine.hook(:f5) do | driver |
-      rl = ResourceLocator.instance
       if $edit_mode
         save_universe(rl.repository.universe)
       end
@@ -65,4 +75,8 @@ def setup_screen
   screen.title = "Kuiper"
   setup_joystick
   return screen
+end
+
+if File.basename($0) == File.basename(__FILE__)
+	start_kuiper
 end
