@@ -75,7 +75,7 @@
                                               </child>
                                               <child name='plot'/>
                                               <child name='planets'>
-                                                <planet landing_distance='100.0' name='Kosigan' x='-37.0' y='-17.0' fuel_cost='1.0' image_filename='desert.png' tag='planet_kosigan' description='For several generations, this planet was cut off from the rest of humanity by the unexpected failure of its hyperspace lane.   By the time the connection was finally restored - an event as mysterious as its initial vanishing - the number of people on the planet had dropped by 75%.' labels='human,inhabited,standard,rebel'>
+                                                <planet landing_distance='100.0' name='Kosigan' x='-37.0' y='-17.0' fuel_cost='1.0' image_filename='desert.png' tag='planet_kosigan' description='For several generations, this planet was cut off from the rest of humanity by the unexpected failure of its hyperspace lane.   By the time the connection was finally restored - an event as mysterious as its initial vanishing - the number of people on the planet had dropped by 75%.' labels='human,inhabited,standard,rebel,right'>
                                                   <child name='missions'/>
                                                   <child name='weapons_for_sale'/>
                                                   <child name='ships_for_sale'/>
@@ -88,7 +88,7 @@
                                               </child>
                                               <child name='projectiles'/>
                                             </sector>
-                                            <sector name='The End' x='-860.0' visited='false' y='-211.0' tag='sector_end' description='Initially the name was just a joke, but like many such names, it stuck. This sector has numerous properties making hyperspace lane formation not only improbable, but impossible.  The pre-existing route to this sector is due to collapse within a few thousand years. ' labels='uninhabited,secondsurvey,rebel,human'>
+                                            <sector name='The End' x='-860.0' visited='false' y='-211.0' tag='sector_end' description='Initially the name was just a joke, but like many such names, it stuck. This sector has numerous properties making hyperspace lane formation not only improbable, but impossible.  The pre-existing route to this sector is due to collapse within a few thousand years. ' labels='uninhabited,secondsurvey,rebel,human,right,gatesearch'>
                                               <child name='killed_fleets'/>
                                               <child name='halos'/>
                                               <child name='active_fleets'/>
@@ -116,14 +116,14 @@
                                           </child>
                                           <child name='projectiles'/>
                                         </sector>
-                                        <sector name='The Anvil' x='-503.0' visited='false' y='-308.0' tag='sector_anvil' description='Originally interesting due to fluctuations in previously-thought-constant constants, this sector has only become more interesting over time; at the moment it is the center of most defensive research. ' labels=''>
+                                        <sector name='The Anvil' x='-503.0' visited='false' y='-308.0' tag='sector_anvil' description='Originally interesting due to fluctuations in previously-thought-constant constants, this sector has only become more interesting over time; at the moment it is the center of most defensive research. ' labels='rebel,human,inhabited'>
                                           <child name='killed_fleets'/>
                                           <child name='halos'/>
                                           <child name='active_fleets'/>
                                           <child name='potential_fleets'/>
                                           <child name='links_to'>
                                             <ref tag='sector_vat'/>
-                                            <sector name='The Ruse' x='-645.0' visited='false' y='-363.0' tag='sector_ruse' description='This entire area of space is known for its scientifically interesting oddities, but none more so than The Ruse.  Whenever a ship enters the sector, it gets a brief sensor echo of the next sector along.  The reason for this remains unexplained, even today. ' labels=''>
+                                            <sector name='The Ruse' x='-645.0' visited='false' y='-363.0' tag='sector_ruse' description='This entire area of space is known for its scientifically interesting oddities, but few more so than The Ruse.  Whenever a ship enters the sector, it gets a brief sensor echo of the next sector along.  The reason for this remains unexplained, even today. ' labels='rebel,price,right,human,inhabited'>
                                               <child name='killed_fleets'/>
                                               <child name='halos'/>
                                               <child name='active_fleets'/>
@@ -131,26 +131,26 @@
                                               <child name='links_to'>
                                                 <ref tag='sector_vat'/>
                                                 <ref tag='sector_anvil'/>
-                                                <sector name='The Rebel' x='-776.0' visited='false' y='-394.0' tag='sector_rebel' description='It was in this sector, not long ago, that the rebellion against the central alliance of humans was begun.  The central systems had a weak hold this far from their center to begin with, and their influence had plummeted since. ' labels=''>
+                                                <sector name='The Rebel' x='-776.0' visited='false' y='-394.0' tag='sector_rebel' description='It was in this sector, not long ago, that the rebellion against the central alliance of humans was begun.  The central systems had a weak hold this far from their center to begin with, and their influence had plummeted since. ' labels='rebel,human,inhabited'>
                                                   <child name='killed_fleets'/>
                                                   <child name='halos'/>
                                                   <child name='active_fleets'/>
                                                   <child name='potential_fleets'/>
                                                   <child name='links_to'>
                                                     <ref tag='sector_ruse'/>
-                                                    <sector name='Second Survey 6' x='-834.0' visited='false' y='-493.0' tag='sector_ss6' description='Second Survey Six faced the same naming problems as Second Survey Two, but even less interest. ' labels=''>
+                                                    <sector name='Second Survey 6' x='-834.0' visited='false' y='-493.0' tag='sector_ss6' description='Second Survey Six faced the same naming problems as Second Survey Two, but even less interest. ' labels='secondsurvey,right'>
                                                       <child name='killed_fleets'/>
                                                       <child name='halos'/>
                                                       <child name='active_fleets'/>
                                                       <child name='potential_fleets'/>
                                                       <child name='links_to'>
-                                                        <sector name='Second Survey 5' x='-513.0' visited='false' y='-473.0' tag='sector_ss5' description='&quot;Oh, come on, even the Galaxy Survey eventually found a sector!&quot; - Second Survey Official. ' labels=''>
+                                                        <sector name='Second Survey 5' x='-513.0' visited='false' y='-473.0' tag='sector_ss5' description='&quot;Oh, come on, even the Galaxy Survey eventually found an inhabitable sector!&quot; - Second Survey Official. ' labels='rebel,human,unnhabited,price'>
                                                           <child name='killed_fleets'/>
                                                           <child name='halos'/>
                                                           <child name='active_fleets'/>
                                                           <child name='potential_fleets'/>
                                                           <child name='links_to'>
-                                                            <sector name='The Price' x='-519.0' visited='false' y='-404.0' tag='sector_price' description='This sector is owned by the Price family, widely considered by many, rebel and alliance alike, as being an organized crime front. ' labels=''>
+                                                            <sector name='The Price' x='-519.0' visited='false' y='-404.0' tag='sector_price' description='This sector is owned by the Price family, widely considered by many, rebel and alliance alike, as being an organized crime front. ' labels='rebel,human,price,inhabited'>
                                                               <child name='killed_fleets'/>
                                                               <child name='halos'/>
                                                               <child name='active_fleets'/>
@@ -158,14 +158,14 @@
                                                               <child name='links_to'>
                                                                 <ref tag='sector_ruse'/>
                                                                 <ref tag='sector_ss5'/>
-                                                                <sector name='The Pale' x='-389.0' visited='false' y='-428.0' tag='sector_pale' description='This area of the galaxy is no stranger to anomalies, but this particular area is, to quote scientists who tried to explore further, &quot;Beyond the Pale&quot; ' labels=''>
+                                                                <sector name='The Pale' x='-389.0' visited='false' y='-428.0' tag='sector_pale' description='This area of the galaxy is no stranger to anomalies, but this particular area is, to quote scientists who tried to explore further, &quot;Beyond the Pale&quot; ' labels='gatesearch,uninhabited'>
                                                                   <child name='killed_fleets'/>
                                                                   <child name='halos'/>
                                                                   <child name='active_fleets'/>
                                                                   <child name='potential_fleets'/>
                                                                   <child name='links_to'>
                                                                     <ref tag='sector_price'/>
-                                                                    <sector name='Second Survey 4' x='-401.0' visited='false' y='-335.0' tag='sector_ss4' description='It became painfully and rapidly apparent that the Second Survey was to be no more successful than the first. ' labels=''>
+                                                                    <sector name='Second Survey 4' x='-401.0' visited='false' y='-335.0' tag='sector_ss4' description='It became painfully and rapidly apparent that the Second Survey was to be no more successful than the first. ' labels='gatesearch,secondsurvey,rebel,price,uninhabited'>
                                                                       <child name='killed_fleets'/>
                                                                       <child name='halos'/>
                                                                       <child name='active_fleets'/>
@@ -223,7 +223,18 @@
                                                                 </sector>
                                                               </child>
                                                               <child name='plot'/>
-                                                              <child name='planets'/>
+                                                              <child name='planets'>
+                                                                <planet landing_distance='100.0' name='Price Landing' x='39.0' y='-33.0' fuel_cost='1.0' image_filename='moon.png' tag='planet_price_landing' description='When you finance half of the rebellion, you can afford your own moon. ' labels='price,human,rebel,inhabited,standard'>
+                                                                  <child name='missions'/>
+                                                                  <child name='weapons_for_sale'/>
+                                                                  <child name='ships_for_sale'/>
+                                                                  <child name='random_missions'/>
+                                                                  <child name='plot'/>
+                                                                  <child name='cargo_for_sale'/>
+                                                                  <child name='owner'/>
+                                                                  <child name='addons_for_sale'/>
+                                                                </planet>
+                                                              </child>
                                                               <child name='projectiles'/>
                                                             </sector>
                                                             <ref tag='sector_ruse'/>
@@ -241,18 +252,29 @@
                                                     </sector>
                                                   </child>
                                                   <child name='plot'/>
-                                                  <child name='planets'/>
+                                                  <child name='planets'>
+                                                    <planet landing_distance='100.0' name='New Freehold' x='-25.0' y='-94.0' fuel_cost='1.0' image_filename='green.png' tag='planet_new_freehold' description=' ' labels='rebel,standard,inhabited,human'>
+                                                      <child name='missions'/>
+                                                      <child name='weapons_for_sale'/>
+                                                      <child name='ships_for_sale'/>
+                                                      <child name='random_missions'/>
+                                                      <child name='plot'/>
+                                                      <child name='cargo_for_sale'/>
+                                                      <child name='owner'/>
+                                                      <child name='addons_for_sale'/>
+                                                    </planet>
+                                                  </child>
                                                   <child name='projectiles'/>
                                                 </sector>
                                                 <ref tag='sector_price'/>
-                                                <sector name='The Right' x='-858.0' visited='false' y='-328.0' tag='sector_right' description='In actuality, this sector belongs to a family known as the&quot;Wrights&quot;, but hardly anyone gets this right, despite the fearsome family reputation. ' labels=''>
+                                                <sector name='The Right' x='-858.0' visited='false' y='-328.0' tag='sector_right' description='In actuality, this sector belongs to a family known as the&quot;Wrights&quot;, but hardly anyone gets this right, despite the fearsome family reputation. ' labels='right,rebel,human,inhabited'>
                                                   <child name='killed_fleets'/>
                                                   <child name='halos'/>
                                                   <child name='active_fleets'/>
                                                   <child name='potential_fleets'/>
                                                   <child name='links_to'>
                                                     <ref tag='sector_ruse'/>
-                                                    <sector name='Second Survey 7' x='-952.0' visited='false' y='-275.0' tag='sector_ss7' description='The number 7 has traditionally been associated with luck.  Unfortunately for the second survey, this was not the case.' labels=''>
+                                                    <sector name='Second Survey 7' x='-952.0' visited='false' y='-275.0' tag='sector_ss7' description='The number 7 has traditionally been associated with luck.  Unfortunately for the second survey, this was not the case.' labels='secondsurvey,uninhabited'>
                                                       <child name='killed_fleets'/>
                                                       <child name='halos'/>
                                                       <child name='active_fleets'/>
@@ -264,7 +286,7 @@
                                                       <child name='planets'/>
                                                       <child name='projectiles'/>
                                                     </sector>
-                                                    <sector name='Second Survey 3' x='-972.0' visited='false' y='-377.0' tag='sector_ss3' description='The same spirit of heady adventure and optimisim permeated the Second Survey as did the first.  Sadly, the same failure followed. ' labels=''>
+                                                    <sector name='Second Survey 3' x='-972.0' visited='false' y='-377.0' tag='sector_ss3' description='The same spirit of heady adventure and optimisim permeated the Second Survey as did the first.  Sadly, the same failure followed. ' labels='secondsurvey,uninhabited'>
                                                       <child name='killed_fleets'/>
                                                       <child name='halos'/>
                                                       <child name='active_fleets'/>
@@ -278,7 +300,18 @@
                                                     </sector>
                                                   </child>
                                                   <child name='plot'/>
-                                                  <child name='planets'/>
+                                                  <child name='planets'>
+                                                    <planet landing_distance='100.0' name='Wright Place' x='-35.0' y='26.0' fuel_cost='1.0' image_filename='station.png' tag='planet_wright_place' description=' The pun was, it is explained to you by the docking authorities, intentional.' labels='right,human,inhabited,standard,station'>
+                                                      <child name='missions'/>
+                                                      <child name='weapons_for_sale'/>
+                                                      <child name='ships_for_sale'/>
+                                                      <child name='random_missions'/>
+                                                      <child name='plot'/>
+                                                      <child name='cargo_for_sale'/>
+                                                      <child name='owner'/>
+                                                      <child name='addons_for_sale'/>
+                                                    </planet>
+                                                  </child>
                                                   <child name='projectiles'/>
                                                 </sector>
                                                 <sector name='The Night Sky' x='-669.0' visited='false' y='-455.0' tag='sector_night_sky' description='The lone habitable world of this sector would have little to recommend it, if not for the spectacular view of the nearby nebula. ' labels=''>
@@ -290,23 +323,45 @@
                                                     <ref tag='sector_ruse'/>
                                                   </child>
                                                   <child name='plot'/>
-                                                  <child name='planets'/>
+                                                  <child name='planets'>
+                                                    <planet landing_distance='100.0' name='Nebula' x='-27.0' y='-27.0' fuel_cost='1.0' image_filename='water.png' tag='planet_nebula' description='This planet has very little mass to speak of, and even fewer accessible resources.  What it does have, however, is the most stunning view in the galaxy: A nebula is visible in the night sky for most of the year. ' labels='rebel,inhabited,human,standard'>
+                                                      <child name='missions'/>
+                                                      <child name='weapons_for_sale'/>
+                                                      <child name='ships_for_sale'/>
+                                                      <child name='random_missions'/>
+                                                      <child name='plot'/>
+                                                      <child name='cargo_for_sale'/>
+                                                      <child name='owner'/>
+                                                      <child name='addons_for_sale'/>
+                                                    </planet>
+                                                  </child>
                                                   <child name='projectiles'/>
                                                 </sector>
                                                 <ref tag='sector_ss5'/>
                                               </child>
                                               <child name='plot'/>
-                                              <child name='planets'/>
+                                              <child name='planets'>
+                                                <planet landing_distance='100.0' name='Labrynth' x='23.0' y='-56.0' fuel_cost='1.0' image_filename='desert.png' tag='planet_labrynth' description='High winds re-sculpt the terrain of this planet on a minute-by-minute basis.  There is human life here, but not much of it. ' labels='rebel,human,inhabited'>
+                                                  <child name='missions'/>
+                                                  <child name='weapons_for_sale'/>
+                                                  <child name='ships_for_sale'/>
+                                                  <child name='random_missions'/>
+                                                  <child name='plot'/>
+                                                  <child name='cargo_for_sale'/>
+                                                  <child name='owner'/>
+                                                  <child name='addons_for_sale'/>
+                                                </planet>
+                                              </child>
                                               <child name='projectiles'/>
                                             </sector>
-                                            <sector name='Second Survey 1' x='-501.0' visited='false' y='-247.0' tag='sector_ss1' description='Comissioned by the Rebellion, the Second Survey was designed to pick up where theGalaxy Survey left off - and if they were to discover sectors which would give the rebels an advantage, this was &quot;just a bonus&quot; ' labels=''>
+                                            <sector name='Second Survey 1' x='-501.0' visited='false' y='-247.0' tag='sector_ss1' description='Comissioned by the Rebellion, the Second Survey was designed to pick up where theGalaxy Survey left off - and if they were to discover sectors which would give the rebels an advantage, this was &quot;just a bonus&quot; ' labels='secondsurvey,uninhabited,gatesearch,price'>
                                               <child name='killed_fleets'/>
                                               <child name='halos'/>
                                               <child name='active_fleets'/>
                                               <child name='potential_fleets'/>
                                               <child name='links_to'>
                                                 <ref tag='sector_anvil'/>
-                                                <sector name='Second Survey 2' x='-461.0' visited='false' y='-223.0' tag='sector_ss2' description='The alliteration of the sector name, and the fact that it was the second attempt at a survey seemed to dictate a better name.  In the years since its discovery, none have been suggested, owing mainly to lack of interest. ' labels=''>
+                                                <sector name='Second Survey 2' x='-461.0' visited='false' y='-223.0' tag='sector_ss2' description='The alliteration of the sector name, and the fact that it was the second attempt at a survey seemed to dictate a better name.  In the years since its discovery, none have been suggested, owing mainly to lack of interest. ' labels='rebel.price,uninhabited,secondsurvey,gatesearch'>
                                                   <child name='killed_fleets'/>
                                                   <child name='halos'/>
                                                   <child name='active_fleets'/>
@@ -326,7 +381,18 @@
                                             <ref tag='sector_ss4'/>
                                           </child>
                                           <child name='plot'/>
-                                          <child name='planets'/>
+                                          <child name='planets'>
+                                            <planet landing_distance='100.0' name='Anvil Station' x='64.0' y='-91.0' fuel_cost='1.0' image_filename='station.png' tag='planet_anvil_station' description='When leading scientists and engineers created this station long ago, it was to study - from a safe distance - the odd phenomenon in this part of the galaxy.  War has changed the focus of the station dramatically. ' labels='human,rebel,station,inhabited,standard'>
+                                              <child name='missions'/>
+                                              <child name='weapons_for_sale'/>
+                                              <child name='ships_for_sale'/>
+                                              <child name='random_missions'/>
+                                              <child name='plot'/>
+                                              <child name='cargo_for_sale'/>
+                                              <child name='owner'/>
+                                              <child name='addons_for_sale'/>
+                                            </planet>
+                                          </child>
                                           <child name='projectiles'/>
                                         </sector>
                                         <ref tag='sector_ruse'/>
