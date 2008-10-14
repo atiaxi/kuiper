@@ -51,21 +51,21 @@
                                   <child name='potential_fleets'/>
                                   <child name='links_to'>
                                     <ref tag='sector_gs83'/>
-                                    <sector name='The Vat' x='-621.0' visited='false' y='-265.0' tag='sector_vat' description='The Vat was an expieriment to create habitable planets.  While it worked, it turned out to be massively consuming of time and energy. It was deemed easier to simply explore for other habitable worlds and terraform where appropriate. ' labels='rebel,human,inhabited'>
+                                    <sector name='The Vat' x='-621.0' visited='false' y='-265.0' tag='sector_vat' description='The Vat was an expieriment to create habitable planets.  While it worked, it turned out to be massively consuming of time and energy. It was deemed easier to simply explore for other habitable worlds and terraform where appropriate. ' labels=''>
                                       <child name='killed_fleets'/>
                                       <child name='halos'/>
                                       <child name='active_fleets'/>
                                       <child name='potential_fleets'/>
                                       <child name='links_to'>
                                         <ref tag='sector_bottleneck'/>
-                                        <sector name='The Hammer' x='-713.0' visited='false' y='-209.0' tag='sector_hammer' description='This sector plays host to the largest weapons manufacturing system in the known universe. ' labels='inhabited,rebel,human'>
+                                        <sector name='The Hammer' x='-713.0' visited='false' y='-209.0' tag='sector_hammer' description='This sector plays host to the largest weapons manufacturing system in the known universe. ' labels=''>
                                           <child name='killed_fleets'/>
                                           <child name='halos'/>
                                           <child name='active_fleets'/>
                                           <child name='potential_fleets'/>
                                           <child name='links_to'>
                                             <ref tag='sector_vat'/>
-                                            <sector name='The Forgotten' x='-724.0' visited='false' y='-306.0' tag='sector_forgotten' description='Everyone remembers The Forgotten - its name stems from an unexpected hyperspace lane failure which left it isolated for hundreds of years. ' labels='rebel,inhabited,human'>
+                                            <sector name='The Forgotten' x='-724.0' visited='false' y='-306.0' tag='sector_forgotten' description='Everyone remembers The Forgotten - its name stems from an unexpected hyperspace lane failure which left it isolated for hundreds of years. ' labels=''>
                                               <child name='killed_fleets'/>
                                               <child name='halos'/>
                                               <child name='active_fleets'/>
@@ -74,21 +74,10 @@
                                                 <ref tag='sector_hammer'/>
                                               </child>
                                               <child name='plot'/>
-                                              <child name='planets'>
-                                                <planet landing_distance='100.0' name='Kosigan' x='-37.0' y='-17.0' fuel_cost='1.0' image_filename='desert.png' tag='planet_kosigan' description='For several generations, this planet was cut off from the rest of humanity by the unexpected failure of its hyperspace lane.   By the time the connection was finally restored - an event as mysterious as its initial vanishing - the number of people on the planet had dropped by 75%.' labels='human,inhabited,standard,rebel'>
-                                                  <child name='missions'/>
-                                                  <child name='weapons_for_sale'/>
-                                                  <child name='ships_for_sale'/>
-                                                  <child name='random_missions'/>
-                                                  <child name='plot'/>
-                                                  <child name='cargo_for_sale'/>
-                                                  <child name='owner'/>
-                                                  <child name='addons_for_sale'/>
-                                                </planet>
-                                              </child>
+                                              <child name='planets'/>
                                               <child name='projectiles'/>
                                             </sector>
-                                            <sector name='The End' x='-860.0' visited='false' y='-211.0' tag='sector_end' description='Initially the name was just a joke, but like many such names, it stuck. This sector has numerous properties making hyperspace lane formation not only improbable, but impossible.  The pre-existing route to this sector is due to collapse within a few thousand years. ' labels='uninhabited,secondsurvey,rebel,human'>
+                                            <sector name='The End' x='-860.0' visited='false' y='-211.0' tag='sector_end' description='Initially the name was just a joke, but like many such names, it stuck. This sector has numerous properties making hyperspace lane formation not only improbable, but impossible.  The pre-existing route to this sector is due to collapse within a few thousand years. ' labels=''>
                                               <child name='killed_fleets'/>
                                               <child name='halos'/>
                                               <child name='active_fleets'/>
@@ -102,18 +91,7 @@
                                             </sector>
                                           </child>
                                           <child name='plot'/>
-                                          <child name='planets'>
-                                            <planet landing_distance='100.0' name='The Forge' x='-100.0' y='-4.0' fuel_cost='1.0' image_filename='redplanet.png' tag='planet_forge' description='The Forge is a planet of exotic chemicals and more.  It was been described, not inacurrately, as being &apos;shrouded in war&apos;, as weapons creation and testing are the world&apos;s entire purpose. ' labels='rebel,human,standard,inhabited'>
-                                              <child name='missions'/>
-                                              <child name='weapons_for_sale'/>
-                                              <child name='ships_for_sale'/>
-                                              <child name='random_missions'/>
-                                              <child name='plot'/>
-                                              <child name='cargo_for_sale'/>
-                                              <child name='owner'/>
-                                              <child name='addons_for_sale'/>
-                                            </planet>
-                                          </child>
+                                          <child name='planets'/>
                                           <child name='projectiles'/>
                                         </sector>
                                         <sector name='The Anvil' x='-503.0' visited='false' y='-308.0' tag='sector_anvil' description='Originally interesting due to fluctuations in previously-thought-constant constants, this sector has only become more interesting over time; at the moment it is the center of most defensive research. ' labels=''>
@@ -332,18 +310,7 @@
                                         <ref tag='sector_ruse'/>
                                       </child>
                                       <child name='plot'/>
-                                      <child name='planets'>
-                                        <planet landing_distance='100.0' name='Farm' x='-5.0' y='85.0' fuel_cost='1.0' image_filename='planetoid.png' tag='planet_farm' description='More expensive than both the galaxy survey and second survey expeditions combined, this planet is the pinnacle of both terraforming science and spending. ' labels='rebel,human,inhabited,standard'>
-                                          <child name='missions'/>
-                                          <child name='weapons_for_sale'/>
-                                          <child name='ships_for_sale'/>
-                                          <child name='random_missions'/>
-                                          <child name='plot'/>
-                                          <child name='cargo_for_sale'/>
-                                          <child name='owner'/>
-                                          <child name='addons_for_sale'/>
-                                        </planet>
-                                      </child>
+                                      <child name='planets'/>
                                       <child name='projectiles'/>
                                     </sector>
                                     <sector name='Second Survey 12' x='-356.0' visited='false' y='-197.0' tag='sector_ss12' description='Initially the Second Survey thought that following up in the exact same places that the initial Survey had, but with superior technology, would reveal better results.  This was a mistake. ' labels='gatesearch,secondsurvey,human,uninhabited,humanwar'>
