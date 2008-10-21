@@ -125,9 +125,9 @@ class Repository
           child.each do | obj |
             if obj.is_placeholder?
               index = child.index(obj)
-              lookup = @everything[child.tag]
+              lookup = @everything[obj.tag]
               if lookup
-                rl.logger.info("Resolved #{tag} to #{lookup}")
+                rl.logger.info("Resolved #{obj.tag} to #{lookup}")
               else
                 rl.logger.fatal("Unable to resolve tag #{child.tag}")
               end

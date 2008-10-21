@@ -265,6 +265,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     repo = Repository.new
     @rl.storage[:repository] = repo
     uni = Bootstrapper.new.universe
+    uni.name="werg"
     repo.root = uni
     assert_equal('universe',repo.root.tag)
     #temp_file = Tempfile.new('kuiper_xml_test')
@@ -279,6 +280,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     
     assert_not_nil(loaded_repo.universe)
     assert_equal(repo.universe,loaded_repo.universe)
+    assert_equal(repo.universe.name, loaded_repo.universe.name)
   end
   
   def test_full_circle
