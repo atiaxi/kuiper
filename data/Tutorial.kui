@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<kuiper major='0' minor='0' bug='2'>
 <universe name='Tutorial' tag='universe' description=' New to Kuiper?  This scenario explains how to play the game.'>
   <child name='map'>
     <map tag='new_object'>
@@ -569,3 +570,4 @@ Your next objective is to land on Chiron.  You may not see it on-screen, but the
     </player>
   </child>
 </universe>
+</kuiper>
