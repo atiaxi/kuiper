@@ -198,6 +198,11 @@ class TitleScreen < State
     @rl.visual_log << "Welcome to Kuiper!"
 
     start = repository.universe.player.start_sector
+    @rl.logger.warn("Universe is null!") unless repository.universe
+    @rl.logger.warn("Player is null!") unless repository.universe.player
+    @rl.logger.fatal("Start sector is null!") unless repository.universe.player.start_sector
+
+    @rl.logger.debug("Everything's start is #{@rl.repository.everything['start_sector']}")
 
     secstate = SectorState.new(start,@driver)
     callcc do |cont|

@@ -419,7 +419,7 @@ class KuiObject
   def tag=(string)
     repo = Opal::ResourceLocator.instance.storage[:repository]
     if repo
-      repo.everything[string] = self
+      repo.register_tag_for(self, string)
     end
     @tag = string
   end
@@ -934,6 +934,7 @@ class KuiPlayer < KuiObject
     @on_planet = nil
     @credits = 0
     @name = nil
+    @start_ship = nil
     self.tag="player"
   end
   

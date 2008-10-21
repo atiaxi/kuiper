@@ -90,7 +90,7 @@ module Layout
   end
   
   def layout_ship_image_child(text, filename, sizes=nil,&callback)
-    layout_image_child(text,filename,ShipImageButton,&callback)
+    layout_image_child(text,filename,sizes,ShipImageButton,&callback)
   end
   
    def layout_minibuilder_child(mb)

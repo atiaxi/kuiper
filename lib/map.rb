@@ -331,6 +331,8 @@ class MapState < Opal::State
       @center = Rubygame::Rect.new(@current_sector.x, @current_sector.y, 1, 1)
     end
     
+    puts "Map is '#{@map}'"
+    
     @map.sectors.each do | sector |
       name = sector.name
       links_to_us = []
