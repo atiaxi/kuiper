@@ -274,7 +274,7 @@ class KuiObject
   attr_reader :label_array
 
   def initialize()
-    @tag = "new_object"
+    @tag = "new_tag"
     self.labels = ""
     @rl = Opal::ResourceLocator.instance
     super
@@ -421,7 +421,6 @@ class KuiObject
     if repo
       repo.everything[string] = self
     end
-
     @tag = string
   end
   
@@ -1129,12 +1128,14 @@ class KuiUniverse < KuiObject
   string_attr :description
   boolean_attr :save_as_dev
   
-  set_size_for :description , [5,40] 
+  set_size_for :description , [5,40]
   
   def initialize
     super
     @map = KuiMap.new
+    @map.tag = "map"
     @player = KuiPlayer.new
+    @player.tag="player"
     @save_as_dev = false
   end
   

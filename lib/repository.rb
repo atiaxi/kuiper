@@ -21,11 +21,17 @@ class Repository
   def add(io)
     
     doc = REXML::Document.new(io)
-    new_root = KuiObject.from_xml(doc.root)
-    if new_root.tag=="universe"
-      @root = new_root
+    kuiper = doc.root
+    # TODO: Version checks
+    kuiper.elements.each do | element |
+      obj = KuiObject.from_xml(element)
+      if obj.tag == "universe"
+        @root = obj
+      end
+      @everything[obj.tag] = obj
     end
-    return new_root
+
+    return @root
   end
  
   def add_from_file(filename, autoresolve = true)
@@ -93,19 +99,14 @@ class Repository
     return initial
   end
   
-  # If we've already output this object, we need
-  # only create a reference to it
+  # Returns a <ref> tag for the given object
   def ref_for(kuiobject)
-    if @objects_output.include?(kuiobject)
+    if kuiobject.tag
       ref = REXML::Element.new("ref")
       ref.add_attribute("tag", kuiobject.tag)
       return ref
     else
-      if kuiobject
-        return kuiobject.to_xml
-      else
-        raise "Attempted to get nil ref"
-      end  
+      return kuiobject.to_xml
     end
   end
   
@@ -148,10 +149,24 @@ class Repository
   
   def to_xml(io=$stdout)
     @objects_output = Set.new
+
+    doc = self.to_xml_document
+    doc.write(io,2)
+  end
+  
+  def to_xml_document
     doc = REXML::Document.new()
     doc.add(REXML::XMLDecl.new("1.0", "UTF-8"))
-    doc.add(@root.to_xml)
-    doc.write(io,2)
+    kuiper = REXML::Element.new("kuiper")
+    major,minor,bug = $KUIPER_VERSION
+    kuiper.add_attribute("major",major.to_s)
+    kuiper.add_attribute("minor",minor.to_s)
+    kuiper.add_attribute("bug",bug.to_s)
+    @everything.each_value do | kui |
+      kuiper.add(kui.to_xml)
+    end
+    doc.add(kuiper)
+    return doc
   end
   
   def universe

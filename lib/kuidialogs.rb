@@ -529,9 +529,10 @@ class ScenarioDialog < ResourceDialog
       @chosen = rl.path_for(filename)
       File.open(@chosen) do | file |
         xml = REXML::Document.new(file)
-        universe_xml = xml.root
-        @name.text = universe_xml.attribute('name').value
-        @desc.text = universe_xml.attribute('description').value
+        kuiper_xml = xml.root
+        universe_xml = kuiper_xml.get_elements("universe")[0]
+        @name.text= universe_xml.attribute('name').value
+        @desc.text =universe_xml.attribute('description').value
       end
       
     end

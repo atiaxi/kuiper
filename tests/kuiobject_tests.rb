@@ -456,7 +456,7 @@ class TC_Cargo < Test::Unit::TestCase
     assert(!@playerShip.can_transfer_to?(@otherShip))
     
     @player.buy_ship(@otherShip)
-    assert_equal(@otherShip, @player.start_ship)
+    assert_equal(@otherShip.tag, @player.start_ship.tag)
   end
   
 end

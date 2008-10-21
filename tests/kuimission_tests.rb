@@ -521,6 +521,7 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
   def test_simple_fetch
     
     template = KuiMission.new
+    template.tag = "werg"
     template.name="Go to %DESTINATION%, get %AMOUNT% %CARGO%, and bring it back"
     
     cargoGen = KuiRandomFetch.new

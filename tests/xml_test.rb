@@ -91,7 +91,8 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_cargo    
     e = @cargo.to_xml
     assert(e.attribute('tag').value == @cargo.tag)
-    blueprint = e.get_elements("child/cargoblueprint")[0]
+    blueprint = e.get_elements("child[@name='blueprint']/ref")[0]
+    assert_not_nil(blueprint)
     assert(blueprint.attribute('tag').value == @cargoBlueprint.tag)
   end
   
@@ -103,6 +104,23 @@ class TC_Xml_Export < Test::Unit::TestCase
     #assert(fleet == @fleet)
     # Specifially test enums
     assert(fleet.behavior == @fleet.behavior)
+  end
+  
+  # Title screen uses this technique to get text for scenarios
+  def test_name_extraction
+    repo = Repository.new
+    @rl.storage[:repository] = repo
+    uni = Bootstrapper.new().universe
+    
+    doc = repo.to_xml_document
+    kuiper = doc.root
+    
+    name = kuiper.get_elements("universe")[0].attribute('name').value
+    assert_not_nil(name)
+    assert_equal(uni.name,name)
+    desc = kuiper.get_elements("universe")[0].attribute('description').value
+    assert_not_nil(desc)
+    assert_equal(uni.description,desc)
   end
  
   def test_org
@@ -119,16 +137,16 @@ class TC_Xml_Export < Test::Unit::TestCase
  def test_planet
    e = @planet.to_xml
    assert(e.attribute('tag').value == @planet.tag)
-   cargo = e.get_elements("child['cargo_for_sale']/cargo")[0]
+   cargo = e.get_elements("child[@name='cargo_for_sale']/ref")[0]
    assert(cargo.attribute('tag').value == @cargo.tag)
-   org = e.get_elements("child['owner']/org")[0]
+   org = e.get_elements("child[@name='owner']/ref")[0]
    assert(org.attribute('tag').value == @org.tag)
  end
  
   def test_sector
     e = @sector.to_xml
     assert(e.attribute('tag').value == @sector.tag)
-    planet = e.get_elements("child['planets']/planet")[0]
+    planet = e.get_elements("child['planets']/ref")[0]
     assert(planet.attribute('tag').value == @planet.tag)
   end
   
@@ -244,35 +262,42 @@ class TC_Xml_Export < Test::Unit::TestCase
   # Seemingly some problems with the loading routines giving null universes
   # if the universe tag is changed
   def test_filesystem_full_circle
-    uni = Bootstrapper.new.universe
     repo = Repository.new
     @rl.storage[:repository] = repo
+    uni = Bootstrapper.new.universe
     repo.root = uni
-    
-    temp_file = Tempfile.new('kuiper_xml_test')
+    assert_equal('universe',repo.root.tag)
+    #temp_file = Tempfile.new('kuiper_xml_test')
+    temp_file = File.new("/tmp/blarg","w")
     @rl.repository.to_xml(temp_file)
     temp_file.close
     
     loaded_repo = Repository.new
     loaded_repo.add_from_file(temp_file.path)
-    temp_file.unlink
+    #temp_file.unlink
     
+    
+    assert_not_nil(loaded_repo.universe)
     assert_equal(repo.universe,loaded_repo.universe)
   end
   
   def test_full_circle
-    uni = Bootstrapper.new().universe
     repo = Repository.new
     @rl.storage[:repository] = repo
+    uni = Bootstrapper.new().universe
+
     repo.root = uni
     
     sio = StringIO.new
     repo.to_xml(sio)
     xml = sio.string
     
+    #puts xml
+    
     repo = Repository.new
     @rl.storage[:repository] = repo
     repo.add(xml)
+    assert_not_nil(repo.root)
     assert(repo.root == uni)
   end
   
