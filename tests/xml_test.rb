@@ -272,7 +272,6 @@ class TC_Xml_Export < Test::Unit::TestCase
     assert_equal('universe',repo.root.tag)
     
     temp_file = Tempfile.new('kuiper_xml_test')
-    #temp_file = File.new("/tmp/blarg","w")
     @rl.repository.to_xml(temp_file)
     original_sio = StringIO.new
     @rl.repository.to_xml(original_sio)

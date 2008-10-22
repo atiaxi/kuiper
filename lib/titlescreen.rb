@@ -202,8 +202,6 @@ class TitleScreen < State
     @rl.logger.warn("Player is null!") unless repository.universe.player
     @rl.logger.fatal("Start sector is null!") unless repository.universe.player.start_sector
 
-    #@rl.logger.debug("Everything's start is #{@rl.repository.everything['start_sector']}")
-
     secstate = SectorState.new(start,@driver)
     callcc do |cont|
       @continue = cont
