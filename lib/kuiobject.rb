@@ -274,7 +274,7 @@ class KuiObject
   attr_reader :label_array
 
   def initialize()
-    @tag = "new_tag"
+    @tag = nil
     self.labels = ""
     @rl = Opal::ResourceLocator.instance
     super
@@ -284,7 +284,11 @@ class KuiObject
   def ==(other)
     #return self.deep_equals(other)
     return false unless other
-    return self.tag.eql?(other.tag)
+    if self.respond_to?(:tag) && other.respond_to?(:tag)
+      return self.tag.eql?(other.tag)
+    else
+      return self.eql?(other)
+    end
   end
   
   # Two objects are === if their base tags are identical.
@@ -420,6 +424,7 @@ class KuiObject
     repo = Opal::ResourceLocator.instance.storage[:repository]
     if repo
       repo.register_tag_for(self, string)
+      #puts "Registered: #{string} for #{self}"
     end
     @tag = string
   end
@@ -1135,17 +1140,24 @@ class KuiUniverse < KuiObject
   def initialize
     super
     repo = Opal::ResourceLocator.instance.storage[:repository]
-    @map = KuiMap.new
-    @map = repo.register_or_retrieve(@map) if repo
-    @player = KuiPlayer.new
-    @player = repo.register_or_retrieve(@player) if repo
+    @map = nil
+    @player = nil
     @save_as_dev = false
+  end
+  
+  def self.default
+    uni = self.new
+    uni.map = KuiMap.new
+    uni.map.tag = "map"
+    uni.player = KuiPlayer.new
+    uni.player.tag = "player"
+    return uni
   end
   
   def playable?
     # Not calling super here because the universe doesn't need a tag
-    return false unless @map.playable?
-    return false unless @player.playable?
+    return false unless @map && @map.playable?
+    return false unless @player && @player.playable?
     return true
   end
 end

@@ -7,7 +7,7 @@ class TC_Repository_Tests < Test::Unit::TestCase
     @rl = Opal::ResourceLocator.instance
     @rl.storage[:repository] = Repository.new
     @repo = @rl.repository
-    @repo.universe = KuiUniverse.new
+    @repo.universe = KuiUniverse.default
     @player = @repo.universe.player
     
     @foo = KuiObject.new

@@ -330,6 +330,7 @@ class KuiRandomFetch < KuiMissionGenerator
     award = award_cargo_action(picked)
     arrived.thens << award
     # Set the mission flag
+    
     flag_tag =unique_tag(self.base_tag('/')+"_flag")
     flag = KuiFlagAction.new(flag_tag)
     flag.new_number=1

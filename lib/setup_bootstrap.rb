@@ -56,7 +56,7 @@ class Bootstrapper
 
   # Main entry point
   def universe
-    uni = KuiUniverse.new
+    uni = KuiUniverse.default
     sector = KuiSector.new
     sector.name = 'Start Sector'
     sector.tag = 'start_sector'

@@ -10,7 +10,7 @@ class TC_Player < Test::Unit::TestCase
   def setup
     @rl = Opal::ResourceLocator.instance
     @rl.storage[:repository] = Repository.new
-    @rl.repository.universe = KuiUniverse.new
+    @rl.repository.universe = KuiUniverse.default
     @player = @rl.repository.universe.player
   end
   
@@ -181,7 +181,7 @@ class TC_WeaponsAndShips < Test::Unit::TestCase
   def setup
     @rl = Opal::ResourceLocator.instance
     @rl.storage[:repository] = Repository.new
-    @rl.repository.universe = KuiUniverse.new
+    @rl.repository.universe = KuiUniverse.default
 
     @blueprint = KuiShipBlueprint.new
     @blueprint.hardpoints = 10
@@ -406,7 +406,7 @@ class TC_Cargo < Test::Unit::TestCase
   def setup
     @rl = Opal::ResourceLocator.instance
     @rl.storage[:repository] = Repository.new
-    @rl.repository.universe = KuiUniverse.new
+    @rl.repository.universe = KuiUniverse.default
 
     @shipPrint = KuiShipBlueprint.new
     @shipPrint.max_cargo = 10
@@ -439,6 +439,7 @@ class TC_Cargo < Test::Unit::TestCase
   
   def test_buy_new_ship
     @otherShip = KuiShip.new
+    @otherShip.tag="other_ship"
     @otherShip.blueprint = @playerShip.blueprint
     
     # No cargo on board, this should work
@@ -456,7 +457,17 @@ class TC_Cargo < Test::Unit::TestCase
     assert(!@playerShip.can_transfer_to?(@otherShip))
     
     @player.buy_ship(@otherShip)
-    assert_equal(@otherShip.tag, @player.start_ship.tag)
+    assert_equal(@otherShip.tag, @player.start_ship.base_tag)
+  end
+  
+end
+
+class TC_Universe < Test::Unit::TestCase
+  
+  def test_default_universe
+    uni = KuiUniverse.default
+    assert_equal('map',uni.map.tag)
+    assert_equal('player',uni.player.tag)
   end
   
 end

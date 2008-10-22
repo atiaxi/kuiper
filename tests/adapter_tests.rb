@@ -4,7 +4,7 @@ class TC_Adapter < Test::Unit::TestCase
   def setup
     @rl = Opal::ResourceLocator.instance
     @rl.storage[:repository] = Repository.new
-    @rl.repository.universe = KuiUniverse.new
+    @rl.repository.universe = KuiUniverse.default
     @rl.repository.universe.player.credits = 1000
     @shipPrint = KuiShipBlueprint.new
     @shipPrint.max_cargo = 10

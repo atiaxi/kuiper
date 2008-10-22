@@ -14,7 +14,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def setup
     @rl = Opal::ResourceLocator.instance
     @rl.storage[:repository] = Repository.new
-    @rl.repository.universe = KuiUniverse.new
+    @rl.repository.universe = KuiUniverse.default
     
     @playerShip = KuiShip.new
     @playerShip.tag = 'player_ship'
@@ -295,13 +295,19 @@ class TC_Xml_Export < Test::Unit::TestCase
     @rl.storage[:repository] = repo
     uni = Bootstrapper.new().universe
     assert_not_nil(uni.player.start_ship)
+    original = uni.player.start_ship
     repo.root = uni
+    
+    # Make a flag
+    flag = KuiFlag.new
+    flag.value = 20
+    uni.player.on_planet = flag
     
     sio = StringIO.new
     repo.to_xml(sio)
     xml = sio.string
     
-    #puts xml
+    puts xml
     
     repo = Repository.new
     @rl.storage[:repository] = repo
@@ -310,7 +316,9 @@ class TC_Xml_Export < Test::Unit::TestCase
     assert_not_nil(repo.root)
     assert_not_nil(repo.universe.player)
     assert_not_nil(repo.universe.player.start_ship)
-    assert(repo.root == uni)
+    assert_equal(original,repo.universe.player.start_ship)
+    assert_equal(uni.player.on_planet,repo.universe.player.on_planet)
+    assert(repo.root.deep_equals(uni))
   end
   
   # Mainly to test booleans
@@ -348,6 +356,60 @@ class TC_Xml_Export < Test::Unit::TestCase
       answers << chosen
     end
     assert(answers.size == test_size)
+  end
+  
+  # I seem to have problems relying on the engine to convert from the old
+  # version to the new, despite the fact they should be the same
+  def test_version_001_to_002
+    v001 = """<kuiper major='0' minor='0' bug='1'>
+      <universe tag='universe'>
+        <child name='player'>
+          <player tag='player' name='foozy'>
+            <child name='start_ship'>
+              <ship tag='blarg_foobar'/>
+            </child>          
+          </player>
+        </child>
+      </universe>
+    </kuiper>
+    """
+    repo = Repository.new
+    @rl.storage[:repository] = repo
+    repo.add(v001)
+    
+    # Make sure everything up there exists
+    assert_not_nil(repo.retrieve('universe'))
+    assert_not_nil(repo.retrieve('player'))
+    assert_not_nil(repo.retrieve('blarg_foobar'))
+    assert_equal('foozy', repo.universe.player.name)
+    
+    ship = repo.universe.player.start_ship
+    assert_not_nil(ship)
+    assert_not_nil(repo.universe)
+    assert_equal('player',repo.universe.player.tag)
+    assert_equal('blarg_foobar',ship.tag)
+    
+    # Do fullcircle test with this
+    sio = StringIO.new
+    repo.to_xml(sio)
+    xml = sio.string
+    
+    loaded = Repository.new
+    @rl.storage[:repository] = loaded
+    loaded.add(xml)
+    loaded.resolve_placeholders
+    
+    assert_not_nil(loaded.retrieve('universe'))
+    assert_not_nil(loaded.retrieve('player'))
+    assert_not_nil(loaded.retrieve('blarg_foobar'))
+    assert_equal('foozy', loaded.universe.player.name)
+    
+    loaded_ship = loaded.universe.player.start_ship
+    assert_not_nil(loaded_ship)
+    assert_not_nil(loaded.universe)
+    assert_equal('player',loaded.universe.player.tag)
+    assert_equal('blarg_foobar',loaded_ship.tag)
+
   end
   
 end
