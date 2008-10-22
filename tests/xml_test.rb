@@ -307,8 +307,6 @@ class TC_Xml_Export < Test::Unit::TestCase
     repo.to_xml(sio)
     xml = sio.string
     
-    puts xml
-    
     repo = Repository.new
     @rl.storage[:repository] = repo
     repo.add(xml)
