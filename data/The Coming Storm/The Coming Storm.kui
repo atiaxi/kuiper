@@ -2,7 +2,7 @@
 <kuiper major='0' minor='0' bug='0'>
 <universe name='The Coming Storm' save_as_dev='true' tag='universe' description=' Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....' labels=''>
   <child name='map'>
-    <map tag='new_object' labels=''>
+    <map tag='map' labels=''>
       <child name='sectors'>
         <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' The cradle of humankind, the Sol sector is where it all began. ' labels='alliance,human,inhabited'>
           <child name='planets'>

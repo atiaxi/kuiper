@@ -2,7 +2,7 @@
 <kuiper major='0' minor='0' bug='2'>
 <universe name='Tutorial' tag='universe' description=' New to Kuiper?  This scenario explains how to play the game.'>
   <child name='map'>
-    <map tag='new_object'>
+    <map tag='map'>
       <child name='sectors'>
         <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' This sector is home to Earth, the birthplace of humanity.'>
           <child name='active_fleets'/>
@@ -530,7 +530,7 @@ Your next objective is to land on Chiron.  You may not see it on-screen, but the
     </map>
   </child>
   <child name='player'>
-    <player name='' tag='new_object' credits='2000.0'>
+    <player name='' tag='player' credits='2000.0'>
       <child name='org'>
         <org friendly='500.0' name='The Player' killing_mod='-50.0' devoted='1000.0' gullibility='0.8' unfriendly='-500.0' tag='org_player' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' friendly_multiplier='0.5'>
           <child name='feelings'>
