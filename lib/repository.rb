@@ -110,13 +110,25 @@ class Repository
     end
   end
   
+  # If the object's tag already exists, this will return
+  # the object with that tag.  If it doesn't, it will
+  # register the given object (and return that)
+  def register_or_retrieve(object)
+    old = @everything[object.tag]
+    unless old
+      @everything[object.tag] = object
+      old = object
+    end
+    return old
+  end
+  
   def register_tag_for(object, tag)
     old = @everything[tag]
     return if old == object
     rl = Opal::ResourceLocator.instance
     @everything[tag] = object
     if old
-      rl.logger.debug("Replaced #{old} with #{object} for #{tag}")
+      #rl.logger.debug("Replaced #{old} with #{object} for #{tag}")
     end
   end
   
@@ -130,32 +142,32 @@ class Repository
     rl = Opal::ResourceLocator.instance
     @everything.dup.each do | key, value |
       value.class.children.each do | child_sym |
-        rl.logger.debug("Looking at: #{child_sym}")
+        #rl.logger.debug("Looking at: #{child_sym}")
         child = value.send(child_sym)
-        rl.logger.debug("- Got back: #{child}") if child
-        rl.logger.debug("- NULL") unless child
+        #rl.logger.debug("- Got back: #{child}") if child
+        #rl.logger.debug("- NULL") unless child
         if child.respond_to?(:each)
-          rl.logger.debug("- Iterating over #{child.size}")
+          #rl.logger.debug("- Iterating over #{child.size}")
           child.each do | obj |
-            rl.logger.debug("- - #{obj}")
+            #rl.logger.debug("- - #{obj}")
             if obj.is_placeholder?
               index = child.index(obj)
               lookup = @everything[obj.tag]
               if lookup
-                rl.logger.info("Resolved #{obj.tag} to #{lookup}")
+                #rl.logger.info("Resolved #{obj.tag} to #{lookup}")
               else
-                rl.logger.fatal("Unable to resolve tag #{child.tag}")
+                #rl.logger.fatal("Unable to resolve tag #{child.tag}")
               end
               child[index] = lookup
             end
           end
         else
-          rl.logger.debug("Not a collection, it's: #{child}")
+          #rl.logger.debug("Not a collection, it's: #{child}")
           if child && child.is_placeholder?
             setter = (child_sym.to_s+"=").to_sym
             lookup = @everything[child.tag]
-            rl.logger.info("Looked up #{child.tag} as #{lookup}")
-            rl.logger.fatal("Unable to resolve tag #{child.tag}") unless lookup
+            #rl.logger.info("Looked up #{child.tag} as #{lookup}")
+            #rl.logger.fatal("Unable to resolve tag #{child.tag}") unless lookup
             value.send(setter, lookup)
           end
         end  

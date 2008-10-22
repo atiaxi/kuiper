@@ -271,21 +271,24 @@ class TC_Xml_Export < Test::Unit::TestCase
     repo.root = uni
     assert_equal('universe',repo.root.tag)
     
-    #temp_file = Tempfile.new('kuiper_xml_test')
-    temp_file = File.new("/tmp/blarg","w")
+    temp_file = Tempfile.new('kuiper_xml_test')
+    #temp_file = File.new("/tmp/blarg","w")
     @rl.repository.to_xml(temp_file)
+    original_sio = StringIO.new
+    @rl.repository.to_xml(original_sio)
     temp_file.close
     
     loaded_repo = Repository.new
     loaded_repo.add_from_file(temp_file.path)
-    #temp_file.unlink
-    
     
     assert_not_nil(loaded_repo.universe)
     assert_equal(repo.universe,loaded_repo.universe)
+    assert_not_nil(loaded_repo.universe.player)
     assert_not_nil(loaded_repo.universe.player.start_ship)
     assert_equal(repo.universe.player.start_ship.name,
       loaded_repo.universe.player.start_ship.name)
+
+    temp_file.unlink
   end
   
   def test_full_circle
@@ -304,7 +307,9 @@ class TC_Xml_Export < Test::Unit::TestCase
     repo = Repository.new
     @rl.storage[:repository] = repo
     repo.add(xml)
+    repo.resolve_placeholders
     assert_not_nil(repo.root)
+    assert_not_nil(repo.universe.player)
     assert_not_nil(repo.universe.player.start_ship)
     assert(repo.root == uni)
   end

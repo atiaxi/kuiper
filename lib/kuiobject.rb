@@ -690,6 +690,7 @@ class KuiMap < KuiObject
   
   def initialize
     super
+    @tag = "map" # Default tag
     @sectors = []
   end
   
@@ -935,7 +936,7 @@ class KuiPlayer < KuiObject
     @credits = 0
     @name = nil
     @start_ship = nil
-    self.tag="player"
+    @tag="player"
   end
   
   def add_mission(mission)
@@ -1133,10 +1134,13 @@ class KuiUniverse < KuiObject
   
   def initialize
     super
+    repo = Opal::ResourceLocator.instance.storage[:repository]
     @map = KuiMap.new
-    @map.tag = "map"
+    @map = repo.register_or_retrieve(@map) if repo
+    #@map.tag = "map"
     @player = KuiPlayer.new
-    @player.tag="player"
+    @player = repo.register_or_retrieve(@player) if repo
+    #@player.tag="player"
     @save_as_dev = false
   end
   
