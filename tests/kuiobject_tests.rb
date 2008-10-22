@@ -238,7 +238,7 @@ class TC_WeaponsAndShips < Test::Unit::TestCase
     assert_equal(left.items[0].base_tag, primary.base_tag)
     assert_not_equal(left.items[0].tag, primary.tag)
     
-    assert_not_nil(@rl.repository.everything[left.items[0].tag])
+    assert_not_nil(@rl.repository.retrieve(left.items[0].tag))
     assert_equal(3, right.items.size)
     $edit_mode = false
   end

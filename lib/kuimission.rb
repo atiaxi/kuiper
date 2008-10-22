@@ -353,7 +353,7 @@ class KuiFlagAction < KuiAction
       #       refactor it into KuiPlayer::add_flag
       old_flag = player.flag_for(@flag_tag)
       unless old_flag
-        old_flag = @rl.repository.everything[@flag_tag]
+        old_flag = @rl.repository.retrieve(@flag_tag)
         unless old_flag
           old_flag = KuiFlag.new
           old_flag.tag = @flag_tag

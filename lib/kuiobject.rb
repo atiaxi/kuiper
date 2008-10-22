@@ -138,7 +138,7 @@ class KuiObject
     rl = Opal::ResourceLocator.instance
     if element.name=="ref"
       tag = element.attributes["tag"]
-      obj = rl.repository.everything[tag]
+      obj = rl.repository.retrieve(tag)
       unless obj
         return Placeholder.new(tag)
       end
@@ -631,7 +631,7 @@ class KuiFleet < KuiObject
   # informs all interested missions of the player that this fleet is dead.
   # Records this fact in the given sector if we need to.  Removes 
   def kill_fleet(sector)
-    prototype = @rl.repository.everything[self.base_tag]
+    prototype = @rl.repository.retrieve(self.base_tag)
     player = @rl.repository.universe.player
     inform = player.missions.select do | mission |
       mission.fleets_to_die.include?(prototype)
@@ -1137,10 +1137,8 @@ class KuiUniverse < KuiObject
     repo = Opal::ResourceLocator.instance.storage[:repository]
     @map = KuiMap.new
     @map = repo.register_or_retrieve(@map) if repo
-    #@map.tag = "map"
     @player = KuiPlayer.new
     @player = repo.register_or_retrieve(@player) if repo
-    #@player.tag="player"
     @save_as_dev = false
   end
   

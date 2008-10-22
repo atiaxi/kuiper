@@ -344,7 +344,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     answers = Set.new
     test_size.times do
       chosen = @rl.repository.ensure_unique_tag("blarg")
-      @rl.repository.everything[chosen] = "shabarg" # So it's in the system
+      @rl.repository.register_tag_for("shabarg",chosen)
       answers << chosen
     end
     assert(answers.size == test_size)

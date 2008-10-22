@@ -3,7 +3,7 @@ require 'rexml/document'
 class Repository
   attr_accessor :root
   
-  attr_accessor :everything
+  #attr_accessor :everything
   attr_accessor :objects_output
   
   TAG_SEPARATOR=':'
@@ -61,7 +61,7 @@ class Repository
   # (e.g. they're not Laser:3344)
   def everything_of_type(type, base_only = false)
     rl = Opal::ResourceLocator.instance
-    matches = rl.repository.everything.select do | tag, item |
+    matches = @everything.select do | tag, item |
       kind = item.kind_of?(type)
       result = base_only ? kind && (item.tag == item.base_tag) : kind
       result
@@ -122,6 +122,10 @@ class Repository
     return old
   end
   
+  def register(object)
+    register_tag_for(object,object.tag)
+  end
+  
   def register_tag_for(object, tag)
     old = @everything[tag]
     return if old == object
@@ -174,6 +178,10 @@ class Repository
       end
       value.post_load
     end
+  end
+  
+  def retrieve(tag)
+    return @everything[tag]
   end
   
   def to_xml(io=$stdout)
