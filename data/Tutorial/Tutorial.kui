@@ -99,7 +99,7 @@ To jump out of your current sector, just hold down the &apos;J&apos; button. An 
 To complete this mission, jump to Alpha Centauri. ' tag='instruct_on_jumping' show_once_only='true' shown='false'/>
                                   </child>
                                 </ifthen>
-                                <ifthen tag='check_in_alpha_centauri'>
+                                <ifthen tag='check_in_alpha_centauri1'>
                                   <child name='ifs'>
                                     <atcondition tag='in_alpha_centauri?'>
                                       <child name='locations'>
@@ -218,7 +218,7 @@ Remember, without a missile launcher, the missiles are useless!' amount='0.0' is
                                                     <ref tag='completed_jumping'/>
                                                   </child>
                                                   <child name='checks'>
-                                                    <ifthen tag='check_in_alpha_centauri'>
+                                                    <ifthen tag='check_in_alpha_centauri2'>
                                                       <child name='ifs'>
                                                         <atcondition tag='at_alpha_centauri?'>
                                                           <child name='locations'>

@@ -421,10 +421,10 @@ class KuiObject
   # Setting a KuiObject's tag will cause the object to store itself
   # in the repository under that name.
   def tag=(string)
-    repo = Opal::ResourceLocator.instance.storage[:repository]
+    rl = Opal::ResourceLocator.instance
+    repo = rl.storage[:repository]
     if repo
       repo.register_tag_for(self, string)
-      #puts "Registered: #{string} for #{self}"
     end
     @tag = string
   end

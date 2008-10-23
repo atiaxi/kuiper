@@ -116,8 +116,7 @@ class Repository
   def register_or_retrieve(object)
     old = @everything[object.tag]
     unless old
-      @everything[object.tag] = object
-      old = object
+      register(object)
     end
     return old
   end
@@ -130,6 +129,7 @@ class Repository
     old = @everything[tag]
     return if old == object
     rl = Opal::ResourceLocator.instance
+    stacktrace if old
     @everything[tag] = object
     if old
       #rl.logger.debug("Replaced #{old} with #{object} for #{tag}")
@@ -158,9 +158,9 @@ class Repository
               index = child.index(obj)
               lookup = @everything[obj.tag]
               if lookup
-                #rl.logger.info("Resolved #{obj.tag} to #{lookup}")
+                rl.logger.info("Resolved #{obj.tag} to #{lookup}")
               else
-                #rl.logger.fatal("Unable to resolve tag #{child.tag}")
+                rl.logger.fatal("Unable to resolve tag #{child.tag}")
               end
               child[index] = lookup
             end
@@ -171,7 +171,7 @@ class Repository
             setter = (child_sym.to_s+"=").to_sym
             lookup = @everything[child.tag]
             #rl.logger.info("Looked up #{child.tag} as #{lookup}")
-            #rl.logger.fatal("Unable to resolve tag #{child.tag}") unless lookup
+            rl.logger.fatal("Unable to resolve tag #{child.tag}") unless lookup
             value.send(setter, lookup)
           end
         end  
