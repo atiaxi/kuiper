@@ -278,8 +278,8 @@ class TC_Xml_Export < Test::Unit::TestCase
     temp_file.close
     
     loaded_repo = Repository.new
-    loaded_repo.add_from_file(temp_file.path)
-    
+    loaded_repo.add_from_file(temp_file.path,false)
+    assert(loaded_repo.resolve_placeholders)
     assert_not_nil(loaded_repo.universe)
     assert_equal(repo.universe,loaded_repo.universe)
     assert_not_nil(loaded_repo.universe.player)
@@ -310,7 +310,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     repo = Repository.new
     @rl.storage[:repository] = repo
     repo.add(xml)
-    repo.resolve_placeholders
+    assert(repo.resolve_placeholders)
     assert_not_nil(repo.root)
     assert_not_nil(repo.universe.player)
     assert_not_nil(repo.universe.player.start_ship)

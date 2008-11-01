@@ -41,6 +41,10 @@ class Repository
     resolve_placeholders if autoresolve
   end
   
+  def add_placeholder(holder)
+    @placeholders << holder
+  end
+  
   # Given the base tag, create a tag that doesn't already exist.
   # (e.g. If the base tag is foo, the created tag will be foo:123)
   def ensure_unique_tag(base, separator=':')
@@ -129,7 +133,6 @@ class Repository
     old = @everything[tag]
     return if old == object
     rl = Opal::ResourceLocator.instance
-    stacktrace if old
     @everything[tag] = object
     if old
       #rl.logger.debug("Replaced #{old} with #{object} for #{tag}")
@@ -140,9 +143,14 @@ class Repository
     @root = nil
     @objects_output = Set.new
     @everything = {}
+    # Not a set, want to make sure every placeholder is resolved.
+    @placeholders = []
   end
   
-  def resolve_placeholders
+  # Attempts to crawl the object tree for placeholders.
+  # If any are left unresolved, emits an INFO line and
+  # returns false
+  def resolve_placeholders()
     rl = Opal::ResourceLocator.instance
     @everything.dup.each do | key, value |
       value.class.children.each do | child_sym |
@@ -152,32 +160,41 @@ class Repository
         #rl.logger.debug("- NULL") unless child
         if child.respond_to?(:each)
           #rl.logger.debug("- Iterating over #{child.size}")
-          child.each do | obj |
-            #rl.logger.debug("- - #{obj}")
+          
+          replaced = child.collect do | obj |
             if obj.is_placeholder?
-              index = child.index(obj)
               lookup = @everything[obj.tag]
               if lookup
-                rl.logger.info("Resolved #{obj.tag} to #{lookup}")
+                @placeholders.delete_first(obj)
+                lookup
               else
                 rl.logger.fatal("Unable to resolve tag #{child.tag}")
+                nil
               end
-              child[index] = lookup
+            else
+              obj
             end
           end
+          value.adopt_child(child_sym, replaced)
         else
           #rl.logger.debug("Not a collection, it's: #{child}")
           if child && child.is_placeholder?
             setter = (child_sym.to_s+"=").to_sym
             lookup = @everything[child.tag]
-            #rl.logger.info("Looked up #{child.tag} as #{lookup}")
+            #rl.logger.info("Resolved #{child.tag} as #{lookup}")
             rl.logger.fatal("Unable to resolve tag #{child.tag}") unless lookup
             value.send(setter, lookup)
+            @placeholders.delete_first(child)
           end
         end  
       end
       value.post_load
     end
+    unless @placeholders.empty?
+      rl.logger.info("Unresolved placeholders: #{@placeholders}")
+      #puts self.to_xml
+    end
+    return @placeholders.empty?
   end
   
   def retrieve(tag)

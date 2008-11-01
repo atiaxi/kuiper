@@ -38,13 +38,26 @@ end
 
 class Placeholder
   attr_accessor :tag
+  attr_accessor :in_list
   
-  def initialize(tag_name)
+  def initialize(tag_name, in_list=nil)
     @tag = tag_name
+    @in_list = in_list
   end
   
   def is_placeholder?
     return true
+  end
+  
+  def replace_with(aKuiObject)
+    index = nil
+    while(index = @in_list.index(self))
+      @in_list[index] = aKuiObject
+    end
+  end
+  
+  def to_s
+    return "#<Placeholder for: #{@tag}>"
   end
 end
 
@@ -140,7 +153,9 @@ class KuiObject
       tag = element.attributes["tag"]
       obj = rl.repository.retrieve(tag)
       unless obj
-        return Placeholder.new(tag)
+        holder = Placeholder.new(tag)
+        rl.repository.add_placeholder(holder)
+        return holder
       end
     else
       subclass = subclasses(true).detect do | sub |
@@ -180,7 +195,6 @@ class KuiObject
       child.children.each do | new_obj_element |
         if new_obj_element.is_a?(REXML::Element)
           new_obj = KuiObject.from_xml(new_obj_element)
-          
           if current.respond_to?(:<<)
             current << new_obj
           else
@@ -295,6 +309,15 @@ class KuiObject
   def ===(other)
     return self.base_tag == other.base_tag
     #return self.do_equal(other, Set.new,true)
+  end
+  
+  # So I don't have objects calling obj.blarg=new_list
+  # all over the damn place, this essentially does that.
+  def adopt_child(sym,new_list)
+    if !sym.to_s.ends_with?($=)
+      sym = (sym.to_s + "=").to_sym
+    end
+    self.send(sym, new_list)
   end
   
   def base_tag(separator = Repository::TAG_SEPARATOR)
@@ -623,6 +646,11 @@ class KuiFleet < KuiObject
   def initialize_copy(copy)
     @ships = copy.ships.collect do |ship| 
       dupe = ship.dup
+      if dupe.is_placeholder?
+        @rl.logger.fatal("#{ship.tag} is a placeholder!")
+        @rl.logger.debug("Ships is: #{copy.ships}")
+        new_obj = KuiObject.from_xml(new_obj_element)
+      end
       dupe.owner = @owner
       dupe
     end
@@ -1160,6 +1188,7 @@ class KuiUniverse < KuiObject
     return false unless @player && @player.playable?
     return true
   end
+  
 end
 
 # Include items we refactored out

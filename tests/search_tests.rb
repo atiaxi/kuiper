@@ -61,3 +61,17 @@ class TC_Search < Test::Unit::TestCase
   end
   
 end
+
+class TC_Array_Addons < Test::Unit::TestCase
+  
+  def setup
+    @array = [1,1,2,3,3,2,1,1]
+  end
+  
+  def test_delete_first
+    @array.delete_first(2)
+    assert_equal(7,@array.size)
+    assert_equal(4,@array.index(2))
+  end
+  
+end
