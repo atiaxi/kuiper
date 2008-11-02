@@ -260,6 +260,27 @@ class KuiObject
 
   end
   
+  # commentable_attr is a string_attr that reports different values for its
+  # accessor if not in $edit_mode.  Specifically, anything between /* */ is
+  # deleted
+  def self.commentable_attr(*arr)
+    self.attrs.merge(arr)
+    
+    attr_writer(*arr)
+    arr.each do |getter|
+      class_eval do
+        define_method(getter) do
+          result = instance_variable_get("@" +getter.to_s)
+          # Regexp courtesy http://ostermiller.org/findcomment.html
+          if result && !$edit_mode
+            result.gsub!(/\/\*(.|[\r\n])*?\*\//, '')
+          end
+          result
+        end
+      end
+    end
+  end
+  
   # Registers in a 'children' array
   def self.child(*arr)
     self.children.merge(arr)
@@ -906,7 +927,7 @@ class KuiPlanet < KuiObject
   child :random_missions # The result of these generators will be in the
                          # mission board.
   string_attr :name
-  string_attr :description  
+  commentable_attr :description  
   set_size_for :description, [5,40]
   
   numeric_attr :x, :y
@@ -1106,7 +1127,7 @@ class KuiSector < KuiObject
   
   numeric_attr :x, :y
   string_attr :name
-  string_attr :description
+  commentable_attr :description
   set_size_for :description, [5,40]
   
   boolean_attr :visited

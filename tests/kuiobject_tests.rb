@@ -5,6 +5,30 @@ require 'kuispaceworthy'
 require 'repository'
 require 'test/unit'
 
+class TC_Commentable < Test::Unit::TestCase
+  
+  def setup
+    $edit_mode = true
+    @planet = KuiPlanet.new
+    @planet.name = "A Planet"
+    @planet.description = "A perfectly normal planet./* NOTE: Not normal */"
+    @original_description = @planet.description.dup
+  end
+  
+  def test_playing
+    $edit_mode = false
+    assert_equal("A perfectly normal planet./* NOTE: Not normal */",@original_description)
+    assert_not_equal(@planet.description, @original_description)
+    assert_equal("A perfectly normal planet.", @planet.description)
+  end
+  
+  def test_editing
+    $edit_mode = true
+    assert_equal(@original_description,@planet.description)
+  end
+  
+end
+
 class TC_Player < Test::Unit::TestCase
   
   def setup
