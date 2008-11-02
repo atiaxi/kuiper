@@ -83,6 +83,7 @@ class SectorState < Opal::State
     @fleet_controllers << fleetController
     
     fleet.ships.each do | ship |
+      ship.owner = fleet.owner
       ship_sprite = ShipSprite.new(ship, @player_sprite)
       
       jitter_x = rand(jitter) - jitter/2

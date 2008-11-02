@@ -815,6 +815,7 @@ class ProjectileController < ShipController
       img = self.image
       my_radius = [img.h, img.w].max / 12 # Half of six frames
       
+      #TODO: Man, I could optimize this
       potentials = @sector_state.collidables
       potentials = potentials.reject { |p| @model.immune.include?(p.model) }
       if @model.target

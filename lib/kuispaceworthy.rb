@@ -6,6 +6,10 @@ require 'kuiobject'
 class KuiSpaceworthy < KuiObject
   child :blueprint
   child :target
+  
+  # This is only important during gameplay, mostly so the target info pane can
+  # tell the player who the owner of this ship is
+  attr_accessor :owner
     
   # This should apply only to the player's ship; when 'phased' the other ships
   # are supposed to treat it as though it's not there.  This is helped out by 
@@ -40,6 +44,7 @@ class KuiSpaceworthy < KuiObject
     @price = 0
     @accel = 10.0
     @alive = true
+    @owner = nil
     @velocity = Rubygame::Ftor.new(0,0.0001)
   end
   

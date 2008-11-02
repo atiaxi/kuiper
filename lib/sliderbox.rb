@@ -332,11 +332,13 @@ end
 class ShipBox < SliderBox
   
   attr_accessor :ship
+  attr_reader :suppress_owner
   
   def initialize(ship, anchor, where, slide_direction,disp=0)
     @nameLabel = nil
     @ship = ship
     @spacing = 3
+    @suppress_owner = false
     super(anchor,where,slide_direction,disp)
   end
   
@@ -369,6 +371,15 @@ class ShipBox < SliderBox
         @bottom = @fuelLabel
       end
       
+      @ownerLabel = Label.new(" ")
+      @ownerLabel.rect.x = @rect.x + @spacing
+      if @ship != @rl.repository.universe.player.start_ship
+        @ownerLabel.rect.y = @labelY
+        self << @ownerLabel
+        @labelY = @ownerLabel.rect.bottom + @spacing
+        @bottom = @ownerLabel
+      end
+      
     end
     
     if @ship
@@ -379,16 +390,22 @@ class ShipBox < SliderBox
         [@ship.armor, @ship.max_armor]
       @fuelLabel.text = "Fuel: %d/%d (%d jumps)" %
         [@ship.fuel, @ship.max_fuel, @ship.fuel / @ship.fuel_per_jump]
+      if @ship.owner
+        player_org = @rl.repository.universe.player.org
+        feelings = @ship.owner.symbol_for_attitude(player_org)
+        @ownerLabel.text = "#{@ship.owner.name} (#{feelings})"
+      end
       start_showing
     else
       @nameLabel.text = " No target "
       @shieldsLabel.text = " "
       @armorLabel.text = " "
+      @ownerLabel.text = " "
       start_hiding
     end
 
     widths = [@nameLabel.rect.w, @shieldsLabel.rect.w, @armorLabel.rect.w,
-      @fuelLabel.rect.w]
+      @fuelLabel.rect.w + @ownerLabel.rect.w]
     @rect.w = widths.max + @spacing * 2
     @rect.h = @bottom.rect.bottom - @nameLabel.rect.top + @spacing
     #@rect.h = @nameLabel.rect.top - @labelY
