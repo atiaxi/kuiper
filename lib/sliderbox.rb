@@ -388,7 +388,7 @@ class ShipBox < SliderBox
         [@ship.shields,@ship.max_shields]
       @armorLabel.text = "Armor: %.1f/%.1f" %
         [@ship.armor, @ship.max_armor]
-      @fuelLabel.text = "Fuel: %d/%d (%d jumps)" %
+      @fuelLabel.text = "Fuel: %.1f/%.1f (%d jumps)" %
         [@ship.fuel, @ship.max_fuel, @ship.fuel / @ship.fuel_per_jump]
       if @ship.owner
         player_org = @rl.repository.universe.player.org

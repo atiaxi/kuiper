@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <kuiper major='0' bug='2' minor='0'>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:6020' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='true' name='Missile Launcher' rot_per_sec='720.0' max_speed='500.0' accel='500.0' price='250.0' turreted='false' damage='50.0' image_filename='redMissile.png' cooldown='0.0' tag='wpn_missile_launcher:5230' auto_accelerate='false' amount='1.0' description=' This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='3.0'>
+    <child name='anti_addons'/>
+    <child name='ammo'>
+      <ref tag='ammo_missile:3454'/>
+    </child>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:3944' auto_accelerate='true' amount='5.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
   <player name='' tag='player' credits='2000.0' labels=''>
     <child name='missions'/>
     <child name='org'>
@@ -15,20 +29,7 @@
       <ref tag='sector_sol'/>
     </child>
   </player>
-  <weaponblueprint secondary_weapon='true' name='Missile Launcher' rot_per_sec='720.0' max_speed='500.0' accel='500.0' price='250.0' turreted='false' damage='50.0' image_filename='redMissile.png' cooldown='0.0' tag='wpn_missile_launcher:5230' auto_accelerate='false' amount='1.0' description=' This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='3.0' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'>
-      <ref tag='ammo_missile:3454'/>
-    </child>
-  </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:3944' auto_accelerate='true' amount='5.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:6239' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
+  <flagaction flag_tag='flag_meet_and_greet' tag='flag_action_meet_and_greet' new_note='' new_number='1.0' unset='false' labels=''/>
   <ship velocity_x='0.0' name='Scout' velocity_y='0.0001' facing_x='0.0' price='0.0' facing_y='-1.0' armor='100.0' x='0.0' y='0.0' shields='100.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_bare' jumping_progress='0.0' labels=''>
     <child name='itinerary'/>
     <child name='owner'>
@@ -48,7 +49,6 @@
   <infoaction message='Congratulations on arriving in one piece!
 
 Your next objective is to land on Chiron.  You may not see it on-screen, but the radar in the lower-left should show it (and you) completely clearly.  You can always zoom the radar in and out by using the + and - keys. ' tag='inform_offscreen_planet' show_once_only='false' labels='' shown='false'/>
-  <flagaction flag_tag='flag_meet_and_greet' tag='flag_action_meet_and_greet' new_note='' new_number='1.0' unset='false' labels=''/>
   <atcondition tag='in_alpha_centauri?' labels=''>
     <child name='locations'>
       <ref tag='sector_alpha_centauri'/>
@@ -67,7 +67,7 @@ Some weapons need ammunition - this should be noted in most cases in the descrip
 To field-test your weaponry, proceed to the Medregg system.' tag='msg_explain_weapons' show_once_only='true' labels='' shown='false'/>
   <weaponblueprint secondary_weapon='false' name='Missile' rot_per_sec='0.0' max_speed='0.0' accel='0.0' price='50.0' turreted='false' damage='0.0' image_filename='redMissile.png' cooldown='0.0' tag='ammo_missile:3454' auto_accelerate='false' amount='10.0' description=' For use with the standard-issue missile launcher.
 
-Remember, without a missile launcher, the missiles are useless!' is_ammo='true' expansion_required='1.0' labels='' hardpoints_required='0.0' seeking='true' max_cooldown='0.0' max_ttl='0.0'>
+Remember, without a missile launcher, the missiles are useless!' is_ammo='true' expansion_required='1.0' labels='' hardpoints_required='0.0' seeking='true' max_ttl='0.0' max_cooldown='0.0'>
     <child name='anti_addons'/>
     <child name='ammo'/>
   </weaponblueprint>
@@ -76,7 +76,7 @@ Remember, without a missile launcher, the missiles are useless!' is_ammo='true' 
       <ref tag='sector_medregg'/>
     </child>
   </atcondition>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:2438' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:6239' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
     <child name='anti_addons'/>
     <child name='ammo'/>
   </weaponblueprint>
@@ -102,6 +102,10 @@ Don&apos;t try shooting up your buddies in the Sol or Alpha Centauri sector, as 
       <ref tag='msn_multijump'/>
     </child>
   </descriptionaction>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:2438' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
   <fleet name='Terran Defense Force' current_stay='0.0' under_attack='fight' tag='fleet_tdf' spawn_chance='0.3' min_stay='5.0' behavior='patrol' max_stay='10.0' labels='' unique='false'>
     <child name='owner'>
       <ref tag='org_terrans'/>
@@ -161,10 +165,6 @@ You can enter the map by pressing &apos;M&apos;.  There are two ways to put more
 The second method is the easiest, as the computer will plot a course for you, but the first one allows more fine-grained control over where you go.
 
 When you&apos;re ready, jump to Sol. ' tag='msg_explain_multijump' show_once_only='true' labels='' shown='false'/>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:8404' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
   <ifthen tag='check_flag_addon_done' labels=''>
     <child name='ifs'>
       <ref tag='cond_addon_tutorial_done'/>
@@ -173,7 +173,11 @@ When you&apos;re ready, jump to Sol. ' tag='msg_explain_multijump' show_once_onl
       <ref tag='end'/>
     </child>
   </ifthen>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9263' auto_accelerate='true' amount='4.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9263' auto_accelerate='true' amount='4.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:8404' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
     <child name='anti_addons'/>
     <child name='ammo'/>
   </weaponblueprint>
@@ -203,17 +207,17 @@ When you&apos;re ready, jump to Sol. ' tag='msg_explain_multijump' show_once_onl
     <child name='active_fleets'/>
   </sector>
   <mission globally_unique='true' name='Welcome to Kuiper' exit_code='0.0' tag='msn_meet_and_greet' description=' Left/Right arrow keys steer, up arrow key accelerates and the down arrow key slows you.  When you are ready to continue the tutorial, land on the planet by flying close to it and pressing &apos;L&apos;' labels='' unique='true'>
-    <child name='checks'>
-      <ref tag='intro_check_planet'/>
-    </child>
     <child name='setup'>
       <ref tag='flag_action_meet_and_greet'/>
       <ref tag='msg_meet_and_greet'/>
     </child>
-    <child name='fleets_to_die'/>
-    <child name='fleets_that_died'/>
     <child name='sponsors'/>
+    <child name='fleets_to_die'/>
     <child name='worthy'/>
+    <child name='fleets_that_died'/>
+    <child name='checks'>
+      <ref tag='intro_check_planet'/>
+    </child>
   </mission>
   <atcondition tag='at_alpha_centauri?' labels=''>
     <child name='locations'>
@@ -230,7 +234,7 @@ When you&apos;re ready, jump to Sol. ' tag='msg_explain_multijump' show_once_onl
       <ref tag='msn_multijump'/>
     </child>
   </completedcondition>
-  <weaponblueprint secondary_weapon='true' name='Missile Launcher' rot_per_sec='720.0' max_speed='500.0' accel='500.0' price='250.0' turreted='false' damage='50.0' image_filename='redMissile.png' cooldown='0.0' tag='wpn_missile_launcher' auto_accelerate='false' amount='0.0' description=' This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='3.0' max_ttl='3.0'>
+  <weaponblueprint secondary_weapon='true' name='Missile Launcher' rot_per_sec='720.0' max_speed='500.0' accel='500.0' price='250.0' turreted='false' damage='50.0' image_filename='redMissile.png' cooldown='0.0' tag='wpn_missile_launcher' auto_accelerate='false' amount='0.0' description=' This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='3.0'>
     <child name='anti_addons'/>
     <child name='ammo'>
       <ref tag='ammo_missile:3454'/>
@@ -267,23 +271,47 @@ When you&apos;re ready, jump to Sol. ' tag='msg_explain_multijump' show_once_onl
     </child>
   </ship>
   <mission globally_unique='true' name='Multi-Jump Tutorial' exit_code='0.0' tag='msn_multijump' description='This tutorial begins with how to jump into a sector farther away than one leap, and ends with combat! ' labels='' unique='true'>
+    <child name='setup'>
+      <ref tag='set_addon_tutorial_done'/>
+      <ref tag='sell_lasers'/>
+    </child>
+    <child name='sponsors'/>
+    <child name='fleets_to_die'/>
+    <child name='worthy'>
+      <ref tag='completed_jumping'/>
+    </child>
+    <child name='fleets_that_died'/>
     <child name='checks'>
       <ref tag='check_in_alpha_centauri2'/>
       <ref tag='check_at_sol_2'/>
       <ref tag='check_on_earth_2'/>
       <ref tag='check_at_medregg_0'/>
     </child>
-    <child name='setup'>
-      <ref tag='set_addon_tutorial_done'/>
-      <ref tag='sell_lasers'/>
-    </child>
-    <child name='fleets_to_die'/>
-    <child name='fleets_that_died'/>
-    <child name='sponsors'/>
-    <child name='worthy'>
-      <ref tag='completed_jumping'/>
-    </child>
   </mission>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:727' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:2422' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:890' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <ifthen tag='intro_check_planet' labels=''>
+    <child name='ifs'>
+      <ref tag='on_earth'/>
+    </child>
+    <child name='thens'>
+      <ref tag='end'/>
+    </child>
+  </ifthen>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser' auto_accelerate='true' amount='0.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
   <fleet name='Trading Fleet' current_stay='0.0' under_attack='flee' tag='fleet_traders' spawn_chance='0.3' min_stay='5.0' behavior='trade' max_stay='10.0' labels='' unique='false'>
     <child name='owner'>
       <ref tag='org_terrans'/>
@@ -293,18 +321,6 @@ When you&apos;re ready, jump to Sol. ' tag='msg_explain_multijump' show_once_onl
       <ref tag='scout_traders'/>
     </child>
   </fleet>
-  <ifthen tag='intro_check_planet' labels=''>
-    <child name='ifs'>
-      <ref tag='on_earth'/>
-    </child>
-    <child name='thens'>
-      <ref tag='end'/>
-    </child>
-  </ifthen>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser' auto_accelerate='true' amount='0.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
   <infoaction message='Welcome to Earth!  Congratulations on a safe landing.
 
 Next, I&apos;ll explain how Trading works.  Click &quot;Marketplace&quot; and you&apos;ll see two columns.  The one on the left represents all the cargo on your ship, and the one on the right represents all the cargo available for purchase, or that this planet will buy from you.
@@ -313,27 +329,10 @@ When you click on a cargo in either list, you&apos;ll see how much you can buy i
 Another important part of the game is Missions.  The Mission Computer will give you a number of missions - some random, some plot related.   It&apos;s via Missions and Trading that you&apos;ll make most of your money. 
 
 To continue the tutorial, accept the &quot;Map and Jumping Tutorial&quot; mission. ' tag='msg_planet_tutorial' show_once_only='false' labels='' shown='false'/>
-  <org killing_mod='-50.0' friendly='500.0' name='The Player' devoted='1000.0' gullibility='0.8' unfriendly='-500.0' tag='org_player' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
-    <child name='feelings'>
-      <relation labels='' feeling='1000000'>
-        <child name='target_org'>
-          <ref tag='org_player'/>
-        </child>
-      </relation>
-    </child>
-  </org>
-  <fleet name='Defender Patrol' current_stay='0.0' under_attack='fight' tag='fleet_defender_patrol' spawn_chance='0.2' min_stay='10.0' behavior='patrol' max_stay='15.0' labels='' unique='false'>
-    <child name='owner'>
-      <ref tag='org_terrans'/>
-    </child>
-    <child name='ships'>
-      <ref tag='defender_prepared'/>
-    </child>
-  </fleet>
-  <shipblueprint name='Terran Defender' armor_regen='0.005' rot_per_sec='135.0' max_speed='200.0' max_cargo='100.0' accel='150.0' secs_to_jump='5.0' image_filename='longhaul.png' tag='defender_class' description=' The Terran Defender is the top-of-the-line military ship, designed to be able to withstand a Medreggi assault.  Normally these would be available to only those officially affiliated with the Terran Military, but with the current state of the offensive failing, just about anyone with a pilot&apos;s license can have one.' expansion_space='50.0' fuel_per_jump='35.0' shield_regen='0.01' hardpoints='5.0' max_armor='1000.0' max_shields='1200.0' labels='' max_fuel='100.0'/>
+  <shipblueprint name='Terran Defender' armor_regen='0.005' rot_per_sec='135.0' max_speed='200.0' max_cargo='100.0' accel='150.0' fuel_regen='0.0001' secs_to_jump='5.0' image_filename='longhaul.png' tag='defender_class' description=' The Terran Defender is the top-of-the-line military ship, designed to be able to withstand a Medreggi assault.  Normally these would be available to only those officially affiliated with the Terran Military, but with the current state of the offensive failing, just about anyone with a pilot&apos;s license can have one.' expansion_space='50.0' fuel_per_jump='35.0' shield_regen='0.01' hardpoints='5.0' max_armor='1000.0' max_shields='1200.0' labels='' max_fuel='100.0'/>
   <weaponblueprint secondary_weapon='false' name='Missile' rot_per_sec='0.0' max_speed='0.0' accel='0.0' price='50.0' turreted='false' damage='0.0' image_filename='redMissile.png' cooldown='0.0' tag='ammo_missile' auto_accelerate='false' amount='0.0' description=' For use with the standard-issue missile launcher.
 
-Remember, without a missile launcher, the missiles are useless!' is_ammo='true' expansion_required='1.0' labels='' hardpoints_required='0.0' seeking='true' max_cooldown='0.0' max_ttl='0.0'>
+Remember, without a missile launcher, the missiles are useless!' is_ammo='true' expansion_required='1.0' labels='' hardpoints_required='0.0' seeking='true' max_ttl='0.0' max_cooldown='0.0'>
     <child name='anti_addons'/>
     <child name='ammo'/>
   </weaponblueprint>
@@ -356,6 +355,23 @@ Flight controls:
 Feel free to practice flying.  If you lose sight of the planet, a green arrow will appear on the radar to show you how to return.
 
 When you are ready to continue the tutorial, fly over the planet and press &quot;L&quot; to land on it.' tag='msg_meet_and_greet' show_once_only='false' labels='' shown='false'/>
+  <org killing_mod='-50.0' friendly='500.0' name='The Player' devoted='1000.0' gullibility='0.8' unfriendly='-500.0' tag='org_player' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
+    <child name='feelings'>
+      <relation labels='' feeling='1000000'>
+        <child name='target_org'>
+          <ref tag='org_player'/>
+        </child>
+      </relation>
+    </child>
+  </org>
+  <fleet name='Defender Patrol' current_stay='0.0' under_attack='fight' tag='fleet_defender_patrol' spawn_chance='0.2' min_stay='10.0' behavior='patrol' max_stay='15.0' labels='' unique='false'>
+    <child name='owner'>
+      <ref tag='org_terrans'/>
+    </child>
+    <child name='ships'>
+      <ref tag='defender_prepared'/>
+    </child>
+  </fleet>
   <ship velocity_x='0.0' name='Medreggi Warship' velocity_y='0.0001' facing_x='0.0' price='0.0' facing_y='-1.0' armor='1100.0' x='0.0' y='0.0' shields='1200.0' chosen_secondary_index='0.0' fuel='100.0' tag='ship_medregg_prepared' jumping_progress='0.0' labels=''>
     <child name='itinerary'/>
     <child name='owner'/>
@@ -385,28 +401,32 @@ When you are ready to continue the tutorial, fly over the planet and press &quot
       <ref tag='describe_weapons'/>
     </child>
   </ifthen>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9545' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:7482' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
   <mission globally_unique='true' name='Addon Tutorial' exit_code='0.0' tag='msn_addons' description='To continue, accept the &quot;Multi-Jump Tutorial&quot; mission from Charon ' labels='' unique='true'>
-    <child name='checks'>
-      <ref tag='check_flag_addon_done'/>
-    </child>
     <child name='setup'>
       <ref tag='msg_explain_addon'/>
     </child>
-    <child name='fleets_to_die'/>
-    <child name='fleets_that_died'/>
     <child name='sponsors'/>
+    <child name='fleets_to_die'/>
     <child name='worthy'>
       <ref tag='completed_jumping'/>
     </child>
+    <child name='fleets_that_died'/>
+    <child name='checks'>
+      <ref tag='check_flag_addon_done'/>
+    </child>
   </mission>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:7482' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9545' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:7102' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
   <ifthen tag='check_at_sol_2' labels=''>
     <child name='ifs'>
       <ref tag='in_sol?'/>
@@ -421,7 +441,7 @@ When you are ready to continue the tutorial, fly over the planet and press &quot
       <ref tag='map_and_jumping'/>
     </child>
   </completedcondition>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:478' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:6349' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
     <child name='anti_addons'/>
     <child name='ammo'/>
   </weaponblueprint>
@@ -488,15 +508,15 @@ When you are ready to continue the tutorial, fly over the planet and press &quot
       <ref tag='sector_sol'/>
     </child>
   </atcondition>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:478' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
   <cargo average_price='0.0' tag='expensive_fruit' mission_related='false' amount='0.0' markup='25.0' labels=''>
     <child name='blueprint'>
       <ref tag='cargo_fruit_base'/>
     </child>
   </cargo>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:896' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
   <sector name='Medregg' x='-278.0' visited='false' y='-67.0' tag='sector_medregg' description=' This sector is home to the hostile Medreggi - an alien race that thus far has attempted no form of communication aside from destruction.' labels=''>
     <child name='potential_fleets'>
       <ref tag='fleet_tdf'/>
@@ -514,36 +534,44 @@ When you are ready to continue the tutorial, fly over the planet and press &quot
     <child name='halos'/>
     <child name='active_fleets'/>
   </sector>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:896' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
   <mission globally_unique='true' name='Combat Tutorial' exit_code='0.0' tag='msn_combat_tutorial' description='Fight for Earth! ' labels='' unique='true'>
-    <child name='checks'/>
     <child name='setup'>
       <ref tag='msg_explain_combat'/>
     </child>
-    <child name='fleets_to_die'/>
-    <child name='fleets_that_died'/>
     <child name='sponsors'/>
+    <child name='fleets_to_die'/>
     <child name='worthy'>
       <ref tag='at_medregg?'/>
       <ref tag='completed_multijump?'/>
     </child>
+    <child name='fleets_that_died'/>
+    <child name='checks'/>
   </mission>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:8535' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
-  </weaponblueprint>
-  <mission globally_unique='true' name='Map and Jumping Tutorial' exit_code='0.0' tag='map_and_jumping' description='This mission will explain how to jump between sectors.  Accept it to continue. ' labels='' unique='true'>
-    <child name='checks'>
-      <ref tag='map_and_jumping_check_reached_orbit'/>
-      <ref tag='check_in_alpha_centauri1'/>
+  <flagcondition flag_tag='flag_addon_tutorial_done' is_set='true' number_is='0.0' tag='cond_addon_tutorial_done' is_not_set='false' note_is='' labels=''/>
+  <descriptionaction tag='describe_saving' new_description='You can press &apos;escape&apos; any time while flying to get to the main menu, and from there save your game.
+
+Land on Earth to learn about weaponry. ' labels=''>
+    <child name='target'>
+      <ref tag='msn_multijump'/>
     </child>
+  </descriptionaction>
+  <mission globally_unique='true' name='Map and Jumping Tutorial' exit_code='0.0' tag='map_and_jumping' description='This mission will explain how to jump between sectors.  Accept it to continue. ' labels='' unique='true'>
     <child name='setup'>
       <ref tag='set_flag_planet_done'/>
       <ref tag='describe_map_and_jumping'/>
     </child>
-    <child name='fleets_to_die'/>
-    <child name='fleets_that_died'/>
     <child name='sponsors'/>
+    <child name='fleets_to_die'/>
     <child name='worthy'/>
+    <child name='fleets_that_died'/>
+    <child name='checks'>
+      <ref tag='map_and_jumping_check_reached_orbit'/>
+      <ref tag='check_in_alpha_centauri1'/>
+    </child>
   </mission>
   <org killing_mod='-50.0' friendly='500.0' name='Terrans' devoted='1000.0' gullibility='0.8' unfriendly='-500.0' tag='org_terrans' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
     <child name='feelings'>
@@ -559,14 +587,52 @@ When you are ready to continue the tutorial, fly over the planet and press &quot
       </relation>
     </child>
   </org>
-  <descriptionaction tag='describe_saving' new_description='You can press &apos;escape&apos; any time while flying to get to the main menu, and from there save your game.
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:8535' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:3465' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
+  <infoaction message='Saving
 
-Land on Earth to learn about weaponry. ' labels=''>
-    <child name='target'>
-      <ref tag='msn_multijump'/>
+The Medregg sector is typically full of enemies; you&apos;re going to want to save your game before taking them on.   You can press &apos;escape&apos; while flying to go back to the main menu.  From there, press &apos;save game&apos; and your game will be saved.   When you start up Kuiper later, you can press &apos;load game&apos; to pick up where you left off.  To go right back to playing, press &apos;Resume game&apos;.  Your game will also automatically be saved when you take off from a planet.
+
+You may also want weapons to deal with the alien menace.  Land on Earth to learn about them. ' tag='msg_instruct_saving' show_once_only='true' labels='' shown='false'/>
+  <mission globally_unique='true' name='Planet Tutorial' exit_code='0.0' tag='welcome_planet' description='Remember, to continue this tutorial you&apos;ll need to accept the &quot;Map and Jumping Tutorial&quot; mission from Earth.  To land there, just fly near it and press &quot;L&quot; ' labels='' unique='true'>
+    <child name='setup'>
+      <ref tag='msg_planet_tutorial'/>
     </child>
-  </descriptionaction>
-  <flagcondition flag_tag='flag_addon_tutorial_done' is_set='true' number_is='0.0' tag='cond_addon_tutorial_done' is_not_set='false' note_is='' labels=''/>
+    <child name='sponsors'/>
+    <child name='fleets_to_die'/>
+    <child name='worthy'/>
+    <child name='fleets_that_died'/>
+    <child name='checks'>
+      <ref tag='check_planet_tutorial_done'/>
+    </child>
+  </mission>
+  <ifthen tag='check_in_alpha_centauri1' labels=''>
+    <child name='ifs'>
+      <ref tag='in_alpha_centauri?'/>
+    </child>
+    <child name='thens'>
+      <ref tag='inform_offscreen_planet'/>
+      <ref tag='end'/>
+    </child>
+  </ifthen>
+  <map tag='map' labels=''>
+    <child name='sectors'>
+      <ref tag='sector_sol'/>
+      <ref tag='sector_alpha_centauri'/>
+      <ref tag='sector_medregg'/>
+    </child>
+  </map>
+  <cargo average_price='0.0' tag='fruit_cheap' mission_related='false' amount='0.0' markup='-25.0' labels=''>
+    <child name='blueprint'>
+      <ref tag='cargo_fruit_base'/>
+    </child>
+  </cargo>
   <planet name='Chiron' landing_distance='150.0' x='127.0' y='-195.0' fuel_cost='1.0' image_filename='toxic.png' tag='planet_chiron' description='This planet is not yet remotely habitable; terraforming to the extent that it will no longer require a pressure suit to go outside is still centuries away from completion. ' labels=''>
     <child name='missions'>
       <ref tag='msn_multijump'/>
@@ -587,45 +653,10 @@ Land on Earth to learn about weaponry. ' labels=''>
       <ref tag='defender_bare'/>
     </child>
   </planet>
-  <cargo average_price='0.0' tag='fruit_cheap' mission_related='false' amount='0.0' markup='-25.0' labels=''>
-    <child name='blueprint'>
-      <ref tag='cargo_fruit_base'/>
-    </child>
-  </cargo>
-  <map tag='map' labels=''>
-    <child name='sectors'>
-      <ref tag='sector_sol'/>
-      <ref tag='sector_alpha_centauri'/>
-      <ref tag='sector_medregg'/>
-    </child>
-  </map>
-  <ifthen tag='check_in_alpha_centauri1' labels=''>
-    <child name='ifs'>
-      <ref tag='in_alpha_centauri?'/>
-    </child>
-    <child name='thens'>
-      <ref tag='inform_offscreen_planet'/>
-      <ref tag='end'/>
-    </child>
-  </ifthen>
-  <mission globally_unique='true' name='Planet Tutorial' exit_code='0.0' tag='welcome_planet' description='Remember, to continue this tutorial you&apos;ll need to accept the &quot;Map and Jumping Tutorial&quot; mission from Earth.  To land there, just fly near it and press &quot;L&quot; ' labels='' unique='true'>
-    <child name='checks'>
-      <ref tag='check_planet_tutorial_done'/>
-    </child>
-    <child name='setup'>
-      <ref tag='msg_planet_tutorial'/>
-    </child>
-    <child name='fleets_to_die'/>
-    <child name='fleets_that_died'/>
-    <child name='sponsors'/>
-    <child name='worthy'/>
-  </mission>
-  <infoaction message='Saving
-
-The Medregg sector is typically full of enemies; you&apos;re going to want to save your game before taking them on.   You can press &apos;escape&apos; while flying to go back to the main menu.  From there, press &apos;save game&apos; and your game will be saved.   When you start up Kuiper later, you can press &apos;load game&apos; to pick up where you left off.  To go right back to playing, press &apos;Resume game&apos;.  Your game will also automatically be saved when you take off from a planet.
-
-You may also want weapons to deal with the alien menace.  Land on Earth to learn about them. ' tag='msg_instruct_saving' show_once_only='true' labels='' shown='false'/>
-  <endaction exit_code='0.0' tag='end' labels=''/>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:2474' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
   <ifthen tag='check_in_alpha_centauri2' labels=''>
     <child name='ifs'>
       <ref tag='at_alpha_centauri?'/>
@@ -635,6 +666,7 @@ You may also want weapons to deal with the alien menace.  Land on Earth to learn
       <ref tag='describe_multijump_1'/>
     </child>
   </ifthen>
+  <endaction exit_code='0.0' tag='end' labels=''/>
   <infoaction message='The universe is a much bigger place than just one sector.
 
 To go to the Alpha Centauri sector, you&apos;ll need to pull up your map with the &apos;m&apos; key.  Then, click on Alpha Centauri and press &apos;Add to Itinerary&apos;.  You&apos;ll see the name of the sector appear in a list in the upper right.  Then press &apos;done&apos;.
@@ -642,8 +674,8 @@ To go to the Alpha Centauri sector, you&apos;ll need to pull up your map with th
 To jump out of your current sector, just hold down the &apos;J&apos; button. An indicator should appear on-screen, showing how long until the jump will complete.
 
 To complete this mission, jump to Alpha Centauri. ' tag='instruct_on_jumping' show_once_only='true' labels='' shown='false'/>
-  <shipblueprint name='Scout' armor_regen='0.01' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.05' hardpoints='1.0' max_armor='100.0' max_shields='100.0' labels='' max_fuel='100.0'/>
-  <addon armor_regen='0.0' name='Afterburner' rot_per_sec='0.0' max_speed='50.0' max_cargo='0.0' accel='20.0' price='100.0' secs_to_jump='0.0' tag='addon_afterburner' expansion_space='0.0' description='This afterburner increases your overall speed, but will require more fuel when you jump ' fuel_per_jump='10.0' shield_regen='0.0' hardpoints='0.0' max_armor='0.0' max_shields='0.0' duration='30.0' expansion_required='3.0' labels='' hardpoints_required='0.0' max_fuel='0.0'/>
+  <cargoblueprint name='Fruit' tag='cargo_fruit_base' base_price='100.0' description='Real fruit is a delicacy in some places ' labels=''/>
+  <shipblueprint name='Medreggi Warship' armor_regen='0.005' rot_per_sec='150.0' max_speed='150.0' max_cargo='10.0' accel='50.0' fuel_regen='0.0001' secs_to_jump='10.0' image_filename='salvage.png' tag='shipprint_medreggi' description=' The Medreggi Warships are as powerful as they are mysterious.  Which is very.' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.01' hardpoints='5.0' max_armor='1100.0' max_shields='1200.0' labels='' max_fuel='100.0'/>
   <ifthen tag='check_at_medregg_0' labels=''>
     <child name='ifs'>
       <ref tag='at_medregg?'/>
@@ -652,12 +684,26 @@ To complete this mission, jump to Alpha Centauri. ' tag='instruct_on_jumping' sh
       <ref tag='end'/>
     </child>
   </ifthen>
-  <shipblueprint name='Medreggi Warship' armor_regen='0.005' rot_per_sec='150.0' max_speed='150.0' max_cargo='10.0' accel='50.0' secs_to_jump='10.0' image_filename='salvage.png' tag='shipprint_medreggi' description=' The Medreggi Warships are as powerful as they are mysterious.  Which is very.' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.01' hardpoints='5.0' max_armor='1100.0' max_shields='1200.0' labels='' max_fuel='100.0'/>
-  <cargoblueprint name='Fruit' tag='cargo_fruit_base' base_price='100.0' description='Real fruit is a delicacy in some places ' labels=''/>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9852' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_cooldown='1.5' max_ttl='3.0'>
+  <addon armor_regen='0.0' name='Afterburner' rot_per_sec='0.0' max_speed='50.0' max_cargo='0.0' accel='20.0' fuel_regen='0.0001' price='100.0' secs_to_jump='0.0' tag='addon_afterburner' expansion_space='0.0' description='This afterburner increases your overall speed, but will require more fuel when you jump ' fuel_per_jump='10.0' shield_regen='0.0' hardpoints='0.0' max_armor='0.0' max_shields='0.0' duration='30.0' expansion_required='3.0' labels='' hardpoints_required='0.0' max_fuel='0.0'/>
+  <shipblueprint name='Scout' armor_regen='0.01' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' fuel_regen='0.001' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' description=' ' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.05' hardpoints='1.0' max_armor='100.0' max_shields='100.0' labels='' max_fuel='100.0'/>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:7923' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
     <child name='anti_addons'/>
     <child name='ammo'/>
   </weaponblueprint>
+  <sellitemsaction tag='sell_lasers' labels=''>
+    <child name='locations'>
+      <ref tag='planet_earth'/>
+    </child>
+    <child name='cargo'/>
+    <child name='orgs'/>
+    <child name='ships'/>
+    <child name='addons'/>
+    <child name='weapons'>
+      <ref tag='wpn_basic_laser'/>
+      <ref tag='wpn_missile_launcher'/>
+      <ref tag='ammo_missile'/>
+    </child>
+  </sellitemsaction>
   <infoaction message='Combat
 
 When you press &apos;ok&apos; to this, you&apos;re likely to see a sector in turmoil.  Medreggi ships will be attacking Terrans, who are counting on you to help them.
@@ -667,18 +713,8 @@ You can target enemies a number of ways.  By clicking on them with the mouse, by
 Ships targeting you will appear red on your radar.  Your shields will protect you from their fire and, when those are depleted, your armor.  If your armor is reduced to 0, the game is over.
 
 This is the last portion of the tutorial.  Good luck! ' tag='msg_explain_combat' show_once_only='true' labels='' shown='false'/>
-  <sellitemsaction tag='sell_lasers' labels=''>
-    <child name='cargo'/>
-    <child name='orgs'/>
-    <child name='ships'/>
-    <child name='locations'>
-      <ref tag='planet_earth'/>
-    </child>
-    <child name='addons'/>
-    <child name='weapons'>
-      <ref tag='wpn_basic_laser'/>
-      <ref tag='wpn_missile_launcher'/>
-      <ref tag='ammo_missile'/>
-    </child>
-  </sellitemsaction>
+  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9852' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
+    <child name='anti_addons'/>
+    <child name='ammo'/>
+  </weaponblueprint>
 </kuiper>

@@ -658,13 +658,19 @@ class KuiShip < KuiSpaceworthy
       regen = self.shield_regen * self.max_shields * delay
       @shields += regen
       @shields = self.max_shields if @shields > self.max_shields
-    end  
+    end
+    
+    if @fuel < self.max_fuel
+      regen = self.fuel_regen * self.max_fuel * delay
+      @fuel += regen
+      @fuel = self.max_fuel if @fuel > self.max_fuel
+    end
   end
 end
 
 class KuiShipBlueprint < KuiSpaceworthyBlueprint
   numeric_attr :max_shields, :max_armor
-  numeric_attr :shield_regen, :armor_regen
+  numeric_attr :shield_regen, :armor_regen, :fuel_regen
   numeric_attr :hardpoints, :expansion_space
   numeric_attr :secs_to_jump
   numeric_attr :max_cargo
@@ -681,6 +687,7 @@ class KuiShipBlueprint < KuiSpaceworthyBlueprint
     @expansion_space = 10.0
     @shield_regen = 0.01 # 100 sec to recharge
     @armor_regen = 0.005 # 200 sec to recharge
+    @fuel_regen =  0.001 # 1,000 sec to recharge
   end
   
   def playable?(addon_exceptions = false)
