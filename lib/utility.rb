@@ -1,7 +1,7 @@
 # Catchall for classes and functions that don't go anywhere else
 $ERB_SAFE_LEVEL = 3
 
-$KUIPER_VERSION = [0,0,2]
+$KUIPER_VERSION = [0,0,3]
 $QUICKSAVE_SUFFIX = "quicksave"
 $AUTOSAVE_SUFFIX="autosave"
 
