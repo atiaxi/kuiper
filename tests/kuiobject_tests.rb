@@ -63,7 +63,8 @@ class TC_Player < Test::Unit::TestCase
     @player.labels = "abcd,hijk"
     xml = @player.to_xml.to_s
     doc = REXML::Document.new(xml)
-    player = KuiObject.from_xml(doc.root)
+    player = nil
+    assert_nothing_raised { player = KuiObject.from_xml(doc.root) }
     assert_equal(@player.labels,player.labels)
   end
   

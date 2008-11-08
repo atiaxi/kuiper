@@ -67,6 +67,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     @shipBlueprint.image_filename='shuttle.png'
     
     @ship = KuiShip.new
+    @ship.tag = "ship_tag"
     @ship.blueprint = @shipBlueprint
     @ship.facing.angle = 45.0.to_radians
     @ship.velocity.x = 10
@@ -83,15 +84,17 @@ class TC_Xml_Export < Test::Unit::TestCase
   end
   
   def test_default_obj
-    default_xml = "<object tag='default' labels=''/>"
-    assert(@default.to_xml.to_s == default_xml)
+    default_xml = "<object tag='default'>"+
+      "<fields><labels><![CDATA[]]></labels></fields><children/>"+
+      "</object>"
+    assert_equal(default_xml,@default.to_xml.to_s)
   end
   
   # Tests cargos and cargo blueprints
   def test_cargo    
     e = @cargo.to_xml
     assert(e.attribute('tag').value == @cargo.tag)
-    blueprint = e.get_elements("child[@name='blueprint']/ref")[0]
+    blueprint = e.get_elements("children/blueprint/ref")[0]
     assert_not_nil(blueprint)
     assert(blueprint.attribute('tag').value == @cargoBlueprint.tag)
   end
@@ -100,7 +103,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_fleet_roundtrip
     xml = @fleet.to_xml.to_s
     doc = REXML::Document.new(xml)
-    fleet = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { fleet = KuiObject.from_xml(doc.root) }
     #assert(fleet == @fleet)
     # Specifially test enums
     assert(fleet.behavior == @fleet.behavior)
@@ -115,21 +118,22 @@ class TC_Xml_Export < Test::Unit::TestCase
     doc = repo.to_xml_document
     kuiper = doc.root
     
-    name = kuiper.get_elements("universe")[0].attribute('name').value
+    name = kuiper.get_elements("universe/fields/name")[0].text
     assert_not_nil(name)
     assert_equal(uni.name,name)
-    desc = kuiper.get_elements("universe")[0].attribute('description').value
+    desc = kuiper.get_elements("universe/fields/description")[0].text
     assert_not_nil(desc)
     assert_equal(uni.description,desc)
   end
  
   def test_org
    e = @org.to_xml
-   assert(e.attribute('neutral').value.to_i == 0)
-   relations = e.get_elements("*/relation")
+   assert(e.get_elements('fields/neutral')[0].text.to_i == 0)
+   relations = e.get_elements("children/relation")
    relation = relations[0]
-   assert(relation.attribute('feeling').value.to_i == KuiOrg::FANATIC_DEVOTION)
-   refs = relation.get_elements("child/ref")
+   assert_not_nil(relation)
+   assert(relation.get_elements('fields/feeling')[0].text.to_i == KuiOrg::FANATIC_DEVOTION)
+   refs = relation.get_elements("children/ref")
    ref = refs[0]
    assert(ref.attribute('tag').value == @org.tag)  
  end
@@ -137,9 +141,9 @@ class TC_Xml_Export < Test::Unit::TestCase
  def test_planet
    e = @planet.to_xml
    assert(e.attribute('tag').value == @planet.tag)
-   cargo = e.get_elements("child[@name='cargo_for_sale']/ref")[0]
+   cargo = e.get_elements("children/cargo_for_sale/ref")[0]
    assert(cargo.attribute('tag').value == @cargo.tag)
-   org = e.get_elements("child[@name='owner']/ref")[0]
+   org = e.get_elements("children/owner/ref")[0]
    assert(org.attribute('tag').value == @org.tag)
  end
  
@@ -153,22 +157,23 @@ class TC_Xml_Export < Test::Unit::TestCase
   # Ship blueprint's image wasn't getting exported for some reason
   def test_ship_blueprint
     e = @shipBlueprint.to_xml
-    assert(e.attribute('image_filename').value == @shipBlueprint.image_filename)
+    assert(e.get_elements('fields/image_filename')[0].text ==
+      @shipBlueprint.image_filename)
   end
   
   # If we see a ref before we see what it refers to, we need to make a note of
   # that.
   def test_placeholder
     xml = "<ship tag=\"foo\">"+
-      "<child name=\"blueprint\">"+
+      "<children><blueprint>"+
       "<ref tag=\"shabarg\" name=\"werg\"/>"+
-      "</child>"+
+      "</blueprint></children>"+
       "</ship>"
     doc = REXML::Document.new(xml)
-    ship = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
     xml = "<shipblueprint tag=\"shabarg\"></shipblueprint>"
     doc = REXML::Document.new(xml)
-    blue = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { blue = KuiObject.from_xml(doc.root) }
     @rl.repository.resolve_placeholders
     assert(ship.blueprint == blue)
   end
@@ -176,16 +181,16 @@ class TC_Xml_Export < Test::Unit::TestCase
   # Before I do the placeholder tests (and after it's implemented) I want to
   # make sure that plain vanilla references work as well
   def test_ref
-    xml = "<shipblueprint tag=\"shabarg\"></shipblueprint>"
+    xml = "<shipblueprint tag=\"shabarg\"/>"
     doc = REXML::Document.new(xml)
     blue = KuiObject.from_xml(doc.root)
-    xml = "<ship tag=\"foo\">" +
-          "<child name=\"blueprint\">"+
-          "<ref tag=\"shabarg\"/>"+
-         "</child>"+
-          "</ship>"
+    xml = "<ship tag=\"foo\">"+
+      "<children><blueprint>"+
+      "<ref tag=\"shabarg\"/>"+
+      "</blueprint></children>"+
+      "</ship>"
     doc = REXML::Document.new(xml)
-    ship = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
     assert(ship.blueprint == blue)
   end
   
@@ -194,9 +199,9 @@ class TC_Xml_Export < Test::Unit::TestCase
   # test will pass while test_full_circle will fail.
   # In that case, check Repository::add
   def test_restore_name
-    xml = "<universe name='New Universe'/>"
+    xml = "<universe><fields><name>New Universe</name></fields></universe>"
     doc = REXML::Document.new(xml)
-    uni = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { uni = KuiObject.from_xml(doc.root) }
     assert(uni.name == 'New Universe')
   end
   
@@ -212,21 +217,21 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_restore_simple_roundtrip
     xml = @cargoBlueprint.to_xml.to_s
     doc = REXML::Document.new(xml)
-    cargoBlueprint = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { cargoBlueprint = KuiObject.from_xml(doc.root) }
     assert(cargoBlueprint.tag == @cargoBlueprint.tag)
   end
   
   def test_restore_embed_single
     xml = @cargo.to_xml.to_s
     doc = REXML::Document.new(xml)
-    cargo = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { cargo = KuiObject.from_xml(doc.root) }
     assert(cargo.blueprint.tag == @cargoBlueprint.tag)
   end
   
   def test_restore_embed_list
     xml = @otherSector.to_xml.to_s
     doc = REXML::Document.new(xml)
-    sector = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { sector = KuiObject.from_xml(doc.root) }
     assert(sector.planets[0] == @otherPlanet)
     assert(sector.planets[1] == @thirdPlanet)
   end
@@ -234,7 +239,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_restore_embed_ref
     xml = @org.to_xml.to_s
     doc = REXML::Document.new(xml)
-    org = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { org = KuiObject.from_xml(doc.root) }
     assert(org.feelings_for(org) == KuiOrg::FANATIC_DEVOTION)
   end
   
@@ -242,7 +247,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_restore_ftor
     xml = @ship.to_xml.to_s
     doc = REXML::Document.new(xml)
-    ship= KuiObject.from_xml(doc.root)
+    assert_nothing_raised { ship= KuiObject.from_xml(doc.root) }
     # == doesn't work, because they're actually a very very little bit
     # different.  But I don't care.
     assert(ship.facing.angle - @ship.facing.angle < 1e-10)
@@ -254,7 +259,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     @ship.add_weapon(@weaponBlueprint)
     xml = @ship.to_xml.to_s
     doc = REXML::Document.new(xml)
-    ship = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
     ship.setup_firing_order
     assert(ship.weapons.size > 0)
   end
@@ -278,7 +283,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     temp_file.close
     
     loaded_repo = Repository.new
-    loaded_repo.add_from_file(temp_file.path,false)
+    assert_nothing_raised { loaded_repo.add_from_file(temp_file.path,false) }
     assert(loaded_repo.resolve_placeholders)
     assert_not_nil(loaded_repo.universe)
     assert_equal(repo.universe,loaded_repo.universe)
@@ -309,7 +314,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     
     repo = Repository.new
     @rl.storage[:repository] = repo
-    repo.add(xml)
+    assert_nothing_raised { repo.add(xml) }
     assert(repo.resolve_placeholders)
     assert_not_nil(repo.root)
     assert_not_nil(repo.universe.player)
@@ -323,7 +328,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_weapon_roundtrip
     xml = @weaponBlueprint.to_xml.to_s
     doc = REXML::Document.new(xml)
-    blueprint = KuiObject.from_xml(doc.root)
+    assert_nothing_raised { blueprint = KuiObject.from_xml(doc.root) }
     assert(blueprint == @weaponBlueprint)
     #Specifically testing boolean roundtrips
     assert(blueprint.auto_accelerate == @weaponBlueprint.auto_accelerate)
@@ -336,9 +341,11 @@ class TC_Xml_Export < Test::Unit::TestCase
   # one line.  It works when this passes.
   def test_whitespace
     xml = "<ship tag=\"foo\">"+
-          "  <child name=\"blueprint\">"+
-          "    <shipblueprint tag=\"shabarg\"/>"+
-          "  </child>"+
+          "  <children>"+
+          "    <blueprint>"+
+          "      <shipblueprint tag=\"shabarg\"/>"+
+          "    </blueprint>"+
+          "  </children>"+
           "</ship>"
     doc = REXML::Document.new(xml)
     assert_nothing_raised { KuiObject.from_xml(doc.root) }
@@ -354,60 +361,6 @@ class TC_Xml_Export < Test::Unit::TestCase
       answers << chosen
     end
     assert(answers.size == test_size)
-  end
-  
-  # I seem to have problems relying on the engine to convert from the old
-  # version to the new, despite the fact they should be the same
-  def test_version_001_to_002
-    v001 = """<kuiper major='0' minor='0' bug='1'>
-      <universe tag='universe'>
-        <child name='player'>
-          <player tag='player' name='foozy'>
-            <child name='start_ship'>
-              <ship tag='blarg_foobar'/>
-            </child>          
-          </player>
-        </child>
-      </universe>
-    </kuiper>
-    """
-    repo = Repository.new
-    @rl.storage[:repository] = repo
-    repo.add(v001)
-    
-    # Make sure everything up there exists
-    assert_not_nil(repo.retrieve('universe'))
-    assert_not_nil(repo.retrieve('player'))
-    assert_not_nil(repo.retrieve('blarg_foobar'))
-    assert_equal('foozy', repo.universe.player.name)
-    
-    ship = repo.universe.player.start_ship
-    assert_not_nil(ship)
-    assert_not_nil(repo.universe)
-    assert_equal('player',repo.universe.player.tag)
-    assert_equal('blarg_foobar',ship.tag)
-    
-    # Do fullcircle test with this
-    sio = StringIO.new
-    repo.to_xml(sio)
-    xml = sio.string
-    
-    loaded = Repository.new
-    @rl.storage[:repository] = loaded
-    loaded.add(xml)
-    loaded.resolve_placeholders
-    
-    assert_not_nil(loaded.retrieve('universe'))
-    assert_not_nil(loaded.retrieve('player'))
-    assert_not_nil(loaded.retrieve('blarg_foobar'))
-    assert_equal('foozy', loaded.universe.player.name)
-    
-    loaded_ship = loaded.universe.player.start_ship
-    assert_not_nil(loaded_ship)
-    assert_not_nil(loaded.universe)
-    assert_equal('player',loaded.universe.player.tag)
-    assert_equal('blarg_foobar',loaded_ship.tag)
-
   end
   
 end
