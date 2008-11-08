@@ -103,6 +103,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_fleet_roundtrip
     xml = @fleet.to_xml.to_s
     doc = REXML::Document.new(xml)
+    fleet = nil
     assert_nothing_raised { fleet = KuiObject.from_xml(doc.root) }
     #assert(fleet == @fleet)
     # Specifially test enums
@@ -129,11 +130,11 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_org
    e = @org.to_xml
    assert(e.get_elements('fields/neutral')[0].text.to_i == 0)
-   relations = e.get_elements("children/relation")
+   relations = e.get_elements("children/feelings/relation")
    relation = relations[0]
    assert_not_nil(relation)
    assert(relation.get_elements('fields/feeling')[0].text.to_i == KuiOrg::FANATIC_DEVOTION)
-   refs = relation.get_elements("children/ref")
+   refs = relation.get_elements("children/target_org/ref")
    ref = refs[0]
    assert(ref.attribute('tag').value == @org.tag)  
  end
@@ -150,7 +151,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_sector
     e = @sector.to_xml
     assert(e.attribute('tag').value == @sector.tag)
-    planet = e.get_elements("child['planets']/ref")[0]
+    planet = e.get_elements("children/planets/ref")[0]
     assert(planet.attribute('tag').value == @planet.tag)
   end
   
@@ -170,12 +171,14 @@ class TC_Xml_Export < Test::Unit::TestCase
       "</blueprint></children>"+
       "</ship>"
     doc = REXML::Document.new(xml)
+    ship = nil
+    blue = nil
     assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
     xml = "<shipblueprint tag=\"shabarg\"></shipblueprint>"
     doc = REXML::Document.new(xml)
     assert_nothing_raised { blue = KuiObject.from_xml(doc.root) }
     @rl.repository.resolve_placeholders
-    assert(ship.blueprint == blue)
+    assert_equal(blue,ship.blueprint)
   end
   
   # Before I do the placeholder tests (and after it's implemented) I want to
@@ -190,6 +193,7 @@ class TC_Xml_Export < Test::Unit::TestCase
       "</blueprint></children>"+
       "</ship>"
     doc = REXML::Document.new(xml)
+    ship = nil
     assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
     assert(ship.blueprint == blue)
   end
@@ -199,10 +203,11 @@ class TC_Xml_Export < Test::Unit::TestCase
   # test will pass while test_full_circle will fail.
   # In that case, check Repository::add
   def test_restore_name
-    xml = "<universe><fields><name>New Universe</name></fields></universe>"
+    xml = "<universe><fields><name><![CDATA[New Universe]]></name></fields></universe>"
     doc = REXML::Document.new(xml)
+    uni = nil
     assert_nothing_raised { uni = KuiObject.from_xml(doc.root) }
-    assert(uni.name == 'New Universe')
+    assert_equal('New Universe',uni.name)
   end
   
   # This test case is in place because the from_xml wasn't working
@@ -217,20 +222,25 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_restore_simple_roundtrip
     xml = @cargoBlueprint.to_xml.to_s
     doc = REXML::Document.new(xml)
+    cargoBlueprint = nil
     assert_nothing_raised { cargoBlueprint = KuiObject.from_xml(doc.root) }
-    assert(cargoBlueprint.tag == @cargoBlueprint.tag)
+    assert_equal(@cargoBlueprint.tag,cargoBlueprint.tag)
   end
   
   def test_restore_embed_single
     xml = @cargo.to_xml.to_s
     doc = REXML::Document.new(xml)
+    cargo = nil
     assert_nothing_raised { cargo = KuiObject.from_xml(doc.root) }
+    assert_not_nil(cargo)
+    assert_not_nil(cargo.blueprint)
     assert(cargo.blueprint.tag == @cargoBlueprint.tag)
   end
   
   def test_restore_embed_list
     xml = @otherSector.to_xml.to_s
     doc = REXML::Document.new(xml)
+    sector = nil
     assert_nothing_raised { sector = KuiObject.from_xml(doc.root) }
     assert(sector.planets[0] == @otherPlanet)
     assert(sector.planets[1] == @thirdPlanet)
@@ -239,6 +249,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_restore_embed_ref
     xml = @org.to_xml.to_s
     doc = REXML::Document.new(xml)
+    org = nil
     assert_nothing_raised { org = KuiObject.from_xml(doc.root) }
     assert(org.feelings_for(org) == KuiOrg::FANATIC_DEVOTION)
   end
@@ -247,6 +258,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_restore_ftor
     xml = @ship.to_xml.to_s
     doc = REXML::Document.new(xml)
+    ship = nil
     assert_nothing_raised { ship= KuiObject.from_xml(doc.root) }
     # == doesn't work, because they're actually a very very little bit
     # different.  But I don't care.
@@ -259,6 +271,7 @@ class TC_Xml_Export < Test::Unit::TestCase
     @ship.add_weapon(@weaponBlueprint)
     xml = @ship.to_xml.to_s
     doc = REXML::Document.new(xml)
+    ship = nil
     assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
     ship.setup_firing_order
     assert(ship.weapons.size > 0)
@@ -328,6 +341,7 @@ class TC_Xml_Export < Test::Unit::TestCase
   def test_weapon_roundtrip
     xml = @weaponBlueprint.to_xml.to_s
     doc = REXML::Document.new(xml)
+    blueprint = nil
     assert_nothing_raised { blueprint = KuiObject.from_xml(doc.root) }
     assert(blueprint == @weaponBlueprint)
     #Specifically testing boolean roundtrips
@@ -341,6 +355,11 @@ class TC_Xml_Export < Test::Unit::TestCase
   # one line.  It works when this passes.
   def test_whitespace
     xml = "<ship tag=\"foo\">"+
+          "  <fields>"+
+          "    <name>"+
+          "      <![CDATA[Werg]]>"+
+          "    </name>"+
+          "  </fields>" +
           "  <children>"+
           "    <blueprint>"+
           "      <shipblueprint tag=\"shabarg\"/>"+
@@ -348,7 +367,9 @@ class TC_Xml_Export < Test::Unit::TestCase
           "  </children>"+
           "</ship>"
     doc = REXML::Document.new(xml)
-    assert_nothing_raised { KuiObject.from_xml(doc.root) }
+    ship = nil
+    assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
+    assert_equal("Werg",ship.name)
   end
   
   # Not specifically an xml test, but a repository test instead

@@ -147,16 +147,22 @@ class KuiObject
     end
   end  
   
+  def self.from_ref(element)
+    rl = Opal::ResourceLocator.instance
+    tag = element.attributes["tag"]
+    obj = rl.repository.retrieve(tag)
+    unless obj
+      holder = Placeholder.new(tag)
+      rl.repository.add_placeholder(holder)
+      return holder
+    end
+    return obj
+  end
+  
   def self.from_xml(element)
     rl = Opal::ResourceLocator.instance
     if element.name=="ref"
-      tag = element.attributes["tag"]
-      obj = rl.repository.retrieve(tag)
-      unless obj
-        holder = Placeholder.new(tag)
-        rl.repository.add_placeholder(holder)
-        return holder
-      end
+      return self.from_ref(element)
     else
       subclass = subclasses(true).detect do | sub |
         fullname = "kui"+element.name
@@ -166,44 +172,13 @@ class KuiObject
         obj = subclass.new
       else
         rl.logger.fatal("Unable to create a(n) #{element.name}")
+        return nil
       end
     end
     
-    # Set all the attributes
-    element.attributes.each do | key,value |
-      setter = (key+"=").to_sym
-      begin
-        obj.send(setter, value)
-      rescue NoMethodError
-        rl.logger.warn("#{obj.class} does not recognize #{setter}: Likely "+
-          "file format incompatability")
-      end  
-    end
-    
-    kids = element.children.select { |c| c.is_a?(REXML::Element) }
-    
-    kids.each do | child |
-      child_name = child.attribute('name').value
-      current = nil
-      begin
-        current = obj.send(child_name)
-      rescue NoMethodError 
-        rl.logger.warn("#{obj.class} does not recognize #{child_name}: Likely "+
-          "file format incompatability")
-        next
-      end
-      child.children.each do | new_obj_element |
-        if new_obj_element.is_a?(REXML::Element)
-          new_obj = KuiObject.from_xml(new_obj_element)
-          if current.respond_to?(:<<)
-            current << new_obj
-          else
-            child_setter = (child_name + "=").to_sym
-            obj.send(child_setter, new_obj)
-          end
-        end
-      end
-    end
+    obj.set_tag_from(element)
+    obj.set_fields_from(element.get_elements("fields/*"))
+    obj.set_children_from(element.get_elements("children/*"))
     
     return obj
   end
@@ -452,6 +427,49 @@ class KuiObject
   # the method to override.
   def post_load
     
+  end
+
+  def set_fields_from(elements)
+    rl = Opal::ResourceLocator.instance
+    elements.each do |field_element|
+      setter = (field_element.name + "=").to_sym
+      value = field_element.cdatas[0].to_s
+      begin
+        self.send(setter, value)
+      #rescue NoMethodError
+      #  rl.logger.warn("#{self.class} does not recognize #{setter}: Likely "+
+      #    "file format incompatability")
+      end 
+    end
+  end
+  
+  def set_children_from(elements)
+    elements.each do |child_element|
+      current = nil
+      begin
+        current = self.send(child_element.name)
+      rescue NoMethodError 
+        rl.logger.warn("#{obj.class} does not recognize #{child_name}: Likely "+
+          "file format incompatability")
+        next
+      end
+      child_element.elements.each do | new_obj_element |
+        new_obj = KuiObject.from_xml(new_obj_element)
+        if current.respond_to?(:<<)
+          current << new_obj
+        else
+          child_setter = (child_element.name + "=").to_sym
+          self.send(child_setter, new_obj)
+        end
+      end
+    end
+  end
+  
+  def set_tag_from(element)
+    # Note: Not everything has a tag
+    if element.attributes['tag']
+      self.tag = element.attributes['tag']
+    end
   end
 
   def synopsis

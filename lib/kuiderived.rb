@@ -157,6 +157,7 @@ class KuiFleet < KuiObject
       dupe.owner = @owner
       dupe
     end
+    self.tag = @rl.repository.ensure_unique_tag(copy.tag)
   end
   
   def kill(ship)

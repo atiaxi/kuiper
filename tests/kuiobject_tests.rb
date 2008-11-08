@@ -495,4 +495,9 @@ class TC_Universe < Test::Unit::TestCase
     assert_equal('player',uni.player.tag)
   end
   
+  def test_simple_assigment
+    player = KuiPlayer.new
+    assert_nothing_raised { player.name = 'foofle' }
+  end
+  
 end
