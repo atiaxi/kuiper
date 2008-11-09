@@ -500,4 +500,12 @@ class TC_Universe < Test::Unit::TestCase
     assert_nothing_raised { player.name = 'foofle' }
   end
   
+  # Under no circumstances should a placeholder == the thing it's a placeholder
+  # for
+  def test_placeholder_inequality
+    uni = KuiUniverse.default
+    pl = Placeholder.new(uni)
+    assert(!(uni == pl))
+  end
+  
 end

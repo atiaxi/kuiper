@@ -342,7 +342,7 @@ class KuiObjectSelector < ResourceDialog
     end
     
     unless editor.object.playable? && editor.accepted
-      @rl.repository.everything.delete(editor.object)
+      @rl.repository.delete(editor.object)
     end
     setup_gui
   end

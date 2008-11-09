@@ -81,7 +81,7 @@ class MiniBuilder < CompositeSprite
     if editor.accepted && editor.object.playable?
       add_item(editor.object)
     else
-      @rl.repository.everything.delete(editor.object)
+      @rl.repository.delete(editor.object)
     end
     
   end

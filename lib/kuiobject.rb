@@ -38,21 +38,34 @@ end
 
 class Placeholder
   attr_accessor :tag
-  attr_accessor :in_list
+  attr_accessor :in_attr
+  attr_accessor :parent
   
-  def initialize(tag_name, in_list=nil)
+  def initialize(tag_name, in_attribute=nil,child_of=nil)
     @tag = tag_name
-    @in_list = in_list
+    @in_attr = in_attribute
+    @parent = child_of
+  end
+  
+  # Two placeholders are == if they both have the same tag
+  # (i.e. are placeholders for the same thing)
+  def ==(other)
+    return false unless other.is_placeholder?
+    return @tag == other.tag  
   end
   
   def is_placeholder?
     return true
   end
-  
+   
   def replace_with(aKuiObject)
-    index = nil
-    while(index = @in_list.index(self))
-      @in_list[index] = aKuiObject
+    current = @parent.send(in_attr)
+    if current.respond_to?(:<<)
+      index = current.index(self)
+      current.replace_first(self,aKuiObject)      
+    else
+      setter = (in_attr.to_s + "=").to_sym
+      @parent.send(setter,aKuiObject)
     end
   end
   
@@ -147,22 +160,26 @@ class KuiObject
     end
   end  
   
-  def self.from_ref(element)
+  def self.from_ref(element,attr=nil,parent=nil)
     rl = Opal::ResourceLocator.instance
     tag = element.attributes["tag"]
     obj = rl.repository.retrieve(tag)
     unless obj
-      holder = Placeholder.new(tag)
+      holder = Placeholder.new(tag,attr,parent)
       rl.repository.add_placeholder(holder)
       return holder
     end
     return obj
   end
   
-  def self.from_xml(element)
+  # Attr and parent are non-nil in cases of child
+  # objects being converted from XML; in that case
+  # they will be set to the attribute & the parent
+  # it belongs to.
+  def self.from_xml(element,attr=nil,parent=nil)
     rl = Opal::ResourceLocator.instance
     if element.name=="ref"
-      return self.from_ref(element)
+      return self.from_ref(element,attr,parent)
     else
       subclass = subclasses(true).detect do | sub |
         fullname = "kui"+element.name
@@ -282,9 +299,13 @@ class KuiObject
   
   raw_attr :labels
   attr_reader :label_array
+  # Transient objects are not saved and will probably
+  # be re-created
+  attr_accessor :transient
 
   def initialize()
     @tag = nil
+    @transient = false
     self.labels = ""
     @rl = Opal::ResourceLocator.instance
     super
@@ -294,6 +315,7 @@ class KuiObject
   def ==(other)
     #return self.deep_equals(other)
     return false unless other
+    return false if other.respond_to?(:is_placeholder?) && other.is_placeholder?
     if self.respond_to?(:tag) && other.respond_to?(:tag)
       return self.tag.eql?(other.tag)
     else
@@ -346,7 +368,13 @@ class KuiObject
         #puts "About to get our result for: #{attr}"
         our_result = self.send(attr)
         their_result = other.send(attr)
+        
+        # For the purposes of this test, empty strings are null    
         equal = our_result == their_result
+        unless equal
+          equal=true if our_result.nil? && their_result==''
+          equal=true if their_result.nil? && our_result==''
+        end
       end
       return false unless equal
     end
@@ -356,7 +384,6 @@ class KuiObject
       our_result = self.send(boolean)
       their_result = other.send(boolean)
       equal = self.send(boolean) == other.send(boolean)
-
       return false unless equal
     end
     
@@ -381,9 +408,11 @@ class KuiObject
         end
       else
         if our_children
-          return our_children.do_equal(their_children, already_compared,base)
+          result = our_children.do_equal(their_children, already_compared,base)
+          return result
         else
-          return our_children == their_children
+          result = our_children == their_children
+          return result
         end
       end
     end      
@@ -454,7 +483,8 @@ class KuiObject
         next
       end
       child_element.elements.each do | new_obj_element |
-        new_obj = KuiObject.from_xml(new_obj_element)
+        new_obj = KuiObject.from_xml(new_obj_element,
+          child_element.name.to_sym,self)
         if current.respond_to?(:<<)
           current << new_obj
         else
@@ -485,10 +515,10 @@ class KuiObject
   def tag=(string)
     rl = Opal::ResourceLocator.instance
     repo = rl.storage[:repository]
+    @tag = string
     if repo
       repo.register_tag_for(self, string)
     end
-    @tag = string
   end
   
   def to_xml
@@ -527,7 +557,7 @@ class KuiObject
   
   def children_to_xml()
     result = REXML::Element.new('children')
-    self.class.children.each do |child|
+    self.class.children.sort.each do |child|
       result.add(child_to_xml(child))
     end
     return result

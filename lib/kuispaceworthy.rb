@@ -51,10 +51,10 @@ class KuiSpaceworthy < KuiObject
   # When new fleets are spawned, or a new ship bought, it's duplicated from the
   # original; this is us making sure they're unique
   def initialize_copy(copy)
+    self.tag = @rl.repository.ensure_unique_tag(copy.tag)
     @facing = copy.facing.dup
     @velocity = copy.velocity.dup
     @anti_addons = copy.anti_addons.dup
-    self.tag = @rl.repository.ensure_unique_tag(copy.tag)
   end
   
   def accelerate(delay)
@@ -593,6 +593,7 @@ class KuiShip < KuiSpaceworthy
       amount = weapon.amount
       1.upto(amount) do | index |
         expanded = weapon.dup
+        expanded.transient = true
         expanded.amount = 1
         @firing_order << expanded
       end
@@ -783,6 +784,7 @@ class KuiWeaponBlueprint < KuiSpaceworthyBlueprint
     @accel = 500
     @max_speed = 500
     @rot_per_sec = 720
+    @derived_from = nil
   end
   
   def can_fire?
@@ -803,12 +805,14 @@ class KuiWeaponBlueprint < KuiSpaceworthyBlueprint
     if @ammo.size > 0
       self.selected_ammo.amount -= 1
     end
-    fired = KuiWeapon.new(self,fired_by, selected_ammo)
+    parent = @derived_from || self
+    fired = KuiWeapon.new(parent,fired_by, selected_ammo)
     return fired
   end
   
   def initialize_copy(copy)
     self.tag = @rl.repository.ensure_unique_tag(copy.tag)
+    @derived_from = copy
   end
   
   # Switches us to the next ammo.  Returns true if this worked without issue, 

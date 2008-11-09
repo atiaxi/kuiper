@@ -39,10 +39,16 @@ class Repository
       add(file)
     end
     resolve_placeholders if autoresolve
+    post_load
   end
   
   def add_placeholder(holder)
-    @placeholders << holder
+    @placeholders[holder.tag] ||= []
+    @placeholders[holder.tag] << holder
+  end
+  
+  def delete(obj)
+    @everything.delete(obj)
   end
   
   # Given the base tag, create a tag that doesn't already exist.
@@ -84,16 +90,20 @@ class Repository
     
     if object.respond_to?(:name)
       name = object.name
-      name = name.strip.downcase
-        
-      exclusions.each do |x|
-        excludeBeginning = Regexp.new("^#{x}\s")
-        excludeMiddle = Regexp.new("\s#{x}\s")
-        name.gsub!(excludeBeginning,'')
-        name.gsub!(excludeMiddle,' ')
+      if name && name.size > 0
+        name = name.strip.downcase
+          
+        exclusions.each do |x|
+          excludeBeginning = Regexp.new("^#{x}\s")
+          excludeMiddle = Regexp.new("\s#{x}\s")
+          name.gsub!(excludeBeginning,'')
+          name.gsub!(excludeMiddle,' ')
+        end
+       
+        total += name.split
+      else
+        name = "new_object"
       end
-     
-      total += name.split
     end
     
     initial = total.join("_")
@@ -101,6 +111,19 @@ class Repository
       initial = ensure_unique_tag(initial,'-')
     end
     return initial
+  end
+  
+  # Every placeholder for the given tag.
+  # will return nil if none
+  def placeholders_for(tag)
+    return @placeholders[tag]
+  end
+  
+  # Does a post_load on everything in the repository
+  def post_load
+    @everything.each do | tag, obj |
+      obj.post_load
+    end
   end
   
   # Returns a <ref> tag for the given object
@@ -113,27 +136,17 @@ class Repository
       return kuiobject.to_xml
     end
   end
-  
-  # If the object's tag already exists, this will return
-  # the object with that tag.  If it doesn't, it will
-  # register the given object (and return that)
-  def register_or_retrieve(object)
-    old = @everything[object.tag]
-    unless old
-      register(object)
-    end
-    return old
-  end
-  
+    
   def register(object)
     register_tag_for(object,object.tag)
   end
   
   def register_tag_for(object, tag)
     old = @everything[tag]
-    return if old == object
+    #return if old == object
     rl = Opal::ResourceLocator.instance
     @everything[tag] = object
+    resolve_placeholders_for(object)
     if old
       #rl.logger.debug("Replaced #{old} with #{object} for #{tag}")
     end
@@ -143,58 +156,42 @@ class Repository
     @root = nil
     @objects_output = Set.new
     @everything = {}
-    # Not a set, want to make sure every placeholder is resolved.
-    @placeholders = []
+    # Of the form key : [placeholders...]
+    @placeholders = {}
   end
   
   # Attempts to crawl the object tree for placeholders.
-  # If any are left unresolved, emits an INFO line and
+  # If any are left unresolved, emits an WARN line and
   # returns false
   def resolve_placeholders()
     rl = Opal::ResourceLocator.instance
-    @everything.dup.each do | key, value |
-      value.class.children.each do | child_sym |
-        #rl.logger.debug("Looking at: #{child_sym}")
-        child = value.send(child_sym)
-        #rl.logger.debug("- Got back: #{child}") if child
-        #rl.logger.debug("- NULL") unless child
-        if child.respond_to?(:each)
-          #rl.logger.debug("- Iterating over #{child.size}")
-          
-          replaced = child.collect do | obj |
-            if obj.is_placeholder?
-              lookup = @everything[obj.tag]
-              if lookup
-                @placeholders.delete_first(obj)
-                lookup
-              else
-                rl.logger.fatal("Unable to resolve tag #{child.tag}")
-                nil
-              end
-            else
-              obj
-            end
-          end
-          value.adopt_child(child_sym, replaced)
-        else
-          #rl.logger.debug("Not a collection, it's: #{child}")
-          if child && child.is_placeholder?
-            setter = (child_sym.to_s+"=").to_sym
-            lookup = @everything[child.tag]
-            #rl.logger.info("Resolved #{child.tag} as #{lookup}")
-            rl.logger.fatal("Unable to resolve tag #{child.tag}") unless lookup
-            value.send(setter, lookup)
-            @placeholders.delete_first(child)
-          end
-        end  
+    
+    resolved = true
+    @placeholders.dup.each do | tag, holders |
+      obj = @everything[tag]
+      if obj
+        # For some reason, this didn't trigger like it ought to have.  Oh well
+        resolve_placeholders_for(obj)
+      else
+        rl.logger.warn("Could not locate #{tag} ,#{holders.size} needed!")
+        resolved = false
       end
-      value.post_load
     end
-    unless @placeholders.empty?
-      rl.logger.info("Unresolved placeholders: #{@placeholders}")
-      #puts self.to_xml
+    
+    return resolved
+  end
+  
+  # This here object was just created; if any placeholders exist for it,
+  # replace them with this.
+  def resolve_placeholders_for(object)
+    rl = Opal::ResourceLocator.instance
+    holders = @placeholders[object.tag]
+    if holders
+      holders.dup.each do | placeholder |
+        placeholder.replace_with(object)
+      end
+      @placeholders.delete(object.tag)
     end
-    return @placeholders.empty?
   end
   
   def retrieve(tag)
@@ -216,8 +213,11 @@ class Repository
     kuiper.add_attribute("major",major.to_s)
     kuiper.add_attribute("minor",minor.to_s)
     kuiper.add_attribute("bug",bug.to_s)
-    @everything.each_value do | kui |
-      kuiper.add(kui.to_xml)
+    @everything.keys.sort.each do | key |
+      kui = @everything[key]
+      unless kui.transient
+        kuiper.add(kui.to_xml)
+      end
     end
     doc.add(kuiper)
     return doc

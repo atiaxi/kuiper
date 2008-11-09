@@ -29,6 +29,14 @@ class Array
     return nil
   end
   
+  def replace_first(orig,replacement)
+    first = self.index(orig)
+    if first
+      return self[first] = replacement
+    end
+    return nil
+  end
+  
   def random
     if size > 0
       return self[rand(size)]

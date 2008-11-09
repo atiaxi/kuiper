@@ -162,9 +162,36 @@ class TC_Xml_Export < Test::Unit::TestCase
       @shipBlueprint.image_filename)
   end
   
+  # I keep seeing a bug where a placeholder will not be replaced if it's next
+  # to a placeholder just like it
+  def test_double_placeholder
+    repo = Repository.new
+    @rl.storage[:repository] = repo
+    uni = Bootstrapper.new().universe
+    uni.map.sectors << uni.map.sectors[0]
+    
+    sio = StringIO.new
+    repo.to_xml(sio)
+    xml = sio.string
+    
+    loaded_repo = Repository.new
+    @rl.storage[:repository] = loaded_repo
+    assert_nothing_raised { loaded_repo.add(xml) }
+    loaded_repo.resolve_placeholders
+    map = loaded_repo.universe.map
+    assert_equal(2, map.sectors.size)
+    assert(!map.sectors[0].is_placeholder?)
+    assert(!map.sectors[1].is_placeholder?)
+    assert_equal(map.sectors[0],map.sectors[1])
+  end
+  
   # If we see a ref before we see what it refers to, we need to make a note of
   # that.
   def test_placeholder
+    repo = Repository.new
+    @rl.storage[:repository] = repo
+    uni = Bootstrapper.new().universe
+    
     xml = "<ship tag=\"foo\">"+
       "<children><blueprint>"+
       "<ref tag=\"shabarg\" name=\"werg\"/>"+
@@ -174,9 +201,23 @@ class TC_Xml_Export < Test::Unit::TestCase
     ship = nil
     blue = nil
     assert_nothing_raised { ship = KuiObject.from_xml(doc.root) }
+    
+    # That should have created a placeholder
+    assert(ship.blueprint.is_placeholder?)
+    assert_not_nil(repo.placeholders_for('shabarg'))
+    assert_equal(repo.placeholders_for('shabarg')[0],ship.blueprint)
+    assert_equal("shabarg",ship.blueprint.tag)
+    
     xml = "<shipblueprint tag=\"shabarg\"></shipblueprint>"
     doc = REXML::Document.new(xml)
     assert_nothing_raised { blue = KuiObject.from_xml(doc.root) }
+    
+    # Make sure that tag was registered
+    assert_not_nil(repo.retrieve('shabarg'))
+    
+    # Setting the tag should have resolved the placeholder automatically
+    assert(!ship.blueprint.is_placeholder?)
+    
     @rl.repository.resolve_placeholders
     assert_equal(blue,ship.blueprint)
   end
@@ -304,37 +345,34 @@ class TC_Xml_Export < Test::Unit::TestCase
     assert_not_nil(loaded_repo.universe.player.start_ship)
     assert_equal(repo.universe.player.start_ship.name,
       loaded_repo.universe.player.start_ship.name)
-
+    assert(repo.root.deep_equals(loaded_repo.universe))
     temp_file.unlink
   end
-  
-  def test_full_circle
+    
+  def test_complex_full_circle
     repo = Repository.new
     @rl.storage[:repository] = repo
     uni = Bootstrapper.new().universe
+    uni.name = 'blarg'
+    uni.player.start_ship.name='fnord'
     assert_not_nil(uni.player.start_ship)
     original = uni.player.start_ship
     repo.root = uni
-    
-    # Make a flag
-    flag = KuiFlag.new
-    flag.value = 20
-    uni.player.on_planet = flag
+    assert_equal('universe',repo.root.tag)
     
     sio = StringIO.new
     repo.to_xml(sio)
     xml = sio.string
     
-    repo = Repository.new
-    @rl.storage[:repository] = repo
-    assert_nothing_raised { repo.add(xml) }
-    assert(repo.resolve_placeholders)
-    assert_not_nil(repo.root)
-    assert_not_nil(repo.universe.player)
-    assert_not_nil(repo.universe.player.start_ship)
-    assert_equal(original,repo.universe.player.start_ship)
-    assert_equal(uni.player.on_planet,repo.universe.player.on_planet)
-    assert(repo.root.deep_equals(uni))
+    loaded_repo = Repository.new
+    @rl.storage[:repository] = loaded_repo
+    assert_nothing_raised { loaded_repo.add(xml) }
+    assert(loaded_repo.resolve_placeholders)
+    assert_not_nil(loaded_repo.root)
+    assert_not_nil(loaded_repo.universe.player)
+    assert_not_nil(loaded_repo.universe.player.start_ship)
+    assert_equal(original,loaded_repo.universe.player.start_ship)
+    assert(loaded_repo.root.deep_equals(repo.root))
   end
   
   # Mainly to test booleans
@@ -378,10 +416,29 @@ class TC_Xml_Export < Test::Unit::TestCase
     answers = Set.new
     test_size.times do
       chosen = @rl.repository.ensure_unique_tag("blarg")
-      @rl.repository.register_tag_for("shabarg",chosen)
+      ko = KuiObject.new
+      ko.tag = chosen
       answers << chosen
     end
     assert(answers.size == test_size)
+  end
+  
+  # Objects marked transient shouldn't be saved.
+  def test_transience
+    repo = Repository.new
+    @rl.storage[:repository] = repo
+    uni = Bootstrapper.new().universe
+    name = "stringnotappearinginunixml"
+    uni.player.name= name
+    uni.player.transient = true
+    
+    sio = StringIO.new
+    repo.to_xml(sio)
+    xml = sio.string
+    
+    # Player should have been excluded
+    index = xml.index(name)
+    assert_nil(index)
   end
   
 end
