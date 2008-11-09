@@ -64,6 +64,14 @@ module Fontable
 
 end
 
+# Utility for anything that wants to keep track of its focus.
+# depends on there being a self.rect
+module Focusable
+  def mouseMove(loc)
+    @focus = self.rect.collide_point?( *loc )
+  end
+end
+
 class OpalSprite
 
   attr_accessor :rect
@@ -590,6 +598,7 @@ end
 
 class ListBox < CompositeSprite
   include Colorable
+  include Focusable
 
   attr_reader :items
   attr_reader :scroll
@@ -648,6 +657,8 @@ class ListBox < CompositeSprite
     if @enabled
       oldChosen = @chosen
       chosen = @widgets_to_items[item]
+      # If it's not in the widgets dict, it's an actual item
+      chosen = item unless chosen
       if oldChosen == chosen
         if @lku - @chosenAt < 1 # Double click time is 1 sec.
           @doubleChooseCallback.call if @doubleChooseCallback
@@ -693,6 +704,25 @@ class ListBox < CompositeSprite
     @lku = 0
     @chosen = nil
   
+  end
+
+  def keyTyped(event)
+    if @focus && @chosen
+      index = @items.index(@chosen)
+      if index
+        new_index = nil
+        if event.key == :up
+          new_index = index - 1
+          new_index = 0 if new_index < 0
+        elsif event.key == :down
+          new_index = index + 1
+          new_index = @items.size-1 if new_index >= @items.size
+        end
+        puts new_index
+        choose(@items[new_index]) if new_index
+      end
+      
+    end
   end
   
   def scroll=(skipItems)

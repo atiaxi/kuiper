@@ -135,6 +135,8 @@ class MultiLineInput < MultiLineLabel
   
   attr_accessor :scroller
   
+  include Focusable
+  
   def initialize(text, size=12, font="freesansbold.ttf")
     @bgcolor = [ 0, 0, 0 ]
     @border = [ 255, 255, 255 ]
@@ -267,10 +269,6 @@ class MultiLineInput < MultiLineLabel
     end
   end
   
-  def mouseMove(loc)
-    @focus = self.rect.collide_point?( *loc )
-  end
-  
   def click(x,y)
     x -= @rect.x
     y -= @rect.y
@@ -400,10 +398,6 @@ class InputField < MultiLineInput
     @minimum_size = size
     refresh
     @scroller.expand if @scroller
-  end
-  
-  def mouseMove(loc)
-    @focus = self.rect.collide_point?( *loc )
   end
   
   # Changes the text of the image.
