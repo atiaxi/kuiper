@@ -313,6 +313,13 @@ class MapState < Opal::State
     @sectors_to_buttons = {}
     rect = @rl.screen_rect
     
+    @selected_box = Box.new
+    @selected_box.rect.x = 0
+    @selected_box.rect.y = 0
+    @selected_box.rect.w = @rl.screen_rect.w
+    @selected_box.rect.h = 1
+    self << @selected_box
+    
     @selected_label = Label.new("<No sector selected>")
     @selected_label.rect.topleft = [3,3]
     self << @selected_label
@@ -384,6 +391,8 @@ class MapState < Opal::State
         end
         @selected_label.text = name
         @selected_desc.text = description
+        @selected_box.rect.h = @selected_desc.rect.bottom - 
+          @selected_label.rect.y + 3
         button = @sectors_to_buttons[sector]
         button.add_halo(@selection_halo)
         if previous && previous != @selected
