@@ -1,352 +1,1867 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<kuiper major='0' bug='2' minor='0'>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:6020' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+<kuiper major='0' bug='3' minor='0'>
+  <weaponblueprint tag='wpn_basic_laser:6020'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='true' name='Missile Launcher' rot_per_sec='720.0' max_speed='500.0' accel='500.0' price='250.0' turreted='false' damage='50.0' image_filename='redMissile.png' cooldown='0.0' tag='wpn_missile_launcher:5230' auto_accelerate='false' amount='1.0' description=' This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'>
-      <ref tag='ammo_missile:3454'/>
-    </child>
+  <weaponblueprint tag='wpn_missile_launcher:5230'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[true]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Missile Launcher]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[250.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[500.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[3.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[50.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo>
+        <ref tag='ammo_missile:3454'/>
+      </ammo>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:3944' auto_accelerate='true' amount='5.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:3944'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[5.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <player name='' tag='player' credits='2000.0' labels=''>
-    <child name='missions'/>
-    <child name='org'>
-      <ref tag='org_player'/>
-    </child>
-    <child name='completed_missions'/>
-    <child name='on_planet'/>
-    <child name='flags'/>
-    <child name='start_ship'>
-      <ref tag='scout_bare'/>
-    </child>
-    <child name='start_sector'>
-      <ref tag='sector_sol'/>
-    </child>
+  <player tag='player'>
+    <fields>
+      <name>
+      </name>
+      <credits>
+        <![CDATA[2000.0]]>
+      </credits>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <missions/>
+      <org>
+        <ref tag='org_player'/>
+      </org>
+      <completed_missions/>
+      <on_planet/>
+      <flags/>
+      <start_ship>
+        <ref tag='scout_bare'/>
+      </start_ship>
+      <start_sector>
+        <ref tag='sector_sol'/>
+      </start_sector>
+    </children>
   </player>
-  <flagaction flag_tag='flag_meet_and_greet' tag='flag_action_meet_and_greet' new_note='' new_number='1.0' unset='false' labels=''/>
-  <ship velocity_x='0.0' name='Scout' velocity_y='0.0001' facing_x='0.0' price='0.0' facing_y='-1.0' armor='100.0' x='0.0' y='0.0' shields='100.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_bare' jumping_progress='0.0' labels=''>
-    <child name='itinerary'/>
-    <child name='owner'>
-      <ref tag='org_player'/>
-    </child>
-    <child name='cargo'/>
-    <child name='secondaries'/>
-    <child name='anti_addons'/>
-    <child name='target'/>
-    <child name='addons'/>
-    <child name='ammo'/>
-    <child name='weapons'/>
-    <child name='blueprint'>
-      <ref tag='scout_class'/>
-    </child>
+  <flagaction tag='flag_action_meet_and_greet'>
+    <fields>
+      <unset>
+        <![CDATA[false]]>
+      </unset>
+      <new_note>
+      </new_note>
+      <flag_tag>
+        <![CDATA[flag_meet_and_greet]]>
+      </flag_tag>
+      <labels>
+      </labels>
+      <new_number>
+        <![CDATA[1.0]]>
+      </new_number>
+    </fields>
+    <children/>
+  </flagaction>
+  <ship tag='scout_bare'>
+    <fields>
+      <name>
+        <![CDATA[Scout]]>
+      </name>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <armor>
+        <![CDATA[100.0]]>
+      </armor>
+      <shields>
+        <![CDATA[100.0]]>
+      </shields>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <fuel>
+        <![CDATA[100.0]]>
+      </fuel>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <labels>
+      </labels>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+    </fields>
+    <children>
+      <itinerary/>
+      <owner>
+        <ref tag='org_player'/>
+      </owner>
+      <cargo/>
+      <secondaries/>
+      <anti_addons/>
+      <target/>
+      <addons/>
+      <ammo/>
+      <weapons/>
+      <blueprint>
+        <ref tag='scout_class'/>
+      </blueprint>
+    </children>
   </ship>
-  <infoaction message='Congratulations on arriving in one piece!
+  <infoaction tag='inform_offscreen_planet'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[Congratulations on arriving in one piece!
 
-Your next objective is to land on Chiron.  You may not see it on-screen, but the radar in the lower-left should show it (and you) completely clearly.  You can always zoom the radar in and out by using the + and - keys. ' tag='inform_offscreen_planet' show_once_only='false' labels='' shown='false'/>
-  <atcondition tag='in_alpha_centauri?' labels=''>
-    <child name='locations'>
-      <ref tag='sector_alpha_centauri'/>
-    </child>
+Your next objective is to land on Chiron.  You may not see it on-screen, but the radar in the lower-left should show it (and you) completely clearly.  You can always zoom the radar in and out by using the + and - keys. ]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[false]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <atcondition tag='in_alpha_centauri?'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <locations>
+        <ref tag='sector_alpha_centauri'/>
+      </locations>
+    </children>
   </atcondition>
-  <infoaction message='Weapons
+  <infoaction tag='msg_explain_weapons'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[Weapons
 
 Like addons, weaponry can require hardpoints and/or expansion space.  There are two kinds of weaponry; Primary and Secondary:
 
 Primary weapons will fire whenever you press the space bar, and will continue firing as long as you are holding it down.  If you have more than one firing weapon, one will fire and then after a short delay another will fire, and so on until they have all fired or one of your primary weapons is ready again.  Typically - but not always - primary weapons have unlimited ammunition.
 
-Secondary weapons are weapons you can select from.  Only one secondary weapon can be fired at once.  You fire secondary weapons by pressing &apos;F&apos; and cycle through your choices with &apos;Q&apos;.   When you have a secondary weapon, you will see it and any ammunition it needs on the left side of the screen.
+Secondary weapons are weapons you can select from.  Only one secondary weapon can be fired at once.  You fire secondary weapons by pressing 'F' and cycle through your choices with 'Q'.   When you have a secondary weapon, you will see it and any ammunition it needs on the left side of the screen.
 
 Some weapons need ammunition - this should be noted in most cases in the description.  Some weapons can take more than one kind of ammunition; like addons do to ships, ammunition can do things to weapons.  Some ammo may do less damage but have a longer range, for example.
 
-To field-test your weaponry, proceed to the Medregg system.' tag='msg_explain_weapons' show_once_only='true' labels='' shown='false'/>
-  <weaponblueprint secondary_weapon='false' name='Missile' rot_per_sec='0.0' max_speed='0.0' accel='0.0' price='50.0' turreted='false' damage='0.0' image_filename='redMissile.png' cooldown='0.0' tag='ammo_missile:3454' auto_accelerate='false' amount='10.0' description=' For use with the standard-issue missile launcher.
+To field-test your weaponry, proceed to the Medregg system.]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[true]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <weaponblueprint tag='ammo_missile:3454'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Missile]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[0.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[50.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[1.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[0.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[true]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[0.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[0.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[10.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[true]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ For use with the standard-issue missile launcher.
 
-Remember, without a missile launcher, the missiles are useless!' is_ammo='true' expansion_required='1.0' labels='' hardpoints_required='0.0' seeking='true' max_ttl='0.0' max_cooldown='0.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+Remember, without a missile launcher, the missiles are useless!]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[0.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[0.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <atcondition tag='at_medregg?' labels=''>
-    <child name='locations'>
-      <ref tag='sector_medregg'/>
-    </child>
+  <atcondition tag='at_medregg?'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <locations>
+        <ref tag='sector_medregg'/>
+      </locations>
+    </children>
   </atcondition>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:6239' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:6239'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <ship velocity_x='0.0' name='Terran Trading Fleet' velocity_y='0.0001' facing_x='0.0' price='0.0' facing_y='-1.0' armor='100.0' x='0.0' y='0.0' shields='100.0' chosen_secondary_index='0.0' fuel='100.0' tag='scout_traders' jumping_progress='0.0' labels=''>
-    <child name='itinerary'/>
-    <child name='owner'/>
-    <child name='cargo'/>
-    <child name='secondaries'/>
-    <child name='anti_addons'/>
-    <child name='target'/>
-    <child name='addons'/>
-    <child name='ammo'/>
-    <child name='weapons'/>
-    <child name='blueprint'>
-      <ref tag='scout_class'/>
-    </child>
+  <ship tag='scout_traders'>
+    <fields>
+      <name>
+        <![CDATA[Terran Trading Fleet]]>
+      </name>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <armor>
+        <![CDATA[100.0]]>
+      </armor>
+      <shields>
+        <![CDATA[100.0]]>
+      </shields>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <fuel>
+        <![CDATA[100.0]]>
+      </fuel>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <labels>
+      </labels>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+    </fields>
+    <children>
+      <itinerary/>
+      <owner/>
+      <cargo/>
+      <secondaries/>
+      <anti_addons/>
+      <target/>
+      <addons/>
+      <ammo/>
+      <weapons/>
+      <blueprint>
+        <ref tag='scout_class'/>
+      </blueprint>
+    </children>
   </ship>
-  <flagaction flag_tag='flag_addon_tutorial_done' tag='set_addon_tutorial_done' new_note='' new_number='1.0' unset='false' labels=''/>
-  <descriptionaction tag='describe_weapons' new_description='Primary weapons are fired with the spacebar, secondary weapons with &apos;F&apos; (and you select them with &apos;Q&apos;).  Some weapons (like the missile launcher) require ammo.
+  <flagaction tag='set_addon_tutorial_done'>
+    <fields>
+      <unset>
+        <![CDATA[false]]>
+      </unset>
+      <new_note>
+      </new_note>
+      <flag_tag>
+        <![CDATA[flag_addon_tutorial_done]]>
+      </flag_tag>
+      <labels>
+      </labels>
+      <new_number>
+        <![CDATA[1.0]]>
+      </new_number>
+    </fields>
+    <children/>
+  </flagaction>
+  <descriptionaction tag='describe_weapons'>
+    <fields>
+      <new_description>
+        <![CDATA[Primary weapons are fired with the spacebar, secondary weapons with 'F' (and you select them with 'Q').  Some weapons (like the missile launcher) require ammo.
 
-Don&apos;t try shooting up your buddies in the Sol or Alpha Centauri sector, as they don&apos;t take kindly to being fired upon.  Instead, shoot up some Medreggi!  That&apos;s the &apos;unknown&apos; sector on your map. ' labels=''>
-    <child name='target'>
-      <ref tag='msn_multijump'/>
-    </child>
+Don't try shooting up your buddies in the Sol or Alpha Centauri sector, as they don't take kindly to being fired upon.  Instead, shoot up some Medreggi!  That's the 'unknown' sector on your map. ]]>
+      </new_description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <target>
+        <ref tag='msn_multijump'/>
+      </target>
+    </children>
   </descriptionaction>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:2438' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:2438'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <fleet name='Terran Defense Force' current_stay='0.0' under_attack='fight' tag='fleet_tdf' spawn_chance='0.3' min_stay='5.0' behavior='patrol' max_stay='10.0' labels='' unique='false'>
-    <child name='owner'>
-      <ref tag='org_terrans'/>
-    </child>
-    <child name='ships'>
-      <ref tag='defender_prepared'/>
-      <ref tag='defender_prepared'/>
-    </child>
+  <fleet tag='fleet_tdf'>
+    <fields>
+      <name>
+        <![CDATA[Terran Defense Force]]>
+      </name>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <max_stay>
+        <![CDATA[10.0]]>
+      </max_stay>
+      <under_attack>
+        <![CDATA[fight]]>
+      </under_attack>
+      <spawn_chance>
+        <![CDATA[0.3]]>
+      </spawn_chance>
+      <min_stay>
+        <![CDATA[5.0]]>
+      </min_stay>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <behavior>
+        <![CDATA[patrol]]>
+      </behavior>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_terrans'/>
+      </owner>
+      <ships>
+        <ref tag='defender_prepared'/>
+        <ref tag='defender_prepared'/>
+      </ships>
+    </children>
   </fleet>
-  <org killing_mod='-50.0' friendly='500.0' name='Medreggi' devoted='1000.0' gullibility='0.8' unfriendly='-500.0' tag='org_medreggi' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
-    <child name='feelings'>
-      <relation labels='' feeling='1000000'>
-        <child name='target_org'>
-          <ref tag='org_medreggi'/>
-        </child>
-      </relation>
-      <relation labels='' feeling='-1000.0'>
-        <child name='target_org'>
-          <ref tag='org_terrans'/>
-        </child>
-      </relation>
-    </child>
+  <org tag='org_medreggi'>
+    <fields>
+      <name>
+        <![CDATA[Medreggi]]>
+      </name>
+      <friendly>
+        <![CDATA[500.0]]>
+      </friendly>
+      <devoted>
+        <![CDATA[1000.0]]>
+      </devoted>
+      <gullibility>
+        <![CDATA[0.8]]>
+      </gullibility>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <friendly_multiplier>
+        <![CDATA[0.5]]>
+      </friendly_multiplier>
+    </fields>
+    <children>
+      <feelings>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[1000000]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_medreggi'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_terrans'/>
+            </target_org>
+          </children>
+        </relation>
+      </feelings>
+    </children>
   </org>
-  <infoaction message='Fuel
+  <infoaction tag='msg_explain_addon'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[Fuel
 
-You&apos;ll see a new option on this planet for refueling - every time you jump, a certain amount of fuel is deducted from your total.  Planets allow you to replace this fuel... for a price.  
+You'll see a new option on this planet for refueling - every time you jump, a certain amount of fuel is deducted from your total.  Planets allow you to replace this fuel... for a price.  
 
 Addons
 
 Addons are an easy way to customize your ship without having to buy a new one.  Each addon tends to do something for you, though often at the expense of something else.  The one for sale here will increase your speed, but take more fuel when jumping.  
 
-Also, addons tend to require &apos;expansion&apos; space (your ship has some space set aside for internal modifications) or &apos;hardpoints&apos; (interfaces to outside systems).
+Also, addons tend to require 'expansion' space (your ship has some space set aside for internal modifications) or 'hardpoints' (interfaces to outside systems).
 
-To buy or sell addons, click the &apos;Addons&apos; button.  The interface is exactly the same as buying cargo.
+To buy or sell addons, click the 'Addons' button.  The interface is exactly the same as buying cargo.
 
 Ships
 
-Addons  can only take you so far - ships don&apos;t have unlimited expansion space or hardpoints.  You can buy a new ship by clicking the &apos;Shipyard&apos; button  on any planet that&apos;s selling ships.
+Addons  can only take you so far - ships don't have unlimited expansion space or hardpoints.  You can buy a new ship by clicking the 'Shipyard' button  on any planet that's selling ships.
 
-When you&apos;re ready for the next tutorial, accept the &quot;Multi-Jump Tutorial&quot; mission.' tag='msg_explain_addon' show_once_only='true' labels='' shown='false'/>
-  <descriptionaction tag='describe_map_and_jumping' new_description='Press &apos;m&apos; to get to the map; once there, select the Alpha Centauri sector and click &apos;add to itinerary&apos;.  Then, hold down &apos;J&apos; to jump. ' labels=''>
-    <child name='target'>
-      <ref tag='map_and_jumping'/>
-    </child>
+When you're ready for the next tutorial, accept the "Multi-Jump Tutorial" mission.]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[true]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <descriptionaction tag='describe_map_and_jumping'>
+    <fields>
+      <new_description>
+        <![CDATA[Press 'm' to get to the map; once there, select the Alpha Centauri sector and click 'add to itinerary'.  Then, hold down 'J' to jump. ]]>
+      </new_description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <target>
+        <ref tag='map_and_jumping'/>
+      </target>
+    </children>
   </descriptionaction>
-  <flagcondition flag_tag='planet_tutorial_done' is_set='true' number_is='0.0' tag='check_flag_planet_done' is_not_set='false' note_is='' labels=''/>
-  <flagaction flag_tag='planet_tutorial_done' tag='set_flag_planet_done' new_note='' new_number='1.0' unset='false' labels=''/>
-  <infoaction message='Advanced Mapping
+  <flagcondition tag='check_flag_planet_done'>
+    <fields>
+      <is_set>
+        <![CDATA[true]]>
+      </is_set>
+      <number_is>
+        <![CDATA[0.0]]>
+      </number_is>
+      <is_not_set>
+        <![CDATA[false]]>
+      </is_not_set>
+      <note_is>
+      </note_is>
+      <flag_tag>
+        <![CDATA[planet_tutorial_done]]>
+      </flag_tag>
+      <labels>
+      </labels>
+    </fields>
+    <children/>
+  </flagcondition>
+  <flagaction tag='set_flag_planet_done'>
+    <fields>
+      <unset>
+        <![CDATA[false]]>
+      </unset>
+      <new_note>
+      </new_note>
+      <flag_tag>
+        <![CDATA[planet_tutorial_done]]>
+      </flag_tag>
+      <labels>
+      </labels>
+      <new_number>
+        <![CDATA[1.0]]>
+      </new_number>
+    </fields>
+    <children/>
+  </flagaction>
+  <infoaction tag='msg_explain_multijump'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[Advanced Mapping
 
-As you&apos;ve likely noticed, there&apos;s more to the universe than even the two sectors you&apos;ve seen so far.  From here, we&apos;re going to jump to the Medregg system - it&apos;s labeled &apos;unknown&apos; because you haven&apos;t visited it before.  Usually, sectors you haven&apos;t visited will either not appear on the map or will only appear as &apos;unknown&apos;.
+As you've likely noticed, there's more to the universe than even the two sectors you've seen so far.  From here, we're going to jump to the Medregg system - it's labeled 'unknown' because you haven't visited it before.  Usually, sectors you haven't visited will either not appear on the map or will only appear as 'unknown'.
 
-You can enter the map by pressing &apos;M&apos;.  There are two ways to put more than one sector on your itinerary:
+You can enter the map by pressing 'M'.  There are two ways to put more than one sector on your itinerary:
 
-(1) Select the Sol sector and press &apos;add to itinerary&apos;, like you did before for Alpha Centauri.  Then, click on the Unknown sector and press &apos;add to itinerary&apos; again, or
-(2) Select the &apos;Unknown&apos; sector and press &apos;plot course&apos;.
+(1) Select the Sol sector and press 'add to itinerary', like you did before for Alpha Centauri.  Then, click on the Unknown sector and press 'add to itinerary' again, or
+(2) Select the 'Unknown' sector and press 'plot course'.
 
 The second method is the easiest, as the computer will plot a course for you, but the first one allows more fine-grained control over where you go.
 
-When you&apos;re ready, jump to Sol. ' tag='msg_explain_multijump' show_once_only='true' labels='' shown='false'/>
-  <ifthen tag='check_flag_addon_done' labels=''>
-    <child name='ifs'>
-      <ref tag='cond_addon_tutorial_done'/>
-    </child>
-    <child name='thens'>
-      <ref tag='end'/>
-    </child>
+When you're ready, jump to Sol. ]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[true]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <ifthen tag='check_flag_addon_done'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='cond_addon_tutorial_done'/>
+      </ifs>
+      <thens>
+        <ref tag='end'/>
+      </thens>
+    </children>
   </ifthen>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9263' auto_accelerate='true' amount='4.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:9263'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[4.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:8404' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:8404'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <atcondition tag='on_earth' labels=''>
-    <child name='locations'>
-      <ref tag='planet_earth'/>
-    </child>
+  <atcondition tag='on_earth'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <locations>
+        <ref tag='planet_earth'/>
+      </locations>
+    </children>
   </atcondition>
-  <sector name='Sol' x='0.0' visited='true' y='0.0' tag='sector_sol' description=' This sector is home to Earth, the birthplace of humanity.' labels=''>
-    <child name='potential_fleets'>
-      <ref tag='fleet_traders'/>
-      <ref tag='fleet_defender_patrol'/>
-    </child>
-    <child name='links_to'>
-      <ref tag='sector_alpha_centauri'/>
-      <ref tag='sector_medregg'/>
-    </child>
-    <child name='planets'>
-      <ref tag='planet_earth'/>
-    </child>
-    <child name='plot'>
-      <ref tag='msn_meet_and_greet'/>
-    </child>
-    <child name='projectiles'/>
-    <child name='killed_fleets'/>
-    <child name='halos'/>
-    <child name='active_fleets'/>
+  <sector tag='sector_sol'>
+    <fields>
+      <name>
+        <![CDATA[Sol]]>
+      </name>
+      <visited>
+        <![CDATA[true]]>
+      </visited>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <description>
+        <![CDATA[ This sector is home to Earth, the birthplace of humanity.]]>
+      </description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <potential_fleets>
+        <ref tag='fleet_traders'/>
+        <ref tag='fleet_defender_patrol'/>
+      </potential_fleets>
+      <links_to>
+        <ref tag='sector_alpha_centauri'/>
+        <ref tag='sector_medregg'/>
+      </links_to>
+      <planets>
+        <ref tag='planet_earth'/>
+      </planets>
+      <plot>
+        <ref tag='msn_meet_and_greet'/>
+      </plot>
+      <projectiles/>
+      <killed_fleets/>
+      <halos/>
+      <active_fleets/>
+    </children>
   </sector>
-  <mission globally_unique='true' name='Welcome to Kuiper' exit_code='0.0' tag='msn_meet_and_greet' description=' Left/Right arrow keys steer, up arrow key accelerates and the down arrow key slows you.  When you are ready to continue the tutorial, land on the planet by flying close to it and pressing &apos;L&apos;' labels='' unique='true'>
-    <child name='setup'>
-      <ref tag='flag_action_meet_and_greet'/>
-      <ref tag='msg_meet_and_greet'/>
-    </child>
-    <child name='sponsors'/>
-    <child name='fleets_to_die'/>
-    <child name='worthy'/>
-    <child name='fleets_that_died'/>
-    <child name='checks'>
-      <ref tag='intro_check_planet'/>
-    </child>
+  <mission tag='msn_meet_and_greet'>
+    <fields>
+      <name>
+        <![CDATA[Welcome to Kuiper]]>
+      </name>
+      <globally_unique>
+        <![CDATA[true]]>
+      </globally_unique>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <description>
+        <![CDATA[ Left/Right arrow keys steer, up arrow key accelerates and the down arrow key slows you.  When you are ready to continue the tutorial, land on the planet by flying close to it and pressing 'L']]>
+      </description>
+      <unique>
+        <![CDATA[true]]>
+      </unique>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <setup>
+        <ref tag='flag_action_meet_and_greet'/>
+        <ref tag='msg_meet_and_greet'/>
+      </setup>
+      <sponsors/>
+      <fleets_to_die/>
+      <worthy/>
+      <fleets_that_died/>
+      <checks>
+        <ref tag='intro_check_planet'/>
+      </checks>
+    </children>
   </mission>
-  <atcondition tag='at_alpha_centauri?' labels=''>
-    <child name='locations'>
-      <ref tag='sector_alpha_centauri'/>
-    </child>
+  <atcondition tag='at_alpha_centauri?'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <locations>
+        <ref tag='sector_alpha_centauri'/>
+      </locations>
+    </children>
   </atcondition>
-  <descriptionaction tag='describe_multijump_1' new_description='Remember, you can access the map by pressing &apos;m&apos; and can then add as many legs as you want to your itinerary.  This is done manualy by selecting the item and pressing &apos;add to itinerary&apos; or by selecting the destination and pressing &apos;plot course&apos;. ' labels=''>
-    <child name='target'>
-      <ref tag='msn_multijump'/>
-    </child>
+  <descriptionaction tag='describe_multijump_1'>
+    <fields>
+      <new_description>
+        <![CDATA[Remember, you can access the map by pressing 'm' and can then add as many legs as you want to your itinerary.  This is done manualy by selecting the item and pressing 'add to itinerary' or by selecting the destination and pressing 'plot course'. ]]>
+      </new_description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <target>
+        <ref tag='msn_multijump'/>
+      </target>
+    </children>
   </descriptionaction>
-  <completedcondition exit_code='0.0' tag='completed_multijump?' labels=''>
-    <child name='completed'>
-      <ref tag='msn_multijump'/>
-    </child>
+  <completedcondition tag='completed_multijump?'>
+    <fields>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <completed>
+        <ref tag='msn_multijump'/>
+      </completed>
+    </children>
   </completedcondition>
-  <weaponblueprint secondary_weapon='true' name='Missile Launcher' rot_per_sec='720.0' max_speed='500.0' accel='500.0' price='250.0' turreted='false' damage='50.0' image_filename='redMissile.png' cooldown='0.0' tag='wpn_missile_launcher' auto_accelerate='false' amount='0.0' description=' This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='3.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'>
-      <ref tag='ammo_missile:3454'/>
-    </child>
+  <weaponblueprint tag='wpn_missile_launcher'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[true]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Missile Launcher]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[250.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[500.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[3.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[50.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is a standard-issue seeking missile launcher.  Like the laser, its use was once limited to military only, but times have become desperate.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo>
+        <ref tag='ammo_missile:3454'/>
+      </ammo>
+    </children>
   </weaponblueprint>
-  <universe name='Tutorial' save_as_dev='true' tag='universe' description=' New to Kuiper?  This scenario explains how to play the game.' labels=''>
-    <child name='map'>
-      <ref tag='map'/>
-    </child>
-    <child name='player'>
-      <ref tag='player'/>
-    </child>
+  <universe tag='universe'>
+    <fields>
+      <name>
+        <![CDATA[Tutorial]]>
+      </name>
+      <save_as_dev>
+        <![CDATA[true]]>
+      </save_as_dev>
+      <description>
+        <![CDATA[ New to Kuiper?  This scenario explains how to play the game.]]>
+      </description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <map>
+        <ref tag='map'/>
+      </map>
+      <player>
+        <ref tag='player'/>
+      </player>
+    </children>
   </universe>
-  <ifthen tag='map_and_jumping_check_reached_orbit' labels=''>
-    <child name='ifs'>
-      <ref tag='in_sol?'/>
-    </child>
-    <child name='thens'>
-      <ref tag='instruct_on_jumping'/>
-    </child>
+  <ifthen tag='map_and_jumping_check_reached_orbit'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='in_sol?'/>
+      </ifs>
+      <thens>
+        <ref tag='instruct_on_jumping'/>
+      </thens>
+    </children>
   </ifthen>
-  <ship velocity_x='0.0' name='Base Terran Defender' velocity_y='0.0001' facing_x='0.0' price='1100.0' facing_y='-1.0' armor='1000.0' x='0.0' y='0.0' shields='1200.0' chosen_secondary_index='0.0' fuel='100.0' tag='defender_bare' jumping_progress='0.0' labels=''>
-    <child name='itinerary'/>
-    <child name='owner'/>
-    <child name='cargo'/>
-    <child name='secondaries'/>
-    <child name='anti_addons'/>
-    <child name='target'/>
-    <child name='addons'/>
-    <child name='ammo'/>
-    <child name='weapons'/>
-    <child name='blueprint'>
-      <ref tag='defender_class'/>
-    </child>
+  <ship tag='defender_bare'>
+    <fields>
+      <name>
+        <![CDATA[Base Terran Defender]]>
+      </name>
+      <price>
+        <![CDATA[1100.0]]>
+      </price>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <armor>
+        <![CDATA[1000.0]]>
+      </armor>
+      <shields>
+        <![CDATA[1200.0]]>
+      </shields>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <fuel>
+        <![CDATA[100.0]]>
+      </fuel>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <labels>
+      </labels>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+    </fields>
+    <children>
+      <itinerary/>
+      <owner/>
+      <cargo/>
+      <secondaries/>
+      <anti_addons/>
+      <target/>
+      <addons/>
+      <ammo/>
+      <weapons/>
+      <blueprint>
+        <ref tag='defender_class'/>
+      </blueprint>
+    </children>
   </ship>
-  <mission globally_unique='true' name='Multi-Jump Tutorial' exit_code='0.0' tag='msn_multijump' description='This tutorial begins with how to jump into a sector farther away than one leap, and ends with combat! ' labels='' unique='true'>
-    <child name='setup'>
-      <ref tag='set_addon_tutorial_done'/>
-      <ref tag='sell_lasers'/>
-    </child>
-    <child name='sponsors'/>
-    <child name='fleets_to_die'/>
-    <child name='worthy'>
-      <ref tag='completed_jumping'/>
-    </child>
-    <child name='fleets_that_died'/>
-    <child name='checks'>
-      <ref tag='check_in_alpha_centauri2'/>
-      <ref tag='check_at_sol_2'/>
-      <ref tag='check_on_earth_2'/>
-      <ref tag='check_at_medregg_0'/>
-    </child>
+  <mission tag='msn_multijump'>
+    <fields>
+      <name>
+        <![CDATA[Multi-Jump Tutorial]]>
+      </name>
+      <globally_unique>
+        <![CDATA[true]]>
+      </globally_unique>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <description>
+        <![CDATA[This tutorial begins with how to jump into a sector farther away than one leap, and ends with combat! ]]>
+      </description>
+      <unique>
+        <![CDATA[true]]>
+      </unique>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <setup>
+        <ref tag='set_addon_tutorial_done'/>
+        <ref tag='sell_lasers'/>
+      </setup>
+      <sponsors/>
+      <fleets_to_die/>
+      <worthy>
+        <ref tag='completed_jumping'/>
+      </worthy>
+      <fleets_that_died/>
+      <checks>
+        <ref tag='check_in_alpha_centauri2'/>
+        <ref tag='check_at_sol_2'/>
+        <ref tag='check_on_earth_2'/>
+        <ref tag='check_at_medregg_0'/>
+      </checks>
+    </children>
   </mission>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:727' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:727'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:2422' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:2422'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:890' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:890'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <ifthen tag='intro_check_planet' labels=''>
-    <child name='ifs'>
-      <ref tag='on_earth'/>
-    </child>
-    <child name='thens'>
-      <ref tag='end'/>
-    </child>
+  <ifthen tag='intro_check_planet'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='on_earth'/>
+      </ifs>
+      <thens>
+        <ref tag='end'/>
+      </thens>
+    </children>
   </ifthen>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser' auto_accelerate='true' amount='0.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <fleet name='Trading Fleet' current_stay='0.0' under_attack='flee' tag='fleet_traders' spawn_chance='0.3' min_stay='5.0' behavior='trade' max_stay='10.0' labels='' unique='false'>
-    <child name='owner'>
-      <ref tag='org_terrans'/>
-    </child>
-    <child name='ships'>
-      <ref tag='scout_traders'/>
-      <ref tag='scout_traders'/>
-    </child>
+  <fleet tag='fleet_traders'>
+    <fields>
+      <name>
+        <![CDATA[Trading Fleet]]>
+      </name>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <max_stay>
+        <![CDATA[10.0]]>
+      </max_stay>
+      <under_attack>
+        <![CDATA[flee]]>
+      </under_attack>
+      <spawn_chance>
+        <![CDATA[0.3]]>
+      </spawn_chance>
+      <min_stay>
+        <![CDATA[5.0]]>
+      </min_stay>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <behavior>
+        <![CDATA[trade]]>
+      </behavior>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_terrans'/>
+      </owner>
+      <ships>
+        <ref tag='scout_traders'/>
+        <ref tag='scout_traders'/>
+      </ships>
+    </children>
   </fleet>
-  <infoaction message='Welcome to Earth!  Congratulations on a safe landing.
+  <infoaction tag='msg_planet_tutorial'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[Welcome to Earth!  Congratulations on a safe landing.
 
-Next, I&apos;ll explain how Trading works.  Click &quot;Marketplace&quot; and you&apos;ll see two columns.  The one on the left represents all the cargo on your ship, and the one on the right represents all the cargo available for purchase, or that this planet will buy from you.
-When you click on a cargo in either list, you&apos;ll see how much you can buy it for  or how much it&apos;s worth sold.  You can then use the &apos;&lt;&lt;&apos; and &apos;&gt;&gt;&apos; buttons to buy or sell, respectively.
+Next, I'll explain how Trading works.  Click "Marketplace" and you'll see two columns.  The one on the left represents all the cargo on your ship, and the one on the right represents all the cargo available for purchase, or that this planet will buy from you.
+When you click on a cargo in either list, you'll see how much you can buy it for  or how much it's worth sold.  You can then use the '<<' and '>>' buttons to buy or sell, respectively.
 
-Another important part of the game is Missions.  The Mission Computer will give you a number of missions - some random, some plot related.   It&apos;s via Missions and Trading that you&apos;ll make most of your money. 
+Another important part of the game is Missions.  The Mission Computer will give you a number of missions - some random, some plot related.   It's via Missions and Trading that you'll make most of your money. 
 
-To continue the tutorial, accept the &quot;Map and Jumping Tutorial&quot; mission. ' tag='msg_planet_tutorial' show_once_only='false' labels='' shown='false'/>
-  <shipblueprint name='Terran Defender' armor_regen='0.005' rot_per_sec='135.0' max_speed='200.0' max_cargo='100.0' accel='150.0' fuel_regen='0.0001' secs_to_jump='5.0' image_filename='longhaul.png' tag='defender_class' description=' The Terran Defender is the top-of-the-line military ship, designed to be able to withstand a Medreggi assault.  Normally these would be available to only those officially affiliated with the Terran Military, but with the current state of the offensive failing, just about anyone with a pilot&apos;s license can have one.' expansion_space='50.0' fuel_per_jump='35.0' shield_regen='0.01' hardpoints='5.0' max_armor='1000.0' max_shields='1200.0' labels='' max_fuel='100.0'/>
-  <weaponblueprint secondary_weapon='false' name='Missile' rot_per_sec='0.0' max_speed='0.0' accel='0.0' price='50.0' turreted='false' damage='0.0' image_filename='redMissile.png' cooldown='0.0' tag='ammo_missile' auto_accelerate='false' amount='0.0' description=' For use with the standard-issue missile launcher.
+To continue the tutorial, accept the "Map and Jumping Tutorial" mission. ]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[false]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <shipblueprint tag='defender_class'>
+    <fields>
+      <name>
+        <![CDATA[Terran Defender]]>
+      </name>
+      <armor_regen>
+        <![CDATA[0.005]]>
+      </armor_regen>
+      <rot_per_sec>
+        <![CDATA[135.0]]>
+      </rot_per_sec>
+      <accel>
+        <![CDATA[150.0]]>
+      </accel>
+      <secs_to_jump>
+        <![CDATA[5.0]]>
+      </secs_to_jump>
+      <fuel_regen>
+        <![CDATA[0.0001]]>
+      </fuel_regen>
+      <image_filename>
+        <![CDATA[longhaul.png]]>
+      </image_filename>
+      <max_speed>
+        <![CDATA[200.0]]>
+      </max_speed>
+      <max_cargo>
+        <![CDATA[100.0]]>
+      </max_cargo>
+      <fuel_per_jump>
+        <![CDATA[35.0]]>
+      </fuel_per_jump>
+      <hardpoints>
+        <![CDATA[5.0]]>
+      </hardpoints>
+      <shield_regen>
+        <![CDATA[0.01]]>
+      </shield_regen>
+      <description>
+        <![CDATA[ The Terran Defender is the top-of-the-line military ship, designed to be able to withstand a Medreggi assault.  Normally these would be available to only those officially affiliated with the Terran Military, but with the current state of the offensive failing, just about anyone with a pilot's license can have one.]]>
+      </description>
+      <expansion_space>
+        <![CDATA[50.0]]>
+      </expansion_space>
+      <max_armor>
+        <![CDATA[1000.0]]>
+      </max_armor>
+      <max_shields>
+        <![CDATA[1200.0]]>
+      </max_shields>
+      <labels>
+      </labels>
+      <max_fuel>
+        <![CDATA[100.0]]>
+      </max_fuel>
+    </fields>
+    <children/>
+  </shipblueprint>
+  <weaponblueprint tag='ammo_missile'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Missile]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[0.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[50.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[1.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[0.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[true]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[0.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[0.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[true]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ For use with the standard-issue missile launcher.
 
-Remember, without a missile launcher, the missiles are useless!' is_ammo='true' expansion_required='1.0' labels='' hardpoints_required='0.0' seeking='true' max_ttl='0.0' max_cooldown='0.0'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+Remember, without a missile launcher, the missiles are useless!]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[0.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[0.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <ifthen tag='check_planet_tutorial_done' labels=''>
-    <child name='ifs'>
-      <ref tag='check_flag_planet_done'/>
-    </child>
-    <child name='thens'>
-      <ref tag='end'/>
-    </child>
+  <ifthen tag='check_planet_tutorial_done'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='check_flag_planet_done'/>
+      </ifs>
+      <thens>
+        <ref tag='end'/>
+      </thens>
+    </children>
   </ifthen>
-  <infoaction message='   * Welcome to Kuiper! *
+  <infoaction tag='msg_meet_and_greet'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[   * Welcome to Kuiper! *
 
-This tutorial will explain most facets of playing the game.  To review the instructions at any time, press &apos;I&apos; (for &apos;Info&apos;) and click the &apos;mission&apos; button.
+This tutorial will explain most facets of playing the game.  To review the instructions at any time, press 'I' (for 'Info') and click the 'mission' button.
 
 Flight controls:
   * Left/Right arrow keys rotate your ship left or right.
@@ -354,367 +1869,1874 @@ Flight controls:
   * Down arrow key slows your ship
 Feel free to practice flying.  If you lose sight of the planet, a green arrow will appear on the radar to show you how to return.
 
-When you are ready to continue the tutorial, fly over the planet and press &quot;L&quot; to land on it.' tag='msg_meet_and_greet' show_once_only='false' labels='' shown='false'/>
-  <org killing_mod='-50.0' friendly='500.0' name='The Player' devoted='1000.0' gullibility='0.8' unfriendly='-500.0' tag='org_player' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
-    <child name='feelings'>
-      <relation labels='' feeling='1000000'>
-        <child name='target_org'>
-          <ref tag='org_player'/>
-        </child>
-      </relation>
-    </child>
+When you are ready to continue the tutorial, fly over the planet and press "L" to land on it.]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[false]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <org tag='org_player'>
+    <fields>
+      <name>
+        <![CDATA[The Player]]>
+      </name>
+      <friendly>
+        <![CDATA[500.0]]>
+      </friendly>
+      <devoted>
+        <![CDATA[1000.0]]>
+      </devoted>
+      <gullibility>
+        <![CDATA[0.8]]>
+      </gullibility>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <friendly_multiplier>
+        <![CDATA[0.5]]>
+      </friendly_multiplier>
+    </fields>
+    <children>
+      <feelings>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[1000000]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_player'/>
+            </target_org>
+          </children>
+        </relation>
+      </feelings>
+    </children>
   </org>
-  <fleet name='Defender Patrol' current_stay='0.0' under_attack='fight' tag='fleet_defender_patrol' spawn_chance='0.2' min_stay='10.0' behavior='patrol' max_stay='15.0' labels='' unique='false'>
-    <child name='owner'>
-      <ref tag='org_terrans'/>
-    </child>
-    <child name='ships'>
-      <ref tag='defender_prepared'/>
-    </child>
+  <fleet tag='fleet_defender_patrol'>
+    <fields>
+      <name>
+        <![CDATA[Defender Patrol]]>
+      </name>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <max_stay>
+        <![CDATA[15.0]]>
+      </max_stay>
+      <under_attack>
+        <![CDATA[fight]]>
+      </under_attack>
+      <spawn_chance>
+        <![CDATA[0.2]]>
+      </spawn_chance>
+      <min_stay>
+        <![CDATA[10.0]]>
+      </min_stay>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <behavior>
+        <![CDATA[patrol]]>
+      </behavior>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_terrans'/>
+      </owner>
+      <ships>
+        <ref tag='defender_prepared'/>
+      </ships>
+    </children>
   </fleet>
-  <ship velocity_x='0.0' name='Medreggi Warship' velocity_y='0.0001' facing_x='0.0' price='0.0' facing_y='-1.0' armor='1100.0' x='0.0' y='0.0' shields='1200.0' chosen_secondary_index='0.0' fuel='100.0' tag='ship_medregg_prepared' jumping_progress='0.0' labels=''>
-    <child name='itinerary'/>
-    <child name='owner'/>
-    <child name='cargo'/>
-    <child name='secondaries'>
-      <ref tag='wpn_missile_launcher:5230'/>
-    </child>
-    <child name='anti_addons'/>
-    <child name='target'/>
-    <child name='addons'/>
-    <child name='ammo'>
-      <ref tag='ammo_missile:3454'/>
-    </child>
-    <child name='weapons'>
-      <ref tag='wpn_basic_laser:9263'/>
-    </child>
-    <child name='blueprint'>
-      <ref tag='shipprint_medreggi'/>
-    </child>
+  <ship tag='ship_medregg_prepared'>
+    <fields>
+      <name>
+        <![CDATA[Medreggi Warship]]>
+      </name>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <armor>
+        <![CDATA[1100.0]]>
+      </armor>
+      <shields>
+        <![CDATA[1200.0]]>
+      </shields>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <fuel>
+        <![CDATA[100.0]]>
+      </fuel>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <labels>
+      </labels>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+    </fields>
+    <children>
+      <itinerary/>
+      <owner/>
+      <cargo/>
+      <secondaries>
+        <ref tag='wpn_missile_launcher:5230'/>
+      </secondaries>
+      <anti_addons/>
+      <target/>
+      <addons/>
+      <ammo>
+        <ref tag='ammo_missile:3454'/>
+      </ammo>
+      <weapons>
+        <ref tag='wpn_basic_laser:9263'/>
+      </weapons>
+      <blueprint>
+        <ref tag='shipprint_medreggi'/>
+      </blueprint>
+    </children>
   </ship>
-  <ifthen tag='check_on_earth_2' labels=''>
-    <child name='ifs'>
-      <ref tag='on_earth'/>
-    </child>
-    <child name='thens'>
-      <ref tag='msg_explain_weapons'/>
-      <ref tag='describe_weapons'/>
-    </child>
+  <ifthen tag='check_on_earth_2'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='on_earth'/>
+      </ifs>
+      <thens>
+        <ref tag='msg_explain_weapons'/>
+        <ref tag='describe_weapons'/>
+      </thens>
+    </children>
   </ifthen>
-  <mission globally_unique='true' name='Addon Tutorial' exit_code='0.0' tag='msn_addons' description='To continue, accept the &quot;Multi-Jump Tutorial&quot; mission from Charon ' labels='' unique='true'>
-    <child name='setup'>
-      <ref tag='msg_explain_addon'/>
-    </child>
-    <child name='sponsors'/>
-    <child name='fleets_to_die'/>
-    <child name='worthy'>
-      <ref tag='completed_jumping'/>
-    </child>
-    <child name='fleets_that_died'/>
-    <child name='checks'>
-      <ref tag='check_flag_addon_done'/>
-    </child>
+  <mission tag='msn_addons'>
+    <fields>
+      <name>
+        <![CDATA[Addon Tutorial]]>
+      </name>
+      <globally_unique>
+        <![CDATA[true]]>
+      </globally_unique>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <description>
+        <![CDATA[To continue, accept the "Multi-Jump Tutorial" mission from Charon ]]>
+      </description>
+      <unique>
+        <![CDATA[true]]>
+      </unique>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <setup>
+        <ref tag='msg_explain_addon'/>
+      </setup>
+      <sponsors/>
+      <fleets_to_die/>
+      <worthy>
+        <ref tag='completed_jumping'/>
+      </worthy>
+      <fleets_that_died/>
+      <checks>
+        <ref tag='check_flag_addon_done'/>
+      </checks>
+    </children>
   </mission>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:7482' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:7482'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9545' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:9545'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:7102' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:7102'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <ifthen tag='check_at_sol_2' labels=''>
-    <child name='ifs'>
-      <ref tag='in_sol?'/>
-    </child>
-    <child name='thens'>
-      <ref tag='msg_instruct_saving'/>
-      <ref tag='describe_saving'/>
-    </child>
+  <ifthen tag='check_at_sol_2'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='in_sol?'/>
+      </ifs>
+      <thens>
+        <ref tag='msg_instruct_saving'/>
+        <ref tag='describe_saving'/>
+      </thens>
+    </children>
   </ifthen>
-  <completedcondition exit_code='0.0' tag='completed_jumping' labels=''>
-    <child name='completed'>
-      <ref tag='map_and_jumping'/>
-    </child>
+  <completedcondition tag='completed_jumping'>
+    <fields>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <completed>
+        <ref tag='map_and_jumping'/>
+      </completed>
+    </children>
   </completedcondition>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:6349' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:6349'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <fleet name='Medregg Fleet' current_stay='0.0' under_attack='fight' tag='fleet_medreggi' spawn_chance='0.2' min_stay='30.0' behavior='patrol' max_stay='45.0' labels='' unique='false'>
-    <child name='owner'>
-      <ref tag='org_medreggi'/>
-    </child>
-    <child name='ships'>
-      <ref tag='ship_medregg_prepared'/>
-      <ref tag='ship_medregg_prepared'/>
-    </child>
+  <fleet tag='fleet_medreggi'>
+    <fields>
+      <name>
+        <![CDATA[Medregg Fleet]]>
+      </name>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <max_stay>
+        <![CDATA[45.0]]>
+      </max_stay>
+      <under_attack>
+        <![CDATA[fight]]>
+      </under_attack>
+      <spawn_chance>
+        <![CDATA[0.2]]>
+      </spawn_chance>
+      <min_stay>
+        <![CDATA[30.0]]>
+      </min_stay>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <behavior>
+        <![CDATA[patrol]]>
+      </behavior>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_medreggi'/>
+      </owner>
+      <ships>
+        <ref tag='ship_medregg_prepared'/>
+        <ref tag='ship_medregg_prepared'/>
+      </ships>
+    </children>
   </fleet>
-  <sector name='Alpha Centauri' x='81.0' visited='true' y='-52.0' tag='sector_alpha_centauri' description=' Alpha Centauri is the closest star system to Earth, and was therefore one of the first colonized.' labels=''>
-    <child name='potential_fleets'>
-      <ref tag='fleet_defender_patrol'/>
-      <ref tag='fleet_traders'/>
-    </child>
-    <child name='links_to'>
-      <ref tag='sector_sol'/>
-    </child>
-    <child name='planets'>
-      <ref tag='planet_chiron'/>
-    </child>
-    <child name='plot'/>
-    <child name='projectiles'/>
-    <child name='killed_fleets'/>
-    <child name='halos'/>
-    <child name='active_fleets'/>
+  <sector tag='sector_alpha_centauri'>
+    <fields>
+      <name>
+        <![CDATA[Alpha Centauri]]>
+      </name>
+      <visited>
+        <![CDATA[true]]>
+      </visited>
+      <x>
+        <![CDATA[81.0]]>
+      </x>
+      <y>
+        <![CDATA[-52.0]]>
+      </y>
+      <description>
+        <![CDATA[ Alpha Centauri is the closest star system to Earth, and was therefore one of the first colonized.]]>
+      </description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <potential_fleets>
+        <ref tag='fleet_defender_patrol'/>
+        <ref tag='fleet_traders'/>
+      </potential_fleets>
+      <links_to>
+        <ref tag='sector_sol'/>
+      </links_to>
+      <planets>
+        <ref tag='planet_chiron'/>
+      </planets>
+      <plot/>
+      <projectiles/>
+      <killed_fleets/>
+      <halos/>
+      <active_fleets/>
+    </children>
   </sector>
-  <planet name='Earth' landing_distance='100.0' x='-6.0' y='13.0' fuel_cost='1.0' image_filename='planetoid.png' tag='planet_earth' description=' Earth; for millions of years, humanity was trapped on her surface.  Now, finally, mankind has begun to spread out.  ' labels=''>
-    <child name='missions'>
-      <ref tag='map_and_jumping'/>
-    </child>
-    <child name='random_missions'/>
-    <child name='owner'/>
-    <child name='cargo_for_sale'>
-      <ref tag='fruit_cheap'/>
-    </child>
-    <child name='plot'>
-      <ref tag='welcome_planet'/>
-    </child>
-    <child name='addons_for_sale'/>
-    <child name='weapons_for_sale'/>
-    <child name='ships_for_sale'/>
+  <planet tag='planet_earth'>
+    <fields>
+      <name>
+        <![CDATA[Earth]]>
+      </name>
+      <x>
+        <![CDATA[-6.0]]>
+      </x>
+      <image_filename>
+        <![CDATA[planetoid.png]]>
+      </image_filename>
+      <y>
+        <![CDATA[13.0]]>
+      </y>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
+      <description>
+        <![CDATA[ Earth; for millions of years, humanity was trapped on her surface.  Now, finally, mankind has begun to spread out.  ]]>
+      </description>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <missions>
+        <ref tag='map_and_jumping'/>
+      </missions>
+      <random_missions/>
+      <owner/>
+      <cargo_for_sale>
+        <ref tag='fruit_cheap'/>
+      </cargo_for_sale>
+      <plot>
+        <ref tag='welcome_planet'/>
+      </plot>
+      <addons_for_sale/>
+      <weapons_for_sale/>
+      <ships_for_sale/>
+    </children>
   </planet>
-  <ship velocity_x='0.0' name='Terran Defenders' velocity_y='0.0001' facing_x='0.0' price='0.0' facing_y='-1.0' armor='1000.0' x='0.0' y='0.0' shields='1200.0' chosen_secondary_index='0.0' fuel='100.0' tag='defender_prepared' jumping_progress='0.0' labels=''>
-    <child name='itinerary'/>
-    <child name='owner'/>
-    <child name='cargo'/>
-    <child name='secondaries'/>
-    <child name='anti_addons'/>
-    <child name='target'/>
-    <child name='addons'/>
-    <child name='ammo'/>
-    <child name='weapons'>
-      <ref tag='wpn_basic_laser:3944'/>
-    </child>
-    <child name='blueprint'>
-      <ref tag='defender_class'/>
-    </child>
+  <ship tag='defender_prepared'>
+    <fields>
+      <name>
+        <![CDATA[Terran Defenders]]>
+      </name>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <armor>
+        <![CDATA[1000.0]]>
+      </armor>
+      <shields>
+        <![CDATA[1200.0]]>
+      </shields>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <fuel>
+        <![CDATA[100.0]]>
+      </fuel>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <labels>
+      </labels>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+    </fields>
+    <children>
+      <itinerary/>
+      <owner/>
+      <cargo/>
+      <secondaries/>
+      <anti_addons/>
+      <target/>
+      <addons/>
+      <ammo/>
+      <weapons>
+        <ref tag='wpn_basic_laser:3944'/>
+      </weapons>
+      <blueprint>
+        <ref tag='defender_class'/>
+      </blueprint>
+    </children>
   </ship>
-  <atcondition tag='in_sol?' labels=''>
-    <child name='locations'>
-      <ref tag='sector_sol'/>
-    </child>
+  <atcondition tag='in_sol?'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <locations>
+        <ref tag='sector_sol'/>
+      </locations>
+    </children>
   </atcondition>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:478' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:478'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <cargo average_price='0.0' tag='expensive_fruit' mission_related='false' amount='0.0' markup='25.0' labels=''>
-    <child name='blueprint'>
-      <ref tag='cargo_fruit_base'/>
-    </child>
+  <cargo tag='expensive_fruit'>
+    <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <markup>
+        <![CDATA[25.0]]>
+      </markup>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargo_fruit_base'/>
+      </blueprint>
+    </children>
   </cargo>
-  <sector name='Medregg' x='-278.0' visited='false' y='-67.0' tag='sector_medregg' description=' This sector is home to the hostile Medreggi - an alien race that thus far has attempted no form of communication aside from destruction.' labels=''>
-    <child name='potential_fleets'>
-      <ref tag='fleet_tdf'/>
-      <ref tag='fleet_medreggi'/>
-    </child>
-    <child name='links_to'>
-      <ref tag='sector_sol'/>
-    </child>
-    <child name='planets'/>
-    <child name='plot'>
-      <ref tag='msn_combat_tutorial'/>
-    </child>
-    <child name='projectiles'/>
-    <child name='killed_fleets'/>
-    <child name='halos'/>
-    <child name='active_fleets'/>
+  <sector tag='sector_medregg'>
+    <fields>
+      <name>
+        <![CDATA[Medregg]]>
+      </name>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
+      <x>
+        <![CDATA[-278.0]]>
+      </x>
+      <y>
+        <![CDATA[-67.0]]>
+      </y>
+      <description>
+        <![CDATA[ This sector is home to the hostile Medreggi - an alien race that thus far has attempted no form of communication aside from destruction.]]>
+      </description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <potential_fleets>
+        <ref tag='fleet_tdf'/>
+        <ref tag='fleet_medreggi'/>
+      </potential_fleets>
+      <links_to>
+        <ref tag='sector_sol'/>
+      </links_to>
+      <planets/>
+      <plot>
+        <ref tag='msn_combat_tutorial'/>
+      </plot>
+      <projectiles/>
+      <killed_fleets/>
+      <halos/>
+      <active_fleets/>
+    </children>
   </sector>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:896' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:896'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <mission globally_unique='true' name='Combat Tutorial' exit_code='0.0' tag='msn_combat_tutorial' description='Fight for Earth! ' labels='' unique='true'>
-    <child name='setup'>
-      <ref tag='msg_explain_combat'/>
-    </child>
-    <child name='sponsors'/>
-    <child name='fleets_to_die'/>
-    <child name='worthy'>
-      <ref tag='at_medregg?'/>
-      <ref tag='completed_multijump?'/>
-    </child>
-    <child name='fleets_that_died'/>
-    <child name='checks'/>
+  <mission tag='msn_combat_tutorial'>
+    <fields>
+      <name>
+        <![CDATA[Combat Tutorial]]>
+      </name>
+      <globally_unique>
+        <![CDATA[true]]>
+      </globally_unique>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <description>
+        <![CDATA[Fight for Earth! ]]>
+      </description>
+      <unique>
+        <![CDATA[true]]>
+      </unique>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <setup>
+        <ref tag='msg_explain_combat'/>
+      </setup>
+      <sponsors/>
+      <fleets_to_die/>
+      <worthy>
+        <ref tag='at_medregg?'/>
+        <ref tag='completed_multijump?'/>
+      </worthy>
+      <fleets_that_died/>
+      <checks/>
+    </children>
   </mission>
-  <flagcondition flag_tag='flag_addon_tutorial_done' is_set='true' number_is='0.0' tag='cond_addon_tutorial_done' is_not_set='false' note_is='' labels=''/>
-  <descriptionaction tag='describe_saving' new_description='You can press &apos;escape&apos; any time while flying to get to the main menu, and from there save your game.
+  <flagcondition tag='cond_addon_tutorial_done'>
+    <fields>
+      <is_set>
+        <![CDATA[true]]>
+      </is_set>
+      <number_is>
+        <![CDATA[0.0]]>
+      </number_is>
+      <is_not_set>
+        <![CDATA[false]]>
+      </is_not_set>
+      <note_is>
+      </note_is>
+      <flag_tag>
+        <![CDATA[flag_addon_tutorial_done]]>
+      </flag_tag>
+      <labels>
+      </labels>
+    </fields>
+    <children/>
+  </flagcondition>
+  <descriptionaction tag='describe_saving'>
+    <fields>
+      <new_description>
+        <![CDATA[You can press 'escape' any time while flying to get to the main menu, and from there save your game.
 
-Land on Earth to learn about weaponry. ' labels=''>
-    <child name='target'>
-      <ref tag='msn_multijump'/>
-    </child>
+Land on Earth to learn about weaponry. ]]>
+      </new_description>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <target>
+        <ref tag='msn_multijump'/>
+      </target>
+    </children>
   </descriptionaction>
-  <mission globally_unique='true' name='Map and Jumping Tutorial' exit_code='0.0' tag='map_and_jumping' description='This mission will explain how to jump between sectors.  Accept it to continue. ' labels='' unique='true'>
-    <child name='setup'>
-      <ref tag='set_flag_planet_done'/>
-      <ref tag='describe_map_and_jumping'/>
-    </child>
-    <child name='sponsors'/>
-    <child name='fleets_to_die'/>
-    <child name='worthy'/>
-    <child name='fleets_that_died'/>
-    <child name='checks'>
-      <ref tag='map_and_jumping_check_reached_orbit'/>
-      <ref tag='check_in_alpha_centauri1'/>
-    </child>
+  <mission tag='map_and_jumping'>
+    <fields>
+      <name>
+        <![CDATA[Map and Jumping Tutorial]]>
+      </name>
+      <globally_unique>
+        <![CDATA[true]]>
+      </globally_unique>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <description>
+        <![CDATA[This mission will explain how to jump between sectors.  Accept it to continue. ]]>
+      </description>
+      <unique>
+        <![CDATA[true]]>
+      </unique>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <setup>
+        <ref tag='set_flag_planet_done'/>
+        <ref tag='describe_map_and_jumping'/>
+      </setup>
+      <sponsors/>
+      <fleets_to_die/>
+      <worthy/>
+      <fleets_that_died/>
+      <checks>
+        <ref tag='map_and_jumping_check_reached_orbit'/>
+        <ref tag='check_in_alpha_centauri1'/>
+      </checks>
+    </children>
   </mission>
-  <org killing_mod='-50.0' friendly='500.0' name='Terrans' devoted='1000.0' gullibility='0.8' unfriendly='-500.0' tag='org_terrans' shooting_mod='-10.0' friendly_shots_threshold='3.0' neutral='0.0' kill_on_sight='-1000.0' labels='' friendly_multiplier='0.5'>
-    <child name='feelings'>
-      <relation labels='' feeling='1000000'>
-        <child name='target_org'>
-          <ref tag='org_terrans'/>
-        </child>
-      </relation>
-      <relation labels='' feeling='-1000.0'>
-        <child name='target_org'>
-          <ref tag='org_medreggi'/>
-        </child>
-      </relation>
-    </child>
+  <org tag='org_terrans'>
+    <fields>
+      <name>
+        <![CDATA[Terrans]]>
+      </name>
+      <friendly>
+        <![CDATA[500.0]]>
+      </friendly>
+      <devoted>
+        <![CDATA[1000.0]]>
+      </devoted>
+      <gullibility>
+        <![CDATA[0.8]]>
+      </gullibility>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <friendly_multiplier>
+        <![CDATA[0.5]]>
+      </friendly_multiplier>
+    </fields>
+    <children>
+      <feelings>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[1000000]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_terrans'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_medreggi'/>
+            </target_org>
+          </children>
+        </relation>
+      </feelings>
+    </children>
   </org>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:8535' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:8535'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:3465' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:3465'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <infoaction message='Saving
+  <infoaction tag='msg_instruct_saving'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[Saving
 
-The Medregg sector is typically full of enemies; you&apos;re going to want to save your game before taking them on.   You can press &apos;escape&apos; while flying to go back to the main menu.  From there, press &apos;save game&apos; and your game will be saved.   When you start up Kuiper later, you can press &apos;load game&apos; to pick up where you left off.  To go right back to playing, press &apos;Resume game&apos;.  Your game will also automatically be saved when you take off from a planet.
+The Medregg sector is typically full of enemies; you're going to want to save your game before taking them on.   You can press 'escape' while flying to go back to the main menu.  From there, press 'save game' and your game will be saved.   When you start up Kuiper later, you can press 'load game' to pick up where you left off.  To go right back to playing, press 'Resume game'.  Your game will also automatically be saved when you take off from a planet.
 
-You may also want weapons to deal with the alien menace.  Land on Earth to learn about them. ' tag='msg_instruct_saving' show_once_only='true' labels='' shown='false'/>
-  <mission globally_unique='true' name='Planet Tutorial' exit_code='0.0' tag='welcome_planet' description='Remember, to continue this tutorial you&apos;ll need to accept the &quot;Map and Jumping Tutorial&quot; mission from Earth.  To land there, just fly near it and press &quot;L&quot; ' labels='' unique='true'>
-    <child name='setup'>
-      <ref tag='msg_planet_tutorial'/>
-    </child>
-    <child name='sponsors'/>
-    <child name='fleets_to_die'/>
-    <child name='worthy'/>
-    <child name='fleets_that_died'/>
-    <child name='checks'>
-      <ref tag='check_planet_tutorial_done'/>
-    </child>
+You may also want weapons to deal with the alien menace.  Land on Earth to learn about them. ]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[true]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <mission tag='welcome_planet'>
+    <fields>
+      <name>
+        <![CDATA[Planet Tutorial]]>
+      </name>
+      <globally_unique>
+        <![CDATA[true]]>
+      </globally_unique>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <description>
+        <![CDATA[Remember, to continue this tutorial you'll need to accept the "Map and Jumping Tutorial" mission from Earth.  To land there, just fly near it and press "L" ]]>
+      </description>
+      <unique>
+        <![CDATA[true]]>
+      </unique>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <setup>
+        <ref tag='msg_planet_tutorial'/>
+      </setup>
+      <sponsors/>
+      <fleets_to_die/>
+      <worthy/>
+      <fleets_that_died/>
+      <checks>
+        <ref tag='check_planet_tutorial_done'/>
+      </checks>
+    </children>
   </mission>
-  <ifthen tag='check_in_alpha_centauri1' labels=''>
-    <child name='ifs'>
-      <ref tag='in_alpha_centauri?'/>
-    </child>
-    <child name='thens'>
-      <ref tag='inform_offscreen_planet'/>
-      <ref tag='end'/>
-    </child>
+  <ifthen tag='check_in_alpha_centauri1'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='in_alpha_centauri?'/>
+      </ifs>
+      <thens>
+        <ref tag='inform_offscreen_planet'/>
+        <ref tag='end'/>
+      </thens>
+    </children>
   </ifthen>
-  <map tag='map' labels=''>
-    <child name='sectors'>
-      <ref tag='sector_sol'/>
-      <ref tag='sector_alpha_centauri'/>
-      <ref tag='sector_medregg'/>
-    </child>
+  <map tag='map'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <sectors>
+        <ref tag='sector_sol'/>
+        <ref tag='sector_alpha_centauri'/>
+        <ref tag='sector_medregg'/>
+      </sectors>
+    </children>
   </map>
-  <cargo average_price='0.0' tag='fruit_cheap' mission_related='false' amount='0.0' markup='-25.0' labels=''>
-    <child name='blueprint'>
-      <ref tag='cargo_fruit_base'/>
-    </child>
+  <cargo tag='fruit_cheap'>
+    <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <markup>
+        <![CDATA[-25.0]]>
+      </markup>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargo_fruit_base'/>
+      </blueprint>
+    </children>
   </cargo>
-  <planet name='Chiron' landing_distance='150.0' x='127.0' y='-195.0' fuel_cost='1.0' image_filename='toxic.png' tag='planet_chiron' description='This planet is not yet remotely habitable; terraforming to the extent that it will no longer require a pressure suit to go outside is still centuries away from completion. ' labels=''>
-    <child name='missions'>
-      <ref tag='msn_multijump'/>
-    </child>
-    <child name='random_missions'/>
-    <child name='owner'/>
-    <child name='cargo_for_sale'>
-      <ref tag='expensive_fruit'/>
-    </child>
-    <child name='plot'>
-      <ref tag='msn_addons'/>
-    </child>
-    <child name='addons_for_sale'>
-      <ref tag='addon_afterburner'/>
-    </child>
-    <child name='weapons_for_sale'/>
-    <child name='ships_for_sale'>
-      <ref tag='defender_bare'/>
-    </child>
+  <planet tag='planet_chiron'>
+    <fields>
+      <name>
+        <![CDATA[Chiron]]>
+      </name>
+      <x>
+        <![CDATA[127.0]]>
+      </x>
+      <image_filename>
+        <![CDATA[toxic.png]]>
+      </image_filename>
+      <y>
+        <![CDATA[-195.0]]>
+      </y>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
+      <description>
+        <![CDATA[This planet is not yet remotely habitable; terraforming to the extent that it will no longer require a pressure suit to go outside is still centuries away from completion. ]]>
+      </description>
+      <landing_distance>
+        <![CDATA[150.0]]>
+      </landing_distance>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <missions>
+        <ref tag='msn_multijump'/>
+      </missions>
+      <random_missions/>
+      <owner/>
+      <cargo_for_sale>
+        <ref tag='expensive_fruit'/>
+      </cargo_for_sale>
+      <plot>
+        <ref tag='msn_addons'/>
+      </plot>
+      <addons_for_sale>
+        <ref tag='addon_afterburner'/>
+      </addons_for_sale>
+      <weapons_for_sale/>
+      <ships_for_sale>
+        <ref tag='defender_bare'/>
+      </ships_for_sale>
+    </children>
   </planet>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:2474' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <weaponblueprint tag='wpn_basic_laser:2474'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <ifthen tag='check_in_alpha_centauri2' labels=''>
-    <child name='ifs'>
-      <ref tag='at_alpha_centauri?'/>
-    </child>
-    <child name='thens'>
-      <ref tag='msg_explain_multijump'/>
-      <ref tag='describe_multijump_1'/>
-    </child>
+  <ifthen tag='check_in_alpha_centauri2'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='at_alpha_centauri?'/>
+      </ifs>
+      <thens>
+        <ref tag='msg_explain_multijump'/>
+        <ref tag='describe_multijump_1'/>
+      </thens>
+    </children>
   </ifthen>
-  <endaction exit_code='0.0' tag='end' labels=''/>
-  <infoaction message='The universe is a much bigger place than just one sector.
+  <endaction tag='end'>
+    <fields>
+      <exit_code>
+        <![CDATA[0.0]]>
+      </exit_code>
+      <labels>
+      </labels>
+    </fields>
+    <children/>
+  </endaction>
+  <infoaction tag='instruct_on_jumping'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[The universe is a much bigger place than just one sector.
 
-To go to the Alpha Centauri sector, you&apos;ll need to pull up your map with the &apos;m&apos; key.  Then, click on Alpha Centauri and press &apos;Add to Itinerary&apos;.  You&apos;ll see the name of the sector appear in a list in the upper right.  Then press &apos;done&apos;.
+To go to the Alpha Centauri sector, you'll need to pull up your map with the 'm' key.  Then, click on Alpha Centauri and press 'Add to Itinerary'.  You'll see the name of the sector appear in a list in the upper right.  Then press 'done'.
 
-To jump out of your current sector, just hold down the &apos;J&apos; button. An indicator should appear on-screen, showing how long until the jump will complete.
+To jump out of your current sector, just hold down the 'J' button. An indicator should appear on-screen, showing how long until the jump will complete.
 
-To complete this mission, jump to Alpha Centauri. ' tag='instruct_on_jumping' show_once_only='true' labels='' shown='false'/>
-  <cargoblueprint name='Fruit' tag='cargo_fruit_base' base_price='100.0' description='Real fruit is a delicacy in some places ' labels=''/>
-  <shipblueprint name='Medreggi Warship' armor_regen='0.005' rot_per_sec='150.0' max_speed='150.0' max_cargo='10.0' accel='50.0' fuel_regen='0.0001' secs_to_jump='10.0' image_filename='salvage.png' tag='shipprint_medreggi' description=' The Medreggi Warships are as powerful as they are mysterious.  Which is very.' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.01' hardpoints='5.0' max_armor='1100.0' max_shields='1200.0' labels='' max_fuel='100.0'/>
-  <ifthen tag='check_at_medregg_0' labels=''>
-    <child name='ifs'>
-      <ref tag='at_medregg?'/>
-    </child>
-    <child name='thens'>
-      <ref tag='end'/>
-    </child>
+To complete this mission, jump to Alpha Centauri. ]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[true]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <cargoblueprint tag='cargo_fruit_base'>
+    <fields>
+      <name>
+        <![CDATA[Fruit]]>
+      </name>
+      <base_price>
+        <![CDATA[100.0]]>
+      </base_price>
+      <description>
+        <![CDATA[Real fruit is a delicacy in some places ]]>
+      </description>
+      <labels>
+      </labels>
+    </fields>
+    <children/>
+  </cargoblueprint>
+  <shipblueprint tag='shipprint_medreggi'>
+    <fields>
+      <name>
+        <![CDATA[Medreggi Warship]]>
+      </name>
+      <armor_regen>
+        <![CDATA[0.005]]>
+      </armor_regen>
+      <rot_per_sec>
+        <![CDATA[150.0]]>
+      </rot_per_sec>
+      <accel>
+        <![CDATA[50.0]]>
+      </accel>
+      <secs_to_jump>
+        <![CDATA[10.0]]>
+      </secs_to_jump>
+      <fuel_regen>
+        <![CDATA[0.0001]]>
+      </fuel_regen>
+      <image_filename>
+        <![CDATA[salvage.png]]>
+      </image_filename>
+      <max_speed>
+        <![CDATA[150.0]]>
+      </max_speed>
+      <max_cargo>
+        <![CDATA[10.0]]>
+      </max_cargo>
+      <fuel_per_jump>
+        <![CDATA[25.0]]>
+      </fuel_per_jump>
+      <hardpoints>
+        <![CDATA[5.0]]>
+      </hardpoints>
+      <shield_regen>
+        <![CDATA[0.01]]>
+      </shield_regen>
+      <description>
+        <![CDATA[ The Medreggi Warships are as powerful as they are mysterious.  Which is very.]]>
+      </description>
+      <expansion_space>
+        <![CDATA[10.0]]>
+      </expansion_space>
+      <max_armor>
+        <![CDATA[1100.0]]>
+      </max_armor>
+      <max_shields>
+        <![CDATA[1200.0]]>
+      </max_shields>
+      <labels>
+      </labels>
+      <max_fuel>
+        <![CDATA[100.0]]>
+      </max_fuel>
+    </fields>
+    <children/>
+  </shipblueprint>
+  <ifthen tag='check_at_medregg_0'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <ifs>
+        <ref tag='at_medregg?'/>
+      </ifs>
+      <thens>
+        <ref tag='end'/>
+      </thens>
+    </children>
   </ifthen>
-  <addon armor_regen='0.0' name='Afterburner' rot_per_sec='0.0' max_speed='50.0' max_cargo='0.0' accel='20.0' fuel_regen='0.0001' price='100.0' secs_to_jump='0.0' tag='addon_afterburner' expansion_space='0.0' description='This afterburner increases your overall speed, but will require more fuel when you jump ' fuel_per_jump='10.0' shield_regen='0.0' hardpoints='0.0' max_armor='0.0' max_shields='0.0' duration='30.0' expansion_required='3.0' labels='' hardpoints_required='0.0' max_fuel='0.0'/>
-  <shipblueprint name='Scout' armor_regen='0.01' rot_per_sec='200.0' max_speed='200.0' max_cargo='10.0' accel='150.0' fuel_regen='0.001' secs_to_jump='3.0' image_filename='shuttle.png' tag='scout_class' description=' ' expansion_space='10.0' fuel_per_jump='25.0' shield_regen='0.05' hardpoints='1.0' max_armor='100.0' max_shields='100.0' labels='' max_fuel='100.0'/>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:7923' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+  <addon tag='addon_afterburner'>
+    <fields>
+      <armor_regen>
+        <![CDATA[0.0]]>
+      </armor_regen>
+      <name>
+        <![CDATA[Afterburner]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[0.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <duration>
+        <![CDATA[30.0]]>
+      </duration>
+      <expansion_required>
+        <![CDATA[3.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[20.0]]>
+      </accel>
+      <secs_to_jump>
+        <![CDATA[0.0]]>
+      </secs_to_jump>
+      <fuel_regen>
+        <![CDATA[0.0001]]>
+      </fuel_regen>
+      <max_speed>
+        <![CDATA[50.0]]>
+      </max_speed>
+      <max_cargo>
+        <![CDATA[0.0]]>
+      </max_cargo>
+      <fuel_per_jump>
+        <![CDATA[10.0]]>
+      </fuel_per_jump>
+      <hardpoints>
+        <![CDATA[0.0]]>
+      </hardpoints>
+      <shield_regen>
+        <![CDATA[0.0]]>
+      </shield_regen>
+      <expansion_space>
+        <![CDATA[0.0]]>
+      </expansion_space>
+      <description>
+        <![CDATA[This afterburner increases your overall speed, but will require more fuel when you jump ]]>
+      </description>
+      <max_armor>
+        <![CDATA[0.0]]>
+      </max_armor>
+      <max_shields>
+        <![CDATA[0.0]]>
+      </max_shields>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[0.0]]>
+      </hardpoints_required>
+      <max_fuel>
+        <![CDATA[0.0]]>
+      </max_fuel>
+    </fields>
+    <children/>
+  </addon>
+  <shipblueprint tag='scout_class'>
+    <fields>
+      <name>
+        <![CDATA[Scout]]>
+      </name>
+      <armor_regen>
+        <![CDATA[0.01]]>
+      </armor_regen>
+      <rot_per_sec>
+        <![CDATA[200.0]]>
+      </rot_per_sec>
+      <accel>
+        <![CDATA[150.0]]>
+      </accel>
+      <secs_to_jump>
+        <![CDATA[3.0]]>
+      </secs_to_jump>
+      <fuel_regen>
+        <![CDATA[0.001]]>
+      </fuel_regen>
+      <image_filename>
+        <![CDATA[shuttle.png]]>
+      </image_filename>
+      <max_speed>
+        <![CDATA[200.0]]>
+      </max_speed>
+      <max_cargo>
+        <![CDATA[10.0]]>
+      </max_cargo>
+      <fuel_per_jump>
+        <![CDATA[25.0]]>
+      </fuel_per_jump>
+      <hardpoints>
+        <![CDATA[1.0]]>
+      </hardpoints>
+      <shield_regen>
+        <![CDATA[0.05]]>
+      </shield_regen>
+      <description>
+      </description>
+      <expansion_space>
+        <![CDATA[10.0]]>
+      </expansion_space>
+      <max_armor>
+        <![CDATA[100.0]]>
+      </max_armor>
+      <max_shields>
+        <![CDATA[100.0]]>
+      </max_shields>
+      <labels>
+      </labels>
+      <max_fuel>
+        <![CDATA[100.0]]>
+      </max_fuel>
+    </fields>
+    <children/>
+  </shipblueprint>
+  <weaponblueprint tag='wpn_basic_laser:7923'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
-  <sellitemsaction tag='sell_lasers' labels=''>
-    <child name='locations'>
-      <ref tag='planet_earth'/>
-    </child>
-    <child name='cargo'/>
-    <child name='orgs'/>
-    <child name='ships'/>
-    <child name='addons'/>
-    <child name='weapons'>
-      <ref tag='wpn_basic_laser'/>
-      <ref tag='wpn_missile_launcher'/>
-      <ref tag='ammo_missile'/>
-    </child>
+  <sellitemsaction tag='sell_lasers'>
+    <fields>
+      <labels>
+      </labels>
+    </fields>
+    <children>
+      <locations>
+        <ref tag='planet_earth'/>
+      </locations>
+      <cargo/>
+      <orgs/>
+      <ships/>
+      <addons/>
+      <weapons>
+        <ref tag='wpn_basic_laser'/>
+        <ref tag='wpn_missile_launcher'/>
+        <ref tag='ammo_missile'/>
+      </weapons>
+    </children>
   </sellitemsaction>
-  <infoaction message='Combat
+  <infoaction tag='msg_explain_combat'>
+    <fields>
+      <shown>
+        <![CDATA[false]]>
+      </shown>
+      <message>
+        <![CDATA[Combat
 
-When you press &apos;ok&apos; to this, you&apos;re likely to see a sector in turmoil.  Medreggi ships will be attacking Terrans, who are counting on you to help them.
+When you press 'ok' to this, you're likely to see a sector in turmoil.  Medreggi ships will be attacking Terrans, who are counting on you to help them.
 
-You can target enemies a number of ways.  By clicking on them with the mouse, by cycling through all available targets with the &apos;tab&apos; key, or by pressing &apos;r&apos; to select the nearest hostile target.  While you have a target selected, your weapons will not affect any other targets, and if you don&apos;t have any targets ,your weapons will affect the first thing they hit, so be careful!
+You can target enemies a number of ways.  By clicking on them with the mouse, by cycling through all available targets with the 'tab' key, or by pressing 'r' to select the nearest hostile target.  While you have a target selected, your weapons will not affect any other targets, and if you don't have any targets ,your weapons will affect the first thing they hit, so be careful!
 
 Ships targeting you will appear red on your radar.  Your shields will protect you from their fire and, when those are depleted, your armor.  If your armor is reduced to 0, the game is over.
 
-This is the last portion of the tutorial.  Good luck! ' tag='msg_explain_combat' show_once_only='true' labels='' shown='false'/>
-  <weaponblueprint secondary_weapon='false' name='Basic Laser' rot_per_sec='45.0' max_speed='600.0' accel='600.0' price='100.0' turreted='false' damage='25.0' image_filename='laser2.png' cooldown='0.0' tag='wpn_basic_laser:9852' auto_accelerate='true' amount='1.0' description=' This is your basic laser weaponry.  Fast, but none too powerful.' is_ammo='false' expansion_required='0.0' labels='' hardpoints_required='1.0' seeking='false' max_ttl='3.0' max_cooldown='1.5'>
-    <child name='anti_addons'/>
-    <child name='ammo'/>
+This is the last portion of the tutorial.  Good luck! ]]>
+      </message>
+      <labels>
+      </labels>
+      <show_once_only>
+        <![CDATA[true]]>
+      </show_once_only>
+    </fields>
+    <children/>
+  </infoaction>
+  <weaponblueprint tag='wpn_basic_laser:9852'>
+    <fields>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <rot_per_sec>
+        <![CDATA[45.0]]>
+      </rot_per_sec>
+      <price>
+        <![CDATA[100.0]]>
+      </price>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <accel>
+        <![CDATA[600.0]]>
+      </accel>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_cooldown>
+        <![CDATA[1.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <max_speed>
+        <![CDATA[600.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <damage>
+        <![CDATA[25.0]]>
+      </damage>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <description>
+        <![CDATA[ This is your basic laser weaponry.  Fast, but none too powerful.]]>
+      </description>
+      <labels>
+      </labels>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_ttl>
+        <![CDATA[3.0]]>
+      </max_ttl>
+    </fields>
+    <children>
+      <anti_addons/>
+      <ammo/>
+    </children>
   </weaponblueprint>
 </kuiper>

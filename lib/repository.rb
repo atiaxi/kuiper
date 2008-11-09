@@ -121,7 +121,8 @@ class Repository
   
   # Does a post_load on everything in the repository
   def post_load
-    @everything.each do | tag, obj |
+    @everything.keys.dup.each do | tag |
+      obj = @everything[tag]
       obj.post_load
     end
   end
