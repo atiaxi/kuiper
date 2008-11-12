@@ -47,6 +47,13 @@ class Repository
     @placeholders[holder.tag] << holder
   end
   
+  def all_labels
+    labels = @everything.values.collect do |obj|
+      obj.label_array
+    end
+    return labels.flatten
+  end
+  
   def delete(obj)
     @everything.delete(obj)
   end

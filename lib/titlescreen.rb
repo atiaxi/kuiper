@@ -83,6 +83,23 @@ class TitleScreen < State
     @loaduni = Button.new("Load Universe", 16) { self.load_universe() }
     @loaduni.rect.midtop = [ @newuni.rect.centerx, @newuni.rect.bottom + 3]
     self << @loaduni
+    
+    @multitest = ListBox.new
+    @multitest.rect.width = 200
+    @multitest.rect.height = 300
+    @multitest.items = [ 'asdf','b','c','d' ]
+    @multitest.translate_to(3,3)
+    @multitest.multi = true
+    @multitest.chooseCallback { puts @multitest.chosen.inspect }
+    #self << @multitest
+    
+    @omnitest = OmniChooser.new(@driver,"omni")
+    @omnitest.rect.w = 200
+    @omnitest.rect.h = 300
+    @omnitest.translate_to(3,3)
+    @omnitest.refresh
+    self << @omnitest
+    
  
     parse_args
   end

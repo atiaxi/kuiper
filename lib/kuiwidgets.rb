@@ -321,3 +321,89 @@ class ShipImageButton < Opal::ImageButton
     @image = @images[frame]    
   end
 end
+
+class OmniChooser < CompositeSprite
+  
+  def initialize(driver,title="")
+    super()
+    @driver = driver
+    @rl = ResourceLocator.instance
+    @spacing = 3
+    self.label = title # Calls refresh
+  end
+  
+  def label=(text)
+    @label = text
+    refresh
+  end
+  
+  def refresh
+    self.clear
+    y = @rect.top + @spacing
+    x = @rect.left + @spacing
+    w = @rect.w
+    right = @rect.right - @spacing
+    
+    @labelLabel = Label.new(@label)
+    @labelLabel.rect.y = y
+    @labelLabel.rect.right = right
+    self << @labelLabel
+    
+    bottom = @labelLabel.rect.bottom + @spacing
+    
+    @types = setup_types
+    @types.rect.w = (@rect.w - @spacing*2) / 2
+    @types.rect.h = @types.height(5)
+    @types.translate_to(x,bottom)
+    @types.refresh
+    self << @types
+    
+    @labels = setup_labels
+    @labels.rect.w = (@rect.w - @spacing * 2)/2
+    @labels.rect.h = @labels.height(5)
+    @labels.translate_to(@types.rect.right + @spacing*2,bottom)
+    @labels.refresh
+    self << @labels
+    bottom = @labels.rect.bottom + @spacing
+    
+    @select_all = Button.new("All") { self.select_all }
+    @select_all.rect.x = x
+    @select_all.rect.bottom = @rect.bottom - @spacing
+    self << @select_all
+    
+    @select_none = Button.new("None") { self.select_none }
+    @select_none.rect.right = @rect.right - @spacing
+    @select_none.rect.bottom = @select_all.rect.bottom
+    self << @select_none
+    
+    leftover_h = @select_all.rect.y - bottom - @spacing
+    
+    @results = ListBox.new
+    @results.items = []
+    if leftover_h > 0
+      @results.rect.w = @rect.w - @spacing * 2
+      @results.rect.h = leftover_h
+      @results.translate_to(x,bottom)
+    end
+    @results.refresh
+    self << @results
+  end
+  
+  def select_all
+    # TODO: That thing.
+  end
+  
+  def setup_labels
+    result = ListBox.new
+    result.items = @rl.repository.all_labels
+    return result
+  end
+  
+  def setup_types
+    result = ListBox.new
+    result.items = KuiObject.subclasses
+    puts result.items
+    return result
+  end
+  
+end

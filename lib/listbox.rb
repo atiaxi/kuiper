@@ -161,12 +161,7 @@ class ListBox < CompositeSprite
   def items=(array)
     @items = array
 
-    setup_items
-    setup_scroll
-    
-    @lku = 0
-    @chosen = nil
-  
+    refresh  
   end
 
   def keyTyped(event)
@@ -198,6 +193,14 @@ class ListBox < CompositeSprite
         @chosen.delete(picked)
       end
     end
+  end
+  
+  def refresh
+    setup_items
+    setup_scroll
+    
+    @lku = 0
+    @chosen = nil
   end
   
   def scroll=(skipItems)

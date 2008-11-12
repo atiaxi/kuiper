@@ -15,6 +15,17 @@ class TC_Repository_Tests < Test::Unit::TestCase
     @foo.labels = "foo, planet, werg"
   end
   
+  def test_all_labels
+    # Make some other object
+    bar = KuiObject.new
+    bar.tag = "shabarg"
+    bar.labels = "baz,omg"
+    
+    labels = @repo.all_labels
+    assert_equal(5,labels.size)
+    assert_equal(['foo','planet','werg','baz','omg'],labels)
+  end
+  
   def test_unique_tag
     @blarg = KuiObject.new
     blargtag = "tag_blarg"
