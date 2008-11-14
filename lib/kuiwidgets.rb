@@ -332,6 +332,25 @@ class OmniChooser < CompositeSprite
     self.label = title # Calls refresh
   end
   
+  def constrain
+    passing = Set.new
+    classes = @types.chosen
+    if classes && classes.size > 0
+      selected = @rl.repository.everything_of_types(classes)
+      passing.merge(selected)
+    end
+    labels = @labels.chosen
+    if labels && labels.size > 0
+      if passing.empty?
+        passing = @rl.repository.everything
+      end
+      labelSet = @rl.repository.everything_with_labels(labels)
+      passing = labelSet & passing
+    end
+    
+    @results.items = passing.to_a
+  end
+  
   def label=(text)
     @label = text
     refresh
@@ -355,14 +374,18 @@ class OmniChooser < CompositeSprite
     @types.rect.w = (@rect.w - @spacing*2) / 2
     @types.rect.h = @types.height(5)
     @types.translate_to(x,bottom)
+    @types.multi = true
     @types.refresh
+    @types.chooseCallback { self.constrain }
     self << @types
     
     @labels = setup_labels
     @labels.rect.w = (@rect.w - @spacing * 2)/2
     @labels.rect.h = @labels.height(5)
     @labels.translate_to(@types.rect.right + @spacing*2,bottom)
+    @labels.multi = true
     @labels.refresh
+    @labels.chooseCallback { self.constrain }
     self << @labels
     bottom = @labels.rect.bottom + @spacing
     
@@ -380,17 +403,23 @@ class OmniChooser < CompositeSprite
     
     @results = ListBox.new
     @results.items = []
+    @results.multi = true
     if leftover_h > 0
       @results.rect.w = @rect.w - @spacing * 2
       @results.rect.h = leftover_h
       @results.translate_to(x,bottom)
     end
+    @results.displayBlock { |item| item.synopsis }
     @results.refresh
     self << @results
   end
   
   def select_all
     # TODO: That thing.
+  end
+  
+  def select_none
+    # TODO: This too.
   end
   
   def setup_labels
@@ -402,7 +431,6 @@ class OmniChooser < CompositeSprite
   def setup_types
     result = ListBox.new
     result.items = KuiObject.subclasses
-    puts result.items
     return result
   end
   

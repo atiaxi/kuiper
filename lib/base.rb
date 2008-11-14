@@ -507,8 +507,9 @@ class CompositeSprite < OpalSprite
     clicked = @children.select do | child |
       child.rect.collide_point?(x,y)
     end
-    clicked.each do | clickee |
+    clicked.sort.each do | clickee |
       clickee.click(x,y) if clickee.respond_to?(:click)
+      break if clickee.click_stops_here
     end
   end
   
@@ -551,6 +552,15 @@ class CompositeSprite < OpalSprite
   
   def update(delay)
     @children.each { | child | child.update(delay) }
+  end
+  
+  def wheel(going_up,x,y)
+    clicked = @children.select do | child |
+      child.rect.collide_point?(x,y)
+    end
+    clicked.each do | clickee |
+      clickee.wheel(going_up,x,y) if clickee.respond_to?(:wheel)
+    end    
   end
   
 end

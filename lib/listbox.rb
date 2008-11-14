@@ -29,8 +29,10 @@ class ListItem < Label
   
   def text=(string)
     string = string.to_s
+    rendered_string = string
     @text_string = string
-    @txt_image = @font.render(string, true, @fgcolor)
+    rendered_string = ' ' if string.nil? || string.size == 0
+    @txt_image = @font.render(rendered_string, true, @fgcolor)
     width = [ @min_width, @txt_image.w ].max
     @image = Rubygame::Surface.new( [width, @txt_image.h])
     @image.fill(@bgcolor) unless @selected
@@ -50,7 +52,9 @@ class ListBox < CompositeSprite
   attr_reader :scroll
   attr_accessor :enabled
   
-  attr_accessor :multi
+  attr_reader :multi
+
+  WIDGET_DEPTH = -10
 
   def initialize()
     super
@@ -159,9 +163,26 @@ class ListBox < CompositeSprite
   end
   
   def items=(array)
-    @items = array
+    @items = array.flatten
 
     refresh  
+  end
+  
+  def multi=(new_multi)
+    @multi = new_multi
+    if @multi
+      if @chosen
+        @chosen = [@chosen]
+      else
+        @chosen = []
+      end
+    else
+      if @chosen
+        @chosen = @chosen[0]
+      else
+        @chosen = nil
+      end
+    end
   end
 
   def keyTyped(event)
@@ -237,11 +258,15 @@ class ListBox < CompositeSprite
     upbutton = Button.new('^') { self.up }
     upbutton.rect.top = @rect.top
     upbutton.rect.right = @rect.right
+    upbutton.depth = WIDGET_DEPTH
+    upbutton.click_stops_here = true
     self << upbutton
     
     downbutton = Button.new('v') { self.down }
     downbutton.rect.bottom = @rect.bottom
     downbutton.rect.right = @rect.right
+    downbutton.depth = WIDGET_DEPTH
+    downbutton.click_stops_here= true
     self << downbutton
       
   end
@@ -255,7 +280,7 @@ class ListBox < CompositeSprite
     @lku += delay
   end
   
-  def wheel(going_up)
+  def wheel(going_up,x,y)
     if going_up
       up
     else

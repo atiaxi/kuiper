@@ -12,18 +12,50 @@ class TC_Repository_Tests < Test::Unit::TestCase
     
     @foo = KuiObject.new
     @foo.tag = "barf"
-    @foo.labels = "foo, planet, werg"
+    @foo.labels = "foo, planet, werg,obj"
+    
+    @bar = KuiObject.new
+    @bar.tag = "shabarg"
+    @bar.labels = "baz,omg,obj"
   end
   
   def test_all_labels
-    # Make some other object
-    bar = KuiObject.new
-    bar.tag = "shabarg"
-    bar.labels = "baz,omg"
     
     labels = @repo.all_labels
-    assert_equal(5,labels.size)
-    assert_equal(['foo','planet','werg','baz','omg'],labels)
+    assert_equal(6,labels.size)
+    ['foo','planet','werg','obj','baz','omg'].each do |label|
+      assert(labels.include?(label))
+    end
+  end
+  
+  def test_label_search
+    objs = @repo.everything_with_label('obj')
+    assert_equal(2,objs.size)
+    assert(objs.include?(@foo))
+    assert(objs.include?(@bar))
+    
+    bazs = @repo.everything_with_label('baz')
+    assert_equal(1,bazs.size)
+    assert(bazs.include?(@bar))
+    
+    nothings = @repo.everything_with_label('xyzzy')
+    assert_not_nil(nothings)
+    assert_equal(0,nothings.size)
+  end
+  
+  def test_labels_search
+    objs = @repo.everything_with_labels(['foo','baz'])
+    assert_equal(2,objs.size)
+    assert(objs.include?(@foo))
+    assert(objs.include?(@bar))
+    
+    bazs = @repo.everything_with_labels(['baz','xyzzy'])
+    assert_equal(1,bazs.size)
+    assert(bazs.include?(@bar))
+    
+    nothings = @repo.everything_with_labels(['xyzzy'])
+    assert_not_nil(nothings)
+    assert_equal(0,nothings.size)
   end
   
   def test_unique_tag

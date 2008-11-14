@@ -283,7 +283,7 @@ class State
         sprite.click(x,y) if sprite.respond_to?(:click)
       else
         if sprite.respond_to?(:wheel)
-          sprite.wheel(event.button == :mouse_wheel_up)
+          sprite.wheel(event.button == :mouse_wheel_up,x,y)
         end
       end
       break if sprite.click_stops_here

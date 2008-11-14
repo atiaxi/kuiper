@@ -98,7 +98,7 @@ class TitleScreen < State
     @omnitest.rect.h = 300
     @omnitest.translate_to(3,3)
     @omnitest.refresh
-    self << @omnitest
+    #self << @omnitest
     
  
     parse_args

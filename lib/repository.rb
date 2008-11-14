@@ -48,10 +48,11 @@ class Repository
   end
   
   def all_labels
+    results = Set.new
     labels = @everything.values.collect do |obj|
-      obj.label_array
+      results.merge(obj.label_array.to_set)
     end
-    return labels.flatten
+    return results.to_a
   end
   
   def delete(obj)
@@ -71,6 +72,11 @@ class Repository
     end
   return tagname
   end
+
+  # Returns an array of every tagged object in the repository
+  def everything
+    return @everything.values
+  end
   
   # Type is the class of object we're looking for
   # Anything that satisfied kind_of? will work
@@ -84,6 +90,29 @@ class Repository
       result
     end
     return matches.collect { |tag,item| item }
+  end
+  
+  # Like everything_of_type, only, you know, for any of the given types
+  def everything_of_types(types,base_only=false)
+    result = []
+    types.each do |type|
+      result << everything_of_type(type,base_only)
+    end
+    return result
+  end
+  
+  def everything_with_label(label)
+    return (@everything.values.select do | kui |
+      kui.label_array.include?(label)
+    end).to_set
+  end
+  
+  def everything_with_labels(labels)
+    result = Set.new
+    labels.each do | label |
+      result.merge(everything_with_label(label))
+    end
+    return result
   end
   
   # Generates a unique tag for the given object
