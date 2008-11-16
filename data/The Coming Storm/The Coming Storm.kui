@@ -1756,7 +1756,9 @@ An d that's all before you land.]]>
         <ref tag='planet_anvil_station'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -1828,7 +1830,9 @@ An d that's all before you land.]]>
         <ref tag='planet_second_terra'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -1866,7 +1870,9 @@ An d that's all before you land.]]>
         <ref tag='planet_cork'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -1906,7 +1912,9 @@ An d that's all before you land.]]>
         <ref tag='planet_twin_station'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -1942,7 +1950,9 @@ An d that's all before you land.]]>
         <ref tag='station_locker'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -1978,7 +1988,9 @@ An d that's all before you land.]]>
         <ref tag='planet_fleet_thousands'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2015,7 +2027,9 @@ An d that's all before you land.]]>
         <ref tag='planet_wasteland'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2086,7 +2100,9 @@ An d that's all before you land.]]>
         <ref tag='planet_furthest_shore'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2123,7 +2139,9 @@ An d that's all before you land.]]>
         <ref tag='planet_citadel'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2195,7 +2213,9 @@ An d that's all before you land.]]>
         <ref tag='planet_kosigan'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2267,7 +2287,9 @@ An d that's all before you land.]]>
         <ref tag='planet_new_phoenix'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2775,7 +2797,9 @@ An d that's all before you land.]]>
         <ref tag='planet_forge'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2812,7 +2836,9 @@ An d that's all before you land.]]>
         <ref tag='sector_sole_p'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2850,7 +2876,9 @@ An d that's all before you land.]]>
         <ref tag='planet_artifact'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2887,7 +2915,9 @@ An d that's all before you land.]]>
         <ref tag='planet_gatekeeper'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -2957,7 +2987,9 @@ An d that's all before you land.]]>
         <ref tag='planet_bloodbath'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3215,7 +3247,9 @@ An d that's all before you land.]]>
         <ref tag='planet_eden'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3253,7 +3287,9 @@ An d that's all before you land.]]>
         <ref tag='planet_finders_keepers'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3291,7 +3327,9 @@ An d that's all before you land.]]>
         <ref tag='planet_price_landing'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3330,7 +3368,9 @@ An d that's all before you land.]]>
         <ref tag='planet_chiron_beta_prime'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3367,7 +3407,9 @@ An d that's all before you land.]]>
         <ref tag='planet_new_freehold'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3405,7 +3447,9 @@ An d that's all before you land.]]>
         <ref tag='planet_wright_place'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3447,7 +3491,9 @@ An d that's all before you land.]]>
         <ref tag='planet_labrynth'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3526,7 +3572,9 @@ An d that's all before you land.]]>
         <ref tag='sector_loyalty'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3565,6 +3613,7 @@ An d that's all before you land.]]>
       </planets>
       <plot/>
       <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
         <ref tag='fleet_massive_trading'/>
       </potential_fleets>
       <projectiles/>
@@ -3642,7 +3691,9 @@ An d that's all before you land.]]>
         <ref tag='station_solitude'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -4029,7 +4080,9 @@ An d that's all before you land.]]>
         <ref tag='station_science'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -4101,7 +4154,9 @@ An d that's all before you land.]]>
         <ref tag='planet_terrible'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -4173,7 +4228,9 @@ An d that's all before you land.]]>
         <ref tag='planet_farm'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>

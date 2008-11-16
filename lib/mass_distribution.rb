@@ -24,17 +24,20 @@ class MassDistributor < Opal::State
   
   def add
     return unless sanity_check
-    @sources = @source.chosen
-    @destinations = @dest.chosen
-    @accessors = @slots.chosen.dup
-    
-    @destinations.each do | dest |      
-      @sources.each do | src |
-        @accessors.each do | sym |
+    sources = @source.chosen
+    destinations = @dest.chosen
+    accessors = @slots.chosen.dup
+    count = 0
+    destinations.each do | dest |      
+      sources.each do | src |
+        accessors.each do | sym |
           dest.add_child(sym,src)
+          count += 1
         end
       end
     end
+    @results.text = "Added #{sources.size} objects to #{destinations.size} " +
+      "destinations in #{count} operations"
     
   end
   
@@ -128,9 +131,9 @@ class MassDistributor < Opal::State
     addButton = Button.new("Add") { self.add }
     layout_field(addButton)
     removeButton = Button.new("Remove") { self.remove }
-    remove.rect.x = addButton.rect.right + @spacing
-    remove.rect.y = addButton.rect.y
-    self << remove
+    removeButton.rect.x = addButton.rect.right + @spacing
+    removeButton.rect.y = addButton.rect.y
+    self << removeButton
     
     @results = MultiLineLabel.new
     @results.rect.w = half

@@ -208,6 +208,10 @@ class State
   end
   
   def <<(sprite)
+    unless sprite
+      ResourceLocator.instance.logger.warn("Attempt to add nil sprite!")
+    end
+    
     if @auto_apply_theme
       apply_to(sprite) if sprite.respond_to?(:apply_to)
     end
