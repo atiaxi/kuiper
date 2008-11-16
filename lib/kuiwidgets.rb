@@ -33,16 +33,6 @@ class MiniBuilder < CompositeSprite
     right = RepositoryAdapter.new(@adapter.constraint)
     builder = BuilderDialog.new(@driver, left, right)
     @driver << builder
-    
-#    selector = KuiObjectSelector.new(@driver,@adapter.constraint)
-#    callcc do | cont |
-#      @driver << selector
-#      @continue = cont
-#    end
-#    
-#    if selector.chosen && selector.chosen.playable?
-#      add_item(selector.chosen)
-#    end
   end
   
   def draw(screen)
@@ -329,7 +319,12 @@ class OmniChooser < CompositeSprite
     @driver = driver
     @rl = ResourceLocator.instance
     @spacing = 3
+    @resultsCallback = nil
     self.label = title # Calls refresh
+  end
+  
+  def chosen
+    @results.chosen
   end
   
   def constrain
@@ -337,7 +332,7 @@ class OmniChooser < CompositeSprite
     classes = @types.chosen
     if classes && classes.size > 0
       selected = @rl.repository.everything_of_types(classes)
-      passing.merge(selected)
+      passing = passing | selected
     end
     labels = @labels.chosen
     if labels && labels.size > 0
@@ -349,11 +344,16 @@ class OmniChooser < CompositeSprite
     end
     
     @results.items = passing.to_a
+    @resultsCallback.call if @resultsCallback
   end
   
   def label=(text)
     @label = text
     refresh
+  end
+  
+  def onResultsChange(&callback)
+    @resultsCallback = callback
   end
   
   def refresh
@@ -410,16 +410,19 @@ class OmniChooser < CompositeSprite
       @results.translate_to(x,bottom)
     end
     @results.displayBlock { |item| item.synopsis }
+    @results.chooseCallback { @resultsCallback.call if @resultsCallback }
     @results.refresh
     self << @results
   end
   
   def select_all
-    # TODO: That thing.
+    @results.select_all
+    @resultsCallback.call if @resultsCallback
   end
   
   def select_none
-    # TODO: This too.
+    @results.select_none
+    @resultsCallback.call if @resultsCallback
   end
   
   def setup_labels

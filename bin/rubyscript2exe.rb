@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 # License, not of this script, but of the application it contains:
 #
 # Copyright Erik Veenstra <rubyscript2exe@erikveen.dds.nl>
@@ -619,7 +618,7 @@ else
 
   newlocation do
     if __FILE__ == $0
-      $0.replace(File.expand_path("./init.rb"))
+      #$0.replace(File.expand_path("./init.rb"))
 
       TAR2RUBYSCRIPT	= true	unless defined?(TAR2RUBYSCRIPT)
 

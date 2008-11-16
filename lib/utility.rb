@@ -5,6 +5,8 @@ $KUIPER_VERSION = [0,0,3]
 $QUICKSAVE_SUFFIX = "quicksave"
 $AUTOSAVE_SUFFIX="autosave"
 
+require 'set'
+
 # Returns an Ftor for a spot at the given radius
 def random_spot(radius)
   angle = rand() * Math::PI * 2
@@ -109,5 +111,56 @@ class ArraySet < Array
     array.each { |x| result << x }
     return result
   end
+end
 
+# The OmniSet is the set that contains everything.
+# Doesn't support all operations (like '-' or to_a)
+class OmniSet < Set
+  
+  def &(other)
+    other
+  end
+  
+  def |(other)
+    self
+  end
+  
+  # Only equals other OmniSets
+  def ==(other)
+    return self.class == other.class
+  end
+  
+  def clear
+    return Set.new
+  end
+  
+  def empty?
+    return false
+  end
+  
+  def include?(obj)
+    return true
+  end
+  
+  def merge(other)
+    self
+  end
+  
+  def proper_subset?(other)
+    return false
+  end
+  
+  def proper_superset?(other)
+    return true unless self == other
+    return false
+  end
+  
+  def subset?(other)
+    return self == other
+  end
+  
+  def superset?(other)
+    return true
+  end
+  
 end

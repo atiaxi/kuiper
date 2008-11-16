@@ -98,7 +98,7 @@ class Repository
     types.each do |type|
       result << everything_of_type(type,base_only)
     end
-    return result
+    return result.flatten
   end
   
   def everything_with_label(label)

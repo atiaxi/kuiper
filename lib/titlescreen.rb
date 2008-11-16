@@ -87,7 +87,7 @@ class TitleScreen < State
     @multitest = ListBox.new
     @multitest.rect.width = 200
     @multitest.rect.height = 300
-    @multitest.items = [ 'asdf','b','c','d' ]
+    @multitest.items = [ 'asdf','b','c','d','werg','chomp' ]
     @multitest.translate_to(3,3)
     @multitest.multi = true
     @multitest.chooseCallback { puts @multitest.chosen.inspect }

@@ -123,20 +123,17 @@ class ListBox < CompositeSprite
       if oldChosen == picked
         if @lku - @chosenAt < 1 # Double click time is 1 sec.
           @doubleChooseCallback.call if @doubleChooseCallback
-        else
-          @chosenAt = @lku # Reset the timer
         end
-      else
-        
-        if @multi
-         multi_select(picked)
-       else
-         self.chosen = picked
-       end
-        
-        @chosenAt = @lku
-        @chooseCallback.call if @chooseCallback
       end
+      
+      if @multi
+        multi_select(picked)
+      else
+        self.chosen = picked
+      end
+        
+      @chosenAt = @lku
+      @chooseCallback.call if @chooseCallback
     end
   end
   
@@ -165,7 +162,7 @@ class ListBox < CompositeSprite
   def items=(array)
     @items = array.flatten
 
-    refresh  
+    refresh
   end
   
   def multi=(new_multi)
@@ -211,23 +208,42 @@ class ListBox < CompositeSprite
         @chosen ||= []
         @chosen << picked
       else
+        @chosen ||= []
         @chosen.delete(picked)
       end
+    else
+      @chosen ||= []
+      @chosen << picked
     end
   end
   
-  def refresh
+  def redraw
     setup_items
     setup_scroll
-    
+  end
+  
+  def refresh
     @lku = 0
     @chosen = nil
+    redraw
+    @chooseCallback.call if @chooseCallback && @multi
   end
   
   def scroll=(skipItems)
     @scroll = skipItems
-    setup_items
-    setup_scroll
+    redraw
+  end
+  
+  def select_all
+    @chosen = @items.dup
+    redraw
+    @chooseCallback.call if @chooseCallback
+  end
+  
+  def select_none
+    @chosen = @multi ? [] : nil
+    redraw
+    @chooseCallback.call if @chooseCallback
   end
   
   def setup_items
@@ -245,7 +261,7 @@ class ListBox < CompositeSprite
         label.rect.y = y
         self << label
         @widgets_to_items[label] = item
-        if @chosen && chosen == item
+        if @chosen && (@chosen == item ||(@multi && @chosen.include?(item)))
           label.selected = true
         end
         y += label.rect.h

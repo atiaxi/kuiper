@@ -319,7 +319,7 @@ class KuiObject
     if self.respond_to?(:tag) && other.respond_to?(:tag)
       return self.tag.eql?(other.tag)
     else
-      return self.eql?(other)
+      return super(other)
     end
   end
   
@@ -327,6 +327,30 @@ class KuiObject
   def ===(other)
     return self.base_tag == other.base_tag
     #return self.do_equal(other, Set.new,true)
+  end
+  
+  # This has the same semantics as ==
+  def eql?(other)
+    return self == other
+  end
+  
+  def hash
+    return @tag.hash if @tag
+    super
+  end
+  
+  # This either sets the given sym to the given child, or adds the given child
+  # to the list at sym, whichever is appropriate.
+  def add_child(sym, child)
+    current = self.send(sym)
+    if current.respond_to?(:<<)
+      current << child
+    else
+      if !sym.to_s.ends_with?($=)
+        sym = (sym.to_s + "=").to_sym
+      end
+      self.send(sym, child)
+    end
   end
   
   # So I don't have objects calling obj.blarg=new_list
