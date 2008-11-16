@@ -5,14 +5,14 @@
       <description>
         <![CDATA[A mix of natural and artificial materials, you never know the exact composition of what you'll be transporting.  The important thing is that you can eat it if your ship ends up stranded somewhere. ]]>
       </description>
-      <name>
-        <![CDATA[Food]]>
-      </name>
       <labels>
       </labels>
       <base_price>
         <![CDATA[100.0]]>
       </base_price>
+      <name>
+        <![CDATA[Food]]>
+      </name>
     </fields>
     <children/>
   </cargoblueprint>
@@ -21,17 +21,58 @@
       <description>
         <![CDATA[This is mostly unprocessed ore - since the metal tends to weigh the same whether it's been through a machine or not and you never know which exact metals the buyer will need. ]]>
       </description>
-      <name>
-        <![CDATA[Raw Metals]]>
-      </name>
       <labels>
       </labels>
       <base_price>
         <![CDATA[150.0]]>
       </base_price>
+      <name>
+        <![CDATA[Raw Metals]]>
+      </name>
     </fields>
     <children/>
   </cargoblueprint>
+  <fleet tag='fleet_massive_trading'>
+    <fields>
+      <spawn_chance>
+        <![CDATA[0.15]]>
+      </spawn_chance>
+      <min_stay>
+        <![CDATA[10.0]]>
+      </min_stay>
+      <under_attack>
+        <![CDATA[flee]]>
+      </under_attack>
+      <max_stay>
+        <![CDATA[30.0]]>
+      </max_stay>
+      <labels>
+        <![CDATA[traders]]>
+      </labels>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <name>
+        <![CDATA[Massive Trading Fleet]]>
+      </name>
+      <behavior>
+        <![CDATA[trade]]>
+      </behavior>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_traders'/>
+      </owner>
+      <ships>
+        <ref tag='ship_massive_cargo_traders'/>
+        <ref tag='ship_massive_cargo_traders'/>
+        <ref tag='ship_massive_cargo_traders'/>
+      </ships>
+    </children>
+  </fleet>
   <cargo tag='food_med'>
     <fields>
       <markup>
@@ -156,9 +197,6 @@
   </cargo>
   <org tag='org_alliance'>
     <fields>
-      <shooting_mod>
-        <![CDATA[-10.0]]>
-      </shooting_mod>
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
@@ -177,20 +215,23 @@
       <friendly_shots_threshold>
         <![CDATA[3.0]]>
       </friendly_shots_threshold>
+      <labels>
+      </labels>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
-      <name>
-        <![CDATA[Alliance]]>
-      </name>
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <labels>
-      </labels>
+      <name>
+        <![CDATA[Alliance]]>
+      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
     </fields>
     <children>
       <feelings>
@@ -213,9 +254,6 @@
   </org>
   <org tag='org_player'>
     <fields>
-      <shooting_mod>
-        <![CDATA[-10.0]]>
-      </shooting_mod>
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
@@ -234,20 +272,23 @@
       <friendly_shots_threshold>
         <![CDATA[3.0]]>
       </friendly_shots_threshold>
+      <labels>
+      </labels>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
-      <name>
-        <![CDATA[The Player]]>
-      </name>
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <labels>
-      </labels>
+      <name>
+        <![CDATA[The Player]]>
+      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
     </fields>
     <children>
       <feelings>
@@ -270,9 +311,6 @@
   </org>
   <org tag='org_scientists'>
     <fields>
-      <shooting_mod>
-        <![CDATA[-10.0]]>
-      </shooting_mod>
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
@@ -291,20 +329,23 @@
       <friendly_shots_threshold>
         <![CDATA[3.0]]>
       </friendly_shots_threshold>
+      <labels>
+      </labels>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
-      <name>
-        <![CDATA[Scientists]]>
-      </name>
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <labels>
-      </labels>
+      <name>
+        <![CDATA[Scientists]]>
+      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
     </fields>
     <children>
       <feelings>
@@ -325,17 +366,74 @@
       </feelings>
     </children>
   </org>
+  <org tag='org_traders'>
+    <fields>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
+      <friendly_multiplier>
+        <![CDATA[0.5]]>
+      </friendly_multiplier>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
+      <labels>
+      </labels>
+      <friendly>
+        <![CDATA[500.0]]>
+      </friendly>
+      <gullibility>
+        <![CDATA[0.8]]>
+      </gullibility>
+      <name>
+        <![CDATA[Traders]]>
+      </name>
+      <devoted>
+        <![CDATA[1000.0]]>
+      </devoted>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
+    </fields>
+    <children>
+      <feelings>
+        <relation>
+          <fields>
+            <labels>
+            </labels>
+            <feeling>
+              <![CDATA[1000000]]>
+            </feeling>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_traders'/>
+            </target_org>
+          </children>
+        </relation>
+      </feelings>
+    </children>
+  </org>
   <planet tag='planet_anvil_station'>
     <fields>
       <description>
         <![CDATA[When leading scientists and engineers created this station long ago, it was to study - from a safe distance - the odd phenomenon in this part of the galaxy.  War has changed the focus of the station dramatically. ]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[human,rebel,station,inhabited,standard]]>
+      </labels>
       <x>
         <![CDATA[64.0]]>
       </x>
@@ -348,9 +446,9 @@
       <name>
         <![CDATA[Anvil Station]]>
       </name>
-      <labels>
-        <![CDATA[human,rebel,station,inhabited,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -368,12 +466,12 @@
       <description>
         <![CDATA[Of all the mysteries in the universe, none have been as persistant as the alien artifacts discovered on this planet.  It started an invasion scare that, to an extent, lingers to this day.  Despite scientists' findings that the artifacts could not possibly function in a universe that obeys the same physical laws as ours, it continues to be a source of mystery and study.]]>
       </description>
-      <image_filename>
-        <![CDATA[desert.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[scientist,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[7.0]]>
       </x>
@@ -386,9 +484,9 @@
       <name>
         <![CDATA[Artifact]]>
       </name>
-      <labels>
-        <![CDATA[scientist,human,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[desert.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -403,17 +501,55 @@
       <weapons_for_sale/>
     </children>
   </planet>
+  <planet tag='planet_beauty'>
+    <fields>
+      <description>
+        <![CDATA[This planet was given its name before anyone had actually seen it.  As much as the inhabitants go on about how the sheer austerity of the barren land is in its own way beautiful, it is widely regarded that the name was simply a mistake. ]]>
+      </description>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
+      <labels>
+        <![CDATA[inhabited,alliance,human,standard]]>
+      </labels>
+      <x>
+        <![CDATA[222.0]]>
+      </x>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
+      <y>
+        <![CDATA[-179.0]]>
+      </y>
+      <name>
+        <![CDATA[Beauty]]>
+      </name>
+      <image_filename>
+        <![CDATA[moon.png]]>
+      </image_filename>
+    </fields>
+    <children>
+      <addons_for_sale/>
+      <cargo_for_sale/>
+      <missions/>
+      <owner/>
+      <plot/>
+      <random_missions/>
+      <ships_for_sale/>
+      <weapons_for_sale/>
+    </children>
+  </planet>
   <planet tag='planet_bloodbath'>
     <fields>
       <description>
         <![CDATA[This planet's name comes from before it was home to a thousand different pirate clans - its red tint earned it the title "Bloodbath".  The constantly fueding clans just outside the landing port seem intent on earning the name. ]]>
       </description>
-      <image_filename>
-        <![CDATA[redplanet.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[inhabited,human,standard,eastpirates]]>
+      </labels>
       <x>
         <![CDATA[-35.0]]>
       </x>
@@ -426,9 +562,47 @@
       <name>
         <![CDATA[Bloodbath]]>
       </name>
+      <image_filename>
+        <![CDATA[redplanet.png]]>
+      </image_filename>
+    </fields>
+    <children>
+      <addons_for_sale/>
+      <cargo_for_sale/>
+      <missions/>
+      <owner/>
+      <plot/>
+      <random_missions/>
+      <ships_for_sale/>
+      <weapons_for_sale/>
+    </children>
+  </planet>
+  <planet tag='planet_cake'>
+    <fields>
+      <description>
+        <![CDATA[The origin of this planet's name date back to an ancient quote of a noble, the actual source long since forgotten, which indicated that those who could not afford bread should simply "eat cake".  The settlers apparently connected this somehow with their putative vow of poverty - one which was abandoned as soon as the expense of actually living on the planet came to light. ]]>
+      </description>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <labels>
-        <![CDATA[inhabited,human,standard,eastpirates]]>
+        <![CDATA[alliance,human,inhabited,standard]]>
       </labels>
+      <x>
+        <![CDATA[-254.0]]>
+      </x>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
+      <y>
+        <![CDATA[-63.0]]>
+      </y>
+      <name>
+        <![CDATA[Cake]]>
+      </name>
+      <image_filename>
+        <![CDATA[toxic.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -446,12 +620,12 @@
       <description>
         <![CDATA[Chiron Alpha Prime's atmosphere is a thick soup of toxic and corrosive gases, and most of the planet is covered in liquid methane at best.  Of course, these rare and horrible materials make excellent exports, which is the only reason anyone would bother setting up here. ]]>
       </description>
-      <image_filename>
-        <![CDATA[toxic.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <x>
         <![CDATA[-154.0]]>
       </x>
@@ -464,9 +638,9 @@
       <name>
         <![CDATA[Chiron Alpha Prime]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[toxic.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -484,12 +658,12 @@
       <description>
         <![CDATA[Whereas Chiron Alpha Prime has volatiles and other rare materials, Chiron Beta Prime is a big rock.  Nickel, aluminum, other metals of ordinary and heavy variety are plentiful, and the planet's comparatively weaker gravity well makes mining it profitable. ]]>
       </description>
-      <image_filename>
-        <![CDATA[moon.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,humanity,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[58.0]]>
       </x>
@@ -502,9 +676,9 @@
       <name>
         <![CDATA[Chiron Beta Prime]]>
       </name>
-      <labels>
-        <![CDATA[alliance,humanity,standard,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[moon.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -524,12 +698,12 @@
 
 An d that's all before you land.]]>
       </description>
-      <image_filename>
-        <![CDATA[green.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[human,inhabited,alliance,standard]]>
+      </labels>
       <x>
         <![CDATA[-12.0]]>
       </x>
@@ -542,9 +716,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[The Citadel]]>
       </name>
-      <labels>
-        <![CDATA[human,inhabited,alliance,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[green.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -564,12 +738,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[ Though the station only represents the 'north' part of the historical compass rose - and to modern stellar cartograhpers, not even that - it still retains its overly poetic name.]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[inhabited,human,scientist]]>
+      </labels>
       <x>
         <![CDATA[-10.0]]>
       </x>
@@ -582,9 +756,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Compass Rose]]>
       </name>
-      <labels>
-        <![CDATA[inhabited,human,scientist]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -602,12 +776,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[When it was first created, Cork was the most heavily armed station humanity had ever made.  A great deal of work and funding has gone into keeping things that way. ]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[station,rebel,standard]]>
+      </labels>
       <x>
         <![CDATA[40.0]]>
       </x>
@@ -620,9 +794,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Cork]]>
       </name>
-      <labels>
-        <![CDATA[station,rebel,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -640,12 +814,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. ]]>
       </description>
-      <image_filename>
-        <![CDATA[planetoid.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[150.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-7.0]]>
       </x>
@@ -658,9 +832,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Earth]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[planetoid.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -683,12 +857,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[Eden was a deceptive planet from the very beginning.  The long-range scanners the Survey used said it was entirely Earthlike, and it was - at first.  Over the past hundred years, the ecosystem has been collapsing.  Despite modern terraforming processes, the collapse has yet to be halted.]]>
       </description>
-      <image_filename>
-        <![CDATA[toxic.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[inhabited,alliance,human,standard]]>
+      </labels>
       <x>
         <![CDATA[-21.0]]>
       </x>
@@ -701,9 +875,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Eden]]>
       </name>
-      <labels>
-        <![CDATA[inhabited,alliance,human,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[toxic.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -723,12 +897,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[More expensive than both the galaxy survey and second survey expeditions combined, this planet is the pinnacle of both terraforming science and spending. ]]>
       </description>
-      <image_filename>
-        <![CDATA[planetoid.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[rebel,human,inhabited,standard]]>
+      </labels>
       <x>
         <![CDATA[-5.0]]>
       </x>
@@ -741,9 +915,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Farm]]>
       </name>
-      <labels>
-        <![CDATA[rebel,human,inhabited,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[planetoid.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -761,12 +935,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[The planet's name is also its motto - its founding was fraught with legal wrangling over who owned what in the wake of some several million squatters having arrived before any government.  Fortunately, that sort of trouble settled down long ago.  ]]>
       </description>
-      <image_filename>
-        <![CDATA[water.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <x>
         <![CDATA[-290.0]]>
       </x>
@@ -779,9 +953,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Finders Keepers]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[water.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -799,12 +973,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[This station remains one of the greatest technological accomplishments of humankind, even today.  Packed nearly full of equipment, its purpose was to project an image of Earth surrounded by thousands of defensive ships - all to ward off an invasion which never came. ]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[scientist,inhabited,standard,human]]>
+      </labels>
       <x>
         <![CDATA[-333.0]]>
       </x>
@@ -817,9 +991,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Fleet of Thousands]]>
       </name>
-      <labels>
-        <![CDATA[scientist,inhabited,standard,human]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -837,12 +1011,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[The Forge is a planet of exotic chemicals and more.  It was been described, not inacurrately, as being 'shrouded in war', as weapons creation and testing are the world's entire purpose. ]]>
       </description>
-      <image_filename>
-        <![CDATA[redplanet.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[rebel,human,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-100.0]]>
       </x>
@@ -855,9 +1029,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[The Forge]]>
       </name>
-      <labels>
-        <![CDATA[rebel,human,standard,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[redplanet.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -875,12 +1049,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[One of the oldest continually-inhabited human colonies, The Furthest Shore feels more like a clone of Earth than any of the planets designed to assume the role.]]>
       </description>
-      <image_filename>
-        <![CDATA[green.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <x>
         <![CDATA[-101.0]]>
       </x>
@@ -893,9 +1067,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[The Furthest Shore]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[green.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -913,12 +1087,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[Gatekeeper is a barren waste at best.  This does not stop it from being host to literally tens of thousands of scientists, all encamped in enclosed domes, devoted to their research. ]]>
       </description>
-      <image_filename>
-        <![CDATA[moon.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[scientist,inhabited,human,standard]]>
+      </labels>
       <x>
         <![CDATA[-161.0]]>
       </x>
@@ -931,9 +1105,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Gatekeeper]]>
       </name>
-      <labels>
-        <![CDATA[scientist,inhabited,human,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[moon.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -951,12 +1125,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[For several generations, this planet was cut off from the rest of humanity by the unexpected failure of its hyperspace lane.   By the time the connection was finally restored - an event as mysterious as its initial vanishing - the number of people on the planet had dropped by 75%.]]>
       </description>
-      <image_filename>
-        <![CDATA[desert.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[human,inhabited,standard,rebel,right]]>
+      </labels>
       <x>
         <![CDATA[-37.0]]>
       </x>
@@ -969,9 +1143,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Kosigan]]>
       </name>
-      <labels>
-        <![CDATA[human,inhabited,standard,rebel,right]]>
-      </labels>
+      <image_filename>
+        <![CDATA[desert.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -989,12 +1163,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[High winds re-sculpt the terrain of this planet on a minute-by-minute basis.  There is human life here, but not much of it. ]]>
       </description>
-      <image_filename>
-        <![CDATA[desert.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[23.0]]>
       </x>
@@ -1007,9 +1181,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Labrynth]]>
       </name>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[desert.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1027,12 +1201,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[Overture, inc., welcomes you to our planet, and asks you to spend freely. ]]>
       </description>
-      <image_filename>
-        <![CDATA[green.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[178.0]]>
       </x>
@@ -1045,9 +1219,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Limited Liability]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[green.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1065,12 +1239,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[This planet has very little mass to speak of, and even fewer accessible resources.  What it does have, however, is the most stunning view in the galaxy: A nebula is visible in the night sky for most of the year. ]]>
       </description>
-      <image_filename>
-        <![CDATA[water.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[rebel,inhabited,human,standard]]>
+      </labels>
       <x>
         <![CDATA[-27.0]]>
       </x>
@@ -1083,9 +1257,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Nebula]]>
       </name>
-      <labels>
-        <![CDATA[rebel,inhabited,human,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[water.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1102,12 +1276,12 @@ An d that's all before you land.]]>
     <fields>
       <description>
       </description>
-      <image_filename>
-        <![CDATA[green.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[rebel,standard,inhabited,human]]>
+      </labels>
       <x>
         <![CDATA[-25.0]]>
       </x>
@@ -1120,9 +1294,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[New Freehold]]>
       </name>
-      <labels>
-        <![CDATA[rebel,standard,inhabited,human]]>
-      </labels>
+      <image_filename>
+        <![CDATA[green.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1140,12 +1314,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[New Phoenix is a prosperous, happy planet.  Money changes hands, tourists gawk at attractions, natives go about their business.  It is extremely ordinary for a place that was once the head of a rebellion. ]]>
       </description>
-      <image_filename>
-        <![CDATA[water.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-31.0]]>
       </x>
@@ -1158,9 +1332,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[New Phoenix]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[water.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1180,12 +1354,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[When you finance half of the rebellion, you can afford your own moon. ]]>
       </description>
-      <image_filename>
-        <![CDATA[moon.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[price,human,rebel,inhabited,standard]]>
+      </labels>
       <x>
         <![CDATA[39.0]]>
       </x>
@@ -1198,9 +1372,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Price Landing]]>
       </name>
-      <labels>
-        <![CDATA[price,human,rebel,inhabited,standard]]>
-      </labels>
+      <image_filename>
+        <![CDATA[moon.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1218,12 +1392,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[Second Terra is 15% smaller than Earth, has a less than ideal magnetosphere, and features landmass merely half that of the human homeworld.  Regardless, plans were made to evacuate as many people as possible to it.  These plans were made in the midst of the invasion scare, but are still kept up to date today. ]]>
       </description>
-      <image_filename>
-        <![CDATA[water.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <x>
         <![CDATA[-31.0]]>
       </x>
@@ -1236,9 +1410,47 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Second Terra]]>
       </name>
+      <image_filename>
+        <![CDATA[water.png]]>
+      </image_filename>
+    </fields>
+    <children>
+      <addons_for_sale/>
+      <cargo_for_sale/>
+      <missions/>
+      <owner/>
+      <plot/>
+      <random_missions/>
+      <ships_for_sale/>
+      <weapons_for_sale/>
+    </children>
+  </planet>
+  <planet tag='planet_terrible'>
+    <fields>
+      <description>
+        <![CDATA[The people who settled on this planet insist they are closest to the truth, because their belief rejects all the illusions of the universe, thus making this planet one of the more accurately named ones. ]]>
+      </description>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
+        <![CDATA[human,inhabited,alliance,standard]]>
       </labels>
+      <x>
+        <![CDATA[233.0]]>
+      </x>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
+      <y>
+        <![CDATA[204.0]]>
+      </y>
+      <name>
+        <![CDATA[Terrible]]>
+      </name>
+      <image_filename>
+        <![CDATA[redplanet.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1256,12 +1468,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[The oldest human-created habitation still existing, this station has a constant air of disrepair despite having been fully rebuilt over a dozen times.]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[150.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,standard,station]]>
+      </labels>
       <x>
         <![CDATA[-1.0]]>
       </x>
@@ -1274,9 +1486,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Twin Station]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,standard,station]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1294,12 +1506,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[Mars was once thought to be the most arid and deserted planet to have once held life.  Then Wasteland was encountered, and all the survivalists migrated. ]]>
       </description>
-      <image_filename>
-        <![CDATA[desert.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[65.0]]>
       </x>
@@ -1312,9 +1524,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Wasteland]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[desert.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1332,12 +1544,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[ The pun was, it is explained to you by the docking authorities, intentional.]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[right,human,inhabited,standard,station]]>
+      </labels>
       <x>
         <![CDATA[-35.0]]>
       </x>
@@ -1350,9 +1562,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Wright Place]]>
       </name>
-      <labels>
-        <![CDATA[right,human,inhabited,standard,station]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1370,10 +1582,10 @@ An d that's all before you land.]]>
       <credits>
         <![CDATA[1000.0]]>
       </credits>
-      <name>
-      </name>
       <labels>
       </labels>
+      <name>
+      </name>
     </fields>
     <children>
       <completed_missions/>
@@ -1393,12 +1605,6 @@ An d that's all before you land.]]>
   </player>
   <ship tag='scout_bare'>
     <fields>
-      <chosen_secondary_index>
-        <![CDATA[0.0]]>
-      </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <price>
         <![CDATA[0.0]]>
       </price>
@@ -1411,20 +1617,20 @@ An d that's all before you land.]]>
       <armor>
         <![CDATA[100.0]]>
       </armor>
-      <x>
-        <![CDATA[0.0]]>
-      </x>
+      <labels>
+      </labels>
       <facing_y>
         <![CDATA[-1.0]]>
       </facing_y>
-      <name>
-        <![CDATA[Scout]]>
-      </name>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
-      <labels>
-      </labels>
+      <name>
+        <![CDATA[Scout]]>
+      </name>
       <y>
         <![CDATA[0.0]]>
       </y>
@@ -1434,6 +1640,12 @@ An d that's all before you land.]]>
       <fuel>
         <![CDATA[100.0]]>
       </fuel>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
     </fields>
     <children>
       <addons/>
@@ -1454,12 +1666,6 @@ An d that's all before you land.]]>
   </ship>
   <shipblueprint tag='scout_class'>
     <fields>
-      <max_fuel>
-        <![CDATA[100.0]]>
-      </max_fuel>
-      <expansion_space>
-        <![CDATA[10.0]]>
-      </expansion_space>
       <fuel_per_jump>
         <![CDATA[25.0]]>
       </fuel_per_jump>
@@ -1469,14 +1675,11 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
-      <image_filename>
-        <![CDATA[shuttle.png]]>
-      </image_filename>
-      <description>
-      </description>
       <rot_per_sec>
         <![CDATA[200.0]]>
       </rot_per_sec>
+      <description>
+      </description>
       <max_shields>
         <![CDATA[100.0]]>
       </max_shields>
@@ -1492,20 +1695,29 @@ An d that's all before you land.]]>
       <max_armor>
         <![CDATA[100.0]]>
       </max_armor>
+      <labels>
+      </labels>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
-      <labels>
-      </labels>
       <max_speed>
         <![CDATA[200.0]]>
       </max_speed>
-      <name>
-        <![CDATA[Scout]]>
-      </name>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
+      <name>
+        <![CDATA[Scout]]>
+      </name>
+      <max_fuel>
+        <![CDATA[100.0]]>
+      </max_fuel>
+      <expansion_space>
+        <![CDATA[10.0]]>
+      </expansion_space>
+      <image_filename>
+        <![CDATA[shuttle.png]]>
+      </image_filename>
     </fields>
     <children/>
   </shipblueprint>
@@ -1517,6 +1729,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-503.0]]>
       </x>
@@ -1526,9 +1741,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-308.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1556,6 +1768,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[260.0]]>
       </x>
@@ -1565,9 +1780,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[227.0]]>
       </y>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1592,6 +1804,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,inhabited,human]]>
+      </labels>
       <x>
         <![CDATA[-198.0]]>
       </x>
@@ -1601,9 +1816,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[55.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,inhabited,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1628,6 +1840,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebelwar,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-544.0]]>
       </x>
@@ -1637,9 +1852,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-182.0]]>
       </y>
-      <labels>
-        <![CDATA[rebelwar,rebel,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1666,6 +1878,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,inhabited,human]]>
+      </labels>
       <x>
         <![CDATA[54.0]]>
       </x>
@@ -1675,9 +1890,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-60.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,inhabited,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1706,6 +1918,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[eastpirates,inhabited,human]]>
+      </labels>
       <x>
         <![CDATA[348.0]]>
       </x>
@@ -1715,9 +1930,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[343.0]]>
       </y>
-      <labels>
-        <![CDATA[eastpirates,inhabited,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1742,6 +1954,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[scientists,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-264.0]]>
       </x>
@@ -1751,9 +1966,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[246.0]]>
       </y>
-      <labels>
-        <![CDATA[scientists,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1778,6 +1990,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[93.0]]>
       </x>
@@ -1787,9 +2002,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-174.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1815,6 +2027,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[uninhabited,secondsurvey,rebel,human,right,gatesearch]]>
+      </labels>
       <x>
         <![CDATA[-860.0]]>
       </x>
@@ -1824,9 +2039,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-211.0]]>
       </y>
-      <labels>
-        <![CDATA[uninhabited,secondsurvey,rebel,human,right,gatesearch]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1849,6 +2061,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-71.0]]>
       </x>
@@ -1858,9 +2073,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-75.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1886,6 +2098,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[inhabited,alliance,human]]>
+      </labels>
       <x>
         <![CDATA[-252.0]]>
       </x>
@@ -1895,9 +2110,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[126.0]]>
       </y>
-      <labels>
-        <![CDATA[inhabited,alliance,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1923,6 +2135,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[uninhabited,gatesearch,human,galaxysurvey]]>
+      </labels>
       <x>
         <![CDATA[-60.0]]>
       </x>
@@ -1932,9 +2147,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-448.0]]>
       </y>
-      <labels>
-        <![CDATA[uninhabited,gatesearch,human,galaxysurvey]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1959,6 +2171,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel,inhabited,human]]>
+      </labels>
       <x>
         <![CDATA[-724.0]]>
       </x>
@@ -1968,9 +2183,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-306.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel,inhabited,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -1995,6 +2207,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[-80.0]]>
       </x>
@@ -2004,9 +2219,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-5.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2029,6 +2241,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[201.0]]>
       </x>
@@ -2038,9 +2253,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[4.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2067,6 +2279,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,galaxysurvey,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[-41.0]]>
       </x>
@@ -2076,9 +2291,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[140.0]]>
       </y>
-      <labels>
-        <![CDATA[human,galaxysurvey,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2104,6 +2316,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,eastpirates]]>
+      </labels>
       <x>
         <![CDATA[384.0]]>
       </x>
@@ -2113,9 +2328,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[243.0]]>
       </y>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,eastpirates]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2140,6 +2352,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[galaxysurvey,human,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[225.0]]>
       </x>
@@ -2149,9 +2364,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[296.0]]>
       </y>
-      <labels>
-        <![CDATA[galaxysurvey,human,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2177,6 +2389,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,alliance,galaxysurvey]]>
+      </labels>
       <x>
         <![CDATA[-3.0]]>
       </x>
@@ -2186,9 +2401,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[220.0]]>
       </y>
-      <labels>
-        <![CDATA[human,alliance,galaxysurvey]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2215,6 +2427,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[uninhabited,human,galaxysurvey]]>
+      </labels>
       <x>
         <![CDATA[64.0]]>
       </x>
@@ -2224,9 +2439,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[312.0]]>
       </y>
-      <labels>
-        <![CDATA[uninhabited,human,galaxysurvey]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2252,6 +2464,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,galaxysurvey,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[143.0]]>
       </x>
@@ -2261,9 +2476,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[380.0]]>
       </y>
-      <labels>
-        <![CDATA[human,galaxysurvey,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2287,6 +2499,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,gatesearch]]>
+      </labels>
       <x>
         <![CDATA[67.0]]>
       </x>
@@ -2296,9 +2511,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-234.0]]>
       </y>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,gatesearch]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2321,6 +2533,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[288.0]]>
       </x>
@@ -2330,9 +2545,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[160.0]]>
       </y>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2357,6 +2569,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,human]]>
+      </labels>
       <x>
         <![CDATA[-50.0]]>
       </x>
@@ -2366,9 +2581,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-348.0]]>
       </y>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2393,6 +2605,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,uninhabited,galaxysurvey]]>
+      </labels>
       <x>
         <![CDATA[-132.0]]>
       </x>
@@ -2402,9 +2617,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[189.0]]>
       </y>
-      <labels>
-        <![CDATA[human,uninhabited,galaxysurvey]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2429,6 +2641,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,human,gatesearch]]>
+      </labels>
       <x>
         <![CDATA[-187.0]]>
       </x>
@@ -2438,9 +2653,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-378.0]]>
       </y>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,human,gatesearch]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2466,6 +2678,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[humanwar,uninhabited,galaxysurvey,human]]>
+      </labels>
       <x>
         <![CDATA[-411.0]]>
       </x>
@@ -2475,9 +2690,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-136.0]]>
       </y>
-      <labels>
-        <![CDATA[humanwar,uninhabited,galaxysurvey,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2502,6 +2714,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,uninhabited,gatesearch,galaxysurvey]]>
+      </labels>
       <x>
         <![CDATA[-217.0]]>
       </x>
@@ -2511,9 +2726,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-421.0]]>
       </y>
-      <labels>
-        <![CDATA[human,uninhabited,gatesearch,galaxysurvey]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2537,6 +2749,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[inhabited,rebel,human]]>
+      </labels>
       <x>
         <![CDATA[-713.0]]>
       </x>
@@ -2546,9 +2761,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-209.0]]>
       </y>
-      <labels>
-        <![CDATA[inhabited,rebel,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2575,6 +2787,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[116.0]]>
       </x>
@@ -2584,9 +2799,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[43.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,standard,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2612,6 +2824,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[scientist,human,inhabited,exit]]>
+      </labels>
       <x>
         <![CDATA[-134.0]]>
       </x>
@@ -2621,9 +2836,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[279.0]]>
       </y>
-      <labels>
-        <![CDATA[scientist,human,inhabited,exit]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2650,6 +2862,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[scientist,inhabited,human]]>
+      </labels>
       <x>
         <![CDATA[79.0]]>
       </x>
@@ -2659,9 +2874,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[185.0]]>
       </y>
-      <labels>
-        <![CDATA[scientist,inhabited,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2687,6 +2899,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,galaxysurvey,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[285.0]]>
       </x>
@@ -2696,9 +2911,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[501.0]]>
       </y>
-      <labels>
-        <![CDATA[human,galaxysurvey,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2721,6 +2933,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[eastpirates,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[474.0]]>
       </x>
@@ -2730,9 +2945,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[311.0]]>
       </y>
-      <labels>
-        <![CDATA[eastpirates,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2754,12 +2966,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. ]]>
       </description>
-      <image_filename>
-        <![CDATA[desert.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-89.0]]>
       </x>
@@ -2772,9 +2984,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Loyalty]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[desert.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -2795,6 +3007,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[uninhabited,human,galaxysurvey,gatesearch]]>
+      </labels>
       <x>
         <![CDATA[-239.0]]>
       </x>
@@ -2804,9 +3019,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-317.0]]>
       </y>
-      <labels>
-        <![CDATA[uninhabited,human,galaxysurvey,gatesearch]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2829,6 +3041,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[uninhabited,human,humanwar]]>
+      </labels>
       <x>
         <![CDATA[-166.0]]>
       </x>
@@ -2838,8 +3053,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-39.0]]>
       </y>
-      <labels>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2863,6 +3076,8 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+      </labels>
       <x>
         <![CDATA[-669.0]]>
       </x>
@@ -2872,8 +3087,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-455.0]]>
       </y>
-      <labels>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2898,6 +3111,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,uninhabited,gatesearch,alliancewar]]>
+      </labels>
       <x>
         <![CDATA[-88.0]]>
       </x>
@@ -2907,9 +3123,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-268.0]]>
       </y>
-      <labels>
-        <![CDATA[human,uninhabited,gatesearch,alliancewar]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2938,6 +3151,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[gatesearch,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[-389.0]]>
       </x>
@@ -2947,9 +3163,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-428.0]]>
       </y>
-      <labels>
-        <![CDATA[gatesearch,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -2976,6 +3189,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[inhabited,alliance,human]]>
+      </labels>
       <x>
         <![CDATA[154.0]]>
       </x>
@@ -2985,9 +3201,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[255.0]]>
       </y>
-      <labels>
-        <![CDATA[inhabited,alliance,human]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3014,6 +3227,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[129.0]]>
       </x>
@@ -3023,9 +3239,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[112.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3052,6 +3265,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel,human,price,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-519.0]]>
       </x>
@@ -3061,9 +3277,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-404.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel,human,price,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3090,6 +3303,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[173.0]]>
       </x>
@@ -3099,9 +3315,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[163.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3129,6 +3342,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-776.0]]>
       </x>
@@ -3138,9 +3354,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-394.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3166,6 +3379,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[right,rebel,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-858.0]]>
       </x>
@@ -3175,9 +3391,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-328.0]]>
       </y>
-      <labels>
-        <![CDATA[right,rebel,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3204,6 +3417,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel,price,right,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-645.0]]>
       </x>
@@ -3213,9 +3429,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-363.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel,price,right,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3246,6 +3459,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,uninhabited,alliancewar]]>
+      </labels>
       <x>
         <![CDATA[-280.0]]>
       </x>
@@ -3255,9 +3471,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-92.0]]>
       </y>
-      <labels>
-        <![CDATA[human,alliance,uninhabited,alliancewar]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3284,6 +3497,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[31.0]]>
       </x>
@@ -3293,9 +3509,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[77.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3326,6 +3539,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[true]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[0.0]]>
       </x>
@@ -3335,9 +3551,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3351,7 +3564,9 @@ An d that's all before you land.]]>
         <ref tag='planet_earth'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_massive_trading'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -3360,12 +3575,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[This moon is owned by one person, currently Alexander Michail.  Nobody but those who end up in charge of the place know how ownership  transfers from one person to another, only that Sole Proprietorship has remained true to its name for hundreds of years. ]]>
       </description>
-      <image_filename>
-        <![CDATA[moon.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <x>
         <![CDATA[22.0]]>
       </x>
@@ -3378,9 +3593,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Sole Proprietorship]]>
       </name>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
+      <image_filename>
+        <![CDATA[moon.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -3401,6 +3616,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,inhabited,galaxysurvey]]>
+      </labels>
       <x>
         <![CDATA[202.0]]>
       </x>
@@ -3410,9 +3628,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[443.0]]>
       </y>
-      <labels>
-        <![CDATA[human,inhabited,galaxysurvey]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3439,6 +3654,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[secondsurvey,uninhabited,gatesearch,price]]>
+      </labels>
       <x>
         <![CDATA[-501.0]]>
       </x>
@@ -3448,9 +3666,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-247.0]]>
       </y>
-      <labels>
-        <![CDATA[secondsurvey,uninhabited,gatesearch,price]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3474,6 +3689,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[gatesearch,secondsurvey,human,uninhabited,humanwar]]>
+      </labels>
       <x>
         <![CDATA[-356.0]]>
       </x>
@@ -3483,9 +3701,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-197.0]]>
       </y>
-      <labels>
-        <![CDATA[gatesearch,secondsurvey,human,uninhabited,humanwar]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3510,6 +3725,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[uninhabited,human,galaxysurvey,secondsurvey,gatesearch,alliancewar]]>
+      </labels>
       <x>
         <![CDATA[-203.0]]>
       </x>
@@ -3519,9 +3737,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-225.0]]>
       </y>
-      <labels>
-        <![CDATA[uninhabited,human,galaxysurvey,secondsurvey,gatesearch,alliancewar]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3546,6 +3761,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel.price,uninhabited,secondsurvey,gatesearch]]>
+      </labels>
       <x>
         <![CDATA[-461.0]]>
       </x>
@@ -3555,9 +3773,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-223.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel.price,uninhabited,secondsurvey,gatesearch]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3580,6 +3795,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[secondsurvey,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[-972.0]]>
       </x>
@@ -3589,9 +3807,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-377.0]]>
       </y>
-      <labels>
-        <![CDATA[secondsurvey,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3614,6 +3829,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[gatesearch,secondsurvey,rebel,price,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[-401.0]]>
       </x>
@@ -3623,9 +3841,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-335.0]]>
       </y>
-      <labels>
-        <![CDATA[gatesearch,secondsurvey,rebel,price,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3649,6 +3864,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel,human,unnhabited,price]]>
+      </labels>
       <x>
         <![CDATA[-513.0]]>
       </x>
@@ -3658,9 +3876,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-473.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel,human,unnhabited,price]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3685,6 +3900,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[secondsurvey,right]]>
+      </labels>
       <x>
         <![CDATA[-834.0]]>
       </x>
@@ -3694,9 +3912,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-493.0]]>
       </y>
-      <labels>
-        <![CDATA[secondsurvey,right]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3720,6 +3935,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[secondsurvey,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[-952.0]]>
       </x>
@@ -3729,9 +3947,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-275.0]]>
       </y>
-      <labels>
-        <![CDATA[secondsurvey,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3754,6 +3969,8 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+      </labels>
       <x>
         <![CDATA[-281.0]]>
       </x>
@@ -3763,8 +3980,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-464.0]]>
       </y>
-      <labels>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3788,6 +4003,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[scientist,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-45.0]]>
       </x>
@@ -3797,9 +4015,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[353.0]]>
       </y>
-      <labels>
-        <![CDATA[scientist,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3826,6 +4041,8 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+      </labels>
       <x>
         <![CDATA[-283.0]]>
       </x>
@@ -3835,8 +4052,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-392.0]]>
       </y>
-      <labels>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3860,6 +4075,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[human,alliance,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-395.0]]>
       </x>
@@ -3869,8 +4087,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[41.0]]>
       </y>
-      <labels>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3879,7 +4095,11 @@ An d that's all before you land.]]>
       <links_to>
         <ref tag='sector_sandwall'/>
       </links_to>
-      <planets/>
+      <planets>
+        <ref tag='planet_beauty'/>
+        <ref tag='planet_cake'/>
+        <ref tag='planet_terrible'/>
+      </planets>
       <plot/>
       <potential_fleets/>
       <projectiles/>
@@ -3893,6 +4113,8 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+      </labels>
       <x>
         <![CDATA[-372.0]]>
       </x>
@@ -3902,8 +4124,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-511.0]]>
       </y>
-      <labels>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3926,6 +4146,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <x>
         <![CDATA[-621.0]]>
       </x>
@@ -3935,9 +4158,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[-265.0]]>
       </y>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3965,6 +4185,9 @@ An d that's all before you land.]]>
       <visited>
         <![CDATA[false]]>
       </visited>
+      <labels>
+        <![CDATA[alliance,human,uninhabited]]>
+      </labels>
       <x>
         <![CDATA[-73.0]]>
       </x>
@@ -3974,9 +4197,6 @@ An d that's all before you land.]]>
       <y>
         <![CDATA[55.0]]>
       </y>
-      <labels>
-        <![CDATA[alliance,human,uninhabited]]>
-      </labels>
     </fields>
     <children>
       <active_fleets/>
@@ -3994,17 +4214,135 @@ An d that's all before you land.]]>
       <projectiles/>
     </children>
   </sector>
+  <ship tag='ship_massive_cargo_traders'>
+    <fields>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <shields>
+        <![CDATA[400.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+      <armor>
+        <![CDATA[400.0]]>
+      </armor>
+      <labels>
+      </labels>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <name>
+        <![CDATA[Traders]]>
+      </name>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <fuel>
+        <![CDATA[400.0]]>
+      </fuel>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+    </fields>
+    <children>
+      <addons/>
+      <ammo/>
+      <anti_addons/>
+      <blueprint>
+        <ref tag='shipblueprint_massive_shipper'/>
+      </blueprint>
+      <cargo/>
+      <itinerary/>
+      <owner/>
+      <secondaries/>
+      <target/>
+      <weapons/>
+    </children>
+  </ship>
+  <shipblueprint tag='shipblueprint_massive_shipper'>
+    <fields>
+      <fuel_per_jump>
+        <![CDATA[50.0]]>
+      </fuel_per_jump>
+      <secs_to_jump>
+        <![CDATA[6.0]]>
+      </secs_to_jump>
+      <fuel_regen>
+        <![CDATA[0.001]]>
+      </fuel_regen>
+      <rot_per_sec>
+        <![CDATA[100.0]]>
+      </rot_per_sec>
+      <description>
+        <![CDATA[ The Massive Shipper is exactly what it claims to be - a gigantic vessel whose entire reason for being is the hauling of cargo.]]>
+      </description>
+      <max_shields>
+        <![CDATA[400.0]]>
+      </max_shields>
+      <accel>
+        <![CDATA[80.0]]>
+      </accel>
+      <max_cargo>
+        <![CDATA[400.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[20.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[400.0]]>
+      </max_armor>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <armor_regen>
+        <![CDATA[0.005]]>
+      </armor_regen>
+      <max_speed>
+        <![CDATA[100.0]]>
+      </max_speed>
+      <shield_regen>
+        <![CDATA[0.01]]>
+      </shield_regen>
+      <name>
+        <![CDATA[Massive Shipper]]>
+      </name>
+      <max_fuel>
+        <![CDATA[400.0]]>
+      </max_fuel>
+      <expansion_space>
+        <![CDATA[200.0]]>
+      </expansion_space>
+      <image_filename>
+        <![CDATA[cargo.png]]>
+      </image_filename>
+    </fields>
+    <children/>
+  </shipblueprint>
   <planet tag='station_locker'>
     <fields>
       <description>
         <![CDATA["Oh no, nosir!  Illegal activity is strictly frowned upon in this station. I mean, yes, there's a lot of pirate activity, but we're just named this way to capitalize on it!  Station management doesn't go in for that sort of thing.   Market's that way, off-market is that way." - Locker tourist guide.]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[eastpirates,inhabited,human,standard,station]]>
+      </labels>
       <x>
         <![CDATA[234.0]]>
       </x>
@@ -4017,9 +4355,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Davey Jones' Locker]]>
       </name>
-      <labels>
-        <![CDATA[eastpirates,inhabited,human,standard,station]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -4037,12 +4375,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[Staying mostly out of the fray between rebel and alliance, the scientists here would be regarded as a renegade breakaway faction if they ever actually did anything other than survey. ]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[scientist,inhabited,station,human]]>
+      </labels>
       <x>
         <![CDATA[-24.0]]>
       </x>
@@ -4055,9 +4393,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Science!]]>
       </name>
-      <labels>
-        <![CDATA[scientist,inhabited,station,human]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -4077,12 +4415,12 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[Solitude Station welcomes anyone who no longer wishes to feel the crush of their fellow human.   It has more windows than any other station ever built, the better to provide views of the universe outside. ]]>
       </description>
-      <image_filename>
-        <![CDATA[station.png]]>
-      </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
+      <labels>
+        <![CDATA[human,inhabited,standard,station]]>
+      </labels>
       <x>
         <![CDATA[-160.0]]>
       </x>
@@ -4095,9 +4433,9 @@ An d that's all before you land.]]>
       <name>
         <![CDATA[Solitude Station]]>
       </name>
-      <labels>
-        <![CDATA[human,inhabited,standard,station]]>
-      </labels>
+      <image_filename>
+        <![CDATA[station.png]]>
+      </image_filename>
     </fields>
     <children>
       <addons_for_sale/>
@@ -4115,15 +4453,15 @@ An d that's all before you land.]]>
       <description>
         <![CDATA[ Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....]]>
       </description>
-      <name>
-        <![CDATA[The Coming Storm]]>
-      </name>
-      <labels>
-        <![CDATA[theuniverse]]>
-      </labels>
       <save_as_dev>
         <![CDATA[true]]>
       </save_as_dev>
+      <labels>
+        <![CDATA[theuniverse]]>
+      </labels>
+      <name>
+        <![CDATA[The Coming Storm]]>
+      </name>
     </fields>
     <children>
       <map>
