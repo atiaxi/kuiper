@@ -20,6 +20,20 @@ class KuiCargoBlueprint < KuiObject
     return 1
   end
   
+  # Automatically generates cargo, marked up by the given multiplier
+  def generate_cargo(multiplier)
+    return nil unless playable?
+    result = KuiCargo.new
+    result.blueprint = self
+    rl = Opal::ResourceLocator.instance
+    repo = rl.storage[:repository]
+    if repo
+      result.tag = repo.ensure_unique_tag("cargo_#{self.name}_x#{multiplier}")
+    end
+    result.auto_price(multiplier)
+    return result    
+  end
+  
   def playable?
     return false unless super
     return false unless @name
@@ -59,6 +73,13 @@ class KuiCargo < KuiObject
   
   def initialize_copy(copy)
     self.tag = @rl.repository.ensure_unique_tag(copy.tag)
+  end
+  
+  # Sets the price of this cargo based on the given multiplier applied to
+  # the blueprint base price.
+  def auto_price(multiplier)
+    return unless @blueprint
+    @markup = (self.base_price * multiplier) - self.base_price
   end
   
   def synopsis

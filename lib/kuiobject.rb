@@ -306,6 +306,7 @@ class KuiObject
   def initialize()
     @tag = nil
     @transient = false
+    @label_array = []
     self.labels = ""
     @rl = Opal::ResourceLocator.instance
     super

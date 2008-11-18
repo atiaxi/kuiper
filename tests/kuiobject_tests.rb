@@ -444,6 +444,7 @@ class TC_Cargo < Test::Unit::TestCase
     @player.start_ship = @playerShip
     
     @cargoBlueprint = KuiCargoBlueprint.new
+    @cargoBlueprint.base_price = 100
     @cargoBlueprint.tag = "cargo_fruit"
     @cargoBlueprint.name = "fruit"
     
@@ -451,6 +452,30 @@ class TC_Cargo < Test::Unit::TestCase
     @cargo.tag = "cargo"
     @cargo.blueprint = @cargoBlueprint
     @cargo.markup = 10
+  end
+  
+  def test_auto_generated
+    auto_high = @cargoBlueprint.generate_cargo(1.25)
+    assert_equal(125, auto_high.price)
+    
+    auto_low = @cargoBlueprint.generate_cargo(0.75)
+    assert_equal(75, auto_low.price)
+  end
+  
+  def test_auto_price
+    auto_high = KuiCargo.new
+    auto_high.blueprint = @cargoBlueprint
+    auto_high.auto_price(1.25)
+    assert_equal(125, auto_high.price)
+    
+    auto_low = KuiCargo.new
+    auto_low.blueprint = @cargoBlueprint
+    auto_low.auto_price(0.25)
+    assert_equal(25, auto_low.price)
+    
+    # Second auto shouldn't interfere with first
+    auto_low.auto_price(2.0)
+    assert_equal(200, auto_low.price)
   end
  
   def test_dupes

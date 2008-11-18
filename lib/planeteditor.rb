@@ -4,6 +4,44 @@
 
 require 'editor'
 
+class CargoBlueprintEditor < PropertiesDialog
+  def self.handles?(type)
+    return type == KuiCargoBlueprint
+  end
+  
+  def initialize(cargo, driver)
+    @cargo = cargo
+    super
+  end
+  
+  def apply_children
+    if @auto_expensive.checked
+      result = @cargo.generate_cargo(1.15)
+      result.label_array << 'expensive'
+      @rl.logger.info("Generated #{result.tag}: #{result.synopsis}")
+    end
+    if @auto_avg.checked
+      result = @cargo.generate_cargo(1.0)
+      result.label_array << "average"
+      @rl.logger.info("Generated #{result.tag}: #{result.synopsis}")
+    end
+    if @auto_cheap.checked
+      result = @cargo.generate_cargo(0.85)
+      result.label_array << "cheap"
+      @rl.logger.info("Generated #{result.tag}: #{result.synopsis}")
+    end
+  end
+  
+  def layout_children
+    @auto_expensive = CheckBox.new("Auto create expensive")
+    layout_child(@auto_expensive)
+    @auto_avg = CheckBox.new("Auto create average")
+    layout_child(@auto_avg)
+    @auto_cheap = CheckBox.new("Auto create cheap")
+    layout_child(@auto_cheap)
+  end
+end
+
 class CargoEditor < PropertiesDialog
   def self.handles?(type)
     return type == KuiCargo
@@ -12,6 +50,12 @@ class CargoEditor < PropertiesDialog
   def initialize(cargo, driver)
     @cargo = cargo
     super
+  end
+  
+  # Mostly, we just pass this down to the model
+  def auto_price(multiplier)
+    @cargo.auto_price(multiplier)
+    setup_gui
   end
   
   def layout_children
@@ -24,6 +68,13 @@ class CargoEditor < PropertiesDialog
       @label.rect.topright = [@blueprintButton.rect.x - @spacing, @childY]
       self << @label
       next_child(@blueprintButton)
+      
+      @autoHi = Button.new("Auto Expensive") { self.auto_price(1.15) }
+      layout_child(@autoHi)
+      @autoMed = Button.new("Auto Average") { self.auto_price(1.0) }
+      layout_child(@autoMed)
+      @autoLow = Button.new("Auto Cheap") { self.auto_price(0.85) }
+      layout_child(@autoLow)
     else
       @blueprintButton = Button.new("Set Blueprint") { set_blueprint }
       layout_child(@blueprintButton)

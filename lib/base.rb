@@ -438,11 +438,13 @@ class CheckBox < Label
     @fgcolor = [ 255, 255, 255,255 ]
     @checked = initial_value
     @spacing = 3
+    @clickCallback = nil
     super(text, size, font)
   end
   
   def click(*args)
     @checked = !@checked
+    @clickCallback.call if @clickCallback
     refresh
   end
   
@@ -460,6 +462,10 @@ class CheckBox < Label
     end
     @txt_image.blit(screen, [@rect.x+checkbox_w + @spacing, @rect.y+2])
     #@image.set_alpha(255)
+  end
+  
+  def onClicked(&callback)
+    @clickCallback = callback
   end
   
   def text=(string)

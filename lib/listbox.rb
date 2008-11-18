@@ -251,20 +251,23 @@ class ListBox < CompositeSprite
     @items ||= []
     @widgets_to_items = {}
     y = @rect.top + @spacing
-    if not @items.empty? 
-      @items[@scroll...@items.size].each do | item |
-        break if y >= @rect.bottom
-        continue if item.nil?
-        text = @displayBlock.call(item)
-        label = ListItem.new(text,self, @rect.width - 2)
-        label.rect.x = @rect.x + @spacing
-        label.rect.y = y
-        self << label
-        @widgets_to_items[label] = item
-        if @chosen && (@chosen == item ||(@multi && @chosen.include?(item)))
-          label.selected = true
-        end
-        y += label.rect.h
+    if not @items.empty?
+      in_view = @items[@scroll...@items.size]
+      if in_view
+        in_view.each do | item |
+          break if y >= @rect.bottom
+          continue if item.nil?
+          text = @displayBlock.call(item)
+          label = ListItem.new(text,self, @rect.width - 2)
+          label.rect.x = @rect.x + @spacing
+          label.rect.y = y
+          self << label
+          @widgets_to_items[label] = item
+          if @chosen && (@chosen == item ||(@multi && @chosen.include?(item)))
+            label.selected = true
+          end
+          y += label.rect.h
+        end  
       end
     end
   end

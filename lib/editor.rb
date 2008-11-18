@@ -59,6 +59,14 @@ class PropertiesDialog < Opal::State
   end
   
   def apply
+    apply_fields
+    apply_children
+    @accepted = true
+    
+    cancel
+  end
+  
+  def apply_fields
     @attr_to_field.each do | attr, field |
       setter = (attr.to_s + '=').to_sym
       @object.send(setter,field.text)
@@ -73,9 +81,12 @@ class PropertiesDialog < Opal::State
       setter = (attr.to_s + '=').to_sym
       @object.send(setter,field.checked)
     end
-    @accepted = true
+  end
+  
+  # If children need to do anything special on apply,
+  # now's their chance.
+  def apply_children
     
-    cancel
   end
   
   def cancel
