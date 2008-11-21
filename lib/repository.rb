@@ -116,7 +116,7 @@ class Repository
   end
   
   # Generates a unique tag for the given object
-  def generate_tag_for(object)
+  def generate_tag_for(object, use_this_name=nil)
     total = []
     prefix = object.class.to_s
     prefix = prefix[3...prefix.size()] # Skip 'kui'
@@ -125,7 +125,7 @@ class Repository
     exclusions = [ 'the','a','an','in','of','from','is', 'and' ]
     
     if object.respond_to?(:name)
-      name = object.name
+      name = use_this_name || object.name
       if name && name.size > 0
         name = name.strip.downcase
           

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <kuiper major='0' bug='3' minor='0'>
-  <cargo tag='cargo_Food_x0.85'>
+  <cargo tag='cargo_Equipment_x0.85'>
     <fields>
       <labels>
       </labels>
@@ -11,7 +11,7 @@
         <![CDATA[0]]>
       </amount>
       <markup>
-        <![CDATA[-15.0]]>
+        <![CDATA[-26.25]]>
       </markup>
       <average_price>
         <![CDATA[0]]>
@@ -19,11 +19,11 @@
     </fields>
     <children>
       <blueprint>
-        <ref tag='cargo_food'/>
+        <ref tag='cargoblueprint_equipment'/>
       </blueprint>
     </children>
   </cargo>
-  <cargo tag='cargo_Food_x1.0'>
+  <cargo tag='cargo_Equipment_x1.0'>
     <fields>
       <labels>
       </labels>
@@ -42,6 +42,75 @@
     </fields>
     <children>
       <blueprint>
+        <ref tag='cargoblueprint_equipment'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Equipment_x1.15'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0]]>
+      </amount>
+      <markup>
+        <![CDATA[26.25]]>
+      </markup>
+      <average_price>
+        <![CDATA[0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargoblueprint_equipment'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Food_x0.85'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <markup>
+        <![CDATA[-15.0]]>
+      </markup>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargo_food'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Food_x1.0'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <markup>
+        <![CDATA[0.0]]>
+      </markup>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
         <ref tag='cargo_food'/>
       </blueprint>
     </children>
@@ -54,10 +123,102 @@
         <![CDATA[false]]>
       </mission_related>
       <amount>
-        <![CDATA[0]]>
+        <![CDATA[0.0]]>
       </amount>
       <markup>
         <![CDATA[15.0]]>
+      </markup>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargo_food'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Luxuries_x0.85'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <markup>
+        <![CDATA[-82.5]]>
+      </markup>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargoblueprint_luxuries'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Luxuries_x1.0'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <markup>
+        <![CDATA[0.0]]>
+      </markup>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargoblueprint_luxuries'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Luxuries_x1.15'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <markup>
+        <![CDATA[82.5]]>
+      </markup>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargoblueprint_luxuries'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Raw Metals_x0.85'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0]]>
+      </amount>
+      <markup>
+        <![CDATA[-22.5]]>
       </markup>
       <average_price>
         <![CDATA[0]]>
@@ -65,7 +226,122 @@
     </fields>
     <children>
       <blueprint>
-        <ref tag='cargo_food'/>
+        <ref tag='cargo_raw_metals'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Raw Metals_x1.0'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0]]>
+      </amount>
+      <markup>
+        <![CDATA[0.0]]>
+      </markup>
+      <average_price>
+        <![CDATA[0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargo_raw_metals'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Raw Metals_x1.15'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0]]>
+      </amount>
+      <markup>
+        <![CDATA[22.5]]>
+      </markup>
+      <average_price>
+        <![CDATA[0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargo_raw_metals'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Specimens_x0.85'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0]]>
+      </amount>
+      <markup>
+        <![CDATA[-48.75]]>
+      </markup>
+      <average_price>
+        <![CDATA[0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargoblueprint_specimens'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Specimens_x1.0'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0]]>
+      </amount>
+      <markup>
+        <![CDATA[0.0]]>
+      </markup>
+      <average_price>
+        <![CDATA[0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargoblueprint_specimens'/>
+      </blueprint>
+    </children>
+  </cargo>
+  <cargo tag='cargo_Specimens_x1.15'>
+    <fields>
+      <labels>
+      </labels>
+      <mission_related>
+        <![CDATA[false]]>
+      </mission_related>
+      <amount>
+        <![CDATA[0]]>
+      </amount>
+      <markup>
+        <![CDATA[48.7499999999999]]>
+      </markup>
+      <average_price>
+        <![CDATA[0]]>
+      </average_price>
+    </fields>
+    <children>
+      <blueprint>
+        <ref tag='cargoblueprint_specimens'/>
       </blueprint>
     </children>
   </cargo>
@@ -88,6 +364,7 @@
   <cargoblueprint tag='cargo_raw_metals'>
     <fields>
       <labels>
+        <![CDATA[metal]]>
       </labels>
       <description>
         <![CDATA[This is mostly unprocessed ore - since the metal tends to weigh the same whether it's been through a machine or not and you never know which exact metals the buyer will need. ]]>
@@ -97,6 +374,54 @@
       </base_price>
       <name>
         <![CDATA[Raw Metals]]>
+      </name>
+    </fields>
+    <children/>
+  </cargoblueprint>
+  <cargoblueprint tag='cargoblueprint_equipment'>
+    <fields>
+      <labels>
+      </labels>
+      <description>
+        <![CDATA[Scanners, probes, imagers, from items as expensive as hyperdrives and as cheap as children's toys, it's all lumped together in large lots. ]]>
+      </description>
+      <base_price>
+        <![CDATA[175.0]]>
+      </base_price>
+      <name>
+        <![CDATA[Equipment]]>
+      </name>
+    </fields>
+    <children/>
+  </cargoblueprint>
+  <cargoblueprint tag='cargoblueprint_luxuries'>
+    <fields>
+      <labels>
+      </labels>
+      <description>
+        <![CDATA[The hottest fasions, the best new trends, whether near or far people everywhere will pay good money for what's 'in'. ]]>
+      </description>
+      <base_price>
+        <![CDATA[550.0]]>
+      </base_price>
+      <name>
+        <![CDATA[Luxuries]]>
+      </name>
+    </fields>
+    <children/>
+  </cargoblueprint>
+  <cargoblueprint tag='cargoblueprint_specimens'>
+    <fields>
+      <labels>
+      </labels>
+      <description>
+        <![CDATA[Every planet with life - and even those that only used to host it - has unique specimens. ]]>
+      </description>
+      <base_price>
+        <![CDATA[325.0]]>
+      </base_price>
+      <name>
+        <![CDATA[Specimens]]>
       </name>
     </fields>
     <children/>
@@ -252,7 +577,7 @@
         <![CDATA[0.0]]>
       </amount>
       <markup>
-        <![CDATA[10.0]]>
+        <![CDATA[22.5]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
@@ -914,6 +1239,9 @@ An d that's all before you land.]]>
       <cargo_for_sale>
         <ref tag='food_med'/>
         <ref tag='metals_high'/>
+        <ref tag='cargo_Equipment_x0.85'/>
+        <ref tag='cargo_Luxuries_x0.85'/>
+        <ref tag='cargo_Specimens_x1.15'/>
       </cargo_for_sale>
       <missions/>
       <owner>

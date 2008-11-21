@@ -118,7 +118,11 @@ class PropertiesDialog < Opal::State
     tagInput = InputField.new(value,30)
     @attr_to_field[:tag] = tagInput
     layout_field_button(label,tagInput,"Auto") do
-      tagInput.text = @rl.repository.generate_tag_for(@object)
+      attemptName = nil
+      if @attr_to_field[:name]
+        attemptName = @attr_to_field[:name].text
+      end
+      tagInput.text = @rl.repository.generate_tag_for(@object,attemptName)
     end
     @fieldY = tagInput.rect.bottom + @spacing    
     @object.class.attrs.sort.each do | attr |
