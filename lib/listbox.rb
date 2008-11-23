@@ -1,4 +1,3 @@
-
 module Opal
 
 # Like a button, but with less overhead.
@@ -9,7 +8,7 @@ class ListItem < Label
   # The parents will usually be a ListBox, but for the sake of future
   # implementing of radio buttons or something, the parent object just
   # has to support :choose
-  def initialize(text, parent, min_width=0, size=12, font="freesansbold.ttf")
+  def initialize(text, parent, min_width=0, size=12, font=$FONT)
     @bgcolor = [0, 0, 0]
     @selected_color = [128,128,128]
     @parent = parent

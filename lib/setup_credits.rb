@@ -21,6 +21,8 @@ def main
   root << ["Other Art", notmine]
   # Of the form filename, source, author, license
   notmine << ['freesansbold.ttf','Courtesy the Rubygame Distribution',nil, nil]
+  notmine << ['LiberationSans-Bold.ttf','https://www.redhat.com/promo/fonts/',
+    "Red Hat Liberation Fonts", 'GPL2+']
   notmine << ['kuiper.png', 
     'http://hubblesite.org/newscenter/archive/releases/2000/06/image/a/',
     'NASA, The Hubble Heritage Team (AURA/STScI), ESA',

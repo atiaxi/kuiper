@@ -9,7 +9,7 @@ class HaloButton < Opal::Button
   
   HALO_THICKNESS = 3
   
-  def initialize(text='', size=12, font='freesansbold.ttf', &callback)
+  def initialize(text='', size=12, font=$FONT, &callback)
     @halos = []
     super(text,size,font,&callback)
   end

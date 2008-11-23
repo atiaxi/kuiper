@@ -116,7 +116,7 @@ class RepositoryAdapter < Adapter
   end
   
   def items
-    return @adaptee.everything_of_type(@constraint, @base_only)
+    return @adaptee.everything_of_type(@constraint, @base_only).sort
   end
   
 end

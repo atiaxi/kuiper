@@ -312,6 +312,12 @@ class KuiObject
     super
   end
   
+  # As the sorting is likely to be done for display purposes, this sorts based
+  # on this object's synopsis (which defaults to the tag)
+  def <=>(other)
+    return self.synopsis <=> other.synopsis
+  end
+  
   # Two objects are == if their tags are identical
   def ==(other)
     #return self.deep_equals(other)

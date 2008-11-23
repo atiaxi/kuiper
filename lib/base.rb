@@ -165,7 +165,7 @@ class Label < StaticSprite
   include Fontable
   include Colorable
 
-  def initialize(txt='', size=12, font="freesansbold.ttf")
+  def initialize(txt='', size=12, font=$FONT)
     @image = false
     super()
     @rl = ResourceLocator.instance()
@@ -209,7 +209,7 @@ end
 # necessary after the rect has been set to the desired height and width.  This
 # label will wrap words accordingly, and will respect embedded newlines.
 class MultiLineLabel < Label
-  def initialize(txt='',size=12,font='freesansbold.ttf')
+  def initialize(txt='',size=12,font=$FONT)
     @width = nil
     @height = nil
     super(txt,size,font)
@@ -376,7 +376,7 @@ class Button < Label
   attr_accessor :callback
   attr_reader :border_thickness
 
-  def initialize(text='', size=12, font="freesansbold.ttf", &callback)
+  def initialize(text='', size=12, font=$FONT, &callback)
     @bgcolor = [ 0, 0, 255 ]
     @border = [ 255, 255, 255 ]
     @disabled_color = [ 64, 64, 64 ]
@@ -432,7 +432,7 @@ class CheckBox < Label
   
   attr_accessor :checked
   
-  def initialize(text='',initial_value=false,size=12,font="freesansbold.ttf")
+  def initialize(text='',initial_value=false,size=12,font=$FONT)
     @bgcolor = [ 0, 0, 0 ,255]
     @border = [255,255,255,255]
     @fgcolor = [ 255, 255, 255,255 ]

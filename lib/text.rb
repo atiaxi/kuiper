@@ -137,7 +137,7 @@ class MultiLineInput < MultiLineLabel
   
   include Focusable
   
-  def initialize(text, size=12, font="freesansbold.ttf")
+  def initialize(text, size=12, font=$FONT)
     @bgcolor = [ 0, 0, 0 ]
     @border = [ 255, 255, 255 ]
     @focus = false
@@ -369,7 +369,7 @@ class InputField < MultiLineInput
   
   attr_reader :minimum_size
   
-  def initialize(text, minChars = nil, size=12, font="freesansbold.ttf")
+  def initialize(text, minChars = nil, size=12, font=$FONT)
     @minimum_size = 0
     super(text,size,font)
     self.minimum_chars = minChars

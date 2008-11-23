@@ -247,7 +247,7 @@ class TC_WeaponsAndShips < Test::Unit::TestCase
     
     assert_equal(3, right.items.size)
     
-    primary = right.items[0]
+    primary = right.items[1]
     assert_equal(primary, @primary)
     
     # Repository adapter is supposedly read-only

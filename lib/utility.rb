@@ -2,6 +2,7 @@
 $ERB_SAFE_LEVEL = 3
 
 $KUIPER_VERSION = [0,0,3]
+$FONT = 'LiberationSans-Bold.ttf'
 $QUICKSAVE_SUFFIX = "quicksave"
 $AUTOSAVE_SUFFIX="autosave"
 
