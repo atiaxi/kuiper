@@ -433,7 +433,7 @@ class OmniChooser < CompositeSprite
   
   def setup_types
     result = ListBox.new
-    result.items = KuiObject.subclasses
+    result.items = KuiObject.subclasses(true)
     return result
   end
   

@@ -92,10 +92,19 @@ class TC_Repository_Tests < Test::Unit::TestCase
     # Make sure tag isn't re-set if it's same as original
     assert_equal("player_player",gen)
     
-    @player.tag = "something_else"
-    gen = @repo.generate_tag_for(@player)
+    newPlayer = KuiPlayer.new
+    newPlayer.name="The Player"
+    
+    gen = @repo.generate_tag_for(newPlayer)
     assert_not_equal("player_player",gen)
     assert_equal("player_player-",gen[0...14])
+  end
+  
+  def test_rename_tag
+    assert_equal(@foo, @repo['barf'])
+    @foo.tag = "something_else"
+    assert_equal(@foo, @repo['something_else'])
+    assert_nil(@repo['barf'])
   end
   
 end

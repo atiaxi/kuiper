@@ -370,8 +370,7 @@ class KuiObject
   end
   
   def base_tag(separator = Repository::TAG_SEPARATOR)
-    return @tag.split(separator)[0] if @tag
-    return nil
+    return compute_base_tag(@tag,separator)
   end
 
   # Old ==, compares fields, children, everything.
@@ -546,9 +545,10 @@ class KuiObject
   def tag=(string)
     rl = Opal::ResourceLocator.instance
     repo = rl.storage[:repository]
+    old_tag = self.tag
     @tag = string
     if repo
-      repo.register_tag_for(self, string)
+      repo.register_tag_for(self, string,old_tag)
     end
   end
   

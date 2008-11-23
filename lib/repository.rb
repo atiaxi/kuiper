@@ -178,11 +178,19 @@ class Repository
     register_tag_for(object,object.tag)
   end
   
-  def register_tag_for(object, tag)
+  def register_tag_for(object, tag, old_tag = nil)
     old = @everything[tag]
     #return if old == object
     rl = Opal::ResourceLocator.instance
     @everything[tag] = object
+    if old_tag && old_tag != tag
+      old_base = compute_base_tag(old_tag,Repository::TAG_SEPARATOR)
+      new_base = compute_base_tag(tag,Repository::TAG_SEPARATOR)
+      if old_base != new_base
+        @everything.delete(old_tag)
+      end
+      
+    end
     resolve_placeholders_for(object)
     if old
       #rl.logger.debug("Replaced #{old} with #{object} for #{tag}")

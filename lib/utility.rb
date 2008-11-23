@@ -8,6 +8,11 @@ $AUTOSAVE_SUFFIX="autosave"
 
 require 'set'
 
+def compute_base_tag(tag,separator)
+  return tag.split(separator)[0] if tag
+  return nil
+end
+
 # Returns an Ftor for a spot at the given radius
 def random_spot(radius)
   angle = rand() * Math::PI * 2

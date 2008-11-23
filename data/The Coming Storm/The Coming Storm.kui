@@ -1,21 +1,91 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <kuiper major='0' bug='3' minor='0'>
+  <weaponblueprint tag=''>
+    <fields>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[700.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[missile.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[true]]>
+      </turreted>
+      <description>
+        <![CDATA[ A turret allows you to launch Direct Missiles without having to first point your ship at your target; the turret tracks your target for you.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[700.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <price>
+        <![CDATA[25000.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[10.0]]>
+      </max_ttl>
+      <name>
+        <![CDATA[Direct Missile Turret]]>
+      </name>
+      <secondary_weapon>
+        <![CDATA[true]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[100.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[2.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[4.0]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+    </fields>
+    <children>
+      <ammo>
+        <ref tag='weaponblueprint_direct_missile'/>
+      </ammo>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
   <cargo tag='cargo_Equipment_x0.85'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[-26.25]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -25,20 +95,20 @@
   </cargo>
   <cargo tag='cargo_Equipment_x1.0'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -48,20 +118,20 @@
   </cargo>
   <cargo tag='cargo_Equipment_x1.15'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[26.25]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -71,20 +141,20 @@
   </cargo>
   <cargo tag='cargo_Food_x0.85'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[-15.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -94,20 +164,20 @@
   </cargo>
   <cargo tag='cargo_Food_x1.0'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -117,20 +187,20 @@
   </cargo>
   <cargo tag='cargo_Food_x1.15'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[15.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -140,20 +210,20 @@
   </cargo>
   <cargo tag='cargo_Luxuries_x0.85'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[-82.5]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -163,20 +233,20 @@
   </cargo>
   <cargo tag='cargo_Luxuries_x1.0'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -186,20 +256,20 @@
   </cargo>
   <cargo tag='cargo_Luxuries_x1.15'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[82.5]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -209,20 +279,20 @@
   </cargo>
   <cargo tag='cargo_Raw Metals_x0.85'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[-22.5]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -232,20 +302,20 @@
   </cargo>
   <cargo tag='cargo_Raw Metals_x1.0'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -255,20 +325,20 @@
   </cargo>
   <cargo tag='cargo_Raw Metals_x1.15'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[22.5]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -278,20 +348,20 @@
   </cargo>
   <cargo tag='cargo_Specimens_x0.85'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[-48.75]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -301,20 +371,20 @@
   </cargo>
   <cargo tag='cargo_Specimens_x1.0'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -324,20 +394,20 @@
   </cargo>
   <cargo tag='cargo_Specimens_x1.15'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[48.7499999999999]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -347,20 +417,20 @@
   </cargo>
   <cargo tag='cargo_Synthetics_x0.85'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[-37.5]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -370,20 +440,20 @@
   </cargo>
   <cargo tag='cargo_Synthetics_x1.0'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -393,20 +463,20 @@
   </cargo>
   <cargo tag='cargo_Synthetics_x1.15'>
     <fields>
-      <labels>
-      </labels>
       <markup>
         <![CDATA[37.5]]>
       </markup>
       <average_price>
         <![CDATA[0.0]]>
       </average_price>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <labels>
+      </labels>
     </fields>
     <children>
       <blueprint>
@@ -419,14 +489,14 @@
       <description>
         <![CDATA[A mix of natural and artificial materials, you never know the exact composition of what you'll be transporting.  The important thing is that you can eat it if your ship ends up stranded somewhere. ]]>
       </description>
-      <base_price>
-        <![CDATA[100.0]]>
-      </base_price>
       <labels>
       </labels>
       <name>
         <![CDATA[Food]]>
       </name>
+      <base_price>
+        <![CDATA[100.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -435,15 +505,15 @@
       <description>
         <![CDATA[This is mostly unprocessed ore - since the metal tends to weigh the same whether it's been through a machine or not and you never know which exact metals the buyer will need. ]]>
       </description>
-      <base_price>
-        <![CDATA[150.0]]>
-      </base_price>
       <labels>
         <![CDATA[metal]]>
       </labels>
       <name>
         <![CDATA[Raw Metals]]>
       </name>
+      <base_price>
+        <![CDATA[150.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -452,14 +522,14 @@
       <description>
         <![CDATA[Scanners, probes, imagers, from items as expensive as hyperdrives and as cheap as children's toys, it's all lumped together in large lots. ]]>
       </description>
-      <base_price>
-        <![CDATA[175.0]]>
-      </base_price>
       <labels>
       </labels>
       <name>
         <![CDATA[Equipment]]>
       </name>
+      <base_price>
+        <![CDATA[175.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -468,14 +538,14 @@
       <description>
         <![CDATA[The hottest fasions, the best new trends, whether near or far people everywhere will pay good money for what's 'in'. ]]>
       </description>
-      <base_price>
-        <![CDATA[550.0]]>
-      </base_price>
       <labels>
       </labels>
       <name>
         <![CDATA[Luxuries]]>
       </name>
+      <base_price>
+        <![CDATA[550.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -484,14 +554,14 @@
       <description>
         <![CDATA[Every planet with life - and even those that only used to host it - has unique specimens. ]]>
       </description>
-      <base_price>
-        <![CDATA[325.0]]>
-      </base_price>
       <labels>
       </labels>
       <name>
         <![CDATA[Specimens]]>
       </name>
+      <base_price>
+        <![CDATA[325.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -499,25 +569,19 @@
     <fields>
       <description>
       </description>
-      <base_price>
-        <![CDATA[250.0]]>
-      </base_price>
       <labels>
       </labels>
       <name>
         <![CDATA[Synthetics]]>
       </name>
+      <base_price>
+        <![CDATA[250.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
   <fleet tag='fleet_massive_trading'>
     <fields>
-      <spawn_chance>
-        <![CDATA[0.15]]>
-      </spawn_chance>
-      <labels>
-        <![CDATA[traders]]>
-      </labels>
       <min_stay>
         <![CDATA[10.0]]>
       </min_stay>
@@ -530,15 +594,21 @@
       <current_stay>
         <![CDATA[0.0]]>
       </current_stay>
-      <name>
-        <![CDATA[Massive Trading Fleet]]>
-      </name>
       <behavior>
         <![CDATA[trade]]>
       </behavior>
+      <labels>
+        <![CDATA[traders]]>
+      </labels>
       <unique>
         <![CDATA[false]]>
       </unique>
+      <name>
+        <![CDATA[Massive Trading Fleet]]>
+      </name>
+      <spawn_chance>
+        <![CDATA[0.15]]>
+      </spawn_chance>
     </fields>
     <children>
       <owner>
@@ -629,17 +699,6 @@
   </map>
   <org tag='org_alliance'>
     <fields>
-      <kill_on_sight>
-        <![CDATA[-1000.0]]>
-      </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
-      <labels>
-      </labels>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
@@ -655,25 +714,36 @@
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <name>
-        <![CDATA[Alliance]]>
-      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <labels>
+      </labels>
       <shooting_mod>
         <![CDATA[-10.0]]>
       </shooting_mod>
+      <name>
+        <![CDATA[Alliance]]>
+      </name>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
     </fields>
     <children>
       <feelings>
         <relation>
           <fields>
-            <labels>
-            </labels>
             <feeling>
               <![CDATA[1000000]]>
             </feeling>
+            <labels>
+            </labels>
           </fields>
           <children>
             <target_org>
@@ -686,17 +756,6 @@
   </org>
   <org tag='org_player'>
     <fields>
-      <kill_on_sight>
-        <![CDATA[-1000.0]]>
-      </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
-      <labels>
-      </labels>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
@@ -712,25 +771,36 @@
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <name>
-        <![CDATA[The Player]]>
-      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <labels>
+      </labels>
       <shooting_mod>
         <![CDATA[-10.0]]>
       </shooting_mod>
+      <name>
+        <![CDATA[The Player]]>
+      </name>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
     </fields>
     <children>
       <feelings>
         <relation>
           <fields>
-            <labels>
-            </labels>
             <feeling>
               <![CDATA[1000000]]>
             </feeling>
+            <labels>
+            </labels>
           </fields>
           <children>
             <target_org>
@@ -743,17 +813,6 @@
   </org>
   <org tag='org_rebels'>
     <fields>
-      <kill_on_sight>
-        <![CDATA[-1000.0]]>
-      </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
-      <labels>
-      </labels>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
@@ -769,25 +828,36 @@
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <name>
-        <![CDATA[Rebels]]>
-      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <labels>
+      </labels>
       <shooting_mod>
         <![CDATA[-10.0]]>
       </shooting_mod>
+      <name>
+        <![CDATA[Rebels]]>
+      </name>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
     </fields>
     <children>
       <feelings>
         <relation>
           <fields>
-            <labels>
-            </labels>
             <feeling>
               <![CDATA[1000000]]>
             </feeling>
+            <labels>
+            </labels>
           </fields>
           <children>
             <target_org>
@@ -800,17 +870,6 @@
   </org>
   <org tag='org_scientists'>
     <fields>
-      <kill_on_sight>
-        <![CDATA[-1000.0]]>
-      </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
-      <labels>
-      </labels>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
@@ -826,25 +885,36 @@
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <name>
-        <![CDATA[Scientists]]>
-      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <labels>
+      </labels>
       <shooting_mod>
         <![CDATA[-10.0]]>
       </shooting_mod>
+      <name>
+        <![CDATA[Scientists]]>
+      </name>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
     </fields>
     <children>
       <feelings>
         <relation>
           <fields>
-            <labels>
-            </labels>
             <feeling>
               <![CDATA[1000000]]>
             </feeling>
+            <labels>
+            </labels>
           </fields>
           <children>
             <target_org>
@@ -857,17 +927,6 @@
   </org>
   <org tag='org_traders'>
     <fields>
-      <kill_on_sight>
-        <![CDATA[-1000.0]]>
-      </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
-      <labels>
-      </labels>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
@@ -883,25 +942,36 @@
       <gullibility>
         <![CDATA[0.8]]>
       </gullibility>
-      <name>
-        <![CDATA[Traders]]>
-      </name>
       <devoted>
         <![CDATA[1000.0]]>
       </devoted>
+      <labels>
+      </labels>
       <shooting_mod>
         <![CDATA[-10.0]]>
       </shooting_mod>
+      <name>
+        <![CDATA[Traders]]>
+      </name>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
     </fields>
     <children>
       <feelings>
         <relation>
           <fields>
-            <labels>
-            </labels>
             <feeling>
               <![CDATA[1000000]]>
             </feeling>
+            <labels>
+            </labels>
           </fields>
           <children>
             <target_org>
@@ -914,24 +984,24 @@
   </org>
   <planet tag='planet_anvil_station'>
     <fields>
-      <description>
-        <![CDATA[When leading scientists and engineers created this station long ago, it was to study - from a safe distance - the odd phenomenon in this part of the galaxy.  War has changed the focus of the station dramatically. ]]>
-      </description>
-      <labels>
-        <![CDATA[human,rebel,station,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[64.0]]>
-      </x>
+      <description>
+        <![CDATA[When leading scientists and engineers created this station long ago, it was to study - from a safe distance - the odd phenomenon in this part of the galaxy.  War has changed the focus of the station dramatically. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[64.0]]>
+      </x>
+      <labels>
+        <![CDATA[human,rebel,station,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[-91.0]]>
       </y>
@@ -952,29 +1022,37 @@
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_artifact'>
     <fields>
-      <description>
-        <![CDATA[Of all the mysteries in the universe, none have been as persistant as the alien artifacts discovered on this planet.  It started an invasion scare that, to an extent, lingers to this day.  Despite scientists' findings that the artifacts could not possibly function in a universe that obeys the same physical laws as ours, it continues to be a source of mystery and study.]]>
-      </description>
-      <labels>
-        <![CDATA[scientist,human,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[7.0]]>
-      </x>
+      <description>
+        <![CDATA[Of all the mysteries in the universe, none have been as persistant as the alien artifacts discovered on this planet.  It started an invasion scare that, to an extent, lingers to this day.  Despite scientists' findings that the artifacts could not possibly function in a universe that obeys the same physical laws as ours, it continues to be a source of mystery and study.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[7.0]]>
+      </x>
+      <labels>
+        <![CDATA[scientist,human,inhabited]]>
+      </labels>
       <y>
         <![CDATA[177.0]]>
       </y>
@@ -1000,24 +1078,24 @@
   </planet>
   <planet tag='planet_beauty'>
     <fields>
-      <description>
-        <![CDATA[This planet was given its name before anyone had actually seen it.  As much as the inhabitants go on about how the sheer austerity of the barren land is in its own way beautiful, it is widely regarded that the name was simply a mistake. ]]>
-      </description>
-      <labels>
-        <![CDATA[inhabited,alliance,human,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[222.0]]>
-      </x>
+      <description>
+        <![CDATA[This planet was given its name before anyone had actually seen it.  As much as the inhabitants go on about how the sheer austerity of the barren land is in its own way beautiful, it is widely regarded that the name was simply a mistake. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[222.0]]>
+      </x>
+      <labels>
+        <![CDATA[inhabited,alliance,human,standard]]>
+      </labels>
       <y>
         <![CDATA[-179.0]]>
       </y>
@@ -1036,29 +1114,37 @@
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_bloodbath'>
     <fields>
-      <description>
-        <![CDATA[This planet's name comes from before it was home to a thousand different pirate clans - its red tint earned it the title "Bloodbath".  The constantly fueding clans just outside the landing port seem intent on earning the name. ]]>
-      </description>
-      <labels>
-        <![CDATA[inhabited,human,standard,eastpirates]]>
-      </labels>
       <image_filename>
         <![CDATA[redplanet.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-35.0]]>
-      </x>
+      <description>
+        <![CDATA[This planet's name comes from before it was home to a thousand different pirate clans - its red tint earned it the title "Bloodbath".  The constantly fueding clans just outside the landing port seem intent on earning the name. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-35.0]]>
+      </x>
+      <labels>
+        <![CDATA[inhabited,human,standard,eastpirates]]>
+      </labels>
       <y>
         <![CDATA[91.0]]>
       </y>
@@ -1079,29 +1165,37 @@
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_cake'>
     <fields>
-      <description>
-        <![CDATA[The origin of this planet's name date back to an ancient quote of a noble, the actual source long since forgotten, which indicated that those who could not afford bread should simply "eat cake".  The settlers apparently connected this somehow with their putative vow of poverty - one which was abandoned as soon as the expense of actually living on the planet came to light. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[toxic.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-254.0]]>
-      </x>
+      <description>
+        <![CDATA[The origin of this planet's name date back to an ancient quote of a noble, the actual source long since forgotten, which indicated that those who could not afford bread should simply "eat cake".  The settlers apparently connected this somehow with their putative vow of poverty - one which was abandoned as soon as the expense of actually living on the planet came to light. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-254.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[-63.0]]>
       </y>
@@ -1119,29 +1213,37 @@
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_chiron_alpha_prime'>
     <fields>
-      <description>
-        <![CDATA[Chiron Alpha Prime's atmosphere is a thick soup of toxic and corrosive gases, and most of the planet is covered in liquid methane at best.  Of course, these rare and horrible materials make excellent exports, which is the only reason anyone would bother setting up here. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[toxic.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-154.0]]>
-      </x>
+      <description>
+        <![CDATA[Chiron Alpha Prime's atmosphere is a thick soup of toxic and corrosive gases, and most of the planet is covered in liquid methane at best.  Of course, these rare and horrible materials make excellent exports, which is the only reason anyone would bother setting up here. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-154.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[-109.0]]>
       </y>
@@ -1161,29 +1263,37 @@
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_chiron_beta_prime'>
     <fields>
-      <description>
-        <![CDATA[Whereas Chiron Alpha Prime has volatiles and other rare materials, Chiron Beta Prime is a big rock.  Nickel, aluminum, other metals of ordinary and heavy variety are plentiful, and the planet's comparatively weaker gravity well makes mining it profitable. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,humanity,standard,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[58.0]]>
-      </x>
+      <description>
+        <![CDATA[Whereas Chiron Alpha Prime has volatiles and other rare materials, Chiron Beta Prime is a big rock.  Nickel, aluminum, other metals of ordinary and heavy variety are plentiful, and the planet's comparatively weaker gravity well makes mining it profitable. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[58.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,humanity,standard,inhabited]]>
+      </labels>
       <y>
         <![CDATA[84.0]]>
       </y>
@@ -1203,31 +1313,39 @@
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_citadel'>
     <fields>
-      <description>
-        <![CDATA[To enter into any orbit of Citadel is to risk your life.  Literally billions of tiny networked weapons sattelites  are on watch at all times, repeatedly requesting credentials and making it clear that you are not, even for a small bit of time, welcome.  Merely tolerated.
-
-An d that's all before you land.]]>
-      </description>
-      <labels>
-        <![CDATA[human,inhabited,alliance,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-12.0]]>
-      </x>
+      <description>
+        <![CDATA[To enter into any orbit of Citadel is to risk your life.  Literally billions of tiny networked weapons sattelites  are on watch at all times, repeatedly requesting credentials and making it clear that you are not, even for a small bit of time, welcome.  Merely tolerated.
+
+An d that's all before you land.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-12.0]]>
+      </x>
+      <labels>
+        <![CDATA[human,inhabited,alliance,standard]]>
+      </labels>
       <y>
         <![CDATA[2.0]]>
       </y>
@@ -1245,29 +1363,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_compass_rose'>
     <fields>
-      <description>
-        <![CDATA[ Though the station only represents the 'north' part of the historical compass rose - and to modern stellar cartograhpers, not even that - it still retains its overly poetic name.]]>
-      </description>
-      <labels>
-        <![CDATA[inhabited,human,scientist,station]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-10.0]]>
-      </x>
+      <description>
+        <![CDATA[ Though the station only represents the 'north' part of the historical compass rose - and to modern stellar cartograhpers, not even that - it still retains its overly poetic name.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-10.0]]>
+      </x>
+      <labels>
+        <![CDATA[inhabited,human,scientist,station]]>
+      </labels>
       <y>
         <![CDATA[107.0]]>
       </y>
@@ -1292,24 +1418,24 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_cork'>
     <fields>
-      <description>
-        <![CDATA[When it was first created, Cork was the most heavily armed station humanity had ever made.  A great deal of work and funding has gone into keeping things that way. ]]>
-      </description>
-      <labels>
-        <![CDATA[station,rebel,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[40.0]]>
-      </x>
+      <description>
+        <![CDATA[When it was first created, Cork was the most heavily armed station humanity had ever made.  A great deal of work and funding has gone into keeping things that way. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[40.0]]>
+      </x>
+      <labels>
+        <![CDATA[station,rebel,standard]]>
+      </labels>
       <y>
         <![CDATA[24.0]]>
       </y>
@@ -1331,29 +1457,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_earth'>
     <fields>
-      <description>
-        <![CDATA[This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[planetoid.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[150.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-7.0]]>
-      </x>
+      <description>
+        <![CDATA[This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-7.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <y>
         <![CDATA[-43.0]]>
       </y>
@@ -1377,29 +1511,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_eden'>
     <fields>
-      <description>
-        <![CDATA[Eden was a deceptive planet from the very beginning.  The long-range scanners the Survey used said it was entirely Earthlike, and it was - at first.  Over the past hundred years, the ecosystem has been collapsing.  Despite modern terraforming processes, the collapse has yet to be halted.]]>
-      </description>
-      <labels>
-        <![CDATA[inhabited,alliance,human,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[toxic.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-21.0]]>
-      </x>
+      <description>
+        <![CDATA[Eden was a deceptive planet from the very beginning.  The long-range scanners the Survey used said it was entirely Earthlike, and it was - at first.  Over the past hundred years, the ecosystem has been collapsing.  Despite modern terraforming processes, the collapse has yet to be halted.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-21.0]]>
+      </x>
+      <labels>
+        <![CDATA[inhabited,alliance,human,standard]]>
+      </labels>
       <y>
         <![CDATA[-70.0]]>
       </y>
@@ -1423,29 +1565,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_farm'>
     <fields>
-      <description>
-        <![CDATA[More expensive than both the galaxy survey and second survey expeditions combined, this planet is the pinnacle of both terraforming science and spending. ]]>
-      </description>
-      <labels>
-        <![CDATA[rebel,human,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[planetoid.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-5.0]]>
-      </x>
+      <description>
+        <![CDATA[More expensive than both the galaxy survey and second survey expeditions combined, this planet is the pinnacle of both terraforming science and spending. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-5.0]]>
+      </x>
+      <labels>
+        <![CDATA[rebel,human,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[85.0]]>
       </y>
@@ -1465,29 +1615,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_finders_keepers'>
     <fields>
-      <description>
-        <![CDATA[The planet's name is also its motto - its founding was fraught with legal wrangling over who owned what in the wake of some several million squatters having arrived before any government.  Fortunately, that sort of trouble settled down long ago.  ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-290.0]]>
-      </x>
+      <description>
+        <![CDATA[The planet's name is also its motto - its founding was fraught with legal wrangling over who owned what in the wake of some several million squatters having arrived before any government.  Fortunately, that sort of trouble settled down long ago.  ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-290.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[-78.0]]>
       </y>
@@ -1508,29 +1666,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_fleet_thousands'>
     <fields>
-      <description>
-        <![CDATA[This station remains one of the greatest technological accomplishments of humankind, even today.  Packed nearly full of equipment, its purpose was to project an image of Earth surrounded by thousands of defensive ships - all to ward off an invasion which never came. ]]>
-      </description>
-      <labels>
-        <![CDATA[scientist,inhabited,standard,human]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-333.0]]>
-      </x>
+      <description>
+        <![CDATA[This station remains one of the greatest technological accomplishments of humankind, even today.  Packed nearly full of equipment, its purpose was to project an image of Earth surrounded by thousands of defensive ships - all to ward off an invasion which never came. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-333.0]]>
+      </x>
+      <labels>
+        <![CDATA[scientist,inhabited,standard,human]]>
+      </labels>
       <y>
         <![CDATA[-226.0]]>
       </y>
@@ -1552,29 +1718,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_forge'>
     <fields>
-      <description>
-        <![CDATA[The Forge is a planet of exotic chemicals and more.  It was been described, not inacurrately, as being 'shrouded in war', as weapons creation and testing are the world's entire purpose. ]]>
-      </description>
-      <labels>
-        <![CDATA[rebel,human,standard,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[redplanet.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-100.0]]>
-      </x>
+      <description>
+        <![CDATA[The Forge is a planet of exotic chemicals and more.  It was been described, not inacurrately, as being 'shrouded in war', as weapons creation and testing are the world's entire purpose. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-100.0]]>
+      </x>
+      <labels>
+        <![CDATA[rebel,human,standard,inhabited]]>
+      </labels>
       <y>
         <![CDATA[-4.0]]>
       </y>
@@ -1594,29 +1768,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_furthest_shore'>
     <fields>
-      <description>
-        <![CDATA[One of the oldest continually-inhabited human colonies, The Furthest Shore feels more like a clone of Earth than any of the planets designed to assume the role.]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-101.0]]>
-      </x>
+      <description>
+        <![CDATA[One of the oldest continually-inhabited human colonies, The Furthest Shore feels more like a clone of Earth than any of the planets designed to assume the role.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-101.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[10.0]]>
       </y>
@@ -1638,29 +1820,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_gatekeeper'>
     <fields>
-      <description>
-        <![CDATA[Gatekeeper is a barren waste at best.  This does not stop it from being host to literally tens of thousands of scientists, all encamped in enclosed domes, devoted to their research. ]]>
-      </description>
-      <labels>
-        <![CDATA[scientist,inhabited,human,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-161.0]]>
-      </x>
+      <description>
+        <![CDATA[Gatekeeper is a barren waste at best.  This does not stop it from being host to literally tens of thousands of scientists, all encamped in enclosed domes, devoted to their research. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-161.0]]>
+      </x>
+      <labels>
+        <![CDATA[scientist,inhabited,human,standard]]>
+      </labels>
       <y>
         <![CDATA[-6.0]]>
       </y>
@@ -1679,29 +1869,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_kosigan'>
     <fields>
-      <description>
-        <![CDATA[For several generations, this planet was cut off from the rest of humanity by the unexpected failure of its hyperspace lane.   By the time the connection was finally restored - an event as mysterious as its initial vanishing - the number of people on the planet had dropped by 75%.]]>
-      </description>
-      <labels>
-        <![CDATA[human,inhabited,standard,rebel,right]]>
-      </labels>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-37.0]]>
-      </x>
+      <description>
+        <![CDATA[For several generations, this planet was cut off from the rest of humanity by the unexpected failure of its hyperspace lane.   By the time the connection was finally restored - an event as mysterious as its initial vanishing - the number of people on the planet had dropped by 75%.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-37.0]]>
+      </x>
+      <labels>
+        <![CDATA[human,inhabited,standard,rebel,right]]>
+      </labels>
       <y>
         <![CDATA[-17.0]]>
       </y>
@@ -1721,29 +1919,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_labrynth'>
     <fields>
-      <description>
-        <![CDATA[High winds re-sculpt the terrain of this planet on a minute-by-minute basis.  There is human life here, but not much of it. ]]>
-      </description>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[23.0]]>
-      </x>
+      <description>
+        <![CDATA[High winds re-sculpt the terrain of this planet on a minute-by-minute basis.  There is human life here, but not much of it. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[23.0]]>
+      </x>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <y>
         <![CDATA[-56.0]]>
       </y>
@@ -1767,24 +1973,24 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_llc'>
     <fields>
-      <description>
-        <![CDATA[Overture, inc., welcomes you to our planet, and asks you to spend freely. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[178.0]]>
-      </x>
+      <description>
+        <![CDATA[Overture, inc., welcomes you to our planet, and asks you to spend freely. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[178.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <y>
         <![CDATA[177.0]]>
       </y>
@@ -1804,29 +2010,88 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
+    </children>
+  </planet>
+  <planet tag='planet_loyalty'>
+    <fields>
+      <image_filename>
+        <![CDATA[desert.png]]>
+      </image_filename>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
+      <description>
+        <![CDATA[This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. ]]>
+      </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
+      <x>
+        <![CDATA[-89.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
+      <y>
+        <![CDATA[150.0]]>
+      </y>
+      <name>
+        <![CDATA[Loyalty]]>
+      </name>
+    </fields>
+    <children>
+      <addons_for_sale/>
+      <cargo_for_sale>
+        <ref tag='cargo_Food_x1.0'/>
+        <ref tag='cargo_Raw Metals_x1.0'/>
+        <ref tag='cargo_Equipment_x1.0'/>
+        <ref tag='cargo_Specimens_x1.0'/>
+      </cargo_for_sale>
+      <missions/>
+      <owner/>
+      <plot/>
+      <random_missions/>
+      <ships_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_nebula'>
     <fields>
-      <description>
-        <![CDATA[This planet has very little mass to speak of, and even fewer accessible resources.  What it does have, however, is the most stunning view in the galaxy: A nebula is visible in the night sky for most of the year. ]]>
-      </description>
-      <labels>
-        <![CDATA[rebel,inhabited,human,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-27.0]]>
-      </x>
+      <description>
+        <![CDATA[This planet has very little mass to speak of, and even fewer accessible resources.  What it does have, however, is the most stunning view in the galaxy: A nebula is visible in the night sky for most of the year. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-27.0]]>
+      </x>
+      <labels>
+        <![CDATA[rebel,inhabited,human,standard]]>
+      </labels>
       <y>
         <![CDATA[-27.0]]>
       </y>
@@ -1844,28 +2109,36 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_new_freehold'>
     <fields>
-      <description>
-      </description>
-      <labels>
-        <![CDATA[rebel,standard,inhabited,human]]>
-      </labels>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-25.0]]>
-      </x>
+      <description>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-25.0]]>
+      </x>
+      <labels>
+        <![CDATA[rebel,standard,inhabited,human]]>
+      </labels>
       <y>
         <![CDATA[-94.0]]>
       </y>
@@ -1888,29 +2161,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_new_phoenix'>
     <fields>
-      <description>
-        <![CDATA[New Phoenix is a prosperous, happy planet.  Money changes hands, tourists gawk at attractions, natives go about their business.  It is extremely ordinary for a place that was once the head of a rebellion. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-31.0]]>
-      </x>
+      <description>
+        <![CDATA[New Phoenix is a prosperous, happy planet.  Money changes hands, tourists gawk at attractions, natives go about their business.  It is extremely ordinary for a place that was once the head of a rebellion. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-31.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
       <y>
         <![CDATA[-52.0]]>
       </y>
@@ -1934,29 +2215,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_price_landing'>
     <fields>
-      <description>
-        <![CDATA[When you finance half of the rebellion, you can afford your own moon. ]]>
-      </description>
-      <labels>
-        <![CDATA[price,human,rebel,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[39.0]]>
-      </x>
+      <description>
+        <![CDATA[When you finance half of the rebellion, you can afford your own moon. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[39.0]]>
+      </x>
+      <labels>
+        <![CDATA[price,human,rebel,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[-33.0]]>
       </y>
@@ -1979,29 +2268,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_second_terra'>
     <fields>
-      <description>
-        <![CDATA[Second Terra is 15% smaller than Earth, has a less than ideal magnetosphere, and features landmass merely half that of the human homeworld.  Regardless, plans were made to evacuate as many people as possible to it.  These plans were made in the midst of the invasion scare, but are still kept up to date today. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-31.0]]>
-      </x>
+      <description>
+        <![CDATA[Second Terra is 15% smaller than Earth, has a less than ideal magnetosphere, and features landmass merely half that of the human homeworld.  Regardless, plans were made to evacuate as many people as possible to it.  These plans were made in the midst of the invasion scare, but are still kept up to date today. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-31.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited,standard]]>
+      </labels>
       <y>
         <![CDATA[-64.0]]>
       </y>
@@ -2026,29 +2323,87 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
+    </children>
+  </planet>
+  <planet tag='planet_sole_proprietorship'>
+    <fields>
+      <image_filename>
+        <![CDATA[moon.png]]>
+      </image_filename>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
+      <description>
+        <![CDATA[This moon is owned by one person, currently Alexander Michail.  Nobody but those who end up in charge of the place know how ownership  transfers from one person to another, only that Sole Proprietorship has remained true to its name for hundreds of years. ]]>
+      </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
+      <x>
+        <![CDATA[22.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,standard,inhabited]]>
+      </labels>
+      <y>
+        <![CDATA[58.0]]>
+      </y>
+      <name>
+        <![CDATA[Sole Proprietorship]]>
+      </name>
+    </fields>
+    <children>
+      <addons_for_sale/>
+      <cargo_for_sale>
+        <ref tag='cargo_Food_x1.15'/>
+        <ref tag='cargo_Raw Metals_x0.85'/>
+        <ref tag='cargo_Equipment_x1.0'/>
+      </cargo_for_sale>
+      <missions/>
+      <owner/>
+      <plot/>
+      <random_missions/>
+      <ships_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_terrible'>
     <fields>
-      <description>
-        <![CDATA[The people who settled on this planet insist they are closest to the truth, because their belief rejects all the illusions of the universe, thus making this planet one of the more accurately named ones. ]]>
-      </description>
-      <labels>
-        <![CDATA[human,inhabited,alliance,standard]]>
-      </labels>
       <image_filename>
         <![CDATA[redplanet.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[233.0]]>
-      </x>
+      <description>
+        <![CDATA[The people who settled on this planet insist they are closest to the truth, because their belief rejects all the illusions of the universe, thus making this planet one of the more accurately named ones. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[233.0]]>
+      </x>
+      <labels>
+        <![CDATA[human,inhabited,alliance,standard]]>
+      </labels>
       <y>
         <![CDATA[204.0]]>
       </y>
@@ -2066,29 +2421,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_twin_station'>
     <fields>
-      <description>
-        <![CDATA[The oldest human-created habitation still existing, this station has a constant air of disrepair despite having been fully rebuilt over a dozen times.]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,standard,station]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[150.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-1.0]]>
-      </x>
+      <description>
+        <![CDATA[The oldest human-created habitation still existing, this station has a constant air of disrepair despite having been fully rebuilt over a dozen times.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-1.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,standard,station]]>
+      </labels>
       <y>
         <![CDATA[-31.0]]>
       </y>
@@ -2107,29 +2470,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='planet_wasteland'>
     <fields>
-      <description>
-        <![CDATA[Mars was once thought to be the most arid and deserted planet to have once held life.  Then Wasteland was encountered, and all the survivalists migrated. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[65.0]]>
-      </x>
+      <description>
+        <![CDATA[Mars was once thought to be the most arid and deserted planet to have once held life.  Then Wasteland was encountered, and all the survivalists migrated. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[65.0]]>
+      </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <y>
         <![CDATA[176.0]]>
       </y>
@@ -2154,24 +2525,24 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_wright_place'>
     <fields>
-      <description>
-        <![CDATA[ The pun was, it is explained to you by the docking authorities, intentional.]]>
-      </description>
-      <labels>
-        <![CDATA[right,human,inhabited,standard,station]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-35.0]]>
-      </x>
+      <description>
+        <![CDATA[ The pun was, it is explained to you by the docking authorities, intentional.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-35.0]]>
+      </x>
+      <labels>
+        <![CDATA[right,human,inhabited,standard,station]]>
+      </labels>
       <y>
         <![CDATA[26.0]]>
       </y>
@@ -2193,18 +2564,26 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <player tag='player'>
     <fields>
-      <credits>
-        <![CDATA[1000.0]]>
-      </credits>
       <labels>
       </labels>
       <name>
       </name>
+      <credits>
+        <![CDATA[1000.0]]>
+      </credits>
     </fields>
     <children>
       <completed_missions/>
@@ -2224,8 +2603,6 @@ An d that's all before you land.]]>
   </player>
   <ship tag='scout_bare'>
     <fields>
-      <labels>
-      </labels>
       <shields>
         <![CDATA[100.0]]>
       </shields>
@@ -2238,24 +2615,20 @@ An d that's all before you land.]]>
       <facing_y>
         <![CDATA[-1.0]]>
       </facing_y>
-      <x>
-        <![CDATA[0.0]]>
-      </x>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
-      <name>
-        <![CDATA[Scout]]>
-      </name>
-      <y>
-        <![CDATA[0.0]]>
-      </y>
       <velocity_x>
         <![CDATA[0.0]]>
       </velocity_x>
       <fuel>
         <![CDATA[100.0]]>
       </fuel>
+      <labels>
+      </labels>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
@@ -2265,6 +2638,12 @@ An d that's all before you land.]]>
       <price>
         <![CDATA[0.0]]>
       </price>
+      <name>
+        <![CDATA[Scout]]>
+      </name>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
     </fields>
     <children>
       <addons/>
@@ -2285,22 +2664,6 @@ An d that's all before you land.]]>
   </ship>
   <shipblueprint tag='scout_class'>
     <fields>
-      <fuel_per_jump>
-        <![CDATA[25.0]]>
-      </fuel_per_jump>
-      <secs_to_jump>
-        <![CDATA[3.0]]>
-      </secs_to_jump>
-      <fuel_regen>
-        <![CDATA[0.001]]>
-      </fuel_regen>
-      <labels>
-      </labels>
-      <rot_per_sec>
-        <![CDATA[200.0]]>
-      </rot_per_sec>
-      <description>
-      </description>
       <max_shields>
         <![CDATA[100.0]]>
       </max_shields>
@@ -2319,6 +2682,8 @@ An d that's all before you land.]]>
       <max_armor>
         <![CDATA[100.0]]>
       </max_armor>
+      <description>
+      </description>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
@@ -2328,38 +2693,52 @@ An d that's all before you land.]]>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <name>
-        <![CDATA[Scout]]>
-      </name>
+      <labels>
+      </labels>
       <max_fuel>
         <![CDATA[100.0]]>
       </max_fuel>
       <expansion_space>
         <![CDATA[10.0]]>
       </expansion_space>
+      <fuel_per_jump>
+        <![CDATA[25.0]]>
+      </fuel_per_jump>
+      <secs_to_jump>
+        <![CDATA[3.0]]>
+      </secs_to_jump>
+      <name>
+        <![CDATA[Scout]]>
+      </name>
+      <fuel_regen>
+        <![CDATA[0.001]]>
+      </fuel_regen>
+      <rot_per_sec>
+        <![CDATA[200.0]]>
+      </rot_per_sec>
     </fields>
     <children/>
   </shipblueprint>
   <sector tag='sector_anvil'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Originally interesting due to fluctuations in previously-thought-constant constants, this sector has only become more interesting over time; at the moment it is the center of most defensive research. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-503.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[The Anvil]]>
       </name>
       <y>
         <![CDATA[-308.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2383,24 +2762,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_arc'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Originally Galaxy Survey 6, this sector was re-named as it originally was theorized to be a connector to Paradise but instead completes an arc around it.]]>
       </description>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[260.0]]>
       </x>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Arc]]>
       </name>
       <y>
         <![CDATA[227.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2419,24 +2798,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_backup'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ When the invasion fears reached their peak, plans were enacted to evacuate Earth and relocate them to this sector.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,inhabited,human]]>
-      </labels>
       <x>
         <![CDATA[-198.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,inhabited,human]]>
+      </labels>
       <name>
         <![CDATA[Backup]]>
       </name>
       <y>
         <![CDATA[55.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2457,24 +2836,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_bottleneck'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[For reasons scientists even now do not understand, hyperspace lanes are more difficult to locate in this area of space.  This is the only sector linking another group of tightly-clustered sectors to alliance space, and if not for it, the two would be forever separated. ]]>
       </description>
-      <labels>
-        <![CDATA[rebelwar,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-544.0]]>
       </x>
+      <labels>
+        <![CDATA[rebelwar,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Bottleneck]]>
       </name>
       <y>
         <![CDATA[-182.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2497,24 +2876,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_centauri'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Binary systems are inherently more difficult to find hyperspace links through, but given Centauri's relative closeness to the Sol sector it made for an easy first target.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,inhabited,human]]>
-      </labels>
       <x>
         <![CDATA[54.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,inhabited,human]]>
+      </labels>
       <name>
         <![CDATA[Centauri]]>
       </name>
       <y>
         <![CDATA[-60.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2539,24 +2918,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_cove'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Nobody even remembers the original name of this sector - it has been home to pirates that long.]]>
       </description>
-      <labels>
-        <![CDATA[eastpirates,inhabited,human]]>
-      </labels>
       <x>
         <![CDATA[348.0]]>
       </x>
+      <labels>
+        <![CDATA[eastpirates,inhabited,human]]>
+      </labels>
       <name>
         <![CDATA[Cove]]>
       </name>
       <y>
         <![CDATA[343.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2577,24 +2956,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_decoy'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[At the peak of the invasion fears, this previously empty sector was populated with a wide array of high-tech gadgetry to make it appear as though it were actually humanity's homeworld. ]]>
       </description>
-      <labels>
-        <![CDATA[scientists,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-264.0]]>
       </x>
+      <labels>
+        <![CDATA[scientists,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Decoy]]>
       </name>
       <y>
         <![CDATA[246.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2615,24 +2994,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_edge'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Short for "The Edge of the Galaxy", this was for the longest time the last remotely habitable planet for a very large distance indeed.  Some still consider it so. ]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[93.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Edge]]>
       </name>
       <y>
         <![CDATA[-174.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2654,24 +3033,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_end'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Initially the name was just a joke, but like many such names, it stuck. This sector has numerous properties making hyperspace lane formation not only improbable, but impossible.  The pre-existing route to this sector is due to collapse within a few thousand years. ]]>
       </description>
-      <labels>
-        <![CDATA[uninhabited,secondsurvey,rebel,human,right,gatesearch]]>
-      </labels>
       <x>
         <![CDATA[-860.0]]>
       </x>
+      <labels>
+        <![CDATA[uninhabited,secondsurvey,rebel,human,right,gatesearch]]>
+      </labels>
       <name>
         <![CDATA[The End]]>
       </name>
       <y>
         <![CDATA[-211.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2688,24 +3067,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_farpost'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Hyperspace research stagnated when the burgeoning human alliance reached this sector.  For a very long time, it was in fact the furthest post from human lands.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-71.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Farpost]]>
       </name>
       <y>
         <![CDATA[-75.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2727,24 +3106,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_fear'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[During the initial invasion scare, the inhabitants of this sector rapidly grew xenophobic, not only of the imaginary invaders, but also of their fellow humans. ]]>
       </description>
-      <labels>
-        <![CDATA[inhabited,alliance,human]]>
-      </labels>
       <x>
         <![CDATA[-252.0]]>
       </x>
+      <labels>
+        <![CDATA[inhabited,alliance,human]]>
+      </labels>
       <name>
         <![CDATA[Fear]]>
       </name>
       <y>
         <![CDATA[126.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2766,24 +3145,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_forbidden'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA["We came into this sector as scientists, as explorers, always looking deeper along the hyperspace lanes to find what's there.  We left... content with our place in the world, I guess.  What we saw out there was nothing, and it was the most horrible empty nothing possible.  No future, no end, a death alone and forgotten.  That's what lied along this path.  No, we're not going past this sector." - Captain Millings, Galaxy Survey. ]]>
       </description>
-      <labels>
-        <![CDATA[uninhabited,gatesearch,human,galaxysurvey]]>
-      </labels>
       <x>
         <![CDATA[-60.0]]>
       </x>
+      <labels>
+        <![CDATA[uninhabited,gatesearch,human,galaxysurvey]]>
+      </labels>
       <name>
         <![CDATA[Forbidden]]>
       </name>
       <y>
         <![CDATA[-448.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2802,24 +3181,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_forgotten'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Everyone remembers The Forgotten - its name stems from an unexpected hyperspace lane failure which left it isolated for hundreds of years. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,inhabited,human]]>
-      </labels>
       <x>
         <![CDATA[-724.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,inhabited,human]]>
+      </labels>
       <name>
         <![CDATA[The Forgotten]]>
       </name>
       <y>
         <![CDATA[-306.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2840,24 +3219,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_fray'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Due to its extremely weak connection to the other Galaxy Survey sectors, this sector was long ago re-named to more accurately reflect the fact that it is, in the words of one Survey executive "like the frayed end of a string"]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[-80.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Fray]]>
       </name>
       <y>
         <![CDATA[-5.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2874,24 +3253,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_freehold'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Freehold was the first experiment in independence from the central Earth government.  Though comparatively short-lived due to lack of resources, its example has been remembered by every rebel group since.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[201.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Freehold]]>
       </name>
       <y>
         <![CDATA[4.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2914,24 +3293,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs1'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ When it became known that empty sectors could play host to hyperspace lanes, the Galaxy Survey was comissioned.  It was responsible for discovering many of the outlying sectors, but had a poor track record for selecting inhabitable ones.]]>
       </description>
-      <labels>
-        <![CDATA[human,galaxysurvey,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[-41.0]]>
       </x>
+      <labels>
+        <![CDATA[human,galaxysurvey,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 1]]>
       </name>
       <y>
         <![CDATA[140.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2951,24 +3330,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs10'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ There was little organization to the Galaxy Survey's techniques; as soon as a lane was discovered, an expedition was mounted.  By the time the survey reached GS10, however, there was worry that they were reaching too far afield.]]>
       </description>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,eastpirates]]>
-      </labels>
       <x>
         <![CDATA[384.0]]>
       </x>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,eastpirates]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 10]]>
       </name>
       <y>
         <![CDATA[243.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -2987,24 +3366,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs13'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ This sector came very close to being named 'Triskaidekaphobia'.]]>
       </description>
-      <labels>
-        <![CDATA[galaxysurvey,human,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[225.0]]>
       </x>
+      <labels>
+        <![CDATA[galaxysurvey,human,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 13]]>
       </name>
       <y>
         <![CDATA[296.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3024,24 +3403,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs14'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Galaxy Survey 14 contains very little more than the lanes which connect it to the rest of the galaxy.]]>
       </description>
-      <labels>
-        <![CDATA[human,alliance,galaxysurvey]]>
-      </labels>
       <x>
         <![CDATA[-3.0]]>
       </x>
+      <labels>
+        <![CDATA[human,alliance,galaxysurvey]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 14]]>
       </name>
       <y>
         <![CDATA[220.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3062,24 +3441,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs21'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Galaxy Survey 21 is one of the few surveyed sectors with a star and nothing else.]]>
       </description>
-      <labels>
-        <![CDATA[uninhabited,human,galaxysurvey]]>
-      </labels>
       <x>
         <![CDATA[64.0]]>
       </x>
+      <labels>
+        <![CDATA[uninhabited,human,galaxysurvey]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 21]]>
       </name>
       <y>
         <![CDATA[312.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3099,24 +3478,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs22'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ "A gigantic expanse of nothing" - Galaxy Survey report]]>
       </description>
-      <labels>
-        <![CDATA[human,galaxysurvey,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[143.0]]>
       </x>
+      <labels>
+        <![CDATA[human,galaxysurvey,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 22]]>
       </name>
       <y>
         <![CDATA[380.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3134,24 +3513,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs42'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Galaxy Survey 42 turned out to be the answer to a question nobody asked. ]]>
       </description>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,gatesearch]]>
-      </labels>
       <x>
         <![CDATA[67.0]]>
       </x>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,gatesearch]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 42]]>
       </name>
       <y>
         <![CDATA[-234.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3168,24 +3547,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs5'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ The early days of the Galaxy Survey were full of optimism.  This fifth failure marked the beginning of the decline.]]>
       </description>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[288.0]]>
       </x>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 5]]>
       </name>
       <y>
         <![CDATA[160.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3204,24 +3583,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs60'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Galaxy Survey 60 is a sector.  No more, no less. ]]>
       </description>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,human]]>
-      </labels>
       <x>
         <![CDATA[-50.0]]>
       </x>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,human]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 60]]>
       </name>
       <y>
         <![CDATA[-348.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3240,24 +3619,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs7'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ From a scientific standpoint, there is always something to learn from a newly discovered sector.  Even to scientists, however, this sector is dull.]]>
       </description>
-      <labels>
-        <![CDATA[human,uninhabited,galaxysurvey]]>
-      </labels>
       <x>
         <![CDATA[-132.0]]>
       </x>
+      <labels>
+        <![CDATA[human,uninhabited,galaxysurvey]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 7]]>
       </name>
       <y>
         <![CDATA[189.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3276,24 +3655,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs77'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The Galaxy Survey had lasted for an unprecedented amount of time, but public interest was at this point at an all-time low.  Awareness that the project even existed was less than one-thousandth of one percent among the peoples of the galaxy.  The Survey ended soon after. ]]>
       </description>
-      <labels>
-        <![CDATA[galaxysurvey,uninhabited,human,gatesearch]]>
-      </labels>
       <x>
         <![CDATA[-187.0]]>
       </x>
+      <labels>
+        <![CDATA[galaxysurvey,uninhabited,human,gatesearch]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 77]]>
       </name>
       <y>
         <![CDATA[-378.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3313,24 +3692,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gs83'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[It has been not so subtly suggested that, at this point, the Galaxy Survey had lost count. ]]>
       </description>
-      <labels>
-        <![CDATA[humanwar,uninhabited,galaxysurvey,human]]>
-      </labels>
       <x>
         <![CDATA[-411.0]]>
       </x>
+      <labels>
+        <![CDATA[humanwar,uninhabited,galaxysurvey,human]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey 83]]>
       </name>
       <y>
         <![CDATA[-136.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3349,24 +3728,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_gsFinal'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The Survey of this sector was brief and almost entirely non-noteworthy.  It was also the last Survey performed until the Second Survey was commissioned to repeat their ancestor's mistakes. ]]>
       </description>
-      <labels>
-        <![CDATA[human,uninhabited,gatesearch,galaxysurvey]]>
-      </labels>
       <x>
         <![CDATA[-217.0]]>
       </x>
+      <labels>
+        <![CDATA[human,uninhabited,gatesearch,galaxysurvey]]>
+      </labels>
       <name>
         <![CDATA[Galaxy Survey Final]]>
       </name>
       <y>
         <![CDATA[-421.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3384,24 +3763,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_hammer'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[This sector plays host to the largest weapons manufacturing system in the known universe. ]]>
       </description>
-      <labels>
-        <![CDATA[inhabited,rebel,human]]>
-      </labels>
       <x>
         <![CDATA[-713.0]]>
       </x>
+      <labels>
+        <![CDATA[inhabited,rebel,human]]>
+      </labels>
       <name>
         <![CDATA[The Hammer]]>
       </name>
       <y>
         <![CDATA[-209.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3424,24 +3803,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_incorporated'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ The hyperspace lane to Incorporated was discovered by a private company.  At the time, humankind was spread thinly, and there was little interest in further colonization, allowing the company that discovered the lane a monopoly over its use.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,standard,inhabited]]>
-      </labels>
       <x>
         <![CDATA[116.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,standard,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Incorporated]]>
       </name>
       <y>
         <![CDATA[43.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3452,7 +3831,7 @@ An d that's all before you land.]]>
       </links_to>
       <planets>
         <ref tag='planet_llc'/>
-        <ref tag='sector_sole_p'/>
+        <ref tag='planet_sole_proprietorship'/>
       </planets>
       <plot/>
       <potential_fleets>
@@ -3463,24 +3842,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_invasion'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Humanity has always been alone in the galaxy, but that was not always thought to be the case.   In the early days of exploration, a small rocky planet barren of life was found littered with alien artifacts, starting an invasion fear that only recently has subsided.]]>
       </description>
-      <labels>
-        <![CDATA[scientist,human,inhabited,exit]]>
-      </labels>
       <x>
         <![CDATA[-134.0]]>
       </x>
+      <labels>
+        <![CDATA[scientist,human,inhabited,exit]]>
+      </labels>
       <name>
         <![CDATA[Invasion]]>
       </name>
       <y>
         <![CDATA[279.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3503,24 +3882,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_keyhole'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Home of the so-called 'keyhole nebula', this sector holds value mostly to scientists who want to study potential star formation firsthand.]]>
       </description>
-      <labels>
-        <![CDATA[scientist,inhabited,human]]>
-      </labels>
       <x>
         <![CDATA[79.0]]>
       </x>
+      <labels>
+        <![CDATA[scientist,inhabited,human]]>
+      </labels>
       <name>
         <![CDATA[Keyhole]]>
       </name>
       <y>
         <![CDATA[185.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3542,24 +3921,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_knot'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The Galaxy Survey never gave this sector an official GS number.  The long strand of empty sectors had long by now been compared to a string (especially with the inclusion of 'Frey'), and with this sector being the end of the strand and its comparatively stronger links, the name was a foregone conclusion. ]]>
       </description>
-      <labels>
-        <![CDATA[human,galaxysurvey,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[285.0]]>
       </x>
+      <labels>
+        <![CDATA[human,galaxysurvey,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Knot]]>
       </name>
       <y>
         <![CDATA[501.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3576,24 +3955,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_lagoon'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[In very few other places has the level of criminality risen higher than it has in this area. ]]>
       </description>
-      <labels>
-        <![CDATA[eastpirates,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[474.0]]>
       </x>
+      <labels>
+        <![CDATA[eastpirates,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Lagoon]]>
       </name>
       <y>
         <![CDATA[311.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3612,69 +3991,26 @@ An d that's all before you land.]]>
       <projectiles/>
     </children>
   </sector>
-  <planet tag='sector_loyalty'>
-    <fields>
-      <description>
-        <![CDATA[This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
-      <image_filename>
-        <![CDATA[desert.png]]>
-      </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
-      <x>
-        <![CDATA[-89.0]]>
-      </x>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
-      <y>
-        <![CDATA[150.0]]>
-      </y>
-      <name>
-        <![CDATA[Loyalty]]>
-      </name>
-    </fields>
-    <children>
-      <addons_for_sale/>
-      <cargo_for_sale>
-        <ref tag='cargo_Food_x1.0'/>
-        <ref tag='cargo_Raw Metals_x1.0'/>
-        <ref tag='cargo_Equipment_x1.0'/>
-        <ref tag='cargo_Specimens_x1.0'/>
-      </cargo_for_sale>
-      <missions/>
-      <owner/>
-      <plot/>
-      <random_missions/>
-      <ships_for_sale/>
-      <weapons_for_sale/>
-    </children>
-  </planet>
   <sector tag='sector_new_bottleneck'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The Galaxy Survey operated for a very long time; even after the area beyond Bottleneck had been discovered and colonised, the Survey continued to try to find new sectors.  They spent the vast majority of their time in this sector, using the most sophisticated eqiupment possible to try to find another link to anywhere else, and failed.]]>
       </description>
-      <labels>
-        <![CDATA[uninhabited,human,galaxysurvey,gatesearch]]>
-      </labels>
       <x>
         <![CDATA[-239.0]]>
       </x>
+      <labels>
+        <![CDATA[uninhabited,human,galaxysurvey,gatesearch]]>
+      </labels>
       <name>
         <![CDATA[New Bottleneck]]>
       </name>
       <y>
         <![CDATA[-317.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3691,24 +4027,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_new_sol'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ There are any number of stars similar to that of Earth's, but this was the first that a hyperspace lane was discovered going to.]]>
       </description>
-      <labels>
-        <![CDATA[uninhabited,human,humanwar]]>
-      </labels>
       <x>
         <![CDATA[-166.0]]>
       </x>
+      <labels>
+        <![CDATA[uninhabited,human,humanwar]]>
+      </labels>
       <name>
         <![CDATA[New Sol]]>
       </name>
       <y>
         <![CDATA[-39.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3726,24 +4062,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_night_sky'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The lone habitable world of this sector would have little to recommend it, if not for the spectacular view of the nearby nebula. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,inhabited,human]]>
-      </labels>
       <x>
         <![CDATA[-669.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,inhabited,human]]>
+      </labels>
       <name>
         <![CDATA[The Night Sky]]>
       </name>
       <y>
         <![CDATA[-455.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3762,24 +4098,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_north_star'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[More officially known as 'Polaris', humanity has been navigating by the light of this star since before they could even leave the planet. ]]>
       </description>
-      <labels>
-        <![CDATA[human,uninhabited,gatesearch,alliancewar]]>
-      </labels>
       <x>
         <![CDATA[-88.0]]>
       </x>
+      <labels>
+        <![CDATA[human,uninhabited,gatesearch,alliancewar]]>
+      </labels>
       <name>
         <![CDATA[North Star]]>
       </name>
       <y>
         <![CDATA[-268.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3802,24 +4138,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_pale'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[This area of the galaxy is no stranger to anomalies, but this particular area is, to quote scientists who tried to explore further, "Beyond the Pale" ]]>
       </description>
-      <labels>
-        <![CDATA[gatesearch,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[-389.0]]>
       </x>
+      <labels>
+        <![CDATA[gatesearch,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[The Pale]]>
       </name>
       <y>
         <![CDATA[-428.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3840,24 +4176,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_paradise'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ The Paradise sector was named on its initial survey.  It was later discovered that the previously-thought-perfect planet was anything but paradise.]]>
       </description>
-      <labels>
-        <![CDATA[inhabited,alliance,human]]>
-      </labels>
       <x>
         <![CDATA[154.0]]>
       </x>
+      <labels>
+        <![CDATA[inhabited,alliance,human]]>
+      </labels>
       <name>
         <![CDATA[Paradise]]>
       </name>
       <y>
         <![CDATA[255.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3880,24 +4216,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_preview'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Preview's only habitable planet was known for quite some time before settlement, which resulted in a number of squatters who appeared before they were officially allowed to.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[129.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Preview]]>
       </name>
       <y>
         <![CDATA[112.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3920,24 +4256,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_price'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[This sector is owned by the Price family, widely considered by many, rebel and alliance alike, as being an organized crime front. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,human,price,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-519.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,human,price,inhabited]]>
+      </labels>
       <name>
         <![CDATA[The Price]]>
       </name>
       <y>
         <![CDATA[-404.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -3960,24 +4296,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_raw'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Uninhabitable by most standards, this sector is peopled mainly by those extracting the many raw materials available.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[173.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Raw]]>
       </name>
       <y>
         <![CDATA[163.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4001,24 +4337,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_rebel'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[It was in this sector, not long ago, that the rebellion against the central alliance of humans was begun.  The central systems had a weak hold this far from their center to begin with, and their influence had plummeted since. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-776.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[The Rebel]]>
       </name>
       <y>
         <![CDATA[-394.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4040,24 +4376,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_right'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[In actuality, this sector belongs to a family known as the"Wrights", but hardly anyone gets this right, despite the fearsome family reputation. ]]>
       </description>
-      <labels>
-        <![CDATA[right,rebel,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-858.0]]>
       </x>
+      <labels>
+        <![CDATA[right,rebel,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[The Right]]>
       </name>
       <y>
         <![CDATA[-328.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4080,24 +4416,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ruse'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[This entire area of space is known for its scientifically interesting oddities, but few more so than The Ruse.  Whenever a ship enters the sector, it gets a brief sensor echo of the next sector along.  The reason for this remains unexplained, even today. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,price,right,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-645.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,price,right,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[The Ruse]]>
       </name>
       <y>
         <![CDATA[-363.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4124,24 +4460,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_sandwall'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA["The Sandwall" got its name because it is literally filled with tiny microscopic particles.  At the speed a ship would enter the sector, it would be torn apart in moments.  Fortunately, the upside was that humanity developed shielding technology, more than making up for the inconvenience. ]]>
       </description>
-      <labels>
-        <![CDATA[human,uninhabited,alliancewar]]>
-      </labels>
       <x>
         <![CDATA[-280.0]]>
       </x>
+      <labels>
+        <![CDATA[human,uninhabited,alliancewar]]>
+      </labels>
       <name>
         <![CDATA[Sandwall]]>
       </name>
       <y>
         <![CDATA[-92.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4162,24 +4498,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_sirius'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ One of the first working hyperspace lanes led to this sector.  Its importance has only increased over time.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[31.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Sirius]]>
       </name>
       <y>
         <![CDATA[77.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4194,7 +4530,7 @@ An d that's all before you land.]]>
         <ref tag='sector_gs1'/>
       </links_to>
       <planets>
-        <ref tag='sector_loyalty'/>
+        <ref tag='planet_loyalty'/>
       </planets>
       <plot/>
       <potential_fleets>
@@ -4205,25 +4541,25 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_sol'>
     <fields>
-      <visited>
-        <![CDATA[true]]>
-      </visited>
       <description>
         <![CDATA[ The cradle of humankind, the Sol sector is where it all began. 
 ]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Sol]]>
       </name>
       <y>
         <![CDATA[0.0]]>
       </y>
+      <visited>
+        <![CDATA[true]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4244,68 +4580,26 @@ An d that's all before you land.]]>
       <projectiles/>
     </children>
   </sector>
-  <planet tag='sector_sole_p'>
-    <fields>
-      <description>
-        <![CDATA[This moon is owned by one person, currently Alexander Michail.  Nobody but those who end up in charge of the place know how ownership  transfers from one person to another, only that Sole Proprietorship has remained true to its name for hundreds of years. ]]>
-      </description>
-      <labels>
-        <![CDATA[alliance,human,standard,inhabited]]>
-      </labels>
-      <image_filename>
-        <![CDATA[moon.png]]>
-      </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
-      <x>
-        <![CDATA[22.0]]>
-      </x>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
-      <y>
-        <![CDATA[58.0]]>
-      </y>
-      <name>
-        <![CDATA[Sole Proprietorship]]>
-      </name>
-    </fields>
-    <children>
-      <addons_for_sale/>
-      <cargo_for_sale>
-        <ref tag='cargo_Food_x1.15'/>
-        <ref tag='cargo_Raw Metals_x0.85'/>
-        <ref tag='cargo_Equipment_x1.0'/>
-      </cargo_for_sale>
-      <missions/>
-      <owner/>
-      <plot/>
-      <random_missions/>
-      <ships_for_sale/>
-      <weapons_for_sale/>
-    </children>
-  </planet>
   <sector tag='sector_solitude'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Solitude originally had yet another unimaginitive name courtesy the Galactic Survey.  Its current name was earned by those who, in ones and twos, came to it to get away from everything else.]]>
       </description>
-      <labels>
-        <![CDATA[human,inhabited,galaxysurvey]]>
-      </labels>
       <x>
         <![CDATA[202.0]]>
       </x>
+      <labels>
+        <![CDATA[human,inhabited,galaxysurvey]]>
+      </labels>
       <name>
         <![CDATA[Solitude]]>
       </name>
       <y>
         <![CDATA[443.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4328,24 +4622,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss1'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Comissioned by the Rebellion, the Second Survey was designed to pick up where theGalaxy Survey left off - and if they were to discover sectors which would give the rebels an advantage, this was "just a bonus" ]]>
       </description>
-      <labels>
-        <![CDATA[secondsurvey,uninhabited,gatesearch,price]]>
-      </labels>
       <x>
         <![CDATA[-501.0]]>
       </x>
+      <labels>
+        <![CDATA[secondsurvey,uninhabited,gatesearch,price]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 1]]>
       </name>
       <y>
         <![CDATA[-247.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4363,24 +4657,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss12'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Initially the Second Survey thought that following up in the exact same places that the initial Survey had, but with superior technology, would reveal better results.  This was a mistake. ]]>
       </description>
-      <labels>
-        <![CDATA[gatesearch,secondsurvey,human,uninhabited,humanwar]]>
-      </labels>
       <x>
         <![CDATA[-356.0]]>
       </x>
+      <labels>
+        <![CDATA[gatesearch,secondsurvey,human,uninhabited,humanwar]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 12]]>
       </name>
       <y>
         <![CDATA[-197.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4399,24 +4693,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss14gs81'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The Second Survey was less than excited to discover yet another empty sector.  They were practically infuriated to be informed that the Galaxy Survey had already been there. ]]>
       </description>
-      <labels>
-        <![CDATA[uninhabited,human,galaxysurvey,secondsurvey,gatesearch,alliancewar]]>
-      </labels>
       <x>
         <![CDATA[-203.0]]>
       </x>
+      <labels>
+        <![CDATA[uninhabited,human,galaxysurvey,secondsurvey,gatesearch,alliancewar]]>
+      </labels>
       <name>
         <![CDATA[SS-14 / GS-81]]>
       </name>
       <y>
         <![CDATA[-225.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4435,24 +4729,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss2'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The alliteration of the sector name, and the fact that it was the second attempt at a survey seemed to dictate a better name.  In the years since its discovery, none have been suggested, owing mainly to lack of interest. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel.price,uninhabited,secondsurvey,gatesearch]]>
-      </labels>
       <x>
         <![CDATA[-461.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel.price,uninhabited,secondsurvey,gatesearch]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 2]]>
       </name>
       <y>
         <![CDATA[-223.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4469,24 +4763,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss3'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The same spirit of heady adventure and optimisim permeated the Second Survey as did the first.  Sadly, the same failure followed. ]]>
       </description>
-      <labels>
-        <![CDATA[secondsurvey,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[-972.0]]>
       </x>
+      <labels>
+        <![CDATA[secondsurvey,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 3]]>
       </name>
       <y>
         <![CDATA[-377.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4503,24 +4797,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss4'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[It became painfully and rapidly apparent that the Second Survey was to be no more successful than the first. ]]>
       </description>
-      <labels>
-        <![CDATA[gatesearch,secondsurvey,rebel,price,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[-401.0]]>
       </x>
+      <labels>
+        <![CDATA[gatesearch,secondsurvey,rebel,price,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 4]]>
       </name>
       <y>
         <![CDATA[-335.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4538,24 +4832,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss5'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA["Oh, come on, even the Galaxy Survey eventually found an inhabitable sector!" - Second Survey Official. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,human,unnhabited,price]]>
-      </labels>
       <x>
         <![CDATA[-513.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,human,unnhabited,price]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 5]]>
       </name>
       <y>
         <![CDATA[-473.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4574,24 +4868,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss6'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Second Survey Six faced the same naming problems as Second Survey Two, but even less interest. ]]>
       </description>
-      <labels>
-        <![CDATA[secondsurvey,right]]>
-      </labels>
       <x>
         <![CDATA[-834.0]]>
       </x>
+      <labels>
+        <![CDATA[secondsurvey,right]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 6]]>
       </name>
       <y>
         <![CDATA[-493.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4609,24 +4903,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss7'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The number 7 has traditionally been associated with luck.  Unfortunately for the second survey, this was not the case.]]>
       </description>
-      <labels>
-        <![CDATA[secondsurvey,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[-952.0]]>
       </x>
+      <labels>
+        <![CDATA[secondsurvey,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Second Survey 7]]>
       </name>
       <y>
         <![CDATA[-275.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4643,23 +4937,23 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_ss8192'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[This sector didn't even exist until the Pale was discovered.  The Second Survey had no record of the exploration which discovered it, no idea how it simply appeared on their maps, and absolutely no idea why every other map of the galaxy, electronic or otherwise, also now included it. ]]>
       </description>
-      <labels>
-      </labels>
       <x>
         <![CDATA[-281.0]]>
       </x>
+      <labels>
+      </labels>
       <name>
         <![CDATA[Second Survey 8192]]>
       </name>
       <y>
         <![CDATA[-464.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4677,24 +4971,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_survey'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Formerly a nondescript Galaxy Survey sector, this has enjoyed a recent surge in popularity as a jumping-off point for further exploration.]]>
       </description>
-      <labels>
-        <![CDATA[scientist,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-45.0]]>
       </x>
+      <labels>
+        <![CDATA[scientist,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Grand Survey]]>
       </name>
       <y>
         <![CDATA[353.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4717,23 +5011,23 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_the'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the.e.e.e.e.e.e.....]]>
       </description>
-      <labels>
-      </labels>
       <x>
         <![CDATA[-283.0]]>
       </x>
+      <labels>
+      </labels>
       <name>
         <![CDATA[The]]>
       </name>
       <y>
         <![CDATA[-392.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4751,24 +5045,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_truth'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[This sector is home to a number of less-than-ideal but still inhabitable planets.  A number of pilgrims, rejecting the religious ideals of their time, made their way here in search of Truth.  While many claimed to have been successful, each definition seems to disagree with the others. ]]>
       </description>
-      <labels>
-        <![CDATA[human,alliance,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-395.0]]>
       </x>
+      <labels>
+        <![CDATA[human,alliance,inhabited]]>
+      </labels>
       <name>
         <![CDATA[Truth]]>
       </name>
       <y>
         <![CDATA[41.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4791,23 +5085,23 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_unrecoverable'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[Th8s scc!r is nt onnly entr##ly impppsibll to wxplre, but an7 data brght from it i7 inevtttttbly cor*!pted. ]]>
       </description>
-      <labels>
-      </labels>
       <x>
         <![CDATA[-372.0]]>
       </x>
+      <labels>
+      </labels>
       <name>
         <![CDATA[Th% UnreYovrrabNl]]>
       </name>
       <y>
         <![CDATA[-511.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4824,24 +5118,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_vat'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[The Vat was an expieriment to create habitable planets.  While it worked, it turned out to be massively consuming of time and energy. It was deemed easier to simply explore for other habitable worlds and terraform where appropriate. ]]>
       </description>
-      <labels>
-        <![CDATA[rebel,human,inhabited]]>
-      </labels>
       <x>
         <![CDATA[-621.0]]>
       </x>
+      <labels>
+        <![CDATA[rebel,human,inhabited]]>
+      </labels>
       <name>
         <![CDATA[The Vat]]>
       </name>
       <y>
         <![CDATA[-265.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4865,24 +5159,24 @@ An d that's all before you land.]]>
   </sector>
   <sector tag='sector_void'>
     <fields>
-      <visited>
-        <![CDATA[false]]>
-      </visited>
       <description>
         <![CDATA[ Void was the first sector discovered without even a star.  This discovery led to changes in hyperspace theory that allowed humankind to spread even farther.]]>
       </description>
-      <labels>
-        <![CDATA[alliance,human,uninhabited]]>
-      </labels>
       <x>
         <![CDATA[-73.0]]>
       </x>
+      <labels>
+        <![CDATA[alliance,human,uninhabited]]>
+      </labels>
       <name>
         <![CDATA[Void]]>
       </name>
       <y>
         <![CDATA[55.0]]>
       </y>
+      <visited>
+        <![CDATA[false]]>
+      </visited>
     </fields>
     <children>
       <active_fleets/>
@@ -4902,8 +5196,6 @@ An d that's all before you land.]]>
   </sector>
   <ship tag='ship_massive_cargo_traders'>
     <fields>
-      <labels>
-      </labels>
       <shields>
         <![CDATA[400.0]]>
       </shields>
@@ -4916,24 +5208,20 @@ An d that's all before you land.]]>
       <facing_y>
         <![CDATA[-1.0]]>
       </facing_y>
-      <x>
-        <![CDATA[0.0]]>
-      </x>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
-      <name>
-        <![CDATA[Traders]]>
-      </name>
-      <y>
-        <![CDATA[0.0]]>
-      </y>
       <velocity_x>
         <![CDATA[0.0]]>
       </velocity_x>
       <fuel>
         <![CDATA[400.0]]>
       </fuel>
+      <labels>
+      </labels>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
@@ -4943,6 +5231,12 @@ An d that's all before you land.]]>
       <price>
         <![CDATA[0.0]]>
       </price>
+      <name>
+        <![CDATA[Traders]]>
+      </name>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
     </fields>
     <children>
       <addons/>
@@ -4961,24 +5255,6 @@ An d that's all before you land.]]>
   </ship>
   <shipblueprint tag='shipblueprint_massive_shipper'>
     <fields>
-      <fuel_per_jump>
-        <![CDATA[50.0]]>
-      </fuel_per_jump>
-      <secs_to_jump>
-        <![CDATA[6.0]]>
-      </secs_to_jump>
-      <fuel_regen>
-        <![CDATA[0.001]]>
-      </fuel_regen>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
-      <rot_per_sec>
-        <![CDATA[100.0]]>
-      </rot_per_sec>
-      <description>
-        <![CDATA[ The Massive Shipper is exactly what it claims to be - a gigantic vessel whose entire reason for being is the hauling of cargo.]]>
-      </description>
       <max_shields>
         <![CDATA[400.0]]>
       </max_shields>
@@ -4997,6 +5273,9 @@ An d that's all before you land.]]>
       <max_armor>
         <![CDATA[400.0]]>
       </max_armor>
+      <description>
+        <![CDATA[ The Massive Shipper is exactly what it claims to be - a gigantic vessel whose entire reason for being is the hauling of cargo.]]>
+      </description>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
@@ -5006,38 +5285,53 @@ An d that's all before you land.]]>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <name>
-        <![CDATA[Massive Shipper]]>
-      </name>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
       <max_fuel>
         <![CDATA[400.0]]>
       </max_fuel>
       <expansion_space>
         <![CDATA[200.0]]>
       </expansion_space>
+      <fuel_per_jump>
+        <![CDATA[50.0]]>
+      </fuel_per_jump>
+      <secs_to_jump>
+        <![CDATA[6.0]]>
+      </secs_to_jump>
+      <name>
+        <![CDATA[Massive Shipper]]>
+      </name>
+      <fuel_regen>
+        <![CDATA[0.001]]>
+      </fuel_regen>
+      <rot_per_sec>
+        <![CDATA[100.0]]>
+      </rot_per_sec>
     </fields>
     <children/>
   </shipblueprint>
   <planet tag='station_locker'>
     <fields>
-      <description>
-        <![CDATA["Oh no, nosir!  Illegal activity is strictly frowned upon in this station. I mean, yes, there's a lot of pirate activity, but we're just named this way to capitalize on it!  Station management doesn't go in for that sort of thing.   Market's that way, off-market is that way." - Locker tourist guide.]]>
-      </description>
-      <labels>
-        <![CDATA[eastpirates,inhabited,human,standard,station]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[234.0]]>
-      </x>
+      <description>
+        <![CDATA["Oh no, nosir!  Illegal activity is strictly frowned upon in this station. I mean, yes, there's a lot of pirate activity, but we're just named this way to capitalize on it!  Station management doesn't go in for that sort of thing.   Market's that way, off-market is that way." - Locker tourist guide.]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[234.0]]>
+      </x>
+      <labels>
+        <![CDATA[eastpirates,inhabited,human,standard,station]]>
+      </labels>
       <y>
         <![CDATA[-21.0]]>
       </y>
@@ -5060,29 +5354,37 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <planet tag='station_science'>
     <fields>
-      <description>
-        <![CDATA[Staying mostly out of the fray between rebel and alliance, the scientists here would be regarded as a renegade breakaway faction if they ever actually did anything other than survey. ]]>
-      </description>
-      <labels>
-        <![CDATA[scientist,inhabited,station,human]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-24.0]]>
-      </x>
+      <description>
+        <![CDATA[Staying mostly out of the fray between rebel and alliance, the scientists here would be regarded as a renegade breakaway faction if they ever actually did anything other than survey. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-24.0]]>
+      </x>
+      <labels>
+        <![CDATA[scientist,inhabited,station,human]]>
+      </labels>
       <y>
         <![CDATA[6.0]]>
       </y>
@@ -5107,24 +5409,24 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='station_solitude'>
     <fields>
-      <description>
-        <![CDATA[Solitude Station welcomes anyone who no longer wishes to feel the crush of their fellow human.   It has more windows than any other station ever built, the better to provide views of the universe outside. ]]>
-      </description>
-      <labels>
-        <![CDATA[human,inhabited,standard,station]]>
-      </labels>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
       <landing_distance>
         <![CDATA[100.0]]>
       </landing_distance>
-      <x>
-        <![CDATA[-160.0]]>
-      </x>
+      <description>
+        <![CDATA[Solitude Station welcomes anyone who no longer wishes to feel the crush of their fellow human.   It has more windows than any other station ever built, the better to provide views of the universe outside. ]]>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
+      <x>
+        <![CDATA[-160.0]]>
+      </x>
+      <labels>
+        <![CDATA[human,inhabited,standard,station]]>
+      </labels>
       <y>
         <![CDATA[68.0]]>
       </y>
@@ -5142,17 +5444,25 @@ An d that's all before you land.]]>
       <plot/>
       <random_missions/>
       <ships_for_sale/>
-      <weapons_for_sale/>
+      <weapons_for_sale>
+        <ref tag='weaponblueprint_seeking_missile'/>
+        <ref tag='weaponblueprint_charged_laser'/>
+        <ref tag='weaponblueprint_basic_laser'/>
+        <ref tag='weaponblueprint_seeking_missile_launcher'/>
+        <ref tag=''/>
+        <ref tag='weaponblueprint_direct_missile'/>
+        <ref tag='weaponblueprint_direct_missile_launcher'/>
+      </weapons_for_sale>
     </children>
   </planet>
   <universe tag='universe'>
     <fields>
-      <save_as_dev>
-        <![CDATA[true]]>
-      </save_as_dev>
       <description>
         <![CDATA[ Humanity is alone among the stars and, as always when humankind has only itself to deal with, war is constant.  An inner circle of systems are allied against separatist rebels who seek their independence.  It would be a tale told a thousand times, if there were not much worse in store....]]>
       </description>
+      <save_as_dev>
+        <![CDATA[true]]>
+      </save_as_dev>
       <labels>
         <![CDATA[theuniverse]]>
       </labels>
@@ -5169,4 +5479,415 @@ An d that's all before you land.]]>
       </player>
     </children>
   </universe>
+  <weaponblueprint tag='weaponblueprint_basic_laser'>
+    <fields>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[500.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This is the most basic of weaponry available to pilots.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <price>
+        <![CDATA[1000.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[5.0]]>
+      </max_ttl>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[3.0]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_charged_laser'>
+    <fields>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[450.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[yellowLaser.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ A new twist on an old forumla, the charged laser fires more slowly but packs more punch.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <price>
+        <![CDATA[5000.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[5.5]]>
+      </max_ttl>
+      <name>
+        <![CDATA[Charged Laser]]>
+      </name>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[50.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[5.0]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_direct_missile'>
+    <fields>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[9.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[true]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[missile.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This is standard ammunition for all Direct Missile Launchers.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[0.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[1.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <price>
+        <![CDATA[250.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[0.0]]>
+      </max_ttl>
+      <name>
+        <![CDATA[Direct Missile]]>
+      </name>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[0.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[0.0]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[0.0]]>
+      </rot_per_sec>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_direct_missile_launcher'>
+    <fields>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[700.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[missile.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ The missile is as direct as advertised: No seeking mechanisms, no counter-counter-missile ability, just explosives and fuel.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[700.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <price>
+        <![CDATA[10000.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[10.0]]>
+      </max_ttl>
+      <name>
+        <![CDATA[Direct Missile Launcher]]>
+      </name>
+      <secondary_weapon>
+        <![CDATA[true]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[100.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[3.5]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+    </fields>
+    <children>
+      <ammo>
+        <ref tag='weaponblueprint_direct_missile'/>
+      </ammo>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_seeking_missile'>
+    <fields>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[0.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[true]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+      </description>
+      <seeking>
+        <![CDATA[true]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[0.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[1.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[0.0]]>
+      </max_ttl>
+      <name>
+        <![CDATA[Seeking Missile]]>
+      </name>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[0.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[0.0]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_seeking_missile_launcher'>
+    <fields>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[500.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This launcher is designed with the most high-tech of guidance computers, to help its missile find its target.]]>
+      </description>
+      <seeking>
+        <![CDATA[true]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <price>
+        <![CDATA[50000.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[20.0]]>
+      </max_ttl>
+      <name>
+        <![CDATA[Seeking Missile Launcher]]>
+      </name>
+      <secondary_weapon>
+        <![CDATA[true]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[125.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[2.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[6.0]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+    </fields>
+    <children>
+      <ammo>
+        <ref tag='weaponblueprint_seeking_missile'/>
+      </ammo>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
 </kuiper>
