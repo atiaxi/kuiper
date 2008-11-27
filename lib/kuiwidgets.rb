@@ -274,7 +274,7 @@ class ShipImageButton < Opal::ImageButton
     return @animating
   end
 
-  def image=(filename)
+  def raw_image=(img)
     super
     @raw_image = @image
     if @raw_image.w > 1
@@ -308,7 +308,7 @@ class ShipImageButton < Opal::ImageButton
   
   def update_image
     frame = (@angle / 10).to_i
-    @image = @images[frame]    
+    @image = @images[frame]
   end
 end
 

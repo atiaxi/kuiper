@@ -319,41 +319,45 @@ class ImageButton < StaticSprite
     img = ResourceLocator.instance.image_for(filename)
     if img
       @image_filename = filename
-      if @max_size
-        if img.w > @max_size[0] || img.h > @max_size[1]
-          xscale = @max_size[0] / img.w.to_f
-          yscale = @max_size[1] / img.h.to_f
-          if version_check(:sdl_gfx,[2,0,13])
-            img = img.rotozoom(0, [xscale,yscale])
-          else
-            scale = [xscale,yscale].min
-            img = img.rotozoom(0, scale)
-          end
-        end
-      end 
-      
-      width = img.w
-      height = img.h
-      
-      width = width + 2 if @border
-      height = height + 2 if @border
-      
-      @image = Rubygame::Surface.new( [width, height])
-      @image.fill(@disabled_color) unless @enabled
-      if @border
-        border_color = @enabled ? @border : @disabled_color
-        @image.draw_box([0,0], [@image.w-1, @image.h-1], border_color)
-        offset = [ 1, 1 ]
-      else
-        offset = [ 0, 0 ]
-      end
-      img.blit(@image, offset)
-      
-      @rect.w = @image.w
-      @rect.h = @image.h
+      raw_image=(img)
     else
       @image = Rubygame::Surface.new( [ 1, 1] )
     end
+  end
+
+  def raw_image=(img)
+    if @max_size
+      if img.w > @max_size[0] || img.h > @max_size[1]
+        xscale = @max_size[0] / img.w.to_f
+        yscale = @max_size[1] / img.h.to_f
+        if version_check(:sdl_gfx,[2,0,13])
+          img = img.rotozoom(0, [xscale,yscale])
+        else
+          scale = [xscale,yscale].min
+          img = img.rotozoom(0, scale)
+        end
+      end
+    end 
+      
+    width = img.w
+    height = img.h
+      
+    width = width + 2 if @border
+    height = height + 2 if @border
+      
+    @image = Rubygame::Surface.new( [width, height])
+    @image.fill(@disabled_color) unless @enabled
+    if @border
+      border_color = @enabled ? @border : @disabled_color
+      @image.draw_box([0,0], [@image.w-1, @image.h-1], border_color)
+      offset = [ 1, 1 ]
+    else
+      offset = [ 0, 0 ]
+    end
+    img.blit(@image, offset)
+      
+    @rect.w = @image.w
+    @rect.h = @image.h
   end
   
   def max_size=( aspect )
