@@ -3,13 +3,13 @@
   <weaponblueprint tag=''>
     <fields>
       <damage>
-        <![CDATA[100.0]]>
+        <![CDATA[5.0]]>
       </damage>
       <hardpoints_required>
-        <![CDATA[2.0]]>
+        <![CDATA[1.0]]>
       </hardpoints_required>
       <max_cooldown>
-        <![CDATA[4.0]]>
+        <![CDATA[0.5]]>
       </max_cooldown>
       <rot_per_sec>
         <![CDATA[720.0]]>
@@ -21,16 +21,16 @@
         <![CDATA[700.0]]>
       </accel>
       <description>
-        <![CDATA[ A turret allows you to launch Direct Missiles without having to first point your ship at your target; the turret tracks your target for you.]]>
+        <![CDATA[ Adhering to the rebel philosophy of quick, small strikes, the Peck barely scratches ships when used individually.  Its extremely rapid recharge time, however, guarantees an en masse attack.]]>
       </description>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
       <image_filename>
-        <![CDATA[missile.png]]>
+        <![CDATA[flare-small.png]]>
       </image_filename>
       <turreted>
-        <![CDATA[true]]>
+        <![CDATA[false]]>
       </turreted>
       <seeking>
         <![CDATA[false]]>
@@ -42,31 +42,29 @@
         <![CDATA[0.0]]>
       </amount>
       <auto_accelerate>
-        <![CDATA[false]]>
+        <![CDATA[true]]>
       </auto_accelerate>
       <expansion_required>
         <![CDATA[0.0]]>
       </expansion_required>
       <labels>
-        <![CDATA[standard]]>
+        <![CDATA[rebel]]>
       </labels>
       <name>
-        <![CDATA[Direct Missile Turret]]>
+        <![CDATA[peck]]>
       </name>
       <price>
-        <![CDATA[25000.0]]>
+        <![CDATA[7500.0]]>
       </price>
       <max_ttl>
-        <![CDATA[10.0]]>
+        <![CDATA[4.0]]>
       </max_ttl>
       <secondary_weapon>
-        <![CDATA[true]]>
+        <![CDATA[false]]>
       </secondary_weapon>
     </fields>
     <children>
-      <ammo>
-        <ref tag='weaponblueprint_direct_missile'/>
-      </ammo>
+      <ammo/>
       <anti_addons/>
     </children>
   </weaponblueprint>
@@ -6113,6 +6111,142 @@ An d that's all before you land.]]>
       <anti_addons/>
     </children>
   </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_hunt'>
+    <fields>
+      <damage>
+        <![CDATA[200.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[2.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[5.0]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[300.0]]>
+      </accel>
+      <description>
+        <![CDATA[A complicated computerized process allows these contained energy blasts to be attuned to a target's shields, thus naturally seeking them out without any sort of guidance system. ]]>
+      </description>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[flare.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <seeking>
+        <![CDATA[true]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[300.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[allliance]]>
+      </labels>
+      <name>
+        <![CDATA[Hunt]]>
+      </name>
+      <price>
+        <![CDATA[35000.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[15.0]]>
+      </max_ttl>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_peck'>
+    <fields>
+      <damage>
+        <![CDATA[5.0]]>
+      </damage>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[0.5]]>
+      </max_cooldown>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[700.0]]>
+      </accel>
+      <description>
+        <![CDATA[Adhering to the rebel philosophy of faster, lighter weaponry, an individual Peck barely scratches the offending ship.  With its extraordinary recharge time, however, it is deadly. ]]>
+      </description>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+      <image_filename>
+        <![CDATA[flare-small.png]]>
+      </image_filename>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[700.0]]>
+      </max_speed>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <labels>
+        <![CDATA[rebel]]>
+      </labels>
+      <name>
+        <![CDATA[Peck]]>
+      </name>
+      <price>
+        <![CDATA[7500.0]]>
+      </price>
+      <max_ttl>
+        <![CDATA[4.0]]>
+      </max_ttl>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_seeking_missile'>
     <fields>
       <damage>
@@ -6166,7 +6300,7 @@ An d that's all before you land.]]>
         <![CDATA[Seeking Missile]]>
       </name>
       <price>
-        <![CDATA[0.0]]>
+        <![CDATA[350.0]]>
       </price>
       <max_ttl>
         <![CDATA[0.0]]>
