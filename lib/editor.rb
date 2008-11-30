@@ -93,6 +93,25 @@ class PropertiesDialog < Opal::State
     @driver.pop
   end
   
+  # If our object has a blueprint and a max_field equivalent of
+  # a field, offer a 'max' button.
+  # field is a sym of the field in question, input is the input field to 
+  # populate.
+  def check_max_button(field,input)
+    if @object.respond_to?(:blueprint)
+      max = ("max_" + field.to_s ).to_sym
+      if @object.blueprint.respond_to?(max)
+        num_max = @object.send(max)
+        maxButton = Button.new("Max") do
+          input.text = num_max.to_s
+        end
+        maxButton.rect.x = input.rect.right + @spacing
+        maxButton.rect.y = input.rect.y
+        self << maxButton
+      end
+    end
+  end
+  
   def deactivate
     @attr_to_field.each do | attr, field |
       @stored_values[attr] = field.text
@@ -132,6 +151,7 @@ class PropertiesDialog < Opal::State
       label = Label.new(attr.to_s)
       rows,cols = [0,0]
       size= @object.class.size_for(attr)
+      input = nil
       if size
         rows,cols = size
         if rows > 1
@@ -144,9 +164,8 @@ class PropertiesDialog < Opal::State
         end
       else
         input = InputField.new(value,20)
-      end
+      end      
       
-      # TODO: There's no next column creation.  Fix it if it becomes an issue.
       if display
         if rows > 1
           scroller = Scroller.new(input)
@@ -154,9 +173,10 @@ class PropertiesDialog < Opal::State
           layout_field(label,scroller)
         else
           layout_field(label,input)
-        end      
+        end
         @attr_to_field[attr] = input
       end
+      check_max_button(attr,input) if input
     end
     
     # Booleans
