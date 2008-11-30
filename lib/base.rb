@@ -319,9 +319,10 @@ class ImageButton < StaticSprite
     img = ResourceLocator.instance.image_for(filename)
     if img
       @image_filename = filename
-      raw_image=(img)
+      self.raw_image=img
     else
-      @image = Rubygame::Surface.new( [ 1, 1] )
+      img = Rubygame::Surface.new( [ 1, 1] )
+      self.raw_image=img
     end
   end
 

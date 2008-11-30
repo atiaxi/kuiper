@@ -277,6 +277,7 @@ class ShipImageButton < Opal::ImageButton
   def raw_image=(img)
     super
     @raw_image = @image
+    @images = []
     if @raw_image.w > 1
       frame_width = @raw_image.w / 6
       frame_height = @raw_image.h / 6
@@ -308,7 +309,7 @@ class ShipImageButton < Opal::ImageButton
   
   def update_image
     frame = (@angle / 10).to_i
-    @image = @images[frame]
+    @image = @images[frame] if @images
   end
 end
 
