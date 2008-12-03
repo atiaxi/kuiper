@@ -167,7 +167,9 @@ module RandomDestination
   # I don't have the metaclass magic on the module side to make declaring
   # a 'child' here make any sense.  So I'm just noting in a comment:
   
-  #child :destinations  # Implementors should do this
+  # Implementors should do the following:
+  #child :destinations 
+  #labelable_attr :destinations_labels
   
   def arrived_check_for(location)
     arrived = KuiIfThen.new
@@ -182,13 +184,20 @@ module RandomDestination
   end
   
   def pick_destination
-    there = @destinations.random
+    there = nil
+    if @destinations.size > 0
+      there = @destinations.random
+    else
+      dests = @rl.repository.everything_with_labels(@destinations_labels_array)
+      there = dests.to_a.random
+    end
     @destination = there.name
     return there
   end
   
   def random_destination_playable?
-    return false unless @destinations.size > 0
+    return false unless @destinations.size > 0 || 
+      @destinations_labels_array.size >0
     return true
   end
   
@@ -198,6 +207,7 @@ module RandomDestination
   
   def setup_random_destination
     @destinations = []
+    @destinations_labels_array = []
   end
   
 end
@@ -212,9 +222,11 @@ class KuiRandomCargo < KuiMissionGenerator
   
   include RandomDestination
   child :destinations
+  labelable_attr :destinations_labels
   
   def initialize
     super
+    @destinations_labels = []
     setup_random_cargo
     setup_random_destination
   end
@@ -269,6 +281,7 @@ class KuiRandomScout < KuiMissionGenerator
   
   include RandomDestination
   child :destinations
+  labelable_attr :destinations_labels
   
   def initialize
     super
@@ -310,6 +323,7 @@ class KuiRandomFetch < KuiMissionGenerator
   
   include RandomDestination
   child :destinations
+  labelable_attr :destinations_labels
   
   def initialize
     super
@@ -379,6 +393,7 @@ class KuiRandomBounty < KuiMissionGenerator
   
   include RandomDestination
   child :destinations
+  labelable_attr :destinations_labels
   
   child :fleets
   

@@ -590,9 +590,12 @@ class KuiAtCondition < KuiCondition
   # If the player is at any of them, this is true.
   child :locations
   
+  labelable_attr :location_labels
+  
   def initialize
     super
     @locations = []
+    @location_labels_array = []
   end
   
   def playable?
@@ -604,11 +607,18 @@ class KuiAtCondition < KuiCondition
   def value
     sector = player.start_sector
     result = @locations.include?(sector)
+    
+    intersect = sector.labels_array.to_set & @location_labels_array.to_set 
+    result ||= intersect.size > 0
 
     return true if result
     if player.on_planet
       return true if @locations.include?(player.on_planet)
       return true if @locations.include?(player.on_planet.owner)
+      intersect = player.on_planet.labels_array.to_set &
+        @location_labels_array.to_set
+        
+      return true if intersect.size > 0
     end
     return false
   end

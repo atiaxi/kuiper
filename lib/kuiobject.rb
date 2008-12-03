@@ -273,6 +273,32 @@ class KuiObject
     end
   end
   
+  # Labelable attrbutes are, internally, comma-separated string attributes.
+  # This method provides arr, arr=, arr_array
+  def self.labelable_attr(*arr)
+    raw_attr(*arr)
+    arr.each do  | sym |
+      array = (sym.to_s + "_array").to_sym
+      attr_reader(array)
+      
+      class_eval do
+        define_method(sym) do
+          result = instance_variable_get("@"+array.to_s).join(",")
+        end
+      end
+      
+      setter = (sym.to_s + "=").to_sym
+      class_eval do
+        define_method(setter) do | csv |
+          new_label_array = csv.split(",")
+          new_label_array.collect! { |l| l.downcase.strip }
+          new_label_array.reject! { |l| l.size <= 0 }
+          instance_variable_set("@"+array.to_s, new_label_array)
+        end
+      end
+    end
+  end
+  
   # Registers in a 'children' array
   def self.child(*arr)
     self.children.merge(arr)
@@ -297,17 +323,16 @@ class KuiObject
     return @sizes[attr]
   end
   
-  raw_attr :labels
-  attr_reader :label_array
   # Transient objects are not saved and will probably
   # be re-created
   attr_accessor :transient
+  
+  labelable_attr :labels
 
   def initialize()
     @tag = nil
     @transient = false
-    @label_array = []
-    self.labels = ""
+    @labels_array = []
     @rl = Opal::ResourceLocator.instance
     super
   end
@@ -458,19 +483,6 @@ class KuiObject
   # Returns a Binding object for this KuiObject; for use in ERB
   def kuibinding
     return binding()
-  end
-  
-  def labels
-    return @labels
-  end
-  
-  # CSV is, as you might expect, a comma separated list of values that represent
-  # the labels for this object.
-  def labels=(csv)
-    @labels = csv
-    label_array = csv.split(",")
-    label_array = label_array.collect { |l| l.downcase.strip }
-    @label_array = label_array.reject { |l| l.size <= 0 }
   end
   
   # Returns true if this has all the fields it requires to be in the game, as

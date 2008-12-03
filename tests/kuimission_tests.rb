@@ -31,9 +31,15 @@ class KuiMissionTests < Test::Unit::TestCase
     @taketh = KuiAwardRemoveCargoAction.new(@cargo,5,false)
     
     @start = @player.start_sector
+    @start.labels = "start,blarg"
+    
+    @nullStartCond = KuiAtCondition.new
     
     @startCond = KuiAtCondition.new
     @startCond.locations << @start
+    
+    @startLabelCond = KuiAtCondition.new
+    @startLabelCond.location_labels="start,somewhereelse,planet"
     
     @greenHalo = KuiHalo.new
     @giveHalo = KuiHaloAction.new
@@ -42,6 +48,14 @@ class KuiMissionTests < Test::Unit::TestCase
     
     @endAction = KuiEndAction.new(1)
     
+  end
+  
+  def test_labelable_retained
+    assert_equal(3,@startLabelCond.location_labels_array.size)
+  end
+  
+  def test_null_start
+    assert(!@nullStartCond.value)
   end
   
   def test_at_start
@@ -55,6 +69,26 @@ class KuiMissionTests < Test::Unit::TestCase
     @player.on_planet = planet
     @startCond.locations << planet
     assert(@startCond.value)
+  end
+  
+  def test_at_label
+    assert(@startLabelCond.value)
+    
+    another_sector = KuiSector.new
+    another_sector.labels="failme"
+    @player.start_sector = another_sector
+    assert(!@startLabelCond.value)
+    
+    yetAnotherSector = KuiSector.new
+    yetAnotherSector.labels="passme,somewhereelse"
+    assert_equal("passme,somewhereelse",yetAnotherSector.labels)
+    @player.start_sector = yetAnotherSector
+    assert(@startLabelCond.value)
+    
+    planet = KuiPlanet.new
+    planet.labels="planet,inhabited"
+    @player.on_planet = planet
+    assert(@startLabelCond.value)
   end
   
   def test_cargo
@@ -449,9 +483,12 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
     @earth = KuiPlanet.new
     @earth.tag = "planet_earth"
     @earth.name = "Earth"
+    @earth.labels = "planet,earth"
     
     @mars = KuiPlanet.new
+    @mars.name = "Mars"
     @mars.tag = "planet_mars"
+    @mars.labels = "planet,mars"
   end
   
   def test_simple_cargo
@@ -562,6 +599,7 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
     scoutGen = KuiRandomScout.new
     scoutGen.template = template
     scoutGen.destinations << @earth
+    assert(scoutGen.random_destination_playable?)
     
     generated = scoutGen.generate
     assert_equal(KuiMission, generated[0].class)
@@ -577,6 +615,20 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
     assert_equal(1, ifthen.ifs[0].locations.size)
     assert_equal(@earth, ifthen.ifs[0].locations[0])
     
+  end
+  
+  def test_labeled
+    template = KuiMission.new
+    template.name = "Scout the planet %DESTINATION%"
+    scoutGen = KuiRandomScout.new
+    scoutGen.template = template
+    
+    assert(!scoutGen.random_destination_playable?)
+    scoutGen.destinations_labels = 'mars,blarg'
+    assert(scoutGen.random_destination_playable?)
+    
+    generated = scoutGen.generate
+    assert_equal("Scout the planet Mars", generated[0].name)
   end
   
   def test_simple_bounty

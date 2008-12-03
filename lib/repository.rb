@@ -50,7 +50,7 @@ class Repository
   def all_labels
     results = Set.new
     labels = @everything.values.collect do |obj|
-      results.merge(obj.label_array.to_set)
+      results.merge(obj.labels_array.to_set)
     end
     return results.to_a
   end
@@ -103,10 +103,11 @@ class Repository
   
   def everything_with_label(label)
     return (@everything.values.select do | kui |
-      kui.label_array.include?(label)
+      kui.labels_array.include?(label)
     end).to_set
   end
   
+  # Everything that has at least one of the given labels
   def everything_with_labels(labels)
     result = Set.new
     labels.each do | label |

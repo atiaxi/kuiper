@@ -2,15 +2,18 @@
 <kuiper major='0' bug='3' minor='0'>
   <weaponblueprint tag=''>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ Adhering to the rebel philosophy of quick, small strikes, the Peck barely scratches ships when used individually.  Its extremely rapid recharge time, however, guarantees an en masse attack.]]>
+      </description>
       <seeking>
         <![CDATA[false]]>
       </seeking>
       <max_speed>
         <![CDATA[700.0]]>
       </max_speed>
-      <description>
-        <![CDATA[ Adhering to the rebel philosophy of quick, small strikes, the Peck barely scratches ships when used individually.  Its extremely rapid recharge time, however, guarantees an en masse attack.]]>
-      </description>
       <auto_accelerate>
         <![CDATA[true]]>
       </auto_accelerate>
@@ -20,48 +23,45 @@
       <max_ttl>
         <![CDATA[4.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[false]]>
       </secondary_weapon>
       <damage>
         <![CDATA[5.0]]>
       </damage>
+      <labels>
+        <![CDATA[rebel]]>
+      </labels>
+      <name>
+        <![CDATA[peck]]>
+      </name>
+      <price>
+        <![CDATA[7500.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[1.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[0.5]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[flare-small.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[rebel]]>
-      </labels>
       <accel>
         <![CDATA[700.0]]>
       </accel>
-      <name>
-        <![CDATA[peck]]>
-      </name>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
-      <price>
-        <![CDATA[7500.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[flare-small.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo/>
@@ -70,15 +70,24 @@
   </weaponblueprint>
   <addon tag='addon_armor_plating'>
     <fields>
+      <max_cargo>
+        <![CDATA[0.0]]>
+      </max_cargo>
+      <max_armor>
+        <![CDATA[100.0]]>
+      </max_armor>
+      <hardpoints>
+        <![CDATA[0.0]]>
+      </hardpoints>
+      <description>
+        <![CDATA[An extra layer of armor between you and the deadly deadly vacuum of space is never a bad thing. ]]>
+      </description>
       <armor_regen>
         <![CDATA[0.0]]>
       </armor_regen>
       <max_speed>
         <![CDATA[0.0]]>
       </max_speed>
-      <description>
-        <![CDATA[An extra layer of armor between you and the deadly deadly vacuum of space is never a bad thing. ]]>
-      </description>
       <shield_regen>
         <![CDATA[0.0]]>
       </shield_regen>
@@ -100,55 +109,55 @@
       <fuel_per_jump>
         <![CDATA[0.0]]>
       </fuel_per_jump>
+      <name>
+        <![CDATA[Armor Plating]]>
+      </name>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <price>
+        <![CDATA[10000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
       <rot_per_sec>
         <![CDATA[0.0]]>
       </rot_per_sec>
-      <name>
-        <![CDATA[Armor Plating]]>
-      </name>
+      <image_filename>
+      </image_filename>
       <accel>
         <![CDATA[0.0]]>
       </accel>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <max_shields>
         <![CDATA[0.0]]>
       </max_shields>
-      <price>
-        <![CDATA[10000.0]]>
-      </price>
-      <image_filename>
-      </image_filename>
-      <max_cargo>
-        <![CDATA[0.0]]>
-      </max_cargo>
-      <max_armor>
-        <![CDATA[100.0]]>
-      </max_armor>
-      <hardpoints>
-        <![CDATA[0.0]]>
-      </hardpoints>
     </fields>
     <children/>
   </addon>
   <addon tag='addon_cargo_conversion'>
     <fields>
+      <max_cargo>
+        <![CDATA[30.0]]>
+      </max_cargo>
+      <max_armor>
+        <![CDATA[0.0]]>
+      </max_armor>
+      <hardpoints>
+        <![CDATA[0.0]]>
+      </hardpoints>
+      <description>
+        <![CDATA[Without the myriad computer systems that regulate them, the expansion bays become nearly empty space perfectly suited for cargo. ]]>
+      </description>
       <armor_regen>
         <![CDATA[0.0]]>
       </armor_regen>
       <max_speed>
         <![CDATA[0.0]]>
       </max_speed>
-      <description>
-        <![CDATA[Without the myriad computer systems that regulate them, the expansion bays become nearly empty space perfectly suited for cargo. ]]>
-      </description>
       <shield_regen>
         <![CDATA[0.0]]>
       </shield_regen>
@@ -170,34 +179,39 @@
       <fuel_per_jump>
         <![CDATA[0.0]]>
       </fuel_per_jump>
+      <name>
+        <![CDATA[Cargo Conversion]]>
+      </name>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <price>
+        <![CDATA[2000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
       <rot_per_sec>
         <![CDATA[0.0]]>
       </rot_per_sec>
-      <name>
-        <![CDATA[Cargo Conversion]]>
-      </name>
+      <image_filename>
+      </image_filename>
       <accel>
         <![CDATA[0.0]]>
       </accel>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <max_shields>
         <![CDATA[0.0]]>
       </max_shields>
-      <price>
-        <![CDATA[2000.0]]>
-      </price>
-      <image_filename>
-      </image_filename>
+    </fields>
+    <children/>
+  </addon>
+  <addon tag='addon_engine_booster'>
+    <fields>
       <max_cargo>
-        <![CDATA[30.0]]>
+        <![CDATA[0.0]]>
       </max_cargo>
       <max_armor>
         <![CDATA[0.0]]>
@@ -205,20 +219,15 @@
       <hardpoints>
         <![CDATA[0.0]]>
       </hardpoints>
-    </fields>
-    <children/>
-  </addon>
-  <addon tag='addon_engine_booster'>
-    <fields>
+      <description>
+        <![CDATA[This is essentially an afterburner, albeit a lot more complicated.  The downside to the extra speed is, of course, poorer fuel efficiency ]]>
+      </description>
       <armor_regen>
         <![CDATA[0.0]]>
       </armor_regen>
       <max_speed>
         <![CDATA[30.0]]>
       </max_speed>
-      <description>
-        <![CDATA[This is essentially an afterburner, albeit a lot more complicated.  The downside to the extra speed is, of course, poorer fuel efficiency ]]>
-      </description>
       <shield_regen>
         <![CDATA[0.0]]>
       </shield_regen>
@@ -240,32 +249,37 @@
       <fuel_per_jump>
         <![CDATA[10.0]]>
       </fuel_per_jump>
+      <name>
+        <![CDATA[Engine Booster]]>
+      </name>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <price>
+        <![CDATA[750.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
       <rot_per_sec>
         <![CDATA[0.0]]>
       </rot_per_sec>
-      <name>
-        <![CDATA[Engine Booster]]>
-      </name>
+      <image_filename>
+      </image_filename>
       <accel>
         <![CDATA[25.0]]>
       </accel>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <max_shields>
         <![CDATA[0.0]]>
       </max_shields>
-      <price>
-        <![CDATA[750.0]]>
-      </price>
-      <image_filename>
-      </image_filename>
+    </fields>
+    <children/>
+  </addon>
+  <addon tag='addon_fuel_tank'>
+    <fields>
       <max_cargo>
         <![CDATA[0.0]]>
       </max_cargo>
@@ -275,20 +289,15 @@
       <hardpoints>
         <![CDATA[0.0]]>
       </hardpoints>
-    </fields>
-    <children/>
-  </addon>
-  <addon tag='addon_fuel_tank'>
-    <fields>
+      <description>
+        <![CDATA[This converts some of your spare expansion space to fuel storage - without the numerous hardware that  regulates the expansions, this can yield a much larger space. ]]>
+      </description>
       <armor_regen>
         <![CDATA[0.0]]>
       </armor_regen>
       <max_speed>
         <![CDATA[0.0]]>
       </max_speed>
-      <description>
-        <![CDATA[This converts some of your spare expansion space to fuel storage - without the numerous hardware that  regulates the expansions, this can yield a much larger space. ]]>
-      </description>
       <shield_regen>
         <![CDATA[0.0]]>
       </shield_regen>
@@ -310,32 +319,37 @@
       <fuel_per_jump>
         <![CDATA[5.0]]>
       </fuel_per_jump>
+      <name>
+        <![CDATA[Fuel Tank]]>
+      </name>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <price>
+        <![CDATA[5000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
       <rot_per_sec>
         <![CDATA[0.0]]>
       </rot_per_sec>
-      <name>
-        <![CDATA[Fuel Tank]]>
-      </name>
+      <image_filename>
+      </image_filename>
       <accel>
         <![CDATA[0.0]]>
       </accel>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <max_shields>
         <![CDATA[0.0]]>
       </max_shields>
-      <price>
-        <![CDATA[5000.0]]>
-      </price>
-      <image_filename>
-      </image_filename>
+    </fields>
+    <children/>
+  </addon>
+  <addon tag='addon_hyperspace_coupler'>
+    <fields>
       <max_cargo>
         <![CDATA[0.0]]>
       </max_cargo>
@@ -345,20 +359,15 @@
       <hardpoints>
         <![CDATA[0.0]]>
       </hardpoints>
-    </fields>
-    <children/>
-  </addon>
-  <addon tag='addon_hyperspace_coupler'>
-    <fields>
+      <description>
+        <![CDATA[ This directs energy from the engines to the hyperdrive, allowing a faster jump time at the expense of fuel efficiency.]]>
+      </description>
       <armor_regen>
         <![CDATA[0.0]]>
       </armor_regen>
       <max_speed>
         <![CDATA[0.0]]>
       </max_speed>
-      <description>
-        <![CDATA[ This directs energy from the engines to the hyperdrive, allowing a faster jump time at the expense of fuel efficiency.]]>
-      </description>
       <shield_regen>
         <![CDATA[0.0]]>
       </shield_regen>
@@ -380,32 +389,37 @@
       <fuel_per_jump>
         <![CDATA[20.0]]>
       </fuel_per_jump>
+      <name>
+        <![CDATA[Hyperspace Coupler]]>
+      </name>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <price>
+        <![CDATA[2000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
       <rot_per_sec>
         <![CDATA[0.0]]>
       </rot_per_sec>
-      <name>
-        <![CDATA[Hyperspace Coupler]]>
-      </name>
+      <image_filename>
+      </image_filename>
       <accel>
         <![CDATA[0.0]]>
       </accel>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <max_shields>
         <![CDATA[0.0]]>
       </max_shields>
-      <price>
-        <![CDATA[2000.0]]>
-      </price>
-      <image_filename>
-      </image_filename>
+    </fields>
+    <children/>
+  </addon>
+  <addon tag='addon_shield_capacitor'>
+    <fields>
       <max_cargo>
         <![CDATA[0.0]]>
       </max_cargo>
@@ -415,20 +429,15 @@
       <hardpoints>
         <![CDATA[0.0]]>
       </hardpoints>
-    </fields>
-    <children/>
-  </addon>
-  <addon tag='addon_shield_capacitor'>
-    <fields>
+      <description>
+        <![CDATA[This acts as a backup battery for shields, allowing them to stay active longer. ]]>
+      </description>
       <armor_regen>
         <![CDATA[0.0]]>
       </armor_regen>
       <max_speed>
         <![CDATA[0.0]]>
       </max_speed>
-      <description>
-        <![CDATA[This acts as a backup battery for shields, allowing them to stay active longer. ]]>
-      </description>
       <shield_regen>
         <![CDATA[0.0]]>
       </shield_regen>
@@ -450,60 +459,51 @@
       <fuel_per_jump>
         <![CDATA[0.0]]>
       </fuel_per_jump>
+      <name>
+        <![CDATA[Shield Capacitor]]>
+      </name>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <price>
+        <![CDATA[10000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
       <rot_per_sec>
         <![CDATA[0.0]]>
       </rot_per_sec>
-      <name>
-        <![CDATA[Shield Capacitor]]>
-      </name>
+      <image_filename>
+      </image_filename>
       <accel>
         <![CDATA[0.0]]>
       </accel>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <max_shields>
         <![CDATA[100.0]]>
       </max_shields>
-      <price>
-        <![CDATA[10000.0]]>
-      </price>
-      <image_filename>
-      </image_filename>
-      <max_cargo>
-        <![CDATA[0.0]]>
-      </max_cargo>
-      <max_armor>
-        <![CDATA[0.0]]>
-      </max_armor>
-      <hardpoints>
-        <![CDATA[0.0]]>
-      </hardpoints>
     </fields>
     <children/>
   </addon>
   <cargo tag='cargo_Equipment_x0.85'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[-26.25]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -513,20 +513,20 @@
   </cargo>
   <cargo tag='cargo_Equipment_x1.0'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -536,20 +536,20 @@
   </cargo>
   <cargo tag='cargo_Equipment_x1.15'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[26.25]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -559,20 +559,20 @@
   </cargo>
   <cargo tag='cargo_Food_x0.85'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[-15.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -582,20 +582,20 @@
   </cargo>
   <cargo tag='cargo_Food_x1.0'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -605,20 +605,20 @@
   </cargo>
   <cargo tag='cargo_Food_x1.15'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[15.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -628,20 +628,20 @@
   </cargo>
   <cargo tag='cargo_Luxuries_x0.85'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[-82.5]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -651,20 +651,20 @@
   </cargo>
   <cargo tag='cargo_Luxuries_x1.0'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -674,20 +674,20 @@
   </cargo>
   <cargo tag='cargo_Luxuries_x1.15'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[82.5]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -697,20 +697,20 @@
   </cargo>
   <cargo tag='cargo_Raw Metals_x0.85'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[-22.5]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -720,20 +720,20 @@
   </cargo>
   <cargo tag='cargo_Raw Metals_x1.0'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -743,20 +743,20 @@
   </cargo>
   <cargo tag='cargo_Raw Metals_x1.15'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[22.5]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -766,20 +766,20 @@
   </cargo>
   <cargo tag='cargo_Specimens_x0.85'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[-48.75]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -789,20 +789,20 @@
   </cargo>
   <cargo tag='cargo_Specimens_x1.0'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -812,20 +812,20 @@
   </cargo>
   <cargo tag='cargo_Specimens_x1.15'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[48.7499999999999]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -835,20 +835,20 @@
   </cargo>
   <cargo tag='cargo_Synthetics_x0.85'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[-37.5]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -858,20 +858,20 @@
   </cargo>
   <cargo tag='cargo_Synthetics_x1.0'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[0.0]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -881,20 +881,20 @@
   </cargo>
   <cargo tag='cargo_Synthetics_x1.15'>
     <fields>
+      <average_price>
+        <![CDATA[0.0]]>
+      </average_price>
       <mission_related>
         <![CDATA[false]]>
       </mission_related>
       <amount>
         <![CDATA[0.0]]>
       </amount>
+      <labels>
+      </labels>
       <markup>
         <![CDATA[37.5]]>
       </markup>
-      <labels>
-      </labels>
-      <average_price>
-        <![CDATA[0.0]]>
-      </average_price>
     </fields>
     <children>
       <blueprint>
@@ -907,14 +907,14 @@
       <description>
         <![CDATA[A mix of natural and artificial materials, you never know the exact composition of what you'll be transporting.  The important thing is that you can eat it if your ship ends up stranded somewhere. ]]>
       </description>
-      <base_price>
-        <![CDATA[100.0]]>
-      </base_price>
       <name>
         <![CDATA[Food]]>
       </name>
       <labels>
       </labels>
+      <base_price>
+        <![CDATA[100.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -923,15 +923,15 @@
       <description>
         <![CDATA[This is mostly unprocessed ore - since the metal tends to weigh the same whether it's been through a machine or not and you never know which exact metals the buyer will need. ]]>
       </description>
-      <base_price>
-        <![CDATA[150.0]]>
-      </base_price>
       <name>
         <![CDATA[Raw Metals]]>
       </name>
       <labels>
         <![CDATA[metal]]>
       </labels>
+      <base_price>
+        <![CDATA[150.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -940,14 +940,14 @@
       <description>
         <![CDATA[Scanners, probes, imagers, from items as expensive as hyperdrives and as cheap as children's toys, it's all lumped together in large lots. ]]>
       </description>
-      <base_price>
-        <![CDATA[175.0]]>
-      </base_price>
       <name>
         <![CDATA[Equipment]]>
       </name>
       <labels>
       </labels>
+      <base_price>
+        <![CDATA[175.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -956,14 +956,14 @@
       <description>
         <![CDATA[The hottest fasions, the best new trends, whether near or far people everywhere will pay good money for what's 'in'. ]]>
       </description>
-      <base_price>
-        <![CDATA[550.0]]>
-      </base_price>
       <name>
         <![CDATA[Luxuries]]>
       </name>
       <labels>
       </labels>
+      <base_price>
+        <![CDATA[550.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -972,14 +972,14 @@
       <description>
         <![CDATA[Every planet with life - and even those that only used to host it - has unique specimens. ]]>
       </description>
-      <base_price>
-        <![CDATA[325.0]]>
-      </base_price>
       <name>
         <![CDATA[Specimens]]>
       </name>
       <labels>
       </labels>
+      <base_price>
+        <![CDATA[325.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
@@ -987,19 +987,25 @@
     <fields>
       <description>
       </description>
-      <base_price>
-        <![CDATA[250.0]]>
-      </base_price>
       <name>
         <![CDATA[Synthetics]]>
       </name>
       <labels>
       </labels>
+      <base_price>
+        <![CDATA[250.0]]>
+      </base_price>
     </fields>
     <children/>
   </cargoblueprint>
   <fleet tag='fleet_massive_trading'>
     <fields>
+      <under_attack>
+        <![CDATA[flee]]>
+      </under_attack>
+      <max_stay>
+        <![CDATA[30.0]]>
+      </max_stay>
       <current_stay>
         <![CDATA[0.0]]>
       </current_stay>
@@ -1009,24 +1015,18 @@
       <unique>
         <![CDATA[false]]>
       </unique>
-      <spawn_chance>
-        <![CDATA[0.15]]>
-      </spawn_chance>
       <name>
         <![CDATA[Massive Trading Fleet]]>
       </name>
-      <min_stay>
-        <![CDATA[10.0]]>
-      </min_stay>
+      <spawn_chance>
+        <![CDATA[0.15]]>
+      </spawn_chance>
       <labels>
         <![CDATA[traders]]>
       </labels>
-      <under_attack>
-        <![CDATA[flee]]>
-      </under_attack>
-      <max_stay>
-        <![CDATA[30.0]]>
-      </max_stay>
+      <min_stay>
+        <![CDATA[10.0]]>
+      </min_stay>
     </fields>
     <children>
       <owner>
@@ -1117,6 +1117,12 @@
   </map>
   <org tag='org_alliance'>
     <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
@@ -1132,26 +1138,20 @@
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
       <name>
         <![CDATA[Alliance]]>
       </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
-      <labels>
-      </labels>
-      <neutral>
-        <![CDATA[0.0]]>
-      </neutral>
-      <friendly_shots_threshold>
-        <![CDATA[3.0]]>
-      </friendly_shots_threshold>
     </fields>
     <children>
       <feelings>
@@ -1174,6 +1174,12 @@
   </org>
   <org tag='org_player'>
     <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
@@ -1189,26 +1195,20 @@
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
       <name>
         <![CDATA[The Player]]>
       </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
-      <labels>
-      </labels>
-      <neutral>
-        <![CDATA[0.0]]>
-      </neutral>
-      <friendly_shots_threshold>
-        <![CDATA[3.0]]>
-      </friendly_shots_threshold>
     </fields>
     <children>
       <feelings>
@@ -1231,6 +1231,12 @@
   </org>
   <org tag='org_rebels'>
     <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
@@ -1246,26 +1252,20 @@
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
       <name>
         <![CDATA[Rebels]]>
       </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
-      <labels>
-      </labels>
-      <neutral>
-        <![CDATA[0.0]]>
-      </neutral>
-      <friendly_shots_threshold>
-        <![CDATA[3.0]]>
-      </friendly_shots_threshold>
     </fields>
     <children>
       <feelings>
@@ -1288,6 +1288,12 @@
   </org>
   <org tag='org_scientists'>
     <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
@@ -1303,26 +1309,20 @@
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
       <name>
         <![CDATA[Scientists]]>
       </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
-      <labels>
-      </labels>
-      <neutral>
-        <![CDATA[0.0]]>
-      </neutral>
-      <friendly_shots_threshold>
-        <![CDATA[3.0]]>
-      </friendly_shots_threshold>
     </fields>
     <children>
       <feelings>
@@ -1345,6 +1345,12 @@
   </org>
   <org tag='org_traders'>
     <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
       <friendly>
         <![CDATA[500.0]]>
       </friendly>
@@ -1360,26 +1366,20 @@
       <kill_on_sight>
         <![CDATA[-1000.0]]>
       </kill_on_sight>
-      <killing_mod>
-        <![CDATA[-50.0]]>
-      </killing_mod>
-      <unfriendly>
-        <![CDATA[-500.0]]>
-      </unfriendly>
       <name>
         <![CDATA[Traders]]>
       </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
       <friendly_multiplier>
         <![CDATA[0.5]]>
       </friendly_multiplier>
-      <labels>
-      </labels>
-      <neutral>
-        <![CDATA[0.0]]>
-      </neutral>
-      <friendly_shots_threshold>
-        <![CDATA[3.0]]>
-      </friendly_shots_threshold>
     </fields>
     <children>
       <feelings>
@@ -1402,12 +1402,15 @@
   </org>
   <planet tag='planet_anvil_station'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[When leading scientists and engineers created this station long ago, it was to study - from a safe distance - the odd phenomenon in this part of the galaxy.  War has changed the focus of the station dramatically. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[64.0]]>
       </x>
@@ -1423,9 +1426,6 @@
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1464,12 +1464,15 @@
   </planet>
   <planet tag='planet_artifact'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Of all the mysteries in the universe, none have been as persistant as the alien artifacts discovered on this planet.  It started an invasion scare that, to an extent, lingers to this day.  Despite scientists' findings that the artifacts could not possibly function in a universe that obeys the same physical laws as ours, it continues to be a source of mystery and study.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[7.0]]>
       </x>
@@ -1485,9 +1488,6 @@
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1507,12 +1507,15 @@
   </planet>
   <planet tag='planet_beauty'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[This planet was given its name before anyone had actually seen it.  As much as the inhabitants go on about how the sheer austerity of the barren land is in its own way beautiful, it is widely regarded that the name was simply a mistake. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[222.0]]>
       </x>
@@ -1528,9 +1531,6 @@
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1567,12 +1567,15 @@
   </planet>
   <planet tag='planet_bloodbath'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[This planet's name comes from before it was home to a thousand different pirate clans - its red tint earned it the title "Bloodbath".  The constantly fueding clans just outside the landing port seem intent on earning the name. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-35.0]]>
       </x>
@@ -1588,9 +1591,6 @@
       <image_filename>
         <![CDATA[redplanet.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1629,12 +1629,15 @@
   </planet>
   <planet tag='planet_cake'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[The origin of this planet's name date back to an ancient quote of a noble, the actual source long since forgotten, which indicated that those who could not afford bread should simply "eat cake".  The settlers apparently connected this somehow with their putative vow of poverty - one which was abandoned as soon as the expense of actually living on the planet came to light. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-254.0]]>
       </x>
@@ -1650,9 +1653,6 @@
       <image_filename>
         <![CDATA[toxic.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1688,12 +1688,15 @@
   </planet>
   <planet tag='planet_chiron_alpha_prime'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Chiron Alpha Prime's atmosphere is a thick soup of toxic and corrosive gases, and most of the planet is covered in liquid methane at best.  Of course, these rare and horrible materials make excellent exports, which is the only reason anyone would bother setting up here. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-154.0]]>
       </x>
@@ -1709,9 +1712,6 @@
       <image_filename>
         <![CDATA[toxic.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1749,12 +1749,15 @@
   </planet>
   <planet tag='planet_chiron_beta_prime'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Whereas Chiron Alpha Prime has volatiles and other rare materials, Chiron Beta Prime is a big rock.  Nickel, aluminum, other metals of ordinary and heavy variety are plentiful, and the planet's comparatively weaker gravity well makes mining it profitable. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[58.0]]>
       </x>
@@ -1770,9 +1773,6 @@
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1810,14 +1810,17 @@
   </planet>
   <planet tag='planet_citadel'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[To enter into any orbit of Citadel is to risk your life.  Literally billions of tiny networked weapons sattelites  are on watch at all times, repeatedly requesting credentials and making it clear that you are not, even for a small bit of time, welcome.  Merely tolerated.
 
 An d that's all before you land.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-12.0]]>
       </x>
@@ -1833,9 +1836,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1871,12 +1871,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_compass_rose'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[ Though the station only represents the 'north' part of the historical compass rose - and to modern stellar cartograhpers, not even that - it still retains its overly poetic name.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-10.0]]>
       </x>
@@ -1892,9 +1895,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale/>
@@ -1913,12 +1913,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_cork'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[When it was first created, Cork was the most heavily armed station humanity had ever made.  A great deal of work and funding has gone into keeping things that way. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[40.0]]>
       </x>
@@ -1934,9 +1937,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -1976,12 +1976,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_earth'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[150.0]]>
+      </landing_distance>
       <description>
         <![CDATA[This planet has been home to humanity for countless eons.  Though other worlds have been discovered to be habitable - or close enough to be terraformed - Earth remains the only one to have originated intelligent life. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-7.0]]>
       </x>
@@ -1997,9 +2000,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[planetoid.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[150.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2046,12 +2046,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_eden'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Eden was a deceptive planet from the very beginning.  The long-range scanners the Survey used said it was entirely Earthlike, and it was - at first.  Over the past hundred years, the ecosystem has been collapsing.  Despite modern terraforming processes, the collapse has yet to be halted.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-21.0]]>
       </x>
@@ -2067,9 +2070,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[toxic.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2111,12 +2111,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_farm'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[More expensive than both the galaxy survey and second survey expeditions combined, this planet is the pinnacle of both terraforming science and spending. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-5.0]]>
       </x>
@@ -2132,9 +2135,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[planetoid.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2172,12 +2172,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_finders_keepers'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[The planet's name is also its motto - its founding was fraught with legal wrangling over who owned what in the wake of some several million squatters having arrived before any government.  Fortunately, that sort of trouble settled down long ago.  ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-290.0]]>
       </x>
@@ -2193,9 +2196,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2234,12 +2234,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_fleet_thousands'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[This station remains one of the greatest technological accomplishments of humankind, even today.  Packed nearly full of equipment, its purpose was to project an image of Earth surrounded by thousands of defensive ships - all to ward off an invasion which never came. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-333.0]]>
       </x>
@@ -2255,9 +2258,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2297,12 +2297,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_forge'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[The Forge is a planet of exotic chemicals and more.  It was been described, not inacurrately, as being 'shrouded in war', as weapons creation and testing are the world's entire purpose. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-100.0]]>
       </x>
@@ -2318,9 +2321,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[redplanet.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2358,12 +2358,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_furthest_shore'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[One of the oldest continually-inhabited human colonies, The Furthest Shore feels more like a clone of Earth than any of the planets designed to assume the role.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-101.0]]>
       </x>
@@ -2379,9 +2382,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2421,12 +2421,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_gatekeeper'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Gatekeeper is a barren waste at best.  This does not stop it from being host to literally tens of thousands of scientists, all encamped in enclosed domes, devoted to their research. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-161.0]]>
       </x>
@@ -2442,9 +2445,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2481,12 +2481,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_kosigan'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[For several generations, this planet was cut off from the rest of humanity by the unexpected failure of its hyperspace lane.   By the time the connection was finally restored - an event as mysterious as its initial vanishing - the number of people on the planet had dropped by 75%.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-37.0]]>
       </x>
@@ -2502,9 +2505,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2542,12 +2542,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_labrynth'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[High winds re-sculpt the terrain of this planet on a minute-by-minute basis.  There is human life here, but not much of it. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[23.0]]>
       </x>
@@ -2563,9 +2566,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale/>
@@ -2583,12 +2583,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_llc'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Overture, inc., welcomes you to our planet, and asks you to spend freely. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[178.0]]>
       </x>
@@ -2604,9 +2607,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2644,12 +2644,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_loyalty'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[This planet was one of the first to be terraformed by early human settlers, and as such is one of the clumsiest examples of the process.  Though perfectly habitable, it retains the scars from the neophyte terraformers of the ages. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-89.0]]>
       </x>
@@ -2665,9 +2668,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2706,12 +2706,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_nebula'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[This planet has very little mass to speak of, and even fewer accessible resources.  What it does have, however, is the most stunning view in the galaxy: A nebula is visible in the night sky for most of the year. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-27.0]]>
       </x>
@@ -2727,9 +2730,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2765,11 +2765,14 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_new_freehold'>
     <fields>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
+      <description>
+      </description>
       <fuel_cost>
         <![CDATA[1.0]]>
       </fuel_cost>
-      <description>
-      </description>
       <x>
         <![CDATA[-25.0]]>
       </x>
@@ -2785,9 +2788,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[green.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2828,12 +2828,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_new_phoenix'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[New Phoenix is a prosperous, happy planet.  Money changes hands, tourists gawk at attractions, natives go about their business.  It is extremely ordinary for a place that was once the head of a rebellion. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-31.0]]>
       </x>
@@ -2849,9 +2852,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2893,12 +2893,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_price_landing'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[When you finance half of the rebellion, you can afford your own moon. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[39.0]]>
       </x>
@@ -2914,9 +2917,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -2957,12 +2957,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_second_terra'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Second Terra is 15% smaller than Earth, has a less than ideal magnetosphere, and features landmass merely half that of the human homeworld.  Regardless, plans were made to evacuate as many people as possible to it.  These plans were made in the midst of the invasion scare, but are still kept up to date today. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-31.0]]>
       </x>
@@ -2978,9 +2981,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[water.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -3023,12 +3023,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_sole_proprietorship'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[This moon is owned by one person, currently Alexander Michail.  Nobody but those who end up in charge of the place know how ownership  transfers from one person to another, only that Sole Proprietorship has remained true to its name for hundreds of years. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[22.0]]>
       </x>
@@ -3044,9 +3047,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[moon.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -3084,12 +3084,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_terrible'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[The people who settled on this planet insist they are closest to the truth, because their belief rejects all the illusions of the universe, thus making this planet one of the more accurately named ones. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[233.0]]>
       </x>
@@ -3105,9 +3108,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[redplanet.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -3143,12 +3143,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_twin_station'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[150.0]]>
+      </landing_distance>
       <description>
         <![CDATA[The oldest human-created habitation still existing, this station has a constant air of disrepair despite having been fully rebuilt over a dozen times.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-1.0]]>
       </x>
@@ -3164,9 +3167,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[150.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -3203,12 +3203,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_wasteland'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Mars was once thought to be the most arid and deserted planet to have once held life.  Then Wasteland was encountered, and all the survivalists migrated. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[65.0]]>
       </x>
@@ -3224,9 +3227,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[desert.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale/>
@@ -3245,12 +3245,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='planet_wright_place'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[ The pun was, it is explained to you by the docking authorities, intentional.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-35.0]]>
       </x>
@@ -3266,9 +3269,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -3334,6 +3334,12 @@ An d that's all before you land.]]>
   </player>
   <ship tag='scout_bare'>
     <fields>
+      <armor>
+        <![CDATA[100.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -3346,35 +3352,29 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Scout]]>
       </name>
-      <shields>
-        <![CDATA[100.0]]>
-      </shields>
       <labels>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[0.0]]>
       </price>
-      <armor>
+      <shields>
         <![CDATA[100.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -3395,18 +3395,27 @@ An d that's all before you land.]]>
   </ship>
   <shipblueprint tag='scout_class'>
     <fields>
+      <max_cargo>
+        <![CDATA[10.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[2.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[100.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[This entry-level civilian vessel focuses on enabling its captain to go from point A to point B and little else. ]]>
+      </description>
       <max_speed>
         <![CDATA[200.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[This entry-level civilian vessel focuses on enabling its captain to go from point A to point B and little else. ]]>
-      </description>
       <max_fuel>
         <![CDATA[100.0]]>
       </max_fuel>
@@ -3422,32 +3431,23 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+      </labels>
+      <name>
+        <![CDATA[Scout]]>
+      </name>
+      <image_filename>
+        <![CDATA[scout.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[200.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[100.0]]>
       </max_shields>
-      <labels>
-      </labels>
       <accel>
         <![CDATA[150.0]]>
       </accel>
-      <name>
-        <![CDATA[Scout]]>
-      </name>
-      <max_cargo>
-        <![CDATA[10.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[scout.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[2.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[100.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
@@ -5476,7 +5476,7 @@ An d that's all before you land.]]>
         <![CDATA[-223.0]]>
       </y>
       <labels>
-        <![CDATA[rebel.price,uninhabited,secondsurvey,gatesearch]]>
+        <![CDATA[rebel,price,uninhabited,secondsurvey,gatesearch]]>
       </labels>
     </fields>
     <children>
@@ -5927,6 +5927,12 @@ An d that's all before you land.]]>
   </sector>
   <ship tag='ship_arrow_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[250.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -5939,35 +5945,29 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Arrow For Sale]]>
       </name>
-      <shields>
-        <![CDATA[250.0]]>
-      </shields>
       <labels>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[250000.0]]>
       </price>
-      <armor>
+      <shields>
         <![CDATA[250.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -5986,6 +5986,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_battler_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[400.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -5998,36 +6004,30 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Battler For Sale]]>
       </name>
-      <shields>
-        <![CDATA[300.0]]>
-      </shields>
       <labels>
         <![CDATA[alliance]]>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[275000.0]]>
       </price>
-      <armor>
-        <![CDATA[400.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      <shields>
+        <![CDATA[300.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6046,6 +6046,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_bludgeoner_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[800.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6058,36 +6064,30 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Bludgeoner For Sale]]>
       </name>
-      <shields>
-        <![CDATA[600.0]]>
-      </shields>
       <labels>
         <![CDATA[alliance]]>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[750000.0]]>
       </price>
-      <armor>
-        <![CDATA[800.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      <shields>
+        <![CDATA[600.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6106,6 +6106,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_bolt_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[80.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6118,35 +6124,29 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Bolt For Sale]]>
       </name>
-      <shields>
-        <![CDATA[150.0]]>
-      </shields>
       <labels>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[70000.0]]>
       </price>
-      <armor>
-        <![CDATA[80.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      <shields>
+        <![CDATA[150.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6165,6 +6165,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_crossbow_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[550.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6177,35 +6183,29 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Crossbow For Sale]]>
       </name>
-      <shields>
-        <![CDATA[850.0]]>
-      </shields>
       <labels>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[700000.0]]>
       </price>
-      <armor>
-        <![CDATA[550.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      <shields>
+        <![CDATA[850.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6224,6 +6224,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_long_haul_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[500.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6236,36 +6242,30 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Long Haul For Sale]]>
       </name>
-      <shields>
-        <![CDATA[750.0]]>
-      </shields>
       <labels>
         <![CDATA[standard]]>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[500000.0]]>
       </price>
-      <armor>
-        <![CDATA[500.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      <shields>
+        <![CDATA[750.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6284,6 +6284,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_massive_cargo_traders'>
     <fields>
+      <armor>
+        <![CDATA[400.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6296,35 +6302,29 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Traders]]>
       </name>
-      <shields>
-        <![CDATA[400.0]]>
-      </shields>
       <labels>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[0.0]]>
       </price>
-      <armor>
+      <shields>
         <![CDATA[400.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6343,6 +6343,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_massive_shipper_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[400.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6355,36 +6361,30 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Massive Shipper For Sale]]>
       </name>
-      <shields>
-        <![CDATA[400.0]]>
-      </shields>
       <labels>
         <![CDATA[standard]]>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[250000.0]]>
       </price>
-      <armor>
+      <shields>
         <![CDATA[400.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6403,6 +6403,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_scout_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[100.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6415,36 +6421,30 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Scout For Sale]]>
       </name>
-      <shields>
-        <![CDATA[100.0]]>
-      </shields>
       <labels>
         <![CDATA[standard]]>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[75000.0]]>
       </price>
-      <armor>
+      <shields>
         <![CDATA[100.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6463,6 +6463,12 @@ An d that's all before you land.]]>
   </ship>
   <ship tag='ship_skirmisher_for_sale'>
     <fields>
+      <armor>
+        <![CDATA[250.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
       <jumping_progress>
         <![CDATA[0.0]]>
       </jumping_progress>
@@ -6475,36 +6481,30 @@ An d that's all before you land.]]>
       <chosen_secondary_index>
         <![CDATA[0.0]]>
       </chosen_secondary_index>
-      <velocity_y>
-        <![CDATA[0.0001]]>
-      </velocity_y>
       <x>
         <![CDATA[0.0]]>
       </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
       <name>
         <![CDATA[Skirmisher For Sale]]>
       </name>
-      <shields>
-        <![CDATA[150.0]]>
-      </shields>
       <labels>
         <![CDATA[alliance]]>
       </labels>
       <y>
         <![CDATA[0.0]]>
       </y>
-      <facing_x>
-        <![CDATA[0.0]]>
-      </facing_x>
       <price>
         <![CDATA[100000.0]]>
       </price>
-      <armor>
-        <![CDATA[250.0]]>
-      </armor>
-      <facing_y>
-        <![CDATA[-1.0]]>
-      </facing_y>
+      <shields>
+        <![CDATA[150.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
     </fields>
     <children>
       <addons/>
@@ -6523,18 +6523,27 @@ An d that's all before you land.]]>
   </ship>
   <shipblueprint tag='shipblueprint_arrow'>
     <fields>
+      <max_cargo>
+        <![CDATA[75.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[6.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[250.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[ The Arrow is a greatly refined creation, engineered for speed and mobility.]]>
+      </description>
       <max_speed>
         <![CDATA[225.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[ The Arrow is a greatly refined creation, engineered for speed and mobility.]]>
-      </description>
       <max_fuel>
         <![CDATA[100.0]]>
       </max_fuel>
@@ -6550,50 +6559,50 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[rebel]]>
+      </labels>
+      <name>
+        <![CDATA[Arrow]]>
+      </name>
+      <image_filename>
+        <![CDATA[arrow.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[225.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[250.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[rebel]]>
-      </labels>
       <accel>
         <![CDATA[175.0]]>
       </accel>
-      <name>
-        <![CDATA[Arrow]]>
-      </name>
-      <max_cargo>
-        <![CDATA[75.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[arrow.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[6.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[250.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <shipblueprint tag='shipblueprint_battler'>
     <fields>
+      <max_cargo>
+        <![CDATA[100.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[7.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[400.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[ The Battler is what happens when you attempt to improve on the Skirmisher - larger, slower, and more massive.  Fortunately, its weapons-bearing ability is far greater.]]>
+      </description>
       <max_speed>
         <![CDATA[175.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[ The Battler is what happens when you attempt to improve on the Skirmisher - larger, slower, and more massive.  Fortunately, its weapons-bearing ability is far greater.]]>
-      </description>
       <max_fuel>
         <![CDATA[180.0]]>
       </max_fuel>
@@ -6609,50 +6618,50 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[alliance]]>
+      </labels>
+      <name>
+        <![CDATA[Battler]]>
+      </name>
+      <image_filename>
+        <![CDATA[doubleegg.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[200.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[300.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[alliance]]>
-      </labels>
       <accel>
         <![CDATA[125.0]]>
       </accel>
-      <name>
-        <![CDATA[Battler]]>
-      </name>
-      <max_cargo>
-        <![CDATA[100.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[doubleegg.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[7.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[400.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <shipblueprint tag='shipblueprint_bludgeoner'>
     <fields>
+      <max_cargo>
+        <![CDATA[200.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[15.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[800.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[ The Bludgeoner is a new design, one which certainly lives up to its name.  Though slow and difficult to get into position, it is capable of unleashing a hellstorm unequaled by any other vessel.]]>
+      </description>
       <max_speed>
         <![CDATA[175.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[ The Bludgeoner is a new design, one which certainly lives up to its name.  Though slow and difficult to get into position, it is capable of unleashing a hellstorm unequaled by any other vessel.]]>
-      </description>
       <max_fuel>
         <![CDATA[250.0]]>
       </max_fuel>
@@ -6668,50 +6677,50 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[alliance]]>
+      </labels>
+      <name>
+        <![CDATA[Bludgeoner]]>
+      </name>
+      <image_filename>
+        <![CDATA[bigblue.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[175.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[600.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[alliance]]>
-      </labels>
       <accel>
         <![CDATA[100.0]]>
       </accel>
-      <name>
-        <![CDATA[Bludgeoner]]>
-      </name>
-      <max_cargo>
-        <![CDATA[200.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[bigblue.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[15.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[800.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <shipblueprint tag='shipblueprint_bolt'>
     <fields>
+      <max_cargo>
+        <![CDATA[15.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[3.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[80.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[ The bolt is practically the smallest spaceworthy vessel in existance. It's an old missile design re-purposed to serve as a ship.  Extra hardpoints make it an ideal laser platform.]]>
+      </description>
       <max_speed>
         <![CDATA[1000.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[ The bolt is practically the smallest spaceworthy vessel in existance. It's an old missile design re-purposed to serve as a ship.  Extra hardpoints make it an ideal laser platform.]]>
-      </description>
       <max_fuel>
         <![CDATA[50.0]]>
       </max_fuel>
@@ -6727,50 +6736,50 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[rebel]]>
+      </labels>
+      <name>
+        <![CDATA[Bolt]]>
+      </name>
+      <image_filename>
+        <![CDATA[bolt.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[400.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[150.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[rebel]]>
-      </labels>
       <accel>
         <![CDATA[800.0]]>
       </accel>
-      <name>
-        <![CDATA[Bolt]]>
-      </name>
-      <max_cargo>
-        <![CDATA[15.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[bolt.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[3.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[80.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <shipblueprint tag='shipblueprint_crossbow'>
     <fields>
+      <max_cargo>
+        <![CDATA[150.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[12.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[550.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[ The crossbow is the Rebellion's attempt at a maneuverable capital ship.  While only marginally more hard-hitting than the civilian options, it is by far more versatile.]]>
+      </description>
       <max_speed>
         <![CDATA[200.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[ The crossbow is the Rebellion's attempt at a maneuverable capital ship.  While only marginally more hard-hitting than the civilian options, it is by far more versatile.]]>
-      </description>
       <max_fuel>
         <![CDATA[210.0]]>
       </max_fuel>
@@ -6786,50 +6795,50 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[rebel]]>
+      </labels>
+      <name>
+        <![CDATA[Crossbow]]>
+      </name>
+      <image_filename>
+        <![CDATA[crossbow.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[200.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[850.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[rebel]]>
-      </labels>
       <accel>
         <![CDATA[135.0]]>
       </accel>
-      <name>
-        <![CDATA[Crossbow]]>
-      </name>
-      <max_cargo>
-        <![CDATA[150.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[crossbow.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[12.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[550.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <shipblueprint tag='shipblueprint_long_haul'>
     <fields>
+      <max_cargo>
+        <![CDATA[200.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[10.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[500.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[While the Massive Shipper focuses on sheer carrying capacity, the Long Haul focuses on being able to defend its haul. ]]>
+      </description>
       <max_speed>
         <![CDATA[150.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[While the Massive Shipper focuses on sheer carrying capacity, the Long Haul focuses on being able to defend its haul. ]]>
-      </description>
       <max_fuel>
         <![CDATA[200.0]]>
       </max_fuel>
@@ -6845,50 +6854,50 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Long Haul]]>
+      </name>
+      <image_filename>
+        <![CDATA[longhaul.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[150.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[750.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[100.0]]>
       </accel>
-      <name>
-        <![CDATA[Long Haul]]>
-      </name>
-      <max_cargo>
-        <![CDATA[200.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[longhaul.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[10.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[500.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <shipblueprint tag='shipblueprint_massive_shipper'>
     <fields>
+      <max_cargo>
+        <![CDATA[400.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[20.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[400.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[ The Massive Shipper is exactly what it claims to be - a gigantic vessel whose entire reason for being is the hauling of cargo.]]>
+      </description>
       <max_speed>
         <![CDATA[100.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[ The Massive Shipper is exactly what it claims to be - a gigantic vessel whose entire reason for being is the hauling of cargo.]]>
-      </description>
       <max_fuel>
         <![CDATA[400.0]]>
       </max_fuel>
@@ -6904,50 +6913,50 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Massive Shipper]]>
+      </name>
+      <image_filename>
+        <![CDATA[cargo.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[100.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[400.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[80.0]]>
       </accel>
-      <name>
-        <![CDATA[Massive Shipper]]>
-      </name>
-      <max_cargo>
-        <![CDATA[400.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[cargo.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[20.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[400.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <shipblueprint tag='shipblueprint_skirmisher'>
     <fields>
+      <max_cargo>
+        <![CDATA[50.0]]>
+      </max_cargo>
+      <hardpoints>
+        <![CDATA[5.0]]>
+      </hardpoints>
+      <max_armor>
+        <![CDATA[250.0]]>
+      </max_armor>
       <armor_regen>
         <![CDATA[0.005]]>
       </armor_regen>
+      <description>
+        <![CDATA[The Alliance Skirmisher is one of the older models, but is relatively fast (for the alliance) and offers more expansion than an ordinary scout.]]>
+      </description>
       <max_speed>
         <![CDATA[200.0]]>
       </max_speed>
       <shield_regen>
         <![CDATA[0.01]]>
       </shield_regen>
-      <description>
-        <![CDATA[The Alliance Skirmisher is one of the older models, but is relatively fast (for the alliance) and offers more expansion than an ordinary scout.]]>
-      </description>
       <max_fuel>
         <![CDATA[150.0]]>
       </max_fuel>
@@ -6963,44 +6972,38 @@ An d that's all before you land.]]>
       <fuel_regen>
         <![CDATA[0.001]]>
       </fuel_regen>
+      <labels>
+        <![CDATA[alliance]]>
+      </labels>
+      <name>
+        <![CDATA[Skirmisher]]>
+      </name>
+      <image_filename>
+        <![CDATA[eggship.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[175.0]]>
       </rot_per_sec>
       <max_shields>
         <![CDATA[150.0]]>
       </max_shields>
-      <labels>
-        <![CDATA[alliance]]>
-      </labels>
       <accel>
         <![CDATA[135.0]]>
       </accel>
-      <name>
-        <![CDATA[Skirmisher]]>
-      </name>
-      <max_cargo>
-        <![CDATA[50.0]]>
-      </max_cargo>
-      <image_filename>
-        <![CDATA[eggship.png]]>
-      </image_filename>
-      <hardpoints>
-        <![CDATA[5.0]]>
-      </hardpoints>
-      <max_armor>
-        <![CDATA[250.0]]>
-      </max_armor>
     </fields>
     <children/>
   </shipblueprint>
   <planet tag='station_locker'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA["Oh no, nosir!  Illegal activity is strictly frowned upon in this station. I mean, yes, there's a lot of pirate activity, but we're just named this way to capitalize on it!  Station management doesn't go in for that sort of thing.   Market's that way, off-market is that way." - Locker tourist guide.]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[234.0]]>
       </x>
@@ -7016,9 +7019,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -7059,12 +7059,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='station_science'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Staying mostly out of the fray between rebel and alliance, the scientists here would be regarded as a renegade breakaway faction if they ever actually did anything other than survey. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-24.0]]>
       </x>
@@ -7080,9 +7083,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale/>
@@ -7101,12 +7101,15 @@ An d that's all before you land.]]>
   </planet>
   <planet tag='station_solitude'>
     <fields>
-      <fuel_cost>
-        <![CDATA[1.0]]>
-      </fuel_cost>
+      <landing_distance>
+        <![CDATA[100.0]]>
+      </landing_distance>
       <description>
         <![CDATA[Solitude Station welcomes anyone who no longer wishes to feel the crush of their fellow human.   It has more windows than any other station ever built, the better to provide views of the universe outside. ]]>
       </description>
+      <fuel_cost>
+        <![CDATA[1.0]]>
+      </fuel_cost>
       <x>
         <![CDATA[-160.0]]>
       </x>
@@ -7122,9 +7125,6 @@ An d that's all before you land.]]>
       <image_filename>
         <![CDATA[station.png]]>
       </image_filename>
-      <landing_distance>
-        <![CDATA[100.0]]>
-      </landing_distance>
     </fields>
     <children>
       <addons_for_sale>
@@ -7184,15 +7184,18 @@ An d that's all before you land.]]>
   </universe>
   <weaponblueprint tag='weaponblueprint_basic_laser'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This is the most basic of weaponry available to pilots.]]>
+      </description>
       <seeking>
         <![CDATA[false]]>
       </seeking>
       <max_speed>
         <![CDATA[500.0]]>
       </max_speed>
-      <description>
-        <![CDATA[ This is the most basic of weaponry available to pilots.]]>
-      </description>
       <auto_accelerate>
         <![CDATA[true]]>
       </auto_accelerate>
@@ -7202,48 +7205,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[5.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[false]]>
       </secondary_weapon>
       <damage>
         <![CDATA[0.0]]>
       </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <price>
+        <![CDATA[1000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[1.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[3.0]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[500.0]]>
       </accel>
-      <name>
-        <![CDATA[Basic Laser]]>
-      </name>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
-      <price>
-        <![CDATA[1000.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[laser2.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo/>
@@ -7252,15 +7252,18 @@ An d that's all before you land.]]>
   </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_charged_laser'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ A new twist on an old forumla, the charged laser fires more slowly but packs more punch.]]>
+      </description>
       <seeking>
         <![CDATA[false]]>
       </seeking>
       <max_speed>
         <![CDATA[500.0]]>
       </max_speed>
-      <description>
-        <![CDATA[ A new twist on an old forumla, the charged laser fires more slowly but packs more punch.]]>
-      </description>
       <auto_accelerate>
         <![CDATA[true]]>
       </auto_accelerate>
@@ -7270,48 +7273,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[5.5]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[false]]>
       </secondary_weapon>
       <damage>
         <![CDATA[50.0]]>
       </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Charged Laser]]>
+      </name>
+      <price>
+        <![CDATA[5000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[1.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[5.0]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[yellowLaser.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[450.0]]>
       </accel>
-      <name>
-        <![CDATA[Charged Laser]]>
-      </name>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
-      <price>
-        <![CDATA[5000.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[yellowLaser.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo/>
@@ -7320,15 +7320,18 @@ An d that's all before you land.]]>
   </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_direct_missile'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This is standard ammunition for all Direct Missile Launchers.]]>
+      </description>
       <seeking>
         <![CDATA[false]]>
       </seeking>
       <max_speed>
         <![CDATA[0.0]]>
       </max_speed>
-      <description>
-        <![CDATA[ This is standard ammunition for all Direct Missile Launchers.]]>
-      </description>
       <auto_accelerate>
         <![CDATA[false]]>
       </auto_accelerate>
@@ -7338,48 +7341,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[0.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[false]]>
       </secondary_weapon>
       <damage>
         <![CDATA[0.0]]>
       </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Direct Missile]]>
+      </name>
+      <price>
+        <![CDATA[250.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[0.0]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[missile.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[0.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[9.0]]>
       </accel>
-      <name>
-        <![CDATA[Direct Missile]]>
-      </name>
       <is_ammo>
         <![CDATA[true]]>
       </is_ammo>
-      <price>
-        <![CDATA[250.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[missile.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo/>
@@ -7388,15 +7388,18 @@ An d that's all before you land.]]>
   </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_direct_missile_launcher'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ The missile is as direct as advertised: No seeking mechanisms, no counter-counter-missile ability, just explosives and fuel.]]>
+      </description>
       <seeking>
         <![CDATA[false]]>
       </seeking>
       <max_speed>
         <![CDATA[700.0]]>
       </max_speed>
-      <description>
-        <![CDATA[ The missile is as direct as advertised: No seeking mechanisms, no counter-counter-missile ability, just explosives and fuel.]]>
-      </description>
       <auto_accelerate>
         <![CDATA[false]]>
       </auto_accelerate>
@@ -7406,48 +7409,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[10.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[true]]>
       </secondary_weapon>
       <damage>
         <![CDATA[100.0]]>
       </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Direct Missile Launcher]]>
+      </name>
+      <price>
+        <![CDATA[10000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[1.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[3.5]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[missile.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[700.0]]>
       </accel>
-      <name>
-        <![CDATA[Direct Missile Launcher]]>
-      </name>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
-      <price>
-        <![CDATA[10000.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[missile.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo>
@@ -7458,15 +7458,18 @@ An d that's all before you land.]]>
   </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_hunt'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[A complicated computerized process allows these contained energy blasts to be attuned to a target's shields, thus naturally seeking them out without any sort of guidance system. ]]>
+      </description>
       <seeking>
         <![CDATA[true]]>
       </seeking>
       <max_speed>
         <![CDATA[300.0]]>
       </max_speed>
-      <description>
-        <![CDATA[A complicated computerized process allows these contained energy blasts to be attuned to a target's shields, thus naturally seeking them out without any sort of guidance system. ]]>
-      </description>
       <auto_accelerate>
         <![CDATA[true]]>
       </auto_accelerate>
@@ -7476,48 +7479,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[15.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[false]]>
       </secondary_weapon>
       <damage>
         <![CDATA[200.0]]>
       </damage>
+      <labels>
+        <![CDATA[allliance]]>
+      </labels>
+      <name>
+        <![CDATA[Hunt]]>
+      </name>
+      <price>
+        <![CDATA[35000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[2.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[5.0]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[flare.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[allliance]]>
-      </labels>
       <accel>
         <![CDATA[300.0]]>
       </accel>
-      <name>
-        <![CDATA[Hunt]]>
-      </name>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
-      <price>
-        <![CDATA[35000.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[flare.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo/>
@@ -7526,15 +7526,18 @@ An d that's all before you land.]]>
   </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_peck'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[Adhering to the rebel philosophy of faster, lighter weaponry, an individual Peck barely scratches the offending ship.  With its extraordinary recharge time, however, it is deadly. ]]>
+      </description>
       <seeking>
         <![CDATA[false]]>
       </seeking>
       <max_speed>
         <![CDATA[700.0]]>
       </max_speed>
-      <description>
-        <![CDATA[Adhering to the rebel philosophy of faster, lighter weaponry, an individual Peck barely scratches the offending ship.  With its extraordinary recharge time, however, it is deadly. ]]>
-      </description>
       <auto_accelerate>
         <![CDATA[true]]>
       </auto_accelerate>
@@ -7544,48 +7547,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[4.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[false]]>
       </secondary_weapon>
       <damage>
         <![CDATA[5.0]]>
       </damage>
+      <labels>
+        <![CDATA[rebel]]>
+      </labels>
+      <name>
+        <![CDATA[Peck]]>
+      </name>
+      <price>
+        <![CDATA[7500.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[1.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[0.5]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[flare-small.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[rebel]]>
-      </labels>
       <accel>
         <![CDATA[700.0]]>
       </accel>
-      <name>
-        <![CDATA[Peck]]>
-      </name>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
-      <price>
-        <![CDATA[7500.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[flare-small.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo/>
@@ -7594,14 +7594,17 @@ An d that's all before you land.]]>
   </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_seeking_missile'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+      </description>
       <seeking>
         <![CDATA[true]]>
       </seeking>
       <max_speed>
         <![CDATA[0.0]]>
       </max_speed>
-      <description>
-      </description>
       <auto_accelerate>
         <![CDATA[false]]>
       </auto_accelerate>
@@ -7611,48 +7614,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[0.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[false]]>
       </secondary_weapon>
       <damage>
         <![CDATA[0.0]]>
       </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Seeking Missile]]>
+      </name>
+      <price>
+        <![CDATA[350.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[0.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[0.0]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[0.0]]>
       </accel>
-      <name>
-        <![CDATA[Seeking Missile]]>
-      </name>
       <is_ammo>
         <![CDATA[true]]>
       </is_ammo>
-      <price>
-        <![CDATA[350.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[redMissile.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo/>
@@ -7661,15 +7661,18 @@ An d that's all before you land.]]>
   </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_seeking_missile_launcher'>
     <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This launcher is designed with the most high-tech of guidance computers, to help its missile find its target.]]>
+      </description>
       <seeking>
         <![CDATA[true]]>
       </seeking>
       <max_speed>
         <![CDATA[500.0]]>
       </max_speed>
-      <description>
-        <![CDATA[ This launcher is designed with the most high-tech of guidance computers, to help its missile find its target.]]>
-      </description>
       <auto_accelerate>
         <![CDATA[false]]>
       </auto_accelerate>
@@ -7679,48 +7682,45 @@ An d that's all before you land.]]>
       <max_ttl>
         <![CDATA[20.0]]>
       </max_ttl>
+      <amount>
+        <![CDATA[0.0]]>
+      </amount>
       <secondary_weapon>
         <![CDATA[true]]>
       </secondary_weapon>
       <damage>
         <![CDATA[125.0]]>
       </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Seeking Missile Launcher]]>
+      </name>
+      <price>
+        <![CDATA[50000.0]]>
+      </price>
       <hardpoints_required>
         <![CDATA[2.0]]>
       </hardpoints_required>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
       <max_cooldown>
         <![CDATA[6.0]]>
       </max_cooldown>
+      <image_filename>
+        <![CDATA[redMissile.png]]>
+      </image_filename>
       <rot_per_sec>
         <![CDATA[720.0]]>
       </rot_per_sec>
       <cooldown>
         <![CDATA[0.0]]>
       </cooldown>
-      <labels>
-        <![CDATA[standard]]>
-      </labels>
       <accel>
         <![CDATA[500.0]]>
       </accel>
-      <name>
-        <![CDATA[Seeking Missile Launcher]]>
-      </name>
       <is_ammo>
         <![CDATA[false]]>
       </is_ammo>
-      <price>
-        <![CDATA[50000.0]]>
-      </price>
-      <image_filename>
-        <![CDATA[redMissile.png]]>
-      </image_filename>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
     </fields>
     <children>
       <ammo>

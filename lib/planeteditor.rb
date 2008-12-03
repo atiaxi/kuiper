@@ -17,17 +17,17 @@ class CargoBlueprintEditor < PropertiesDialog
   def apply_children
     if @auto_expensive.checked
       result = @cargo.generate_cargo(1.15)
-      result.label_array << 'expensive'
+      result.labels_array << 'expensive'
       @rl.logger.info("Generated #{result.tag}: #{result.synopsis}")
     end
     if @auto_avg.checked
       result = @cargo.generate_cargo(1.0)
-      result.label_array << "average"
+      result.labels_array << "average"
       @rl.logger.info("Generated #{result.tag}: #{result.synopsis}")
     end
     if @auto_cheap.checked
       result = @cargo.generate_cargo(0.85)
-      result.label_array << "cheap"
+      result.labels_array << "cheap"
       @rl.logger.info("Generated #{result.tag}: #{result.synopsis}")
     end
   end
