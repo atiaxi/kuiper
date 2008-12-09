@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <kuiper major='0' bug='3' minor='0'>
-  <weaponblueprint tag=''>
+  <weaponblueprint tag='weaponblueprint_peck'>
     <fields>
       <turreted>
         <![CDATA[false]]>
@@ -1776,7 +1776,6 @@
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -1879,7 +1878,6 @@
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -1941,7 +1939,6 @@
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2000,7 +1997,6 @@
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2061,7 +2057,6 @@
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2122,7 +2117,6 @@
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2183,7 +2177,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2288,7 +2281,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2423,7 +2415,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2484,7 +2475,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2546,7 +2536,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2609,7 +2598,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2670,7 +2658,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2733,7 +2720,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2793,7 +2779,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2854,7 +2839,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -2956,7 +2940,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3018,7 +3001,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3077,7 +3059,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3140,7 +3121,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3205,7 +3185,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3269,7 +3248,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3335,7 +3313,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3396,7 +3373,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3455,7 +3431,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3515,7 +3490,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -3620,7 +3594,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -7859,7 +7832,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
@@ -7960,7 +7932,6 @@ An d that's all before you land.]]>
         <ref tag='weaponblueprint_charged_laser'/>
         <ref tag='weaponblueprint_basic_laser'/>
         <ref tag='weaponblueprint_seeking_missile_launcher'/>
-        <ref tag=''/>
         <ref tag='weaponblueprint_direct_missile'/>
         <ref tag='weaponblueprint_direct_missile_launcher'/>
       </weapons_for_sale>
