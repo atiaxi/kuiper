@@ -18,6 +18,7 @@ require 'optionscreen'
 require 'sector'
 require 'overrides'
 require 'setup_bootstrap'
+require 'banner'
 
 include Opal
 
@@ -83,6 +84,10 @@ class TitleScreen < State
     @loaduni = Button.new("Load Universe", 16) { self.load_universe() }
     @loaduni.rect.midtop = [ @newuni.rect.centerx, @newuni.rect.bottom + 3]
     self << @loaduni
+    
+    @credits = Button.new("Credits",12) { self.show_credits }
+    @credits.rect.midtop = [ @loaduni.rect.centerx, @opts.rect.y ]
+    self << @credits
     
     @multitest = ListBox.new
     @multitest.rect.width = 200
@@ -179,6 +184,11 @@ class TitleScreen < State
     # If there's a game to resume, it means we got control because the
     # SectorState did a yield; give it back.
     @driver.swap
+  end
+  
+  def show_credits
+    banner = BannerState.new(@driver,demo_banner)
+    @driver << banner
   end
   
   def start_edit
