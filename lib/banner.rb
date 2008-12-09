@@ -8,6 +8,7 @@ class BannerState < Opal::State
     super(driver)
     @data = data
     @spacing = 4
+    @vSpacing = 30
     @speed = spd
   end
   
@@ -32,7 +33,7 @@ class BannerState < Opal::State
         datum.refresh
         x = screct.w/2 - datum.rect.w/2 
         datum.translate_to(x,y)
-        y += datum.rect.h + @spacing
+        y += datum.rect.h + @vSpacing
         self << datum
       end
     end
@@ -53,9 +54,17 @@ class Title < Opal::Label
   
 end
 
+class SubTitle < Opal::Label
+  
+  def initialize(txt='',size=36,font=$FONT)
+    super
+  end
+  
+end
+
 class MultiText < Opal::MultiLineLabel
 
-  def initialize(txt='',size=42,font=$FONT)
+  def initialize(txt='',size=24,font=$FONT)
     @width = Opal::ResourceLocator.instance.screen_rect.w
     super(txt,size,font)
   end
@@ -68,7 +77,7 @@ class Table < Opal::CompositeSprite
   # [[ 'col1', 'col2',...], ['col1','col2',...] ...]
   # Failure to keep a consistant number of columns
   # in the array will lead to ANNOYANCE and also crashes.
-  def initialize(rows,size=24)
+  def initialize(rows,size=18)
     @data = rows
     @size = size
     @spacing = 10

@@ -19,6 +19,7 @@ require 'sector'
 require 'overrides'
 require 'setup_bootstrap'
 require 'banner'
+require 'credits'
 
 include Opal
 
@@ -187,7 +188,7 @@ class TitleScreen < State
   end
   
   def show_credits
-    banner = BannerState.new(@driver,demo_banner)
+    banner = BannerState.new(@driver,generate_credits)
     @driver << banner
   end
   
