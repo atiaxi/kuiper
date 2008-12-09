@@ -96,6 +96,10 @@ class KuiCargo < KuiObject
         avg = " available for #{self.price} each."
       end
       
+      if @mission_related
+        avg = " (mission)"
+      end
+      
       return @blueprint.name + amount + avg
     else
       return "Unplayable cargo (no blueprint!)"

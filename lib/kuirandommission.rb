@@ -189,6 +189,8 @@ module RandomDestination
       there = @destinations.random
     else
       dests = @rl.repository.everything_with_labels(@destinations_labels_array)
+      dests.reject! {|dest| !(dest.class == KuiSector ||
+                              dest.class == KuiPlanet)}
       there = dests.to_a.random
     end
     @destination = there.name
@@ -235,6 +237,7 @@ class KuiRandomCargo < KuiMissionGenerator
     m = self.mission
     
     # First, the condition that they have enough cargo
+    @amount = nil # So sufficient_room_condition will pick a new amount
     free = sufficient_room_condition
     m.worthy << free
     

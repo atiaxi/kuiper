@@ -196,6 +196,15 @@ class KuiMission < KuiObject
     @description = ''
     @exit_code = 0
   end
+  
+  def initialize_copy(orig)
+    @sponsors = orig.sponsors.dup
+    @worthy = orig.worthy.dup
+    @setup = orig.setup.dup
+    @checks = orig.checks.dup
+    @fleets_to_die = orig.fleets_to_die.dup
+    @fleets_that_died = orig.fleets_that_died.dup
+  end
 
   # Gives this mission to the player.  Returns true if everything is fine,
   # or a [ action, continuation ] pair if a user response is required.

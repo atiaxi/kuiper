@@ -21,7 +21,7 @@ class KuiMissionTests < Test::Unit::TestCase
     @cargoBlueprint.tag = "cargo_fruit"
     @cargoBlueprint.name = "fruit"
     
-    @cargo = KuiCargo.new.target_org.class == @target.class
+    @cargo = KuiCargo.new
     @cargo.tag = "cargo"
     @cargo.blueprint = @cargoBlueprint
     @cargo.markup = 10
@@ -478,6 +478,7 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
     
     @otherCargo = KuiCargo.new
     @otherCargo.tag = "metal"
+    @otherCargo.labels="metal"
     @otherCargo.blueprint = @otherCargoPrint
     
     @earth = KuiPlanet.new
@@ -488,7 +489,7 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
     @mars = KuiPlanet.new
     @mars.name = "Mars"
     @mars.tag = "planet_mars"
-    @mars.labels = "planet,mars"
+    @mars.labels = "planet,mars,metal"
   end
   
   def test_simple_cargo
@@ -591,6 +592,33 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
     
   end
   
+  def test_multiple_generate
+    template = KuiMission.new
+    template.name="Send %AMOUNT% of %CARGO% to %DESTINATION%"
+        
+    
+    cargoGen = KuiRandomCargo.new
+    cargoGen.template = template
+    cargoGen.min_amount = 1
+    cargoGen.max_amount = 10000000
+    cargoGen.cargo << @cargo
+    cargoGen.destinations << @earth
+    
+    cargoGen.min_generate = 100
+    cargoGen.max_generate = 100
+    
+    seen = Set.new
+    
+    generated = cargoGen.generate
+    assert_equal(100, generated.size)
+    generated.each do | gen |
+      assert_equal(1,gen.worthy.size)
+      free = gen.worthy[0].minimum
+      assert(!seen.include?(free))
+      free << gen.worthy[0].minimum
+    end
+  end
+  
   def test_simple_scout
     
     template = KuiMission.new
@@ -629,6 +657,13 @@ class RandomMissionGenerationTest < Test::Unit::TestCase
     
     generated = scoutGen.generate
     assert_equal("Scout the planet Mars", generated[0].name)
+    
+    scoutGen.destinations_labels = "metal"
+    # Only should pick up the planet
+    128.times do
+      generated = scoutGen.generate
+      assert_equal("Scout the planet Mars", generated[0].name)
+    end
   end
   
   def test_simple_bounty

@@ -20,7 +20,8 @@ class LandedState < DataActionDialog
     ship.armor = ship.max_armor
     if @generated.size == 0
       @planet.random_missions.each do | generator |
-        @generated += generator.generate(@planet)
+        genned = generator.generate(@planet)
+        @generated += genned
       end   
     end
     super

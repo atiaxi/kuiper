@@ -135,7 +135,8 @@ class MissionState < DataActionDialog
   end
   
   def qualified_missions
-    return @missions.select { |m| m.awardable? == true }
+    qualified = @missions.select { |m| m.awardable? == true}
+    return qualified
   end
   
 end

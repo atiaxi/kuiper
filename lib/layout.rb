@@ -57,7 +57,7 @@ module Layout
     w = button.rect.right
     if w > @fieldW
       @fieldW = w
-      @fieldRight = @fieldX + w
+      @fieldRight = w
     end
     self << label
     self << input
@@ -89,7 +89,7 @@ module Layout
     layout_image_child(text,filename,sizes,ShipImageButton,&callback)
   end
   
-   def layout_minibuilder_child(mb)
+  def layout_minibuilder_child(mb)
     mb.rect.w = @mainRect.right - @fieldRight - (@spacing * 2)
     mb.refresh
     layout_child(mb)

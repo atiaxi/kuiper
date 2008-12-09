@@ -53,6 +53,10 @@ def generate_credits
   thanks << [ "","Git"]
   thanks << [ "","Eclipse and the Ruby Development Tools"]
   thanks << [ "","Blender"]
+  
+  thanks << ["",""]
+  thanks << ["Want on this list?","E-mail me!"]
+  thanks << ["Volunteer for beta testing","atiaxi@gmail.com"]
   root << Table.new(thanks)
     
   return root
