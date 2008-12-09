@@ -1,73 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <kuiper major='0' bug='3' minor='0'>
-  <weaponblueprint tag='weaponblueprint_peck'>
-    <fields>
-      <turreted>
-        <![CDATA[false]]>
-      </turreted>
-      <description>
-        <![CDATA[ Adhering to the rebel philosophy of quick, small strikes, the Peck barely scratches ships when used individually.  Its extremely rapid recharge time, however, guarantees an en masse attack.]]>
-      </description>
-      <seeking>
-        <![CDATA[false]]>
-      </seeking>
-      <max_speed>
-        <![CDATA[700.0]]>
-      </max_speed>
-      <auto_accelerate>
-        <![CDATA[true]]>
-      </auto_accelerate>
-      <expansion_required>
-        <![CDATA[0.0]]>
-      </expansion_required>
-      <max_ttl>
-        <![CDATA[4.0]]>
-      </max_ttl>
-      <amount>
-        <![CDATA[0.0]]>
-      </amount>
-      <secondary_weapon>
-        <![CDATA[false]]>
-      </secondary_weapon>
-      <damage>
-        <![CDATA[5.0]]>
-      </damage>
-      <labels>
-        <![CDATA[rebel]]>
-      </labels>
-      <name>
-        <![CDATA[peck]]>
-      </name>
-      <price>
-        <![CDATA[7500.0]]>
-      </price>
-      <hardpoints_required>
-        <![CDATA[1.0]]>
-      </hardpoints_required>
-      <max_cooldown>
-        <![CDATA[0.5]]>
-      </max_cooldown>
-      <image_filename>
-        <![CDATA[flare-small.png]]>
-      </image_filename>
-      <rot_per_sec>
-        <![CDATA[720.0]]>
-      </rot_per_sec>
-      <cooldown>
-        <![CDATA[0.0]]>
-      </cooldown>
-      <accel>
-        <![CDATA[700.0]]>
-      </accel>
-      <is_ammo>
-        <![CDATA[false]]>
-      </is_ammo>
-    </fields>
-    <children>
-      <ammo/>
-      <anti_addons/>
-    </children>
-  </weaponblueprint>
   <addon tag='addon_armor_plating'>
     <fields>
       <max_cargo>
@@ -1122,6 +1054,85 @@
       </ships>
     </children>
   </fleet>
+  <fleet tag='fleet_east_pirate_long_hauler_fleet'>
+    <fields>
+      <under_attack>
+        <![CDATA[fight]]>
+      </under_attack>
+      <max_stay>
+        <![CDATA[30.0]]>
+      </max_stay>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <behavior>
+        <![CDATA[patrol]]>
+      </behavior>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <name>
+        <![CDATA[East Pirate Long Hauler Fleet]]>
+      </name>
+      <spawn_chance>
+        <![CDATA[0.025]]>
+      </spawn_chance>
+      <labels>
+        <![CDATA[eastpirates]]>
+      </labels>
+      <min_stay>
+        <![CDATA[5.0]]>
+      </min_stay>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_east_pirates'/>
+      </owner>
+      <ships>
+        <ref tag='ship_armed_long_hauler'/>
+      </ships>
+    </children>
+  </fleet>
+  <fleet tag='fleet_east_pirate_scouts'>
+    <fields>
+      <under_attack>
+        <![CDATA[fight]]>
+      </under_attack>
+      <max_stay>
+        <![CDATA[30.0]]>
+      </max_stay>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <behavior>
+        <![CDATA[patrol]]>
+      </behavior>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <name>
+        <![CDATA[East Pirate Scouts]]>
+      </name>
+      <spawn_chance>
+        <![CDATA[0.1]]>
+      </spawn_chance>
+      <labels>
+        <![CDATA[eastpirates]]>
+      </labels>
+      <min_stay>
+        <![CDATA[5.0]]>
+      </min_stay>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_east_pirates'/>
+      </owner>
+      <ships>
+        <ref tag='ship_armed_scout'/>
+        <ref tag='ship_armed_scout'/>
+      </ships>
+    </children>
+  </fleet>
   <fleet tag='fleet_massive_trading'>
     <fields>
       <under_attack>
@@ -1163,6 +1174,45 @@
       </ships>
     </children>
   </fleet>
+  <fleet tag='fleet_price_pirates'>
+    <fields>
+      <under_attack>
+        <![CDATA[fight]]>
+      </under_attack>
+      <max_stay>
+        <![CDATA[30.0]]>
+      </max_stay>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <behavior>
+        <![CDATA[patrol]]>
+      </behavior>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <name>
+        <![CDATA[Price Pirates]]>
+      </name>
+      <spawn_chance>
+        <![CDATA[0.75]]>
+      </spawn_chance>
+      <labels>
+        <![CDATA[price]]>
+      </labels>
+      <min_stay>
+        <![CDATA[5.0]]>
+      </min_stay>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_price_pirates'/>
+      </owner>
+      <ships>
+        <ref tag='ship_armed_crossbow'/>
+      </ships>
+    </children>
+  </fleet>
   <fleet tag='fleet_rebel_patrol'>
     <fields>
       <under_attack>
@@ -1199,48 +1249,6 @@
       </owner>
       <ships>
         <ref tag='ship_armed_arrow'/>
-        <ref tag='ship_armed_bolt'/>
-        <ref tag='ship_armed_bolt'/>
-      </ships>
-    </children>
-  </fleet>
-  <fleet tag='fleet_rebel_patrol-3030'>
-    <fields>
-      <under_attack>
-        <![CDATA[fight]]>
-      </under_attack>
-      <max_stay>
-        <![CDATA[30.0]]>
-      </max_stay>
-      <current_stay>
-        <![CDATA[0.0]]>
-      </current_stay>
-      <behavior>
-        <![CDATA[patrol]]>
-      </behavior>
-      <unique>
-        <![CDATA[false]]>
-      </unique>
-      <name>
-        <![CDATA[Rebel Patrol]]>
-      </name>
-      <spawn_chance>
-        <![CDATA[0.05]]>
-      </spawn_chance>
-      <labels>
-        <![CDATA[rebel,patrol]]>
-      </labels>
-      <min_stay>
-        <![CDATA[5.0]]>
-      </min_stay>
-    </fields>
-    <children>
-      <owner>
-        <ref tag='org_rebels'/>
-      </owner>
-      <ships>
-        <ref tag='ship_armed_crossbow'/>
-        <ref tag='ship_armed_crossbow'/>
         <ref tag='ship_armed_bolt'/>
         <ref tag='ship_armed_bolt'/>
       </ships>
@@ -1323,6 +1331,47 @@
     <children>
       <owner>
         <ref tag='org_rebels'/>
+      </owner>
+      <ships>
+        <ref tag='ship_armed_bolt'/>
+        <ref tag='ship_armed_bolt'/>
+        <ref tag='ship_armed_bolt'/>
+      </ships>
+    </children>
+  </fleet>
+  <fleet tag='fleet_right_pirates'>
+    <fields>
+      <under_attack>
+        <![CDATA[fight]]>
+      </under_attack>
+      <max_stay>
+        <![CDATA[30.0]]>
+      </max_stay>
+      <current_stay>
+        <![CDATA[0.0]]>
+      </current_stay>
+      <behavior>
+        <![CDATA[patrol]]>
+      </behavior>
+      <unique>
+        <![CDATA[false]]>
+      </unique>
+      <name>
+        <![CDATA[Right Pirates]]>
+      </name>
+      <spawn_chance>
+        <![CDATA[0.75]]>
+      </spawn_chance>
+      <labels>
+        <![CDATA[right]]>
+      </labels>
+      <min_stay>
+        <![CDATA[5.0]]>
+      </min_stay>
+    </fields>
+    <children>
+      <owner>
+        <ref tag='org_right_pirates'/>
       </owner>
       <ships>
         <ref tag='ship_armed_bolt'/>
@@ -1475,6 +1524,106 @@
             </target_org>
           </children>
         </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_east_pirates'/>
+            </target_org>
+          </children>
+        </relation>
+      </feelings>
+    </children>
+  </org>
+  <org tag='org_east_pirates'>
+    <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
+      <friendly>
+        <![CDATA[500.0]]>
+      </friendly>
+      <gullibility>
+        <![CDATA[0.8]]>
+      </gullibility>
+      <devoted>
+        <![CDATA[1000.0]]>
+      </devoted>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <name>
+        <![CDATA[East Pirates]]>
+      </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+        <![CDATA[eastpirates]]>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
+      <friendly_multiplier>
+        <![CDATA[0.5]]>
+      </friendly_multiplier>
+    </fields>
+    <children>
+      <feelings>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[1000000]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_east_pirates'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_player'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_alliance'/>
+            </target_org>
+          </children>
+        </relation>
       </feelings>
     </children>
   </org>
@@ -1529,6 +1678,92 @@
           <children>
             <target_org>
               <ref tag='org_player'/>
+            </target_org>
+          </children>
+        </relation>
+      </feelings>
+    </children>
+  </org>
+  <org tag='org_price_pirates'>
+    <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
+      <friendly>
+        <![CDATA[500.0]]>
+      </friendly>
+      <gullibility>
+        <![CDATA[0.8]]>
+      </gullibility>
+      <devoted>
+        <![CDATA[1000.0]]>
+      </devoted>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <name>
+        <![CDATA[Price Pirates]]>
+      </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+        <![CDATA[price]]>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
+      <friendly_multiplier>
+        <![CDATA[0.5]]>
+      </friendly_multiplier>
+    </fields>
+    <children>
+      <feelings>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[1000000]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_price_pirates'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_player'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_right_pirates'/>
             </target_org>
           </children>
         </relation>
@@ -1600,6 +1835,120 @@
           <children>
             <target_org>
               <ref tag='org_alliance'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-500.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_right_pirates'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-500.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_price_pirates'/>
+            </target_org>
+          </children>
+        </relation>
+      </feelings>
+    </children>
+  </org>
+  <org tag='org_right_pirates'>
+    <fields>
+      <neutral>
+        <![CDATA[0.0]]>
+      </neutral>
+      <friendly_shots_threshold>
+        <![CDATA[3.0]]>
+      </friendly_shots_threshold>
+      <friendly>
+        <![CDATA[500.0]]>
+      </friendly>
+      <gullibility>
+        <![CDATA[0.8]]>
+      </gullibility>
+      <devoted>
+        <![CDATA[1000.0]]>
+      </devoted>
+      <shooting_mod>
+        <![CDATA[-10.0]]>
+      </shooting_mod>
+      <kill_on_sight>
+        <![CDATA[-1000.0]]>
+      </kill_on_sight>
+      <name>
+        <![CDATA[Right Pirates]]>
+      </name>
+      <killing_mod>
+        <![CDATA[-50.0]]>
+      </killing_mod>
+      <labels>
+        <![CDATA[right]]>
+      </labels>
+      <unfriendly>
+        <![CDATA[-500.0]]>
+      </unfriendly>
+      <friendly_multiplier>
+        <![CDATA[0.5]]>
+      </friendly_multiplier>
+    </fields>
+    <children>
+      <feelings>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[1000000]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_right_pirates'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_player'/>
+            </target_org>
+          </children>
+        </relation>
+        <relation>
+          <fields>
+            <feeling>
+              <![CDATA[-1000.0]]>
+            </feeling>
+            <labels>
+            </labels>
+          </fields>
+          <children>
+            <target_org>
+              <ref tag='org_price_pirates'/>
             </target_org>
           </children>
         </relation>
@@ -3901,6 +4250,13 @@ An d that's all before you land.]]>
       <plot/>
       <potential_fleets>
         <ref tag='fleet_massive_trading'/>
+        <ref tag='fleet_alliance_patrol_(minor)'/>
+        <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_rebel_patrol_(major)'/>
+        <ref tag='fleet_rebel_patrol_(minor)'/>
+        <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_east_pirate_scouts'/>
+        <ref tag='fleet_east_pirate_long_hauler_fleet'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -3984,6 +4340,8 @@ An d that's all before you land.]]>
       <plot/>
       <potential_fleets>
         <ref tag='fleet_massive_trading'/>
+        <ref tag='fleet_east_pirate_scouts'/>
+        <ref tag='fleet_east_pirate_long_hauler_fleet'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -4102,6 +4460,7 @@ An d that's all before you land.]]>
         <ref tag='fleet_rebel_patrol_(major)'/>
         <ref tag='fleet_rebel_patrol_(minor)'/>
         <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_right_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -4417,7 +4776,10 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_east_pirate_scouts'/>
+        <ref tag='fleet_east_pirate_long_hauler_fleet'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -4783,7 +5145,14 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_alliance_patrol_(minor)'/>
+        <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_alliance_patrol_(major)'/>
+        <ref tag='fleet_rebel_patrol_(major)'/>
+        <ref tag='fleet_rebel_patrol_(minor)'/>
+        <ref tag='fleet_rebel_patrol'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -5054,6 +5423,8 @@ An d that's all before you land.]]>
       <plot/>
       <potential_fleets>
         <ref tag='fleet_massive_trading'/>
+        <ref tag='fleet_east_pirate_scouts'/>
+        <ref tag='fleet_east_pirate_long_hauler_fleet'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -5123,7 +5494,14 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_alliance_patrol_(minor)'/>
+        <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_alliance_patrol_(major)'/>
+        <ref tag='fleet_rebel_patrol_(major)'/>
+        <ref tag='fleet_rebel_patrol_(minor)'/>
+        <ref tag='fleet_rebel_patrol'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -5203,7 +5581,13 @@ An d that's all before you land.]]>
         <ref tag='planet_compass_rose'/>
       </planets>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_rebel_patrol_(minor)'/>
+        <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_alliance_patrol_(minor)'/>
+        <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_alliance_patrol_(major)'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -5370,6 +5754,7 @@ An d that's all before you land.]]>
         <ref tag='fleet_rebel_patrol_(major)'/>
         <ref tag='fleet_rebel_patrol_(minor)'/>
         <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_price_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -5499,6 +5884,7 @@ An d that's all before you land.]]>
         <ref tag='fleet_rebel_patrol_(major)'/>
         <ref tag='fleet_rebel_patrol_(minor)'/>
         <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_right_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -5546,6 +5932,8 @@ An d that's all before you land.]]>
         <ref tag='fleet_rebel_patrol_(major)'/>
         <ref tag='fleet_rebel_patrol_(minor)'/>
         <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_price_pirates'/>
+        <ref tag='fleet_right_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -5584,7 +5972,13 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_rebel_patrol_(minor)'/>
+        <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_alliance_patrol_(minor)'/>
+        <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_alliance_patrol_(major)'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -5673,6 +6067,8 @@ An d that's all before you land.]]>
         <ref tag='fleet_alliance_patrol_(minor)'/>
         <ref tag='fleet_alliance_patrol_(major)'/>
         <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_right_pirates'/>
+        <ref tag='fleet_price_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -5748,7 +6144,9 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_price_pirates'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -5784,7 +6182,14 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_alliance_patrol_(minor)'/>
+        <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_alliance_patrol_(major)'/>
+        <ref tag='fleet_rebel_patrol_(major)'/>
+        <ref tag='fleet_rebel_patrol_(minor)'/>
+        <ref tag='fleet_rebel_patrol'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -5820,7 +6225,13 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_rebel_patrol_(minor)'/>
+        <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_alliance_patrol_(minor)'/>
+        <ref tag='fleet_alliance_patrol'/>
+        <ref tag='fleet_alliance_patrol_(major)'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -5858,6 +6269,7 @@ An d that's all before you land.]]>
         <ref tag='fleet_rebel_patrol_(major)'/>
         <ref tag='fleet_rebel_patrol_(minor)'/>
         <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_price_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -5931,6 +6343,7 @@ An d that's all before you land.]]>
         <ref tag='fleet_rebel_patrol_(major)'/>
         <ref tag='fleet_rebel_patrol_(minor)'/>
         <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_price_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -5971,6 +6384,7 @@ An d that's all before you land.]]>
         <ref tag='fleet_rebel_patrol_(major)'/>
         <ref tag='fleet_rebel_patrol_(minor)'/>
         <ref tag='fleet_rebel_patrol'/>
+        <ref tag='fleet_price_pirates'/>
       </potential_fleets>
       <projectiles/>
     </children>
@@ -6006,7 +6420,9 @@ An d that's all before you land.]]>
       </links_to>
       <planets/>
       <plot/>
-      <potential_fleets/>
+      <potential_fleets>
+        <ref tag='fleet_right_pirates'/>
+      </potential_fleets>
       <projectiles/>
     </children>
   </sector>
@@ -6638,6 +7054,133 @@ An d that's all before you land.]]>
       <weapons>
         <ref tag='weaponblueprint_peck:8661'/>
         <ref tag='weaponblueprint_charged_laser:1387'/>
+      </weapons>
+    </children>
+  </ship>
+  <ship tag='ship_armed_long_hauler'>
+    <fields>
+      <armor>
+        <![CDATA[500.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <fuel>
+        <![CDATA[200.0]]>
+      </fuel>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+      <name>
+        <![CDATA[Armed Long Hauler]]>
+      </name>
+      <labels>
+      </labels>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <shields>
+        <![CDATA[750.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+    </fields>
+    <children>
+      <addons/>
+      <ammo>
+        <ref tag='weaponblueprint_direct_missile:8318'/>
+      </ammo>
+      <anti_addons/>
+      <blueprint>
+        <ref tag='shipblueprint_long_haul'/>
+      </blueprint>
+      <cargo/>
+      <itinerary/>
+      <owner/>
+      <secondaries>
+        <ref tag='weaponblueprint_direct_missile_launcher:5547'/>
+      </secondaries>
+      <target/>
+      <weapons>
+        <ref tag='weaponblueprint_basic_laser:6719'/>
+        <ref tag='weaponblueprint_charged_laser:555'/>
+      </weapons>
+    </children>
+  </ship>
+  <ship tag='ship_armed_scout'>
+    <fields>
+      <armor>
+        <![CDATA[100.0]]>
+      </armor>
+      <facing_y>
+        <![CDATA[-1.0]]>
+      </facing_y>
+      <jumping_progress>
+        <![CDATA[0.0]]>
+      </jumping_progress>
+      <velocity_x>
+        <![CDATA[0.0]]>
+      </velocity_x>
+      <fuel>
+        <![CDATA[100.0]]>
+      </fuel>
+      <chosen_secondary_index>
+        <![CDATA[0.0]]>
+      </chosen_secondary_index>
+      <x>
+        <![CDATA[0.0]]>
+      </x>
+      <velocity_y>
+        <![CDATA[0.0001]]>
+      </velocity_y>
+      <name>
+        <![CDATA[Armed_Scout]]>
+      </name>
+      <labels>
+      </labels>
+      <y>
+        <![CDATA[0.0]]>
+      </y>
+      <price>
+        <![CDATA[0.0]]>
+      </price>
+      <shields>
+        <![CDATA[100.0]]>
+      </shields>
+      <facing_x>
+        <![CDATA[0.0]]>
+      </facing_x>
+    </fields>
+    <children>
+      <addons/>
+      <ammo/>
+      <anti_addons/>
+      <blueprint>
+        <ref tag='scout_class'/>
+      </blueprint>
+      <cargo/>
+      <itinerary/>
+      <owner/>
+      <secondaries/>
+      <target/>
+      <weapons>
+        <ref tag='weaponblueprint_basic_laser:5643'/>
       </weapons>
     </children>
   </ship>
@@ -8165,7 +8708,143 @@ An d that's all before you land.]]>
       <anti_addons/>
     </children>
   </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_basic_laser:5643'>
+    <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This is the most basic of weaponry available to pilots.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <max_ttl>
+        <![CDATA[5.0]]>
+      </max_ttl>
+      <amount>
+        <![CDATA[2.0]]>
+      </amount>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <price>
+        <![CDATA[1000.0]]>
+      </price>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[3.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[500.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_basic_laser:5782'>
+    <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This is the most basic of weaponry available to pilots.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <max_ttl>
+        <![CDATA[5.0]]>
+      </max_ttl>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Basic Laser]]>
+      </name>
+      <price>
+        <![CDATA[1000.0]]>
+      </price>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[3.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[laser2.png]]>
+      </image_filename>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[500.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_basic_laser:6719'>
     <fields>
       <turreted>
         <![CDATA[false]]>
@@ -8573,6 +9252,74 @@ An d that's all before you land.]]>
       <anti_addons/>
     </children>
   </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_charged_laser:555'>
+    <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ A new twist on an old forumla, the charged laser fires more slowly but packs more punch.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[500.0]]>
+      </max_speed>
+      <auto_accelerate>
+        <![CDATA[true]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <max_ttl>
+        <![CDATA[5.5]]>
+      </max_ttl>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[50.0]]>
+      </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Charged Laser]]>
+      </name>
+      <price>
+        <![CDATA[5000.0]]>
+      </price>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[5.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[yellowLaser.png]]>
+      </image_filename>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[450.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_direct_missile'>
     <fields>
       <turreted>
@@ -8777,6 +9524,74 @@ An d that's all before you land.]]>
       <anti_addons/>
     </children>
   </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_direct_missile:8318'>
+    <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ This is standard ammunition for all Direct Missile Launchers.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[0.0]]>
+      </max_speed>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[1.0]]>
+      </expansion_required>
+      <max_ttl>
+        <![CDATA[0.0]]>
+      </max_ttl>
+      <amount>
+        <![CDATA[15.0]]>
+      </amount>
+      <secondary_weapon>
+        <![CDATA[false]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[0.0]]>
+      </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Direct Missile]]>
+      </name>
+      <price>
+        <![CDATA[250.0]]>
+      </price>
+      <hardpoints_required>
+        <![CDATA[0.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[0.0]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[missile.png]]>
+      </image_filename>
+      <rot_per_sec>
+        <![CDATA[0.0]]>
+      </rot_per_sec>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[9.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[true]]>
+      </is_ammo>
+    </fields>
+    <children>
+      <ammo/>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
   <weaponblueprint tag='weaponblueprint_direct_missile_launcher'>
     <fields>
       <turreted>
@@ -8842,7 +9657,7 @@ An d that's all before you land.]]>
     </fields>
     <children>
       <ammo>
-        <ref tag='weaponblueprint_direct_missile:1870'/>
+        <ref tag='weaponblueprint_direct_missile:8318'/>
       </ammo>
       <anti_addons/>
     </children>
@@ -8913,6 +9728,76 @@ An d that's all before you land.]]>
     <children>
       <ammo>
         <ref tag='weaponblueprint_direct_missile:1870'/>
+      </ammo>
+      <anti_addons/>
+    </children>
+  </weaponblueprint>
+  <weaponblueprint tag='weaponblueprint_direct_missile_launcher:5547'>
+    <fields>
+      <turreted>
+        <![CDATA[false]]>
+      </turreted>
+      <description>
+        <![CDATA[ The missile is as direct as advertised: No seeking mechanisms, no counter-counter-missile ability, just explosives and fuel.]]>
+      </description>
+      <seeking>
+        <![CDATA[false]]>
+      </seeking>
+      <max_speed>
+        <![CDATA[700.0]]>
+      </max_speed>
+      <auto_accelerate>
+        <![CDATA[false]]>
+      </auto_accelerate>
+      <expansion_required>
+        <![CDATA[0.0]]>
+      </expansion_required>
+      <max_ttl>
+        <![CDATA[10.0]]>
+      </max_ttl>
+      <amount>
+        <![CDATA[1.0]]>
+      </amount>
+      <secondary_weapon>
+        <![CDATA[true]]>
+      </secondary_weapon>
+      <damage>
+        <![CDATA[100.0]]>
+      </damage>
+      <labels>
+        <![CDATA[standard]]>
+      </labels>
+      <name>
+        <![CDATA[Direct Missile Launcher]]>
+      </name>
+      <price>
+        <![CDATA[10000.0]]>
+      </price>
+      <hardpoints_required>
+        <![CDATA[1.0]]>
+      </hardpoints_required>
+      <max_cooldown>
+        <![CDATA[3.5]]>
+      </max_cooldown>
+      <image_filename>
+        <![CDATA[missile.png]]>
+      </image_filename>
+      <rot_per_sec>
+        <![CDATA[720.0]]>
+      </rot_per_sec>
+      <cooldown>
+        <![CDATA[0.0]]>
+      </cooldown>
+      <accel>
+        <![CDATA[700.0]]>
+      </accel>
+      <is_ammo>
+        <![CDATA[false]]>
+      </is_ammo>
+    </fields>
+    <children>
+      <ammo>
+        <ref tag='weaponblueprint_direct_missile:8318'/>
       </ammo>
       <anti_addons/>
     </children>
@@ -9020,7 +9905,7 @@ An d that's all before you land.]]>
         <![CDATA[200.0]]>
       </damage>
       <labels>
-        <![CDATA[allliance]]>
+        <![CDATA[alliance]]>
       </labels>
       <name>
         <![CDATA[Hunt]]>
@@ -9088,7 +9973,7 @@ An d that's all before you land.]]>
         <![CDATA[200.0]]>
       </damage>
       <labels>
-        <![CDATA[allliance]]>
+        <![CDATA[alliance]]>
       </labels>
       <name>
         <![CDATA[Hunt]]>
@@ -9156,7 +10041,7 @@ An d that's all before you land.]]>
         <![CDATA[200.0]]>
       </damage>
       <labels>
-        <![CDATA[allliance]]>
+        <![CDATA[alliance]]>
       </labels>
       <name>
         <![CDATA[Hunt]]>
