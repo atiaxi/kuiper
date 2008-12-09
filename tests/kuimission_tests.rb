@@ -21,7 +21,7 @@ class KuiMissionTests < Test::Unit::TestCase
     @cargoBlueprint.tag = "cargo_fruit"
     @cargoBlueprint.name = "fruit"
     
-    @cargo = KuiCargo.new
+    @cargo = KuiCargo.new.target_org.class == @target.class
     @cargo.tag = "cargo"
     @cargo.blueprint = @cargoBlueprint
     @cargo.markup = 10

@@ -595,6 +595,7 @@ class KuiRelation < KuiObject
   # Need a different comparator, since we don't use tags
   def ==(other)
     return false unless other
+    return false unless other.respond_to?(:target_org)
     return @target_org == other.target_org && @feeling == other.feeling    
   end
   
